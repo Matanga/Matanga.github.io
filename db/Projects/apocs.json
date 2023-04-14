@@ -1,0 +1,23 @@
+{
+    "name": "Procedural World Pipeline R&D Sandbox",
+    "client": "Undisclosed",
+    "company": "Undisclosed",
+    "media": "Digital",
+    "platform": "PC",
+    "involvement": "Pipeline & Tool Development",
+    "impact": "Designed and explored a large-scale procedural world pipeline to validate workflows for terrain, settlements, and infrastructure generation with a strong focus on iteration speed and performance.",
+    "responsibilities": [
+      "Designed and implemented an end-to-end procedural world generation pipeline as a solo R&D initiative.",
+      "Built Houdini-based systems for generating landscapes, towns, and infrastructure using heightfields, SOP networks, PDG, VEX, and Python.",
+      "Developed Unreal Engine tooling to ingest, visualize, and iterate on large-scale procedural data efficiently."
+    ],
+    "context": "This project was an internal-style R&D sandbox focused on exploring and validating procedural world generation workflows using Houdini and Unreal Engine 4. The goal was to prototype scalable pipelines capable of supporting large environments while maintaining fast iteration cycles and high runtime performance.",
+    "challenges": "The primary challenge was managing the complexity and scale of a large procedural environment while working solo. The project required balancing world size, visual fidelity, performance constraints, and usability, all while ensuring that workflows remained flexible and iteration-friendly.",
+    "solutions": "I designed a modular procedural pipeline in Houdini to generate foundational world data, then created custom Unreal Engine workflows to import and refine that data using World Composition, shaders, grass layers, RVTs, blueprints, custom editor widgets, and Niagara. This approach allowed rapid iteration on large environments while validating the technical feasibility of the pipeline.",
+    "portfolioitems": [
+      "apocs-landscape",
+      "apocs-city",
+      "apocs-building"
+    ]
+  }
+  

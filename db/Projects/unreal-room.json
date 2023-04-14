@@ -1,0 +1,23 @@
+{
+	"name": "Unreal Room",
+	"client": "Personal R&D",
+	"company": "Independent",
+	"media": "Art Installation",
+	"platform": "PC",
+	"involvement": "Interactive Systems & VFX Development",
+	"impact": "Explored and prototyped a reusable, gesture-driven interactive installation framework combining real-time computer vision, spatially adaptive environments, and Niagara-based VFX systems.",
+	"responsibilities": [
+	  "Designed and implemented the project end-to-end as a solo R&D initiative.",
+	  "Built a dynamic room system in Unreal Engine 5 capable of adapting to different real-world wall sizes without breaking visual transitions.",
+	  "Integrated MediaPipe-based hand and body tracking to drive real-time interaction and VFX behavior.",
+	  "Designed a VFX pipeline using Niagara that translated gesture input into expressive, controllable visual effects.",
+	  "Developed reusable configuration and tooling systems intended to support deployment in different physical spaces."
+	],
+	"context": "Unreal Room is a personal R&D project focused on interactive installation design using Unreal Engine 5 and real-time computer vision. The goal was to explore how body-driven interaction, adaptive spatial layouts, and high-fidelity VFX could be combined into a flexible framework for immersive experiences.",
+	"challenges": "Key challenges included designing a spatial system that could adapt to different physical dimensions while maintaining coherent transitions, translating noisy computer-vision input into reliable interaction signals, and integrating gesture-driven logic with complex Niagara-based VFX systems.",
+	"solutions": "I developed a dynamic room configurator that decoupled spatial layout from effect logic, allowing the same experience to scale across different wall sizes. Gesture data from MediaPipe was processed and mapped into stable interaction parameters, which were then consumed by Niagara systems and gameplay logic to produce responsive, visually rich feedback during extended interactive sessions.",
+	"portfolioitems": [
+	  "unrealroom-vfx",
+	  "unrealroom-bps"
+	]
+  }

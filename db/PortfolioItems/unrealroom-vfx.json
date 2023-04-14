@@ -1,0 +1,51 @@
+{
+	"date": "2022-11-01",
+	"name": "Interactive Niagara VFX Systems",
+	"projectname": "Unreal Room",
+	"company": "Independent",
+	"oneLiner": "Gesture-driven Niagara VFX systems for an interactive installation R&D project, combining multi-emitter effects, custom Niagara modules, and Blueprint-controlled parameters fed by real-time MediaPipe tracking.",
+	"bulletpoints": [
+	  "Built multiple advanced Niagara effects using multi-emitter setups, custom modules, and reusable Niagara functions.",
+	  "Implemented Blueprint ↔ Niagara data exchange to drive effect behavior through exposed parameters and runtime events.",
+	  "Mapped real-time MediaPipe gesture/body tracking into stable interaction signals that controlled VFX behavior live.",
+	  "Explored diverse effect styles including volumetric motion, particle/ribbon grids, spline-driven biological scenes, and fluid-sim corridor fills."
+	],
+	"dcc": [],
+	"engine": ["Unreal"],
+	"languages": ["Blueprints"],
+	"skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
+	"tags": [
+	  "niagara",
+	  "interactive-vfx",
+	  "gesture-driven",
+	  "mediapipe",
+	  "real-time-input",
+	  "custom-modules",
+	  "fluid-simulation"
+	],
+	"priority": 2,
+	"status": "complete",
+	"media": {
+	  "image": [],
+	  "youtube": [
+		"https://www.youtube.com/embed/HnOhTIWuaPE?start=6",
+		"https://www.youtube.com/embed/qXgegQ6clxA",
+		"https://www.youtube.com/embed/iv7WSnxDBDE?start=3",
+		"https://www.youtube.com/embed/_IHlRjQvM6U?start=7"
+	  ],
+	  "captions": {
+		"https://www.youtube.com/embed/HnOhTIWuaPE?start=6": "Volumetric smoke curtain effect in Niagara, interactively displaced by tracked hand motion.",
+		"https://www.youtube.com/embed/qXgegQ6clxA": "Particle + ribbon world-grid effect built with custom Niagara functions for structured motion and patterns.",
+		"https://www.youtube.com/embed/iv7WSnxDBDE?start=3": "Microscopic inside-the-body scene: spline-driven blood cells, organic walls, and virus-like effects reacting to tracked hands.",
+		"https://www.youtube.com/embed/_IHlRjQvM6U?start=7": "Corridor flood effect inspired by The Shining, created with Niagara fluid simulation (stylized thick-fluid look)."
+	  }
+	},
+	"deepDive": {
+	  "problem": "Interactive installations need expressive VFX that remain controllable and stable when driven by noisy real-time tracking data, without sacrificing iteration speed or visual complexity.",
+	  "approach": [
+		"Built Niagara systems around modular emitters and custom modules, exposing clean control parameters for Blueprint orchestration.",
+		"Translated MediaPipe tracking into stable interaction values in Blueprint, then routed those values into Niagara to drive consistent, responsive behavior."
+	  ]
+	}
+  }
+  

@@ -1,0 +1,52 @@
+{
+    "date": "2026-01-15",
+    "name": "Frogger Gameplay Systems and Diegetic UI Flow",
+    "projectname": "Frogger Game Validation",
+    "company": "Atlas (Design Partner Platform)",
+    "oneLiner": "Built a complete Frogger-style gameplay loop in Unreal Engine 5 with a polished multi-screen flow, diegetic start/settings UI, tutorialization, and HUD feedback designed for a shippable standalone executable.",
+    "bulletpoints": [
+      "Implemented the full gameplay loop: start flow, tutorial onboarding, core crossing mechanics, fail/success states, and end-of-level scoring feedback.",
+      "Built a cohesive UI/state flow across menus, tutorial overlays, HUD, and completion screens, maintaining clarity and consistency across the player experience.",
+      "Designed diegetic UI presentations (in-world start and settings interactions) to integrate interface elements into the game space without breaking immersion."
+    ],
+    "dcc": [],
+    "engine": ["Unreal"],
+    "languages": ["Blueprints"],
+    "skillsets": ["unrealdev"],
+    "tags": ["gameplay", "ui-flow", "diegetic-ui", "tutorial", "packaging"],
+    "priority": 1,
+    "status": "complete",
+    "media": {
+      "image": [
+        "frogger-game-play__01__diegetic-start-gantry.png",
+        "frogger-game-play__02__diegetic-settings-cabinet.png",
+        "frogger-game-play__03__tutorial-start-end-zones.png",
+        "frogger-game-play__04__tutorial-hazard-direction-cues.png",
+        "frogger-game-play__05__tutorial-hazard-proximity.png",
+        "frogger-game-play__06__level-complete-summary.png",
+        "frogger-game-play__07__gameplay-hud-radio.png"
+      ],
+      "youtube": [
+        "https://www.youtube.com/embed/FROGGER_GAMEPLAY_DEMO_ID"
+      ],
+      "captions": {
+        "frogger-game-play__01__diegetic-start-gantry.png": "Diegetic start screen implemented as an in-world traffic gantry, integrating primary navigation (Start/Settings/Quit) into the scene.",
+        "frogger-game-play__02__diegetic-settings-cabinet.png": "Diegetic settings UI presented as an in-world electrical cabinet, keeping configuration inside the world instead of a flat menu screen.",
+        "frogger-game-play__03__tutorial-start-end-zones.png": "Tutorial overlay demonstrating clear start/end zones and onboarding flow before introducing hazards.",
+        "frogger-game-play__04__tutorial-hazard-direction-cues.png": "Tutorial step teaching hazard direction and safe movement patterns using strong visual cues.",
+        "frogger-game-play__05__tutorial-hazard-proximity.png": "Tutorial step highlighting collision danger and spatial awareness using proximity markers around hazards.",
+        "frogger-game-play__06__level-complete-summary.png": "End-of-level completion UI with star-based objectives and a clear summary of performance conditions.",
+        "frogger-game-play__07__gameplay-hud-radio.png": "Gameplay HUD showing lives/coins/state plus an in-world radio-style UI element supporting the overall presentation.",
+        "https://www.youtube.com/embed/FROGGER_GAMEPLAY_DEMO_ID": "Gameplay flow demo: start → tutorial onboarding → live gameplay → level completion feedback."
+      }
+    },
+    "deepDive": {
+      "problem": "To validate end-to-end platform-generated content inside a real game, the project needed a complete and polished gameplay loop with robust state management, clear onboarding, and UI that supports player understanding without relying on external explanation.",
+      "approach": [
+        "Structured the project around a clean game flow: boot/menu → tutorial onboarding → gameplay loop → fail/success → level completion summary.",
+        "Implemented tutorial overlays that introduce rules progressively using strong visual language (zones, hazard direction cues, proximity indicators).",
+        "Created diegetic UI surfaces for start/settings to keep the interface grounded in-world while maintaining usability and readability."
+      ]
+    }
+  }
+  

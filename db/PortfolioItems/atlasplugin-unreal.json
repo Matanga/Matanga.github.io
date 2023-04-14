@@ -1,0 +1,47 @@
+{
+    "date": "2024-11-20",
+    "name": "Atlas Unreal Editor Integration",
+    "projectname": "Atlas DCC Integration Framework",
+    "company": "Atlas",
+    "oneLiner": "Designed and implemented a native Unreal Editor plugin that exposes Atlas AI workflows through dynamic editor UI, supports full workflow lifecycle management, and imports generated assets directly into Unreal projects.",
+    "bulletpoints": [
+      "Built a native Unreal Editor plugin that allows artists to discover, configure, and execute Atlas workflows directly inside the editor.",
+      "Implemented asynchronous job execution with clear progress feedback, robust error handling, and persistent job history with filtering for iterative workflows.",
+      "Integrated automatic import and organization of generated assets into the Unreal Content Browser using engine-native asset pipelines."
+    ],
+    "dcc": [],
+    "engine": ["Unreal"],
+    "languages": ["C++", "Blueprints"],
+    "skillsets": ["unrealdev", "tooldev", "pipelinedev"],
+    "tags": ["editor-plugin", "workflow", "async", "asset-import", "job-history"],
+    "priority": 1,
+    "status": "complete",
+    "media": {
+      "image": [
+        "atlasplugin-unreal_01_editor-docked-ui.jpg",
+        "atlasplugin-unreal_02_workflow-parameters.jpg",
+        "atlasplugin-unreal_03_job-execution-state.jpg",
+        "atlasplugin-unreal_04_job-history-filtering.jpg",
+        "atlasplugin-unreal_05_imported-assets-browser.jpg"
+      ],
+      "youtube": [
+      ],
+      "captions": {
+        "atlasplugin-unreal_01_editor-docked-ui.jpg": "Atlas workflow plugin docked inside the Unreal Editor, demonstrating native integration and editor-consistent UI layout.",
+        "atlasplugin-unreal_02_workflow-parameters.jpg": "Schema-driven workflow configuration UI allowing artists to select and validate workflow inputs before execution.",
+        "atlasplugin-unreal_03_job-execution-state.jpg": "Asynchronous job execution state displayed in-editor, providing clear progress and status feedback.",
+        "atlasplugin-unreal_04_job-history-filtering.jpg": "Persistent job history panel with filtering options, enabling iteration, debugging, and repeatable workflow usage.",
+        "atlasplugin-unreal_05_imported-assets-browser.jpg": "Generated assets automatically imported and organized inside the Unreal Content Browser."
+      }
+    },
+    "deepDive": {
+      "problem": "Integrating networked AI workflows into the Unreal Editor requires not only execution capabilities, but also persistent state, clear feedback, and safe asset handling to support iterative production use.",
+      "approach": [
+        "Designed a native Unreal Editor plugin architecture that supports the full workflow lifecycle: discovery, configuration, execution, and history review.",
+        "Mapped workflow schemas to dynamic editor UI elements with validation to prevent invalid job submissions.",
+        "Implemented asynchronous job execution with editor-safe callbacks, persistent job tracking, and clear success and error states.",
+        "Integrated Unreal-native asset import and naming conventions so generated outputs behave like first-class engine assets."
+      ]
+    }
+  }
+  

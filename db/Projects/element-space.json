@@ -1,0 +1,26 @@
+{
+    "name": "Element Space",
+    "client": "2K",
+    "company": "Globant",
+    "media": "Digital",
+    "platform": "PC",
+    "involvement": "Technical Art & VFX Pipeline Development",
+    "impact": "Enabled scalable VFX production and faster iteration on a shipped Unity title by combining artist-facing tools with optimized, production-ready VFX systems.",
+    "responsibilities": [
+      "Worked as a hybrid Technical Artist and VFX Artist on a shipped top-down, turn-based tactical shooter.",
+      "Designed and developed artist-facing tools to support VFX creation, scene management, and content generation within Unity.",
+      "Created and maintained VFX systems and representative assets while ensuring performance and engine compatibility.",
+      "Enabled non-technical artists to author and iterate on VFX content independently through simplified workflows and tooling."
+    ],
+    "context": "Element Space is a commercially released, top-down, turn-based tactical shooter available on Steam. This project marked my first official Technical Artist role, where I combined hands-on VFX production with tool and workflow development to support a large, multidisciplinary team.",
+    "challenges": "Key challenges included balancing visual quality with performance constraints, ensuring VFX compatibility across different target systems, and supporting a large team with varying technical skill levels. Iteration speed and usability were critical to maintaining production velocity.",
+    "solutions": "I developed a combination of Unity-based tools and VFX workflows that reduced iteration time and lowered the technical barrier for content creation. By collaborating closely with designers and artists, I ensured the tools integrated smoothly into the production pipeline, allowing the team to produce consistent, optimized VFX at scale.",
+    "portfolioitems": [
+      "element-vfxcomps",
+      "element-textools",
+      "element-lightlister",
+      "element-curvetools",
+      "element-vfx"
+    ]
+  }
+  

@@ -1,0 +1,60 @@
+{
+    "date": "2023-10-01",
+    "name": "Procedural Landscape Pipeline",
+    "projectname": "Procedural World Pipeline R&D Sandbox",
+    "company": "Undisclosed",
+    "oneLiner": "Foundational procedural landscape pipeline converting authored roads, cities, and land-use intent into layered heightfield data to drive terrain shaping, urban placement, and large-scale world structure.",
+    "bulletpoints": [
+      "Designed a layered Houdini heightfield pipeline generating terrain, rivers, riverbanks, forests, cities, roads, streets, and countryside features from structured input data.",
+      "Converted authored design intent into discrete heightfield masks for terrain shaping, material blending, and downstream procedural systems.",
+      "Implemented a bidirectional workflow where spline Blueprints authored in Unreal export structured road and city data to a central dataset consumed by Houdini.",
+      "Built a clean, modular Houdini network to process base data, generate heightfield layers, and export results for real-time validation in Unreal Engine.",
+      "Created interactive visualization and debugging nodes in Houdini to inspect, validate, and iterate on intermediate landscape data."
+    ],
+    "dcc": ["Houdini"],
+    "engine": ["Unreal"],
+    "languages": ["Python", "VEX", "Blueprints"],
+    "skillsets": ["tooldev", "pipelinedev", "procgen"],
+    "tags": [
+      "procedural-generation",
+      "landscape",
+      "heightfields",
+      "terrain",
+      "data-driven",
+      "world-building",
+      "pipeline",
+      "r&d"
+    ],
+    "priority": 3,
+    "status": "complete",
+    "media": {
+        "image": [
+            "apocs_landscape_01.jpg",
+            "apocs_landscape_02.gif",
+            "apocs_landscape_03.jpg",
+            "apocs_landscape_04.jpg",
+            "apocs_landscape_06.jpg"
+          ],
+          "youtube": [
+            "https://www.youtube.com/embed/iMSAmSPtDnA"
+          ],
+          "captions": {
+            "apocs_landscape_01.jpg": "Heightfield masks defining rivers, river banks, forests, cities, and land-use regions within the procedural landscape.",            
+            "apocs_landscape_02.gif": "Layered heightfield data showing combined terrain attributes used to drive large-scale landscape generation.",
+            "apocs_landscape_03.jpg": "Spline-driven road and settlement data exported from Unreal Engine and ingested into the Houdini landscape pipeline.",
+            "apocs_landscape_04.jpg": "Houdini network processing landscape inputs into structured heightfield layers with interactive visualization nodes.",
+            "apocs_landscape_06.jpg": "Final landscape data prepared for exported and visualized inside Unreal Engine at world scale.",
+            "https://www.youtube.com/embed/iMSAmSPtDnA": "Landscape pipeline breakdown showing heightfield layering, Unreal-to-Houdini data exchange, and large-scale terrain validation."
+          }
+    },
+    "deepDive": {
+      "problem": "Large-scale procedural worlds require a robust landscape foundation where terrain, infrastructure, and land-use systems share consistent data while remaining editable, inspectable, and scalable.",
+      "approach": [
+        "Built a Houdini-based landscape pipeline using layered heightfields to represent terrain elevation, rivers, forests, roads, cities, and zoning regions.",
+        "Integrated spline-authored roads and city layouts from Unreal Engine into the Houdini pipeline through structured data export and ingestion.",
+        "Processed all incoming data into discrete, reusable heightfield layers to decouple terrain shaping from higher-level urban systems.",
+        "Used interactive visualization inside Houdini to debug and validate data flow before exporting results back to Unreal Engine for large-scale testing."
+      ]
+    }
+  }
+  

@@ -1,0 +1,56 @@
+{
+    "date": "2018-12-01",
+    "name": "VFX Texture Authoring Components",
+    "projectname": "Element Space",
+    "company": "Sixth Vowel",
+    "oneLiner": "Reusable Unity components that enabled artists to author, control, and iterate on VFX textures and sprite-based animation with minimal tech support—supporting both editor-time workflows and runtime variation.",
+    "bulletpoints": [
+      "Built a set of Unity C# components for VFX texture control, including spritesheet setup/preview, randomized selection, and material texture offsets.",
+      "Enabled rapid VFX iteration by exposing artist-friendly inspector workflows for muzzle effects and texture animation directly in-editor.",
+      "Provided reusable components that supported both editor authoring and runtime flexibility across VFX and gameplay-driven scenarios."
+    ],
+    "dcc": [],
+    "engine": ["Unity"],
+    "languages": ["C#"],
+    "skillsets": ["tooldev", "vfx", "unitydev"],
+    "tags": [
+      "vfx-tools",
+      "textures",
+      "spritesheets",
+      "material-animation",
+      "editor-workflows",
+      "runtime-variation",
+      "artist-friendly"
+    ],
+    "priority": 4,
+    "status": "complete",
+    "media": {
+      "image": [
+        "texturetoolcomponents_portfolio_item-1.png",
+        "vfx_muzzlerenderer.gif",
+        "texturetoolcomponents_portfolio_item-4.png",
+        "texturetoolcomponents_portfolio_item-2.png",
+        "vfx_spritesheetutils-1.gif",
+        "texturetoolcomponents_portfolio_item-3.png",
+        "vfx_textureoffset.gif"
+      ],
+      "youtube": [],
+      "captions": {
+        "texturetoolcomponents_portfolio_item-1.png": "Muzzle renderer inspector UI showing authoring controls for parametric muzzle VFX setup.",
+        "vfx_muzzlerenderer.gif": "Animated preview of the muzzle renderer tool generating and updating VFX output in-editor.",
+        "texturetoolcomponents_portfolio_item-4.png": "In-game muzzle effect driven by the authoring components and texture workflows.",
+        "texturetoolcomponents_portfolio_item-2.png": "Tool view showing isolated muzzle variants for quick comparison and iteration.",
+        "vfx_spritesheetutils-1.gif": "Spritesheet utilities animating muzzle textures directly in the Unity editor for fast iteration.",
+        "texturetoolcomponents_portfolio_item-3.png": "Component scripting/editor view supporting the VFX texture authoring toolset.",
+        "vfx_textureoffset.gif": "Texture offset component animating Material texture coordinates in-editor for procedural motion."
+      }
+    },
+    "deepDive": {
+      "problem": "VFX production needed fast, repeatable texture animation and variation workflows, but manual setup and per-effect scripting slowed iteration and increased reliance on technical support.",
+      "approach": [
+        "Implemented reusable Unity components that exposed common VFX texture operations (spritesheets, offsets, randomization) through artist-friendly inspector workflows.",
+        "Designed the tools to support both editor-time authoring and runtime control so effects could be iterated quickly while remaining flexible in-game."
+      ]
+    }
+  }
+  

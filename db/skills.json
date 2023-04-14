@@ -1,0 +1,38 @@
+{
+  "_comment": "Skill metadata for the Skill page. Each key matches a skillset ID used in portfolio items.",
+
+  "vfx": {
+    "title": "VFX & Interactive Systems",
+    "description": "Real-time visual effects, procedural animation, and data-driven Niagara systems integrated with gameplay and external inputs."
+  },
+
+  "tooldev": {
+    "title": "Tool Development",
+    "description": "Custom editor tools, automation systems, and artist-facing workflows that accelerate production and reduce manual work."
+  },
+
+  "pipelinedev": {
+    "title": "Pipeline Development",
+    "description": "End-to-end production pipelines connecting DCCs, game engines, and data systems for scalable content creation."
+  },
+
+  "unrealdev": {
+    "title": "Unreal Engine Development",
+    "description": "Blueprints, Niagara, PCG, and custom editor tools for real-time experiences in Unreal Engine."
+  },
+
+  "unitydev": {
+    "title": "Unity Development",
+    "description": "C# components, custom editors, and VFX systems for Unity-based games and tools."
+  },
+
+  "artinstallation": {
+    "title": "Art Installations",
+    "description": "Interactive real-time installations combining projection mapping, body tracking, and immersive VFX."
+  },
+
+  "procgen": {
+    "title": "Procedural Generation",
+    "description": "Algorithmic content creation utilizing Houdini, Unreal PCG, and grammar-based rules to automate level design and asset assembly."
+  }
+}

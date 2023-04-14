@@ -1,0 +1,21 @@
+{
+    "name": "Enterprise Digital Asset Library (DAM)",
+    "client": "2K",
+    "company": "Globant",
+    "media": "Digital",
+    "platform": "PC",
+    "involvement": "Pipeline & Tool Development",
+    "impact": "Standardized and centralized tens of thousands of legacy assets into a global, searchable, software-agnostic DAM used across multiple 2K teams.",
+    "responsibilities": [
+      "Owned the design and implementation of a scalable asset normalization pipeline spanning multiple DCCs and legacy repositories.",
+      "Developed a suite of internal tools to automate batch processing, metadata extraction, validation, and reporting at scale.",
+      "Defined and enforced metadata and tagging standards to significantly improve asset discoverability and cross-team reuse."
+    ],
+    "context": "As a Senior Technical Artist, I worked on a global 2K initiative focused on salvaging, normalizing, and centralizing digital assets from multiple studios and production pipelines into a unified internal Digital Asset Manager (DAM). The goal was to make assets software-agnostic, searchable, and reusable at scale across teams worldwide.",
+    "challenges": "The asset pool consisted of tens of thousands of files originating from different studios, tools, pipelines, and production eras, often with inconsistent structure and missing metadata. With a small team, early workflows required custom manual handling for each new repository.",
+    "solutions": "I designed and built an extensible ecosystem of tools and batch-driven workflows that replaced manual processing with automated, scalable pipelines. These systems enabled consistent normalization, metadata enrichment, and inventory reporting, while remaining flexible enough to support new repositories and future projects.",
+    "portfolioitems": [
+      "2kdam-batch",
+      "2kdam-inventory"
+    ]
+  }

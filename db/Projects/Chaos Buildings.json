@@ -1,0 +1,24 @@
+{
+  "name": "Chaos Buildings",
+  "client": "Atlas (Internal Research)",
+  "company": "Atlas",
+  "media": "Digital",
+  "platform": "PC",
+  "involvement": "Pipeline/Tool Development",
+  "impact": "Developed a foundation for future city and world building tools in Unreal Engine by exploring designer-friendly, runtime-aware procedural content generation systems that adapt urban layouts via splines, PCG logic, and contextual placement workflows.",
+  "responsibilities": [
+    "Architected and implemented a procedural urban generation system that combined road spline parameters, zoning logic, and custom PCG placement to create coherent building layouts.",
+    "Built editable packed level actors for modular buildings with tagged foliage filtering and runtime logic for foliage population.",
+    "Created custom blueprint systems with spline mesh components to define roads that project into terrain and inform PCG placement rules.",
+    "Designed PCG actors capable of interpreting spline metadata and building type information to place sidewalks, props, cars, and structures with orientation and parameter control.",
+    "Integrated advanced procedural systems with Unreal’s landscape, foliage, and Chaos frameworks, and provided editor mode tooling for real-time environment construction."
+  ],
+  "context": "Chaos Buildings was an internal R&D project to prototype next-generation city and world building workflows in Unreal Engine using platform-generated assets and custom procedural systems. The goal was to explore how interactive spline definitions, zoning logic, and tag-based PCG can create usable, modular urban scenes while providing designers intuitive control.",
+  "challenges": "Developing a system that could interpret designer intent through splines, tags, and zoning, while maintaining performance and real-time responsiveness in Unreal was complex. The system needed to respect road widths, building types, and orientation logic, and provide contextual placement for props, cars, and sidewalks without manual iteration.",
+  "solutions": "I designed custom editor mode tools and blueprint systems that allowed designers to place and edit roads, trigger PCG rules, and receive instant visual feedback. The PCG actors read spline metadata and tag filters to decide on building placement, and a flexible zoning system allowed grouping by usage types. Optional Chaos destruction was used as a demonstrative interactive layer, and multiple media captures (individual turntables, editor mode videos, and gameplay footage) documented the system’s behavior.",
+  "portfolioitems": [
+    "chaosbuilding-spline",
+    "chaosbuilding-pcg",
+    "chaosbuilding-runtime"
+  ]
+}

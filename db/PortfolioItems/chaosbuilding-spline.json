@@ -1,0 +1,52 @@
+{
+  "date": "2024-01-01",
+  "name": "Spline-Driven Urban Authoring System",
+  "projectname": "Chaos Buildings",
+  "company": "Atlas",
+  "oneLiner": "Designer-authored road spline system that encodes spatial intent—such as width, orientation, and intersections—and drives coherent urban layout behavior in real time.",
+  "bulletpoints": [
+    "Built a custom road Blueprint using spline components as the primary authoring interface for urban layout.",
+    "Exposed spline-level parameters (road width, orientation, tags) to encode designer intent rather than static geometry.",
+    "Implemented spline mesh and virtual texture projection to integrate roads with terrain and suppress landscape grass along road paths.",
+    "Designed spline intersection handling to resolve crossings and corners automatically without manual cleanup.",
+    "Encoded directionality at the spline level, enabling downstream systems to reason about orientation-sensitive placement."
+  ],
+  "dcc": [],
+  "engine": ["Unreal"],
+  "languages": ["Blueprints"],
+  "skillsets": ["tooldev", "pipelinedev", "unrealdev","procgen"],
+  "tags": [
+    "spline-authoring",
+    "urban-tools",
+    "designer-workflows",
+    "procedural-layout",
+    "pcg-input",
+    "terrain-integration"
+  ],
+  "priority": 1,
+  "status": "complete",
+  "media": {
+    "image": [
+      "chaosbuildings-spline_01.png",
+      "chaosbuildings-spline_02.png",
+      "chaosbuildings-spline_03.png"
+    ],
+    "youtube": [
+      "https://www.youtube.com/embed/erOLKPf2rXM"
+    ],
+    "captions": {
+      "chaosbuildings-spline_01.png": "Road spline Blueprint selected in the Unreal Editor, exposing authoring parameters used to encode urban layout intent.",
+      "chaosbuildings-spline_02.png": "Top-down view of authored road splines defining the primary urban layout before contextual PCG interpretation.",
+      "chaosbuildings-spline_03.png": "Intersection case showing spline connectivity and layout constraints used as semantic input for downstream systems.",
+      "https://www.youtube.com/embed/erOLKPf2rXM": "Editor-mode walkthrough showing the spline-authored road network forming the structural backbone of the procedural city layout."
+    }
+  },
+  "deepDive": {
+    "problem": "Urban layout tools often treat roads as static geometry, making it difficult for designers to express intent such as spacing, orientation, and hierarchy in a way that downstream systems can reliably interpret.",
+    "approach": [
+      "Designed road splines as the authoritative source of layout intent, exposing semantic parameters rather than relying on baked geometry.",
+      "Integrated spline meshes and virtual texture projection so roads interact correctly with terrain, foliage, and landscape systems.",
+      "Ensured spline data could be consumed by other systems at runtime, enabling coherent reactions to designer edits without manual iteration."
+    ]
+  }
+}

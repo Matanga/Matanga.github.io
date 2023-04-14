@@ -1,0 +1,24 @@
+{
+    "name": "Atlas DCC Integration Framework",
+    "client": "Atlas",
+    "company": "Atlas (Design Partner Platform)",
+    "media": "Digital",
+    "platform": "PC",
+    "involvement": "Pipeline/Tool Development",
+    "impact": "Designed and implemented a cross-DCC integration framework that empowers artists to run customizable AI/ML workflows directly inside Unity, Unreal, and Blender. These plugins provide first-class tooling, dynamic UI, and native asset import/export support that bridges the Atlas Platform with production creative workflows.",
+    "responsibilities": [
+      "Architected and developed the entire cross-DCC plugin ecosystem across Unity, Unreal, and Blender.",
+      "Built dynamic Editor UI and native tooling to expose Atlas workflows with validated input parameters and responsive feedback.",
+      "Implemented REST API integration and robust job execution pipelines within each DCC, including error handling, telemetry, and result persistence.",
+      "Defined consistent input/output mappings for workflows that automatically convert Atlas outputs into native assets (textures, meshes, etc.) inside each host application.",
+      "Standardized workflow identity and UX across multiple engines to allow artists to reuse familiar tooling paradigms across platforms."
+    ],
+    "context": "The Atlas DCC Integration Framework consists of native plugins for Unity, Unreal, and Blender that let creators invoke Atlas Platform workflows directly inside their authoring environments. Each plugin generates dynamic UIs tailored to workflow schemas, handles network communication, and imports generated assets back into the host project.",
+    "challenges": "Each DCC’s extension system has distinct APIs, UI toolchains, and asset pipelines, requiring careful design to ensure feature parity, stability, and native-feeling workflows. Additionally, integrating networked AI/ML workflows and robustly handling errors and asset persistence across editor restarts posed technical complexity.",
+    "solutions": "I designed a unified integration strategy and implemented native plugins for all three major DCCs. These plugins feature dynamic UI that adapts to workflow schemas, native asset importers for output data, history and telemetry tracking, and resilient error handling. Visual and interactive consistency across platforms establishes a clear workflow identity that promotes user familiarity and adoption.",
+    "portfolioitems": [
+      "atlasplugin-unity",
+      "atlasplugin-unreal",
+      "atlasplugin-blender"
+    ]
+  }

@@ -1,0 +1,46 @@
+{
+	"date": "2022-11-01",
+	"name": "Dynamic Room Blueprint Framework",
+	"projectname": "Unreal Room",
+	"company": "Independent",
+	"oneLiner": "Spatially adaptive Unreal Engine framework that reconfigures room layout to match real-world wall sizes while maintaining seamless visual transitions, with real-time MediaPipe tracking streamed into UE via WebSockets.",
+	"bulletpoints": [
+	  "Built a dynamic room Blueprint system that adapts to different physical wall dimensions without breaking layout or transitions.",
+	  "Implemented animated transitions between multiple room configurations and VFX states to keep the experience cohesive across setups.",
+	  "Integrated a MediaPipe tracking stream via a Python WebSocket pipeline to drive real-time interaction inputs inside Unreal Engine."
+	],
+	"dcc": [],
+	"engine": ["Unreal"],
+	"languages": ["Blueprints", "Python"],
+	"skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
+	"tags": [
+	  "interactive-installation",
+	  "spatial-adaptation",
+	  "blueprints",
+	  "mediapipe",
+	  "websockets",
+	  "real-time-input",
+	  "framework"
+	],
+	"priority": 4,
+	"status": "complete",
+	"media": {
+	  "image": [],
+	  "youtube": [
+		"https://www.youtube.com/embed/SJ-r7h9L-m4",
+		"https://www.youtube.com/embed/7p82zrTxtnA"
+	  ],
+	  "captions": {
+		"https://www.youtube.com/embed/SJ-r7h9L-m4": "Dynamic configuration of the room framework demonstrating spatial adaptation across different layouts.",
+		"https://www.youtube.com/embed/7p82zrTxtnA": "Real-time MediaPipe tracking streamed into Unreal via WebSockets, driving live interaction input."
+	  }
+	},
+	"deepDive": {
+	  "problem": "Interactive installations often break when deployed in new physical spaces because wall dimensions and projection layouts change, making spatial transitions and effect staging brittle.",
+	  "approach": [
+		"Designed a Blueprint-driven room configurator that decoupled spatial layout from effect logic, enabling consistent behavior across different wall sizes.",
+		"Streamed stable body/gesture tracking parameters from a Python + MediaPipe WebSocket service into Unreal for real-time interaction control."
+	  ]
+	}
+  }
+  

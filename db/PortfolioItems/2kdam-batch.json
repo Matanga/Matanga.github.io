@@ -1,0 +1,38 @@
+{
+    "date": "2020-12-01",
+    "name": "Batch Sequencer",
+    "projectname": "Enterprise Digital Asset Library (DAM)",
+    "company": "Globant",
+    "oneLiner": "Scalable batch automation system that enabled the normalization and preparation of tens of thousands of legacy assets across multiple DCCs for ingestion into a global DAM.",
+    "bulletpoints": [
+      "Designed and built a node-based batch system to standardize asset processing across heterogeneous DCC pipelines.",
+      "Enabled large-scale automation of legacy asset normalization, replacing brittle manual workflows.",
+      "Introduced reusable batch manifests to ensure consistency, repeatability, and cross-team adoption."
+    ],
+    "dcc": ["Maya", "3ds Max", "Houdini"],
+    "engine": [],
+    "languages": ["Python", "Maxscript", "MEL"],
+    "skillsets": ["tooldev", "pipelinedev"],
+    "tags": ["batch-processing", "automation", "normalization", "dam", "scalable-tools"],
+    "priority": 3,
+    "status": "complete",
+    "media": {
+      "image": [
+        "BatchSequencer_PortfolioItem_1.jpg",
+        "BatchSequencer_PortfolioItem_2.png"
+      ],
+      "youtube": [],
+      "captions": {
+        "BatchSequencer_PortfolioItem_1.jpg": "Batch Sequencer tool UI showing node-based batch workflows used for large-scale asset processing.",
+        "BatchSequencer_PortfolioItem_2.png": "Example batch configuration demonstrating reusable manifests for automated asset normalization."
+      }
+    },
+    "deepDive": {
+      "problem": "Thousands of legacy assets from multiple studios and production eras needed to be processed, normalized, and prepared consistently for a centralized Digital Asset Manager, without scaling manual effort.",
+      "approach": [
+        "Created a node-based batch architecture where each node encapsulated parameters, UI, and execution logic for a specific processing step.",
+        "Structured batch workflows as reusable manifests to enable scalable automation, consistency, and long-term maintainability."
+      ]
+    }
+  }
+  

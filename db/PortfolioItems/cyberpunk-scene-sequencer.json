@@ -1,0 +1,45 @@
+{
+  "date": "2025-01-15",
+  "name": "Cyberpunk Food Court Cinematic Sequencer",
+  "projectname": "Unreal Cyberpunk Food Court Scene",
+  "company": "Atlas",
+  "oneLiner": "Designed and produced a polished Unreal Engine 5 sequencer cinematic to present a cyberpunk environment through controlled camera design, timing, and real-time lighting continuity.",
+  "bulletpoints": [
+    "Authored a sequencer-driven cinematic to present the environment with deliberate pacing and composition.",
+    "Designed camera paths and framing using Unreal Sequencer to guide the viewer through key spatial beats.",
+    "Coordinated lighting and environmental motion within the sequencer timeline to maintain visual continuity."
+  ],
+  "dcc": [],
+  "engine": ["Unreal"],
+  "languages": ["Blueprints"],
+  "skillsets": ["unrealdev"],
+  "tags": ["sequencer", "cinematic", "realtime", "presentation"],
+  "priority": 1,
+  "status": "complete",
+  "media": {
+    "image": [
+      "cyberpunk-scene-sequencer__01__establishing-shot.png",
+      "cyberpunk-scene-sequencer__02__camera-path-overview.png",
+      "cyberpunk-scene-sequencer__03__mid-shot-composition.png",
+      "cyberpunk-scene-sequencer__04__sequencer-lighting-pass.png"
+    ],
+    "youtube": [
+      "https://www.youtube.com/embed/SEQUENCER_CINEMATIC_ID"
+    ],
+    "captions": {
+      "cyberpunk-scene-sequencer__01__establishing-shot.png": "Opening establishing shot used to introduce scale, spatial layout, and overall mood of the environment.",
+      "cyberpunk-scene-sequencer__02__camera-path-overview.png": "Editor overview illustrating the planned camera path and shot progression authored in Unreal Sequencer.",
+      "cyberpunk-scene-sequencer__03__mid-shot-composition.png": "Sequencer editor view showing camera tracks, timing, and shot arrangement during cinematic authoring.",
+      "cyberpunk-scene-sequencer__04__sequencer-lighting-pass.png": "Sequencer timeline view demonstrating coordination of lighting and environment elements alongside camera animation.",
+      "https://www.youtube.com/embed/SEQUENCER_CINEMATIC_ID": "Sequencer-exported cinematic showcasing camera design, lighting continuity, and real-time presentation of the environment."
+    }
+  },
+  "deepDive": {
+    "problem": "Presenting a real-time environment in a controlled, cinematic format that clearly communicates mood, scale, and visual quality without relying on interactive exploration.",
+    "approach": [
+      "Planned a concise cinematic structure focused on spatial reveals and visual rhythm rather than exhaustive coverage.",
+      "Used Unreal Sequencer to author camera movement, shot timing, and framing with precise control.",
+      "Managed lighting states and ambient motion within the sequencer timeline to preserve continuity and avoid visual distraction."
+    ]
+  }
+}

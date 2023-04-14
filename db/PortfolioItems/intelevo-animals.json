@@ -1,0 +1,49 @@
+{
+	"date": "2022-10-01",
+	"name": "Interactive Animal AI & Animation Systems",
+	"projectname": "Evolution Experience",
+	"company": "Genosha",
+	"oneLiner": "Blueprint-driven animal AI and animation systems that enabled reactive, audience-facing behavior in a large-scale Unreal Engine art installation running continuously in a public space.",
+	"bulletpoints": [
+	  "Designed interactive animal behavior using Unreal AI Controllers, Behavior Trees, and animation state machines.",
+	  "Implemented audience-driven animation responses, allowing animals to react naturally to user presence and interaction.",
+	  "Balanced believable motion, responsiveness, and stability to support long-running, multi-user installation sessions."
+	],
+	"dcc": ["Blender", "Houdini"],
+	"engine": ["Unreal"],
+	"languages": ["Blueprints"],
+	"skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
+	"tags": [
+	  "ai-behavior",
+	  "animation-systems",
+	  "interactive-installation",
+	  "audience-interaction",
+	  "behavior-trees",
+	  "blueprints",
+	  "nondiegetic-ai"
+	],
+	"priority": 3,
+	"status": "complete",
+	"media": {
+	  "image": [
+		"intelevoshowcase_portfolio_item-7.png",
+		"intelevoanimals_portfolio_item-1.png",
+		"intelevoanimals_portfolio_item-2.png"
+	  ],
+	  "youtube": ["https://www.youtube.com/embed/3xw63__iTmk"],
+	  "captions": {
+		"intelevoshowcase_portfolio_item-7.png": "Close-up of a roaring tiger character driven by the interactive AI and animation system.",
+		"intelevoanimals_portfolio_item-1.png": "Visitors interacting with the installation, taking selfies with reactive animal characters.",
+		"intelevoanimals_portfolio_item-2.png": "Audience observing animals responding to presence and interaction within the surround-room setup.",
+		"https://www.youtube.com/embed/3xw63__iTmk": "Editor-captured footage showcasing animal movement, animation blending, and AI-driven behavior."
+	  }
+	},
+	"deepDive": {
+	  "problem": "Animals needed to appear believable, reactive, and stable while responding to unpredictable audience behavior in a live, continuously running installation.",
+	  "approach": [
+		"Implemented rule-based AI using Unreal AI Controllers and Behavior Trees to manage state, reactivity, and animation transitions.",
+		"Combined animation blueprints and data-driven parameters to allow rapid tuning of behavior and motion without code changes."
+	  ]
+	}
+  }
+  

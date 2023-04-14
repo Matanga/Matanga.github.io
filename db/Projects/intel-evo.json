@@ -1,0 +1,24 @@
+{
+	"name": "Evolution Experience",
+	"client": "Intel",
+	"company": "Genosha",
+	"media": "Art Installation",
+	"platform": "PC",
+	"involvement": "Interactive Systems & Unreal Development",
+	"impact": "Delivered a large-scale, real-time interactive installation for Intel by designing and implementing the complete Unreal Engine system powering multi-user interaction, AI-driven characters, and an 8-projector nDisplay setup running continuously in a public space.",
+	"responsibilities": [
+	  "Owned and implemented the entire Unreal Engine side of the installation as the sole Unreal developer.",
+	  "Designed and built interactive environments, animation systems, AI controllers, and tooling to support real-time audience interaction.",
+	  "Integrated real-time communication between tablets and Unreal using WebSocket-based networking.",
+	  "Configured and deployed an 8-projector nDisplay setup for a surround-room experience, collaborating with onsite operators to ensure stability and correct calibration.",
+	  "Developed editor tools and data-driven workflows to enable rapid iteration on level design, ambient animation, and interaction behavior."
+	],
+	"context": "Evolution Experience is a large-scale interactive art installation deployed in Spain to promote Intel technology. The experience featured a surround room driven by eight projectors, where audiences could interact with different animal species in real time using tablets. The installation was designed to run continuously for extended periods in a public setting.",
+	"challenges": "The project required building a robust real-time system capable of handling concurrent audience interactions, synchronizing visuals across multiple projectors, and maintaining stability during long-running sessions. Additional challenges included integrating external input via WebSockets, creating believable reactive animal behavior, and supporting rapid creative iteration under installation constraints.",
+	"solutions": "I designed and implemented a complete Unreal-based solution that combined WebSocket-driven interaction, animation blueprints, AI controllers, and nDisplay-based rendering. By building custom tools and data-driven workflows, I enabled fast iteration while maintaining performance and reliability. The final system delivered a stable, immersive experience that engaged audiences continuously and supported the operational demands of a live installation.",
+	"portfolioitems": [
+	  "intelevo-environment",
+	  "intelevo-animals",
+	  "intelevo-showcase"
+	]
+  }

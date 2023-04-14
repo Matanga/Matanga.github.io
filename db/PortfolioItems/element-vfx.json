@@ -1,0 +1,50 @@
+{
+    "date": "2018-12-01",
+    "name": "VFX Showcase",
+    "projectname": "Element Space",
+    "company": "Sixth Vowel",
+    "oneLiner": "Realtime VFX showcase scene demonstrating shipped-quality environment effects and production-ready destruction workflows, supported by internal tech art guidelines for scalable material breakup.",
+    "bulletpoints": [
+      "Authored and integrated environment VFX (fire, steam, sparks, haze) in a realtime Unity showcase scene aligned with production constraints.",
+      "Developed and validated destructible prop workflows suitable for scalable use across varied gameplay scenarios.",
+      "Produced internal tech art documentation defining best practices for destruction scalability across material types (e.g., wood and glass)."
+    ],
+    "dcc": [],
+    "engine": ["Unity"],
+    "languages": ["C#"],
+    "skillsets": ["tooldev", "vfx"],
+    "tags": [
+      "realtime-vfx",
+      "environment-vfx",
+      "destruction",
+      "tech-art-guidelines",
+      "unity",
+      "production-workflows"
+    ],
+    "priority": 1,
+    "status": "complete",
+    "media": {
+      "image": [
+        "texturetoolcomponents_portfolio_item-4.png",
+        "vfxshowcase_portfolio_item-2.png",
+        "vfxshowcase_portfolio_item-3.png",
+        "vfxshowcase_portfolio_item-4.png"
+      ],
+      "youtube": ["https://www.youtube.com/embed/GRmn-bm99Kc"],
+      "captions": {
+        "texturetoolcomponents_portfolio_item-4.png": "In-game realtime VFX screenshot from the Element Space showcase scene.",
+        "vfxshowcase_portfolio_item-2.png": "Internal destruction documentation: wood material breakup and fracturing type guidelines.",
+        "vfxshowcase_portfolio_item-3.png": "Internal destruction documentation: glass material breakup guidelines and recommended fracture types.",
+        "vfxshowcase_portfolio_item-4.png": "Internal destruction documentation index outlining scalable destruction standards by material.",
+        "https://www.youtube.com/embed/GRmn-bm99Kc": "Realtime capture of the VFX showcase scene featuring environment effects and destruction workflows."
+      }
+    },
+    "deepDive": {
+      "problem": "Maintaining visual quality for realtime VFX while keeping destruction workflows scalable and consistent across a large production required clear standards and production-ready implementations.",
+      "approach": [
+        "Built and validated a realtime showcase scene to prove out environment VFX quality under engine and performance constraints.",
+        "Documented scalable destruction best practices per material category to standardize authoring and reduce production risk."
+      ]
+    }
+  }
+  

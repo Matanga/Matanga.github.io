@@ -1,0 +1,35 @@
+{
+    "date": "2020-12-01",
+    "name": "DAM Inventory Dashboard",
+    "projectname": "Enterprise Digital Asset Library (DAM)",
+    "company": "Globant",
+    "oneLiner": "Automated inventory and progress reporting that replaced manual tracking and gave production a reliable, always-up-to-date view of tens of thousands of legacy assets moving through the DAM pipeline.",
+    "bulletpoints": [
+      "Built a Google Sheets–based inventory dashboard that centralized project progress, coverage, and status for production decision-making.",
+      "Automated periodic scans of team repositories to gather, format, and publish inventory data via Python + Google APIs.",
+      "Reduced management overhead by making progress tracking hands-off and consistently visible across the initiative."
+    ],
+    "dcc": ["Maya", "3ds Max", "Houdini"],
+    "engine": [],
+    "languages": ["Python", "Maxscript", "MEL"],
+    "skillsets": ["tooldev", "pipelinedev"],
+    "tags": ["inventory", "dashboard", "reporting", "google-sheets", "google-api", "automation", "production-visibility", "dam"],
+    "priority": 3,
+    "status": "complete",
+    "media": {
+      "image": ["2kdam-inventory-1.png", "2kdam-inventory-2.png"],
+      "youtube": [],
+      "captions": {
+        "2kdam-inventory-1.png": "DAM inventory spreadsheet dashboard providing production visibility into asset progress and pipeline status.",
+        "2kdam-inventory-2.png": "Example inventory reporting view used to track large-scale asset normalization progress without manual updates."
+      }
+    },
+    "deepDive": {
+      "problem": "Tracking tens of thousands of assets manually did not scale, creating visibility gaps and unnecessary overhead for production planning and resourcing.",
+      "approach": [
+        "Automated periodic repository scanning and data normalization, then published results to a central Google Sheets dashboard via Google APIs.",
+        "Structured the spreadsheet to support production workflows (status, coverage, and progress views) so decisions could be made from a single source of truth."
+      ]
+    }
+  }
+  

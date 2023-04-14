@@ -1,0 +1,257 @@
+{
+
+    "apocs":
+    {
+        "name": "Procedural World Pipeline R&D Sandbox",
+        "client": "Undisclosed",
+        "company": "Undisclosed",
+        "media": "Digital",
+        "platform": "PC",
+        "involvement": "Pipeline & Tool Development",
+        "impact": "Designed and explored a large-scale procedural world pipeline to validate workflows for terrain, settlements, and infrastructure generation with a strong focus on iteration speed and performance.",
+        "responsibilities": [
+          "Designed and implemented an end-to-end procedural world generation pipeline as a solo R&D initiative.",
+          "Built Houdini-based systems for generating landscapes, towns, and infrastructure using heightfields, SOP networks, PDG, VEX, and Python.",
+          "Developed Unreal Engine tooling to ingest, visualize, and iterate on large-scale procedural data efficiently."
+        ],
+        "context": "This project was an internal-style R&D sandbox focused on exploring and validating procedural world generation workflows using Houdini and Unreal Engine 4. The goal was to prototype scalable pipelines capable of supporting large environments while maintaining fast iteration cycles and high runtime performance.",
+        "challenges": "The primary challenge was managing the complexity and scale of a large procedural environment while working solo. The project required balancing world size, visual fidelity, performance constraints, and usability, all while ensuring that workflows remained flexible and iteration-friendly.",
+        "solutions": "I designed a modular procedural pipeline in Houdini to generate foundational world data, then created custom Unreal Engine workflows to import and refine that data using World Composition, shaders, grass layers, RVTs, blueprints, custom editor widgets, and Niagara. This approach allowed rapid iteration on large environments while validating the technical feasibility of the pipeline.",
+        "portfolioitems": [
+          "apocs-landscape",
+          "apocs-city",
+          "apocs-building"
+        ]
+      },
+
+    "2kdam": {
+        "name": "Enterprise Digital Asset Library (DAM)",
+        "client": "2K",
+        "company": "Globant",
+        "media": "Digital",
+        "platform": "PC",
+        "involvement": "Pipeline & Tool Development",
+        "impact": "Standardized and centralized tens of thousands of legacy assets into a global, searchable, software-agnostic DAM used across multiple 2K teams.",
+        "responsibilities": [
+          "Owned the design and implementation of a scalable asset normalization pipeline spanning multiple DCCs and legacy repositories.",
+          "Developed a suite of internal tools to automate batch processing, metadata extraction, validation, and reporting at scale.",
+          "Defined and enforced metadata and tagging standards to significantly improve asset discoverability and cross-team reuse."
+        ],
+        "context": "As a Senior Technical Artist, I worked on a global 2K initiative focused on salvaging, normalizing, and centralizing digital assets from multiple studios and production pipelines into a unified internal Digital Asset Manager (DAM). The goal was to make assets software-agnostic, searchable, and reusable at scale across teams worldwide.",
+        "challenges": "The asset pool consisted of tens of thousands of files originating from different studios, tools, pipelines, and production eras, often with inconsistent structure and missing metadata. With a small team, early workflows required custom manual handling for each new repository.",
+        "solutions": "I designed and built an extensible ecosystem of tools and batch-driven workflows that replaced manual processing with automated, scalable pipelines. These systems enabled consistent normalization, metadata enrichment, and inventory reporting, while remaining flexible enough to support new repositories and future projects.",
+        "portfolioitems": [
+          "2kdam-batch",
+          "2kdam-inventory"
+        ]
+      },
+
+    "dance-monsters": {
+        "name": "Dance Monsters",
+        "client": "Netflix",
+        "company": "Realtime UK",
+        "media": "Broadcast",
+        "platform": "Broadcast",
+        "involvement": "Pipeline Development",
+        "impact": "Designed and owned critical pipeline subsystems that enabled the ingestion, normalization, and processing of hundreds of mocap-driven shots per episode for a large-scale Netflix broadcast production.",
+        "responsibilities": [
+          "Designed and owned pipeline subsystems for ingesting, normalizing, and processing multi-vendor mocap, camera, and lighting data.",
+          "Built automation tools in Python, Maya, and MEL to align body mocap, facial capture, camera, and lighting data in time and world space.",
+          "Implemented retargeting workflows to adapt incoming motion data to proprietary character rigs at production scale.",
+          "Collaborated closely with the wider pipeline team to ensure tools met real production needs and supported rapid iteration."
+        ],
+        "context": "Dance Monsters is a Netflix broadcast series featuring digitally created characters driven by full-performance motion capture. As a Pipeline TD / Pipeline Engineer, I worked on the backend systems responsible for processing, validating, and preparing performance data for rendering and VFX across hundreds of shots per episode.",
+        "challenges": "Production data was delivered by multiple vendors in different formats, with body mocap, facial capture, camera, and lighting data arriving asynchronously and often misaligned. All data needed to be normalized, synchronized, and retargeted reliably to support high-throughput episodic delivery.",
+        "solutions": "I designed and implemented robust pipeline subsystems that automatically sorted, validated, and merged incoming data into a consistent internal format. These tools formed the backbone of an agile processing pipeline, enabling fast iteration and reliable shot throughput at broadcast scale. Additional Houdini-based tools were developed to integrate processed data into the rendering and VFX pipeline.",
+        "portfolioitems": [
+          "dm-showcase"
+        ]
+      },
+    "element-space": {
+        "name": "Element Space",
+        "client": "2K",
+        "company": "Globant",
+        "media": "Digital",
+        "platform": "PC",
+        "involvement": "Technical Art & VFX Pipeline Development",
+        "impact": "Enabled scalable VFX production and faster iteration on a shipped Unity title by combining artist-facing tools with optimized, production-ready VFX systems.",
+        "responsibilities": [
+          "Worked as a hybrid Technical Artist and VFX Artist on a shipped top-down, turn-based tactical shooter.",
+          "Designed and developed artist-facing tools to support VFX creation, scene management, and content generation within Unity.",
+          "Created and maintained VFX systems and representative assets while ensuring performance and engine compatibility.",
+          "Enabled non-technical artists to author and iterate on VFX content independently through simplified workflows and tooling."
+        ],
+        "context": "Element Space is a commercially released, top-down, turn-based tactical shooter available on Steam. This project marked my first official Technical Artist role, where I combined hands-on VFX production with tool and workflow development to support a large, multidisciplinary team.",
+        "challenges": "Key challenges included balancing visual quality with performance constraints, ensuring VFX compatibility across different target systems, and supporting a large team with varying technical skill levels. Iteration speed and usability were critical to maintaining production velocity.",
+        "solutions": "I developed a combination of Unity-based tools and VFX workflows that reduced iteration time and lowered the technical barrier for content creation. By collaborating closely with designers and artists, I ensured the tools integrated smoothly into the production pipeline, allowing the team to produce consistent, optimized VFX at scale.",
+        "portfolioitems": [
+          "element-vfxcomps",
+          "element-textools",
+          "element-lightlister",
+          "element-curvetools",
+          "element-vfx"
+        ]
+      },
+    "intel-evo": {
+        "name": "Evolution Experience",
+        "client": "Intel",
+        "company": "Genosha",
+        "media": "Art Installation",
+        "platform": "PC",
+        "involvement": "Interactive Systems & Unreal Development",
+        "impact": "Delivered a large-scale, real-time interactive installation for Intel by designing and implementing the complete Unreal Engine system powering multi-user interaction, AI-driven characters, and an 8-projector nDisplay setup running continuously in a public space.",
+        "responsibilities": [
+          "Owned and implemented the entire Unreal Engine side of the installation as the sole Unreal developer.",
+          "Designed and built interactive environments, animation systems, AI controllers, and tooling to support real-time audience interaction.",
+          "Integrated real-time communication between tablets and Unreal using WebSocket-based networking.",
+          "Configured and deployed an 8-projector nDisplay setup for a surround-room experience, collaborating with onsite operators to ensure stability and correct calibration.",
+          "Developed editor tools and data-driven workflows to enable rapid iteration on level design, ambient animation, and interaction behavior."
+        ],
+        "context": "Evolution Experience is a large-scale interactive art installation deployed in Spain to promote Intel technology. The experience featured a surround room driven by eight projectors, where audiences could interact with different animal species in real time using tablets. The installation was designed to run continuously for extended periods in a public setting.",
+        "challenges": "The project required building a robust real-time system capable of handling concurrent audience interactions, synchronizing visuals across multiple projectors, and maintaining stability during long-running sessions. Additional challenges included integrating external input via WebSockets, creating believable reactive animal behavior, and supporting rapid creative iteration under installation constraints.",
+        "solutions": "I designed and implemented a complete Unreal-based solution that combined WebSocket-driven interaction, animation blueprints, AI controllers, and nDisplay-based rendering. By building custom tools and data-driven workflows, I enabled fast iteration while maintaining performance and reliability. The final system delivered a stable, immersive experience that engaged audiences continuously and supported the operational demands of a live installation.",
+        "portfolioitems": [
+          "intelevo-environment",
+          "intelevo-animals",
+          "intelevo-showcase"
+        ]
+      },
+    "unreal-room": {
+        "name": "Unreal Room",
+        "client": "Personal R&D",
+        "company": "Independent",
+        "media": "Art Installation",
+        "platform": "PC",
+        "involvement": "Interactive Systems & VFX Development",
+        "impact": "Explored and prototyped a reusable, gesture-driven interactive installation framework combining real-time computer vision, spatially adaptive environments, and Niagara-based VFX systems.",
+        "responsibilities": [
+          "Designed and implemented the project end-to-end as a solo R&D initiative.",
+          "Built a dynamic room system in Unreal Engine 5 capable of adapting to different real-world wall sizes without breaking visual transitions.",
+          "Integrated MediaPipe-based hand and body tracking to drive real-time interaction and VFX behavior.",
+          "Designed a VFX pipeline using Niagara that translated gesture input into expressive, controllable visual effects.",
+          "Developed reusable configuration and tooling systems intended to support deployment in different physical spaces."
+        ],
+        "context": "Unreal Room is a personal R&D project focused on interactive installation design using Unreal Engine 5 and real-time computer vision. The goal was to explore how body-driven interaction, adaptive spatial layouts, and high-fidelity VFX could be combined into a flexible framework for immersive experiences.",
+        "challenges": "Key challenges included designing a spatial system that could adapt to different physical dimensions while maintaining coherent transitions, translating noisy computer-vision input into reliable interaction signals, and integrating gesture-driven logic with complex Niagara-based VFX systems.",
+        "solutions": "I developed a dynamic room configurator that decoupled spatial layout from effect logic, allowing the same experience to scale across different wall sizes. Gesture data from MediaPipe was processed and mapped into stable interaction parameters, which were then consumed by Niagara systems and gameplay logic to produce responsive, visually rich feedback during extended interactive sessions.",
+        "portfolioitems": [
+          "unrealroom-vfx",
+          "unrealroom-bps"
+        ]
+      },
+      "AtlasFacadeBuilder":{
+        "name": "Procedural Grammar Editor",
+        "client": "Square Enix (NDA)",
+        "company": "Atlas (Design Partner)",
+        "media": "Digital",
+        "platform": "PC",
+        "involvement": "Pipeline/Tool Development",
+        "impact": "Designed and developed a standalone interactive grammar editor that transformed procedural building authoring from manual text editing into an intuitive visual workflow, producing data assets that integrated directly into Unreal procedural pipelines.",
+        "responsibilities": [
+          "Solely architected and implemented the entire standalone Qt application from scratch using Python and custom 3D components.",
+          "Built an interactive grammar authoring environment that visualized modular building rules and let designers construct, modify, and preview structures in real time.",
+          "Developed a custom 3D preview system to reflect grammar changes immediately, enabling designers to rapidly iterate on procedural building designs.",
+          "Engineered export functionality that converted grammar definitions into spreadsheet data tables consumable by Unreal Engine’s data table system.",
+          "Managed all application logic, UI/UX, and integration flow to ensure a cohesive and usable experience for environment design teams."
+        ],
+        "context": "This tool was created as a prototype for a Square Enix design partner to streamline procedural building workflows. It provided a visual grammar editing interface that replaced cumbersome manual text editing and connected procedural rules to the downstream Unreal pipeline via generated data tables.",
+        "challenges": "Manually authoring procedural grammars was error-prone and unintuitive for environment designers, and a visual editing paradigm was needed. Additionally, visually previewing grammar results in real time required a custom interactive 3D system that could reflect grammar changes as designers updated rules.",
+        "solutions": "I developed a Qt-based editor that presented grammar components and modular building icons, allowing designers to interactively build and customize structures. Alongside this, I implemented a real-time 3D preview system and an export path that produced spreadsheet data tables for direct consumption by the Unreal procedural pipeline. While the project was not fully deployed due to external shifts in organizational priorities, it demonstrated an intuitive and practical workflow prototype.",
+        "portfolioitems": [
+          "squareenix-grammar-editor"
+        ]
+      },
+      "FroggerGame": {
+        "name": "Frogger Game Validation",
+        "client": "Atlas",
+        "company": "Atlas (Design Partner Platform)",
+        "media": "Digital",
+        "platform": "PC",
+        "involvement": "Gameplay & Tool Validation",
+        "impact": "Built a fully playable Unreal Engine 5 executable that validated the Atlas Platform’s end-to-end asset generation capabilities, procedural audio integration, and online connectivity through a working high-score REST API and leaderboard system.",
+        "responsibilities": [
+          "Designed the game architecture and implemented gameplay systems, including state management, UI flow, and core mechanics inspired by Frogger.",
+          "Integrated Atlas-generated procedural commentary using LLM-driven text generation and platform audio workflows, dynamically mixed in real time.",
+          "Created a multi-screen UI experience including menus, HUD, leaderboard, and diegetic elements to support polished game flow.",
+          "Implemented REST API connectivity for posting and fetching high scores, creating an online leaderboard supporting persistent user engagement.",
+          "Built and packaged the project as a polished standalone executable to demonstrate production-level deployment capabilities."
+        ],
+        "context": "This project was created as a polished demonstration of the Atlas Platform’s ability to produce fully integrated 3D games with dynamic asset and audio generation. Built in Unreal Engine 5 as a validation of concept, the project showcases a complete executable that includes gameplay logic, procedural audio, network connectivity, and UI systems.",
+        "challenges": "Combining AI-generated assets and audio with real-time gameplay required careful orchestration between the Atlas Platform and Unreal Engine 5. Ensuring responsive gameplay, stable audio mixing, and reliable network integration demanded robust state management and integration layers.",
+        "solutions": "I implemented a cohesive Unreal project that tied together core gameplay mechanics, UI states, procedural audio, and REST API integration. The executable demonstrated both the Atlas Platform’s practical capabilities and my ability to deliver a complete, polished interactive experience from concept to deployment.",
+        "portfolioitems": [
+          "frogger-game-play",
+          "frogger-game-audio",
+          "frogger-game-highscore"
+        ]
+      },
+      "cyberpunk-scene":{
+        "name": "Unreal Cyberpunk Food Court Scene",
+        "client": "Atlas (Internal Validation)",
+        "company": "Atlas",
+        "media": "Digital",
+        "platform": "PC",
+        "involvement": "Environment & Visualization Validation",
+        "impact": "Demonstrated rapid environment creation, real-time rendering, and cinematic storytelling using AI-generated assets via the Atlas Platform in Unreal Engine 5, culminating in a sequencer-exported cinematic.",
+        "responsibilities": [
+          "Solely designed and built a medium-scale walkable 3D environment in Unreal Engine 5 using platform-generated assets.",
+          "Utilized procedural content generation, custom shaders, and Blueprints to assemble and animate environmental elements and character actors.",
+          "Set up lighting, VFX, and sequencer cinematics to produce a polished visual presentation.",
+          "Integrated AI-generated character and prop assets into the scene and orchestrated their motion and interaction via Blueprints.",
+          "Captured and exported a cinematic sequence using the Unreal Sequencer to showcase the visual and experiential quality of the environment."
+        ],
+        "context": "This project was a one-week internal validation to test the Atlas Platform’s ability to generate and assemble 3D assets into a cohesive Unreal Engine 5 scene. The environment takes the form of a techno-cyberpunk food court with dynamic lighting, rigged character actors, and visual effects.",
+        "challenges": "Building a visually compelling, walkable environment under a tight time constraint required rapid iteration, robust scene layout tools, and seamless importation of platform-generated assets. Ensuring lighting, character motion, and VFX worked together without performance issues was also critical.",
+        "solutions": "I leveraged procedural content generation, Blueprints, and custom shader work to quickly assemble and iterate the environment. Sequencer was used to craft a cinematic walkthrough that highlighted the platform’s asset quality and lighting fidelity. The result was a polished demo cinematic that validated the platform’s real-time capabilities.",
+        "portfolioitems": [
+          "cyberpunk-scene-environment",
+          "cyberpunk-scene-sequencer"
+        ]
+      },
+      "chaosbuildings":{
+        "name": "Chaos Buildings",
+        "client": "Atlas (Internal Research)",
+        "company": "Atlas",
+        "media": "Digital",
+        "platform": "PC",
+        "involvement": "Pipeline/Tool Development",
+        "impact": "Developed a foundation for future city and world building tools in Unreal Engine by exploring designer-friendly, runtime-aware procedural content generation systems that adapt urban layouts via splines, PCG logic, and contextual placement workflows.",
+        "responsibilities": [
+          "Architected and implemented a procedural urban generation system that combined road spline parameters, zoning logic, and custom PCG placement to create coherent building layouts.",
+          "Built editable packed level actors for modular buildings with tagged foliage filtering and runtime logic for foliage population.",
+          "Created custom blueprint systems with spline mesh components to define roads that project into terrain and inform PCG placement rules.",
+          "Designed PCG actors capable of interpreting spline metadata and building type information to place sidewalks, props, cars, and structures with orientation and parameter control.",
+          "Integrated advanced procedural systems with Unreal’s landscape, foliage, and Chaos frameworks, and provided editor mode tooling for real-time environment construction."
+        ],
+        "context": "Chaos Buildings was an internal R&D project to prototype next-generation city and world building workflows in Unreal Engine using platform-generated assets and custom procedural systems. The goal was to explore how interactive spline definitions, zoning logic, and tag-based PCG can create usable, modular urban scenes while providing designers intuitive control.",
+        "challenges": "Developing a system that could interpret designer intent through splines, tags, and zoning, while maintaining performance and real-time responsiveness in Unreal was complex. The system needed to respect road widths, building types, and orientation logic, and provide contextual placement for props, cars, and sidewalks without manual iteration.",
+        "solutions": "I designed custom editor mode tools and blueprint systems that allowed designers to place and edit roads, trigger PCG rules, and receive instant visual feedback. The PCG actors read spline metadata and tag filters to decide on building placement, and a flexible zoning system allowed grouping by usage types. Optional Chaos destruction was used as a demonstrative interactive layer, and multiple media captures (individual turntables, editor mode videos, and gameplay footage) documented the system’s behavior.",
+        "portfolioitems": [
+          "chaosbuildings-spline",
+          "chaosbuildings-pcg",
+          "chaosbuildings-runtime"
+        ]
+      },
+      "atlasplugin":{
+        "name": "Atlas DCC Integration Framework",
+        "client": "Atlas",
+        "company": "Atlas (Design Partner Platform)",
+        "media": "Digital",
+        "platform": "PC",
+        "involvement": "Pipeline/Tool Development",
+        "impact": "Designed and implemented a cross-DCC integration framework that empowers artists to run customizable AI/ML workflows directly inside Unity, Unreal, and Blender. These plugins provide first-class tooling, dynamic UI, and native asset import/export support that bridges the Atlas Platform with production creative workflows.",
+        "responsibilities": [
+          "Architected and developed the entire cross-DCC plugin ecosystem across Unity, Unreal, and Blender.",
+          "Built dynamic Editor UI and native tooling to expose Atlas workflows with validated input parameters and responsive feedback.",
+          "Implemented REST API integration and robust job execution pipelines within each DCC, including error handling, telemetry, and result persistence.",
+          "Defined consistent input/output mappings for workflows that automatically convert Atlas outputs into native assets (textures, meshes, etc.) inside each host application.",
+          "Standardized workflow identity and UX across multiple engines to allow artists to reuse familiar tooling paradigms across platforms."
+        ],
+        "context": "The Atlas DCC Integration Framework consists of native plugins for Unity, Unreal, and Blender that let creators invoke Atlas Platform workflows directly inside their authoring environments. Each plugin generates dynamic UIs tailored to workflow schemas, handles network communication, and imports generated assets back into the host project.",
+        "challenges": "Each DCC’s extension system has distinct APIs, UI toolchains, and asset pipelines, requiring careful design to ensure feature parity, stability, and native-feeling workflows. Additionally, integrating networked AI/ML workflows and robustly handling errors and asset persistence across editor restarts posed technical complexity.",
+        "solutions": "I designed a unified integration strategy and implemented native plugins for all three major DCCs. These plugins feature dynamic UI that adapts to workflow schemas, native asset importers for output data, history and telemetry tracking, and resilient error handling. Visual and interactive consistency across platforms establishes a clear workflow identity that promotes user familiarity and adoption.",
+        "portfolioitems": [
+          "atlasplugin-unity",
+          "atlasplugin-unreal"        ]
+      }
+}

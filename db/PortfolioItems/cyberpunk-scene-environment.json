@@ -1,0 +1,51 @@
+{
+  "date": "2025-01-15",
+  "name": "Cyberpunk Food Court Environment Assembly",
+  "projectname": "Unreal Cyberpunk Food Court Scene",
+  "company": "Atlas",
+  "oneLiner": "Rapid assembly of a cohesive, walkable cyberpunk food court environment in Unreal Engine 5 using AI-generated assets, procedural layout, and real-time iteration under a one-week validation timeline.",
+  "bulletpoints": [
+    "Assembled a medium-scale, walkable UE5 environment from platform-generated props and characters as a solo owner.",
+    "Used procedural content generation and Blueprint-driven setup to establish layout, populate assets, and iterate quickly.",
+    "Unified lighting, materials, shaders, and ambient motion to achieve visual cohesion while maintaining real-time performance."
+  ],
+  "dcc": [],
+  "engine": ["Unreal"],
+  "languages": ["Blueprints"],
+  "skillsets": ["unrealdev", "pipelinedev","procgen"],
+  "tags": ["environment", "realtime", "procedural", "validation"],
+  "priority": 1,
+  "status": "complete",
+  "media": {
+    "image": [
+      "cyberpunk-scene-environment__01__hero-wide.png",
+      "cyberpunk-scene-environment__02__walkthrough-entry.png",
+      "cyberpunk-scene-environment__03__layout-overview.png",
+      "cyberpunk-scene-environment__04__market-stalls-detail.png",
+      "cyberpunk-scene-environment__06__lighting-mood-shot.png",
+      "cyberpunk-scene-environment__08__character-integration.png",
+      "cyberpunk-scene-environment__09__composition-leading-lines.png"
+    ],
+    "youtube": [
+      "https://www.youtube.com/embed/sSofJzzeDCA"
+    ],
+    "captions": {
+      "cyberpunk-scene-environment__01__hero-wide.png": "Hero wide shot establishing the full food court space, density, and overall cyberpunk mood.",
+      "cyberpunk-scene-environment__02__walkthrough-entry.png": "Entry viewpoint used in the walkthrough, showing immediate readability and lighting direction.",
+      "cyberpunk-scene-environment__03__layout-overview.png": "High-level layout overview that communicates spatial flow, focal points, and scene organization.",
+      "cyberpunk-scene-environment__04__market-stalls-detail.png": "Close-up of stall clustering and prop dressing, demonstrating believable lived-in detail from generated assets.",
+      "cyberpunk-scene-environment__06__lighting-mood-shot.png": "Lighting-focused frame highlighting contrast, color separation, and depth through the scene.",
+      "cyberpunk-scene-environment__08__character-integration.png": "Character/actor integration frame showing scale, placement, and interaction within the environment.",
+      "cyberpunk-scene-environment__09__composition-leading-lines.png": "Composition shot demonstrating deliberate sightlines and guiding the viewer through the space.",
+      "https://www.youtube.com/embed/sSofJzzeDCA": "Real-time walkthrough demonstrating environment cohesion, spatial flow, and consistency using platform-generated assets."
+    }
+  },
+  "deepDive": {
+    "problem": "Determining whether AI-generated assets from the Atlas Platform could be rapidly assembled into a cohesive, performant, and visually compelling real-time environment in Unreal Engine 5.",
+    "approach": [
+      "Imported and organized platform-generated assets into a structured Unreal scene hierarchy optimized for rapid iteration.",
+      "Used procedural content generation and Blueprint-driven logic to establish layout, asset placement, and ambient motion efficiently.",
+      "Applied lighting, shader, and material passes to unify disparate assets into a consistent cyberpunk aesthetic while preserving real-time performance."
+    ]
+  }
+}

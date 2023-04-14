@@ -1,0 +1,39 @@
+{
+    "backend": {
+        "date": "2021-10-01",
+        "name": "Dance Monsters Showcase",
+        "projectname": "Dance Monsters",
+        "company": "Realtime UK",
+        "dcc": [
+            "Maya",
+            "Houdini"
+        ],
+        "engine": [],
+        "languages": [
+            "Python",
+            "Melscript",
+            "VEX"
+        ],
+        "skillsets": [
+            "tooldev",
+            "pipelinedev"
+        ]
+    },
+    "description": {
+        "main": "These are some links to the trailers and media from the show. Much of the code and tools are protected by NDA, but I would be more than happy to further explain them on request.",
+        "bulletpoints": []
+    },
+    "media": {
+        "image": [
+            "dm-showcase-1.jpg",
+            "dm-showcase-2.jpg",
+            "dm-showcase-3.jpg",
+            "dm-showcase-4.jpg"
+        ],
+        "youtube": [
+            "https://www.youtube.com/embed/rlB4PZpgHRk?start=8",
+            "https://www.youtube.com/embed/mPlXXrqpubg"
+        ],
+        "url": []
+    }
+}

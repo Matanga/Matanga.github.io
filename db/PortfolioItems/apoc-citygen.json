@@ -1,0 +1,61 @@
+{
+    "date": "2023-10-01",
+    "name": "Procedural World Pipeline Overview",
+    "projectname": "Procedural World Pipeline R&D Sandbox",
+    "company": "Undisclosed",
+    "oneLiner": "Solo R&D exploration of a scalable procedural world pipeline combining Houdini-based terrain, city, and building generation with Unreal Engine validation to test data-driven workflows, iteration speed, and runtime feasibility at world scale.",
+    "bulletpoints": [
+      "Designed a modular Houdini pipeline to generate large-scale landscapes using layered heightfield data driving terrain, roads, settlements, and land use.",
+      "Built parametric city-generation systems in Houdini with zoning logic, street hierarchies, and data export for real-time validation in Unreal Engine.",
+      "Implemented a data-driven building workflow where Houdini-generated lot and zoning data is consumed by custom Unreal Engine actors and editor tools.",
+      "Validated the full pipeline in Unreal Engine through walkable environments, performance testing, and iteration on scale and visual density.",
+      "Produced internal, trailer-style breakdowns to document pipeline structure, data flow, and system maturity."
+    ],
+    "dcc": ["Houdini"],
+    "engine": ["Unreal"],
+    "languages": ["Python", "VEX", "Blueprints"],
+    "skillsets": ["tooldev", "pipelinedev", "unrealdev","procgen"],
+    "tags": [
+      "procedural-generation",
+      "world-building",
+      "terrain",
+      "cities",
+      "buildings",
+      "data-driven",
+      "pipeline-validation",
+      "r&d"
+    ],
+    "priority": 3,
+    "status": "complete",
+    "media": {
+      "image": [
+        "apocs_overview_05.png",
+        "apocs_overview_01.png",
+        "apocs_overview_02.png"
+      ],
+      "youtube": [
+        "https://www.youtube.com/embed/iMSAmSPtDnA",
+        "https://www.youtube.com/embed/qXioipxyH80",
+        "https://www.youtube.com/embed/WXy6JrDf0JM"
+      ],
+      "captions": {
+        "apocs_overview_05.png": "Procedurally generated large-scale terrain demonstrating layered heightfield data driving landscape features.",
+        "apocs_overview_01.png": "Procedural settlements and towns generated from structured terrain and zoning data.",
+        "apocs_overview_02.png": "Detail view of data-driven building generation within the procedural world sandbox.",
+        "https://www.youtube.com/embed/iMSAmSPtDnA": "Landscape pipeline breakdown showing heightfield layering, data flow, and Unreal Engine integration.",
+        "https://www.youtube.com/embed/qXioipxyH80": "City pipeline breakdown demonstrating parametric zoning, street generation, and real-time validation in Unreal.",
+        "https://www.youtube.com/embed/WXy6JrDf0JM": "Building pipeline breakdown covering lot data export, Unreal editor tooling, and modular building assembly."
+      }
+    },
+    "deepDive": {
+      "problem": "Large procedural worlds require multiple interconnected generation stages—terrain, cities, and buildings—that must share structured data while remaining editable, testable, and performant when validated inside a real-time engine.",
+      "approach": [
+        "Built a layered Houdini heightfield pipeline where terrain attributes, masks, and metadata drive downstream systems such as roads, settlements, and land classification.",
+        "Developed parametric city-generation networks in Houdini using zoning rules and street hierarchies, exporting structured city data for Unreal Engine ingestion.",
+        "Implemented a building pipeline where Houdini exports lot dimensions and zoning data, consumed by custom Unreal Engine actors with dedicated editor tooling.",
+        "Used modular building construction with minimal base meshes and per-face material control via custom primitive data to support interiors and exteriors efficiently.",
+        "Validated the entire pipeline inside Unreal Engine through walkable environments, performance testing, and iteration on scale, density, and visual fidelity."
+      ]
+    }
+  }
+  

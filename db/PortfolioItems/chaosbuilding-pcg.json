@@ -1,0 +1,62 @@
+{
+  "date": "2024-01-01",
+  "name": "Contextual PCG & Zoning Placement Framework",
+  "projectname": "Chaos Buildings",
+  "company": "Atlas",
+  "oneLiner": "Runtime-aware procedural placement framework that interprets spline metadata, zoning groups, and global rules to generate coherent urban layouts in real time.",
+  "bulletpoints": [
+    "Designed a global PCG actor that acts as a decision engine, interpreting spline metadata, tags, and zoning data rather than performing random scattering.",
+    "Implemented zoning group logic (commercial, residential, density tiers) to drive contextual building selection and placement.",
+    "Built direction-aware placement rules that align cars and props with road spline orientation.",
+    "Added intersection-aware logic to resolve crossings and corners correctly when multiple splines meet.",
+    "Integrated tag-based foliage filtering on packed level actors, allowing density and removal rules to be driven procedurally.",
+    "Enabled sidewalks, props, traffic, and structures to be placed coherently from the same rule set without manual iteration."
+  ],
+  "dcc": [],
+  "engine": ["Unreal"],
+  "languages": ["Blueprints"],
+  "skillsets": ["tooldev", "pipelinedev", "unrealdev"],
+  "tags": [
+    "pcg",
+    "zoning",
+    "procedural-placement",
+    "urban-systems",
+    "context-aware",
+    "designer-intent",
+    "runtime-evaluation"
+  ],
+  "priority": 1,
+  "status": "complete",
+  "media": {
+    "image": [
+      "chaosbuildings-pcg_01.png",
+      "chaosbuildings-pcg_02.png",
+      "chaosbuildings-pcg_03.png",
+      "chaosbuildings-pcg_04.png",
+      "chaosbuildings-pcg_05.png",
+      "chaosbuildings-pcg_06.png",
+      "chaosbuildings-pcg_07.png"
+    ],
+    "youtube": [
+      "https://www.youtube.com/embed/8j5FebcAETY"
+    ],
+    "captions": {
+      "chaosbuildings-pcg_01.png": "Procedurally generated urban layout produced by the global PCG system, interpreting spline metadata and zoning rules to form coherent city blocks.",
+      "chaosbuildings-pcg_02.png": "Global PCG graph showing rule-based evaluation of spline data, zoning groups, and contextual placement logic.",
+      "chaosbuildings-pcg_03.png": "Zoning configuration view demonstrating how different building categories and density tiers are selected procedurally.",
+      "chaosbuildings-pcg_04.png": "Procedural placement of buildings, sidewalks, and props driven by road context and zoning interpretation.",
+      "chaosbuildings-pcg_05.png": "Context-aware building placement adapting to road width, orientation, and surrounding environment.",
+      "chaosbuildings-pcg_06.png": "Intersection-aware PCG resolving crossings and corners to maintain coherent urban structure.",
+      "chaosbuildings-pcg_07.png": "Direction-aware traffic and prop placement aligned to spline orientation within the procedural city.",
+      "https://www.youtube.com/embed/8j5FebcAETY": "Global PCG system interpreting spline metadata and zoning rules to place buildings, sidewalks, props, and traffic coherently."
+    }
+  },
+  "deepDive": {
+    "problem": "Traditional procedural placement often relies on local rules or random distribution, making it difficult to express designer intent, enforce zoning logic, or maintain coherence across complex urban layouts.",
+    "approach": [
+      "Centralized placement logic in a global PCG actor that evaluates spline metadata, zoning groups, and global parameters before making placement decisions.",
+      "Used splines strictly as semantic inputs while allowing the PCG framework to interpret context such as direction, width, and intersections.",
+      "Extended placement rules beyond buildings to include sidewalks, props, vehicles, and foliage, ensuring all elements respond consistently to the same authored intent."
+    ]
+  }
+}

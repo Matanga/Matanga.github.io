@@ -1,0 +1,1266 @@
+{
+
+    "apocs-landscape": {
+      "date": "2023-10-01",
+      "name": "Procedural Landscape Pipeline",
+      "projectname": "Procedural World Pipeline R&D Sandbox",
+      "company": "Undisclosed",
+      "oneLiner": "Foundational procedural landscape pipeline converting authored roads, cities, and land-use intent into layered heightfield data to drive terrain shaping, urban placement, and large-scale world structure.",
+      "bulletpoints": [
+        "Designed a layered Houdini heightfield pipeline generating terrain, rivers, riverbanks, forests, cities, roads, streets, and countryside features from structured input data.",
+        "Converted authored design intent into discrete heightfield masks for terrain shaping, material blending, and downstream procedural systems.",
+        "Implemented a bidirectional workflow where spline Blueprints authored in Unreal export structured road and city data to a central dataset consumed by Houdini.",
+        "Built a clean, modular Houdini network to process base data, generate heightfield layers, and export results for real-time validation in Unreal Engine.",
+        "Created interactive visualization and debugging nodes in Houdini to inspect, validate, and iterate on intermediate landscape data."
+      ],
+      "dcc": ["Houdini"],
+      "engine": ["Unreal"],
+      "languages": ["Python", "VEX", "Blueprints"],
+      "skillsets": ["tooldev", "pipelinedev", "procgen"],
+      "tags": [
+        "procedural-generation",
+        "landscape",
+        "heightfields",
+        "terrain",
+        "data-driven",
+        "world-building",
+        "pipeline",
+        "r&d"
+      ],
+      "priority": 3,
+      "status": "complete",
+      "media": {
+        "image": [
+          "apocs_landscape_01.jpg",
+          "apocs_landscape_02.gif",
+          "apocs_landscape_03.jpg",
+          "apocs_landscape_04.jpg",
+          "apocs_landscape_06.jpg"
+        ],
+        "youtube": [
+          "https://www.youtube.com/embed/iMSAmSPtDnA"
+        ],
+        "captions": {
+          "apocs_landscape_01.jpg": "Heightfield masks defining rivers, river banks, forests, cities, and land-use regions within the procedural landscape.",            
+          "apocs_landscape_02.gif": "Layered heightfield data showing combined terrain attributes used to drive large-scale landscape generation.",
+          "apocs_landscape_03.jpg": "Spline-driven road and settlement data exported from Unreal Engine and ingested into the Houdini landscape pipeline.",
+          "apocs_landscape_04.jpg": "Houdini network processing landscape inputs into structured heightfield layers with interactive visualization nodes.",
+          "apocs_landscape_06.jpg": "Final landscape data prepared for exported and visualized inside Unreal Engine at world scale.",
+          "https://www.youtube.com/embed/iMSAmSPtDnA": "Landscape pipeline breakdown showing heightfield layering, Unreal-to-Houdini data exchange, and large-scale terrain validation."
+        }
+      },
+      "deepDive": {
+        "problem": "Large-scale procedural worlds require a robust landscape foundation where terrain, infrastructure, and land-use systems share consistent data while remaining editable, inspectable, and scalable.",
+        "approach": [
+          "Built a Houdini-based landscape pipeline using layered heightfields to represent terrain elevation, rivers, forests, roads, cities, and zoning regions.",
+          "Integrated spline-authored roads and city layouts from Unreal Engine into the Houdini pipeline through structured data export and ingestion.",
+          "Processed all incoming data into discrete, reusable heightfield layers to decouple terrain shaping from higher-level urban systems.",
+          "Used interactive visualization inside Houdini to debug and validate data flow before exporting results back to Unreal Engine for large-scale testing."
+        ]
+      }
+    },    
+    "apocs-city":{
+      "date": "2023-10-01",
+      "name": "Procedural City Layout & Zoning Pipeline",
+      "projectname": "Procedural World Pipeline R&D Sandbox",
+      "company": "Undisclosed",
+      "oneLiner": "Parametric city-generation pipeline that transforms spline-defined city extents into structured blocks, road hierarchies, lots, zoning, and density data for downstream building generation and Unreal Engine validation.",
+      "bulletpoints": [
+        "Defined cities through a Houdini Digital Asset that can be manually authored or driven by spline data exported from Unreal Engine.",
+        "Subdivided city extents into blocks and generated primary and secondary road hierarchies using procedural rules.",
+        "Generated grid-aligned lots to support modular building constraints and consistent downstream assembly.",
+        "Assigned zoning categories such as residential, commercial, and governmental, influenced by both pipeline rules and Unreal-authored spline data.",
+        "Computed density maps where main streets and key intersections drive higher building density and variation.",
+        "Exported structured city data including streets, sidewalks, lots, zoning, and density for real-time ingestion and iteration inside Unreal Engine."
+      ],
+      "dcc": ["Houdini"],
+      "engine": ["Unreal"],
+      "languages": ["Python", "VEX", "Blueprints"],
+      "skillsets": ["tooldev", "pipelinedev", "unrealdev", "procgen"],
+      "tags": [
+        "procedural-generation",
+        "city-layout",
+        "zoning",
+        "roads",
+        "lots",
+        "density",
+        "data-driven",
+        "pipeline-validation",
+        "r&d"
+      ],
+      "priority": 3,
+      "status": "complete",
+      "media": {
+        "image": [
+          "apocs_city_01.jpg",
+          "apocs_city_03.jpg",
+          "apocs_city_04.jpg",
+          "apocs_city_05.jpg",
+          "apocs_city_06.gif",
+          "apocs_city_07.jpg"
+        ],
+        "youtube": [
+          "https://www.youtube.com/embed/qXioipxyH80"
+        ],
+        "captions": {
+          "apocs_city_01.jpg": "City extents subdivided into procedural blocks driven by spline-defined boundaries.",
+          "apocs_city_03.jpg": "Grid-aligned lot generation to support modular building workflows.",
+          "apocs_city_04.jpg": "Zoning assignment across city lots, separating residential, commercial, and governmental areas.",
+          "apocs_city_05.jpg": "Density computation showing higher intensity along main streets and intersections.",
+          "apocs_city_06.gif": "Structured city data prepared for export and ingestion into Unreal Engine.",
+          "apocs_city_07.jpg": "View of the city inside Unreal Engine.",
+          "https://www.youtube.com/embed/qXioipxyH80": "City pipeline breakdown showing block subdivision, road generation, zoning rules, and real-time validation in Unreal Engine."
+        }
+      },
+      "deepDive": {
+        "problem": "Procedural cities require structured, editable representations of roads, blocks, lots, zoning, and density that remain consistent across generation stages and compatible with modular building systems and real-time engine validation.",
+        "approach": [
+          "Built a Houdini-based city HDA capable of consuming spline data authored in Unreal or manual inputs for standalone generation.",
+          "Procedurally generated block layouts and hierarchical road networks to define urban structure.",
+          "Created grid-aligned lot systems to match modular building constraints and simplify downstream assembly.",
+          "Applied zoning and density rules influenced by both procedural logic and Unreal-authored spline metadata.",
+          "Exported structured city datasets for ingestion by custom Unreal Engine tools, enabling walkable validation and rapid iteration."
+        ]
+      }
+    },    
+    "apocs-building": {
+      "date": "2023-10-01",
+      "name": "Procedural Building Assembly Pipeline",
+      "projectname": "Procedural World Pipeline R&D Sandbox",
+      "company": "Undisclosed",
+      "oneLiner": "Data-driven building generation pipeline that assembles complete towns from modular assets using lot metadata, zoning rules, facade systems, and Unreal Engine editor tooling with high runtime efficiency.",
+      "bulletpoints": [
+        "Exported structured data from Houdini for streets, sidewalks, and building lots, where lots are represented as 2D grids enriched with attributes such as zoning, density, and usage type.",
+        "Designed a modular building system where static meshes are unwrapped to support different materials on each side, enabling interior and exterior variation from a shared asset set.",
+        "Created rule-based databases to describe building types, including floors, room and area types, connections, facades, and variability constraints.",
+        "Developed custom Unreal Engine editor tools and data assets to author and manage building definitions and style databases.",
+        "Implemented facade rule systems using string-based descriptors to control facade composition and floor distribution.",
+        "Spawned buildings through Blueprint-driven workflows using a single material instance with atlas textures and custom primitive data.",
+        "Used HISM with custom data attributes to render entire towns using a small number of instanced static meshes and minimal draw calls."
+      ],
+      "dcc": ["Houdini"],
+      "engine": ["Unreal"],
+      "languages": ["Python", "VEX", "Blueprints"],
+      "skillsets": ["tooldev", "pipelinedev", "unrealdev", "procgen"],
+      "tags": [
+        "procedural-generation",
+        "buildings",
+        "modular-assets",
+        "facades",
+        "data-driven",
+        "editor-tools",
+        "performance",
+        "pipeline-validation",
+        "r&d"
+      ],
+      "priority": 3,
+      "status": "complete",
+      "media": {
+        "image": [
+          "apocs_buildings_01.jpg",
+          "apocs_buildings_02.jpg",
+          "apocs_buildings_03.jpg",
+          "apocs_buildings_04.jpg",
+          "apocs_buildings_05.gif"
+        ],
+        "youtube": [
+          "https://www.youtube.com/embed/WXy6JrDf0JM"
+        ],
+        "captions": {
+          "apocs_buildings_01.jpg": "City and lot data exported from Houdini, representing streets, sidewalks, and grid-based building lots with zoning attributes.",
+          "apocs_buildings_02.jpg": "Lot database and building type configuration authored through custom Unreal Engine editor tools.",
+          "apocs_buildings_03.jpg": "Rule-based building definition system describing floors, room layouts, connections, and variability.",
+          "apocs_buildings_04.jpg": "Facade rule system controlling facade composition and floor distribution using string-based descriptors.",
+          "apocs_buildings_05.gif": "Blueprint-driven building spawning using instanced static meshes and custom material data for high-performance rendering.",
+          "https://www.youtube.com/embed/WXy6JrDf0JM": "Building pipeline breakdown covering lot data ingestion, editor tooling, modular assembly, facade rules, and runtime performance validation."
+        }
+      },
+      "deepDive": {
+        "problem": "Procedural buildings must balance variation, authoring control, and runtime performance while remaining compatible with upstream city data and downstream engine constraints.",
+        "approach": [
+          "Represented building lots as structured 2D grids with rich metadata exported from the city pipeline.",
+          "Designed modular building assets that support multi-sided material variation using shared geometry.",
+          "Created rule-based databases to describe building composition, floors, facades, and usage types.",
+          "Built custom Unreal Engine editor tools to author, inspect, and iterate on building definitions.",
+          "Used Blueprint-driven spawning combined with HISM, atlas textures, and custom primitive data to achieve high visual variety with minimal draw calls."
+        ]
+      }
+    },    
+    "2kdam-batch": {
+        "date": "2020-12-01",
+        "name": "Batch Sequencer",
+        "projectname": "Enterprise Digital Asset Library (DAM)",
+        "company": "Globant",
+        "oneLiner": "Scalable batch automation system that enabled the normalization and preparation of tens of thousands of legacy assets across multiple DCCs for ingestion into a global DAM.",
+        "bulletpoints": [
+          "Designed and built a node-based batch system to standardize asset processing across heterogeneous DCC pipelines.",
+          "Enabled large-scale automation of legacy asset normalization, replacing brittle manual workflows.",
+          "Introduced reusable batch manifests to ensure consistency, repeatability, and cross-team adoption."
+        ],
+        "dcc": ["Maya", "3ds Max", "Houdini"],
+        "engine": [],
+        "languages": ["Python", "Maxscript", "MEL"],
+        "skillsets": ["tooldev", "pipelinedev"],
+        "tags": ["batch-processing", "automation", "normalization", "dam", "scalable-tools"],
+        "priority": 3,
+        "status": "complete",
+        "media": {
+          "image": [
+            "BatchSequencer_PortfolioItem_1.jpg",
+            "BatchSequencer_PortfolioItem_2.png"
+          ],
+          "youtube": [],
+          "captions": {
+            "BatchSequencer_PortfolioItem_1.jpg": "Batch Sequencer tool UI showing node-based batch workflows used for large-scale asset processing.",
+            "BatchSequencer_PortfolioItem_2.png": "Example batch configuration demonstrating reusable manifests for automated asset normalization."
+          }
+        },
+        "deepDive": {
+          "problem": "Thousands of legacy assets from multiple studios and production eras needed to be processed, normalized, and prepared consistently for a centralized Digital Asset Manager, without scaling manual effort.",
+          "approach": [
+            "Created a node-based batch architecture where each node encapsulated parameters, UI, and execution logic for a specific processing step.",
+            "Structured batch workflows as reusable manifests to enable scalable automation, consistency, and long-term maintainability."
+          ]
+        }
+    },
+    "2kdam-inventory": {
+        "date": "2020-12-01",
+        "name": "DAM Inventory Dashboard",
+        "projectname": "Enterprise Digital Asset Library (DAM)",
+        "company": "Globant",
+        "oneLiner": "Automated inventory and progress reporting that replaced manual tracking and gave production a reliable, always-up-to-date view of tens of thousands of legacy assets moving through the DAM pipeline.",
+        "bulletpoints": [
+          "Built a Google Sheets–based inventory dashboard that centralized project progress, coverage, and status for production decision-making.",
+          "Automated periodic scans of team repositories to gather, format, and publish inventory data via Python + Google APIs.",
+          "Reduced management overhead by making progress tracking hands-off and consistently visible across the initiative."
+        ],
+        "dcc": ["Maya", "3ds Max", "Houdini"],
+        "engine": [],
+        "languages": ["Python", "Maxscript", "MEL"],
+        "skillsets": ["tooldev", "pipelinedev"],
+        "tags": ["inventory", "dashboard", "reporting", "google-sheets", "google-api", "automation", "production-visibility", "dam"],
+        "priority": 3,
+        "status": "complete",
+        "media": {
+          "image": ["2kdam-inventory-1.png", "2kdam-inventory-2.png"],
+          "youtube": [],
+          "captions": {
+            "2kdam-inventory-1.png": "DAM inventory spreadsheet dashboard providing production visibility into asset progress and pipeline status.",
+            "2kdam-inventory-2.png": "Example inventory reporting view used to track large-scale asset normalization progress without manual updates."
+          }
+        },
+        "deepDive": {
+          "problem": "Tracking tens of thousands of assets manually did not scale, creating visibility gaps and unnecessary overhead for production planning and resourcing.",
+          "approach": [
+            "Automated periodic repository scanning and data normalization, then published results to a central Google Sheets dashboard via Google APIs.",
+            "Structured the spreadsheet to support production workflows (status, coverage, and progress views) so decisions could be made from a single source of truth."
+          ]
+        }
+    },
+    "dm-showcase": {
+        "date": "2021-01-01",
+        "name": "Mocap Ingestion & Normalization Pipeline",
+        "projectname": "Dance Monsters",
+        "company": "Realtime UK",
+        "oneLiner": "Production-scale pipeline subsystem that automated the ingestion, synchronization, and normalization of multi-vendor performance capture data for a high-throughput Netflix broadcast series.",
+        "bulletpoints": [
+          "Designed and owned a mocap ingestion pipeline that normalized body, facial, camera, and lighting data from multiple vendors into a consistent internal format.",
+          "Built automation in Maya and Python to reliably align performance data in time and world space across hundreds of shots per episode.",
+          "Enabled stable, repeatable downstream retargeting and rendering by enforcing strict validation and normalization at ingest time."
+        ],
+        "dcc": ["Maya", "Houdini"],
+        "engine": [],
+        "languages": ["Python", "MEL"],
+        "skillsets": ["pipelinedev", "tooldev"],
+        "tags": ["mocap", "performance-capture", "broadcast", "data-normalization", "ingestion-pipeline", "automation"],
+        "priority": 3,
+        "status": "complete",
+        "media": {
+          "image": [
+            "dm-showcase-1.jpg",
+            "dm-showcase-2.jpg",
+            "dm-showcase-3.jpg",
+            "dm-showcase-4.jpg"
+          ],
+          "youtube": [],
+          "captions": {
+            "dm-showcase-1.jpg": "Dance Monsters show poster providing context for the broadcast production.",
+            "dm-showcase-2.jpg": "On-set performance capture used as source data for the pipeline.",
+            "dm-showcase-3.jpg": "Maya-based pipeline tools used to ingest, synchronize, and validate performance data.",
+            "dm-showcase-4.jpg": "Final monster character driven by processed mocap data, integrated into a production shot."
+          }
+        },
+        "deepDive": {
+          "problem": "Multi-vendor mocap, facial, camera, and lighting data arrived asynchronously and inconsistently, making manual alignment and processing unscalable for episodic broadcast delivery.",
+          "approach": [
+            "Implemented automated ingest and validation stages to normalize all incoming data into a consistent coordinate system and timing reference.",
+            "Centralized synchronization logic in Maya-based tools to ensure reliable downstream retargeting and rendering at production scale."
+          ]
+        }
+    },
+    "element-curvetools": {
+        "date": "2018-12-01",
+        "name": "Curve Tools",
+        "projectname": "Element Space",
+        "company": "Sixth Vowel",
+        "oneLiner": "Custom curve-based tooling that enabled artists to author complex, performant VFX geometry in Unity with fast iteration and minimal technical overhead.",
+        "bulletpoints": [
+          "Implemented a reusable curve system with custom Unity editors to support artist-friendly VFX authoring.",
+          "Developed Bezier-based procedural mesh tools used for muzzle flashes, projectiles, and other time-based effects.",
+          "Built a lofting renderer that extrudes shapes along curves, automatically handling geometry generation and UV mapping."
+        ],
+        "dcc": [],
+        "engine": ["Unity"],
+        "languages": ["C#"],
+        "skillsets": ["tooldev", "vfx", "unitydev", "procgen"],
+        "tags": [
+          "curves",
+          "bezier",
+          "procedural-geometry",
+          "lofting",
+          "vfx-tools",
+          "editor-tools",
+          "artist-workflows"
+        ],
+        "priority": 4,
+        "status": "complete",
+        "media": {
+          "image": [
+            "vfx_loftrenderer2.gif",
+            "curvetools_portfolio_item-1.png",
+            "beziercurve.gif",
+            "curvetools_portfolio_item-2.png",
+            "vfx_loftrenderer.gif"
+          ],
+          "youtube": [],
+          "captions": {
+            "curvetools_portfolio_item-1.png": "Curve Tools custom editor UI inside Unity for authoring curve-driven VFX geometry.",
+            "beziercurve.gif": "Animated preview of the Bezier curve tool generating procedural VFX meshes in real time.",
+            "curvetools_portfolio_item-2.png": "Alternate view of the Curve Tools editor showing parameter controls and curve configuration.",
+            "vfx_loftrenderer.gif": "VFX Loft Renderer extruding geometry along curves for projectile and muzzle-style effects.",
+            "vfx_loftrenderer2.gif": "Loft Renderer in action with the curve editor, demonstrating rapid iteration and shape control."
+          }
+        },
+        "deepDive": {
+          "problem": "Authoring complex VFX geometry directly in Unity was slow and error-prone, limiting iteration speed and placing a heavy technical burden on artists.",
+          "approach": [
+            "Designed a curve-based abstraction layer with custom editors to hide implementation complexity from artists.",
+            "Implemented procedural mesh generation and lofting tools that produced optimized geometry while automatically handling UV layout."
+          ]
+        }
+    },
+    "element-lightlister": {
+        "date": "2018-12-01",
+        "name": "Light Lister",
+        "projectname": "Element Space",
+        "company": "Sixth Vowel",
+        "oneLiner": "Unity editor tool that centralized scene lighting control and enabled rapid iteration by editing lights during play mode and persisting changes back into the editor.",
+        "bulletpoints": [
+          "Built a custom Unity Editor Window that discovers, groups, and exposes all scene lights for fast editing and troubleshooting.",
+          "Dynamically populated UI from the current scene and organized lights by type, exposing shared and type-specific properties.",
+          "Enabled lighting iteration in play mode while preserving adjustments by writing runtime-edited values back to serialized scene lights."
+        ],
+        "dcc": [],
+        "engine": ["Unity"],
+        "languages": ["C#"],
+        "skillsets": ["tooldev", "vfx", "unitydev"],
+        "tags": [
+          "lighting",
+          "editor-tools",
+          "scene-tools",
+          "playmode-iteration",
+          "unity-editor",
+          "vfx-workflows"
+        ],
+        "priority": 4,
+        "status": "complete",
+        "media": {
+          "image": [
+            "lightlister_portfolio_item-1.png",
+            "lightlister_portfolio_item-2.png",
+            "lightlister_portfolio_item-3.png"
+          ],
+          "youtube": [],
+          "captions": {
+            "lightlister_portfolio_item-1.png": "Light Lister editor window UI dynamically populated from scene lights for centralized editing.",
+            "lightlister_portfolio_item-2.png": "Grouped-by-type lighting controls showing shared and type-specific properties for fast iteration.",
+            "lightlister_portfolio_item-3.png": "Example Light Lister view demonstrating bulk lighting adjustments driven by current scene contents."
+          }
+        },
+        "deepDive": {
+          "problem": "Lighting iteration was slow when artists had to hunt through scenes and lost play-mode tweaks, reducing iteration speed and increasing risk of inconsistent lighting setups.",
+          "approach": [
+            "Implemented an Editor Window that scans the scene, groups lights by type, and exposes the most relevant controls in a single place.",
+            "Persisted play-mode lighting adjustments by writing modified runtime values back into serialized scene light components when returning to edit mode."
+          ]
+        }
+    },
+    "element-textools": {
+        "date": "2018-12-01",
+        "name": "VFX Texture Authoring Components",
+        "projectname": "Element Space",
+        "company": "Sixth Vowel",
+        "oneLiner": "Reusable Unity components that enabled artists to author, control, and iterate on VFX textures and sprite-based animation with minimal tech support—supporting both editor-time workflows and runtime variation.",
+        "bulletpoints": [
+          "Built a set of Unity C# components for VFX texture control, including spritesheet setup/preview, randomized selection, and material texture offsets.",
+          "Enabled rapid VFX iteration by exposing artist-friendly inspector workflows for muzzle effects and texture animation directly in-editor.",
+          "Provided reusable components that supported both editor authoring and runtime flexibility across VFX and gameplay-driven scenarios."
+        ],
+        "dcc": [],
+        "engine": ["Unity"],
+        "languages": ["C#"],
+        "skillsets": ["tooldev", "vfx", "unitydev"],
+        "tags": [
+          "vfx-tools",
+          "textures",
+          "spritesheets",
+          "material-animation",
+          "editor-workflows",
+          "runtime-variation",
+          "artist-friendly"
+        ],
+        "priority": 4,
+        "status": "complete",
+        "media": {
+          "image": [
+            "texturetoolcomponents_portfolio_item-4.png",
+            "texturetoolcomponents_portfolio_item-1.png",
+            "vfx_muzzlerenderer.gif",
+            "texturetoolcomponents_portfolio_item-2.png",
+            "vfx_spritesheetutils-1.gif",
+            "texturetoolcomponents_portfolio_item-3.png",
+            "vfx_textureoffset.gif"
+          ],
+          "youtube": [],
+          "captions": {
+            "texturetoolcomponents_portfolio_item-1.png": "Muzzle renderer inspector UI showing authoring controls for parametric muzzle VFX setup.",
+            "vfx_muzzlerenderer.gif": "Animated preview of the muzzle renderer tool generating and updating VFX output in-editor.",
+            "texturetoolcomponents_portfolio_item-4.png": "In-game muzzle effect driven by the authoring components and texture workflows.",
+            "texturetoolcomponents_portfolio_item-2.png": "Tool view showing isolated muzzle variants for quick comparison and iteration.",
+            "vfx_spritesheetutils-1.gif": "Spritesheet utilities animating muzzle textures directly in the Unity editor for fast iteration.",
+            "texturetoolcomponents_portfolio_item-3.png": "Component scripting/editor view supporting the VFX texture authoring toolset.",
+            "vfx_textureoffset.gif": "Texture offset component animating Material texture coordinates in-editor for procedural motion."
+          }
+        },
+        "deepDive": {
+          "problem": "VFX production needed fast, repeatable texture animation and variation workflows, but manual setup and per-effect scripting slowed iteration and increased reliance on technical support.",
+          "approach": [
+            "Implemented reusable Unity components that exposed common VFX texture operations (spritesheets, offsets, randomization) through artist-friendly inspector workflows.",
+            "Designed the tools to support both editor-time authoring and runtime control so effects could be iterated quickly while remaining flexible in-game."
+          ]
+        }
+    },
+    "element-vfx": {
+        "date": "2018-12-01",
+        "name": "VFX Showcase",
+        "projectname": "Element Space",
+        "company": "Sixth Vowel",
+        "oneLiner": "Realtime VFX showcase scene demonstrating shipped-quality environment effects and production-ready destruction workflows, supported by internal tech art guidelines for scalable material breakup.",
+        "bulletpoints": [
+          "Authored and integrated environment VFX (fire, steam, sparks, haze) in a realtime Unity showcase scene aligned with production constraints.",
+          "Developed and validated destructible prop workflows suitable for scalable use across varied gameplay scenarios.",
+          "Produced internal tech art documentation defining best practices for destruction scalability across material types (e.g., wood and glass)."
+        ],
+        "dcc": [],
+        "engine": ["Unity"],
+        "languages": ["C#"],
+        "skillsets": ["tooldev", "vfx"],
+        "tags": [
+          "realtime-vfx",
+          "environment-vfx",
+          "destruction",
+          "tech-art-guidelines",
+          "unity",
+          "production-workflows"
+        ],
+        "priority": 1,
+        "status": "complete",
+        "media": {
+          "image": [
+            "texturetoolcomponents_portfolio_item-4.png",
+            "vfxshowcase_portfolio_item-2.png",
+            "vfxshowcase_portfolio_item-3.png",
+            "vfxshowcase_portfolio_item-4.png"
+          ],
+          "youtube": ["https://www.youtube.com/embed/GRmn-bm99Kc"],
+          "captions": {
+            "texturetoolcomponents_portfolio_item-4.png": "In-game realtime VFX screenshot from the Element Space showcase scene.",
+            "vfxshowcase_portfolio_item-2.png": "Internal destruction documentation: wood material breakup and fracturing type guidelines.",
+            "vfxshowcase_portfolio_item-3.png": "Internal destruction documentation: glass material breakup guidelines and recommended fracture types.",
+            "vfxshowcase_portfolio_item-4.png": "Internal destruction documentation index outlining scalable destruction standards by material.",
+            "https://www.youtube.com/embed/GRmn-bm99Kc": "Realtime capture of the VFX showcase scene featuring environment effects and destruction workflows."
+          }
+        },
+        "deepDive": {
+          "problem": "Maintaining visual quality for realtime VFX while keeping destruction workflows scalable and consistent across a large production required clear standards and production-ready implementations.",
+          "approach": [
+            "Built and validated a realtime showcase scene to prove out environment VFX quality under engine and performance constraints.",
+            "Documented scalable destruction best practices per material category to standardize authoring and reduce production risk."
+          ]
+        }
+    },
+    "element-vfxcomps": {
+        "date": "2018-12-01",
+        "name": "Code-Driven VFX Animation Toolkit",
+        "projectname": "Element Space",
+        "company": "Sixth Vowel",
+        "oneLiner": "Lightweight MonoBehaviour-based toolkit that let the VFX team build dynamic, animated effects without relying on Unity’s animation systems—improving iteration speed, consistency, and runtime control.",
+        "bulletpoints": [
+          "Created reusable timing and lifecycle components (delayed start, deactivate-by-time, visibility switching) to standardize common VFX behaviors without Animator dependencies.",
+          "Implemented procedural shape utilities like a Circle Renderer (built on LineRenderer) for fast authoring of geometric VFX elements.",
+          "Built an Animation Curves component to drive multiple targets (lights, shader floats, shader colors) with looping, delays, and easy extensibility for new animated parameters."
+        ],
+        "dcc": [],
+        "engine": ["Unity"],
+        "languages": ["C#"],
+        "skillsets": ["tooldev", "vfx", "unitydev", "procgen"],
+        "tags": [
+          "vfx-tools",
+          "runtime-animation",
+          "monobehaviours",
+          "animation-curves",
+          "timing",
+          "procedural-shapes",
+          "artist-workflows"
+        ],
+        "priority": 3,
+        "status": "complete",
+        "media": {
+          "image": [
+            "vfx_animationcurves.gif",
+            "animatedvfxcomponents_portfolio_item-1.png",
+            "animatedvfxcomponents_portfolio_item-2.png",
+            "animatedvfxcomponents_portfolio_item-3.png",
+            "animatedvfxcomponents_portfolio_item-4.png",
+            "vfx_circlerenderer.gif",
+            "animatedvfxcomponents_portfolio_item-6.png",
+            "animatedvfxcomponents_portfolio_item-7.png",
+            "animatedvfxcomponents_portfolio_item-8.png"
+          ],
+          "youtube": [],
+          "captions": {
+            "animatedvfxcomponents_portfolio_item-1.png": "VFX_DelayStartComponent inspector: enables a disabled MonoBehaviour after a configurable delay.",
+            "animatedvfxcomponents_portfolio_item-2.png": "VFX_DeactivateByTime inspector: deactivates a target GameObject (or self) after a set duration.",
+            "animatedvfxcomponents_portfolio_item-3.png": "VFX_SwitchVisibility inspector: toggles selected MeshRenderers on/off with a configurable delay.",
+            "animatedvfxcomponents_portfolio_item-4.png": "VFX_CircleRenderer inspector: procedural circle drawing controls (radius, segments, width, color).",
+            "vfx_circlerenderer.gif": "Circle Renderer animated example demonstrating procedural circle generation in-editor.",
+            "animatedvfxcomponents_portfolio_item-6.png": "VFX_AnimationCurves setup driving Light parameters using curve-based animation.",
+            "animatedvfxcomponents_portfolio_item-7.png": "VFX_AnimationCurves setup driving shader float parameters via curves for runtime VFX control.",
+            "animatedvfxcomponents_portfolio_item-8.png": "VFX_AnimationCurves setup driving shader color parameters via curves for dynamic VFX styling.",
+            "vfx_animationcurves.gif": "Animated example of curve-driven parameter animation for VFX without using Unity’s Animator."
+          }
+        },
+        "deepDive": {
+          "problem": "VFX iteration slowed down when effects depended on Unity’s animation systems, increasing setup overhead and reducing flexibility for runtime-controlled behaviors.",
+          "approach": [
+            "Replaced common VFX animation needs with small, composable MonoBehaviour components (timing, activation, visibility) that were easy to reuse and reason about.",
+            "Implemented a generalized curve-driven parameter system to animate multiple target types (lights, shader floats, shader colors) with looping and delay support."
+          ]
+        }
+    },
+    "intelevo-animals": {
+        "date": "2022-10-01",
+        "name": "Interactive Animal AI & Animation Systems",
+        "projectname": "Evolution Experience",
+        "company": "Genosha",
+        "oneLiner": "Blueprint-driven animal AI and animation systems that enabled reactive, audience-facing behavior in a large-scale Unreal Engine art installation running continuously in a public space.",
+        "bulletpoints": [
+          "Designed interactive animal behavior using Unreal AI Controllers, Behavior Trees, and animation state machines.",
+          "Implemented audience-driven animation responses, allowing animals to react naturally to user presence and interaction.",
+          "Balanced believable motion, responsiveness, and stability to support long-running, multi-user installation sessions."
+        ],
+        "dcc": [],
+        "engine": ["Unreal"],
+        "languages": ["Blueprints"],
+        "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
+        "tags": [
+          "ai-behavior",
+          "animation-systems",
+          "interactive-installation",
+          "audience-interaction",
+          "behavior-trees",
+          "blueprints",
+          "nondiegetic-ai"
+        ],
+        "priority": 3,
+        "status": "complete",
+        "media": {
+          "image": [
+            "intelevoshowcase_portfolio_item-7.png",
+            "intelevoanimals_portfolio_item-1.png",
+            "intelevoanimals_portfolio_item-2.png"
+          ],
+          "youtube": ["https://www.youtube.com/embed/3xw63__iTmk"],
+          "captions": {
+            "intelevoshowcase_portfolio_item-7.png": "Close-up of a roaring tiger character driven by the interactive AI and animation system.",
+            "intelevoanimals_portfolio_item-1.png": "Visitors interacting with the installation, taking selfies with reactive animal characters.",
+            "intelevoanimals_portfolio_item-2.png": "Audience observing animals responding to presence and interaction within the surround-room setup.",
+            "https://www.youtube.com/embed/3xw63__iTmk": "Editor-captured footage showcasing animal movement, animation blending, and AI-driven behavior."
+          }
+        },
+        "deepDive": {
+          "problem": "Animals needed to appear believable, reactive, and stable while responding to unpredictable audience behavior in a live, continuously running installation.",
+          "approach": [
+            "Implemented rule-based AI using Unreal AI Controllers and Behavior Trees to manage state, reactivity, and animation transitions.",
+            "Combined animation blueprints and data-driven parameters to allow rapid tuning of behavior and motion without code changes."
+          ]
+        }
+    },
+    "intelevo-environment": {
+        "date": "2022-10-01",
+        "name": "Real-Time Installation Environment Systems",
+        "projectname": "Evolution Experience",
+        "company": "Genosha",
+        "oneLiner": "Data-driven Unreal Engine environment systems designed for a large-scale, multi-projector art installation, combining reactive weather, ambient animation, and performance-stable world logic for continuous public operation.",
+        "bulletpoints": [
+          "Designed interactive environment systems where weather, ambient elements, and animal behavior responded dynamically to audience interaction.",
+          "Built data-driven Unreal Engine workflows to support rapid iteration on layout, mood, lighting, and ambient animation under installation constraints.",
+          "Ensured performance and stability across a surround-room nDisplay setup intended to run continuously in a public space."
+        ],
+        "dcc": [],
+        "engine": ["Unreal"],
+        "languages": ["Blueprints"],
+        "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
+        "tags": [
+          "environment-systems",
+          "interactive-environments",
+          "weather-systems",
+          "ambient-animation",
+          "nDisplay",
+          "art-installation",
+          "blueprints"
+        ],
+        "priority": 3,
+        "status": "complete",
+        "media": {
+          "image": [
+            "intelevoenvironment_portfolio_item-1.png",
+            "intelevoenvironment_portfolio_item-2.png",
+            "intelevoenvironment_portfolio_item-3.png"
+          ],
+          "youtube": ["https://www.youtube.com/embed/5nbDx_YLn-k"],
+          "captions": {
+            "intelevoenvironment_portfolio_item-1.png": "Unreal Editor view showing environment actors and systems used to drive the interactive installation.",
+            "intelevoenvironment_portfolio_item-2.png": "Mood lighting setup used to shape atmosphere and support reactive environmental states.",
+            "intelevoenvironment_portfolio_item-3.png": "Weather system driving dynamic environmental changes in response to interaction and ambient logic.",
+            "https://www.youtube.com/embed/5nbDx_YLn-k": "Environment system showcase video demonstrating real-time lighting, weather, and ambient animation."
+          }
+        },
+        "deepDive": {
+          "problem": "The installation required environments that felt alive and reactive while remaining stable, performant, and easy to iterate on across a multi-projector setup running continuously in public.",
+          "approach": [
+            "Implemented Blueprint-driven environment systems to control weather, lighting, ambient motion, and interaction hooks in a modular, data-driven way.",
+            "Built editor-friendly workflows that allowed rapid tuning of mood, behavior, and performance while validating changes directly within the nDisplay context."
+          ]
+        }
+    },
+    "intelevo-showcase": {
+        "date": "2022-10-01",
+        "name": "Live Installation Showcase",
+        "projectname": "Evolution Experience",
+        "company": "Genosha",
+        "oneLiner": "On-site showcase of a large-scale Unreal Engine installation running continuously in a public space, demonstrating stable multi-user interaction, real-time visuals, and a multi-projector surround setup.",
+        "bulletpoints": [
+          "Deployed and operated a real-time Unreal Engine system in a public installation environment with continuous runtime requirements.",
+          "Supported live, multi-user audience interaction via tablets, driving real-time visual and behavioral responses.",
+          "Validated long-running stability, performance, and reliability of the complete system in a real-world setting."
+        ],
+        "dcc": ["Blender", "Houdini"],
+        "engine": ["Unreal"],
+        "languages": ["Blueprints"],
+        "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
+        "tags": [
+          "live-installation",
+          "public-deployment",
+          "interactive-experience",
+          "nDisplay",
+          "real-time-systems",
+          "audience-interaction",
+          "unreal-engine"
+        ],
+        "priority": 3,
+        "status": "complete",
+        "media": {
+          "image": [
+            "intelevoshowcase_portfolio_item-1.png",
+            "intelevoshowcase_portfolio_item-2.png",
+            "intelevoshowcase_portfolio_item-3.png",
+            "intelevoshowcase_portfolio_item-5.png",
+            "intelevoshowcase_portfolio_item-6.png"
+          ],
+          "youtube": ["https://www.youtube.com/embed/t04CSqkdfSM"],
+          "captions": {
+            "intelevoshowcase_portfolio_item-1.png": "Visitors taking photos with interactive animal characters inside the installation.",
+            "intelevoshowcase_portfolio_item-2.png": "Audience members actively engaging with the interactive experience.",
+            "intelevoshowcase_portfolio_item-3.png": "Visitor interacting with a reactive tiger character in the surround environment.",
+            "intelevoshowcase_portfolio_item-5.png": "Participants using tablets to drive real-time interaction with the installation.",
+            "intelevoshowcase_portfolio_item-6.png": "Multi-user tablet interaction controlling animals and environment behavior.",
+            "https://www.youtube.com/embed/t04CSqkdfSM": "On-site footage showing the surround room installation running live and stable during public operation."
+          }
+        },
+        "deepDive": {
+          "problem": "The installation needed to operate reliably for long periods in a public space while supporting concurrent user interaction, synchronized visuals, and continuous real-time rendering.",
+          "approach": [
+            "Deployed and validated the complete Unreal Engine system on-site, focusing on stability, performance, and fault tolerance.",
+            "Ensured the interaction, rendering, and control systems functioned cohesively under real-world usage conditions over extended runtimes."
+          ]
+        }
+    },
+    "unrealroom-bps": {
+        "date": "2022-11-01",
+        "name": "Dynamic Room Blueprint Framework",
+        "projectname": "Unreal Room",
+        "company": "Independent",
+        "oneLiner": "Spatially adaptive Unreal Engine framework that reconfigures room layout to match real-world wall sizes while maintaining seamless visual transitions, with real-time MediaPipe tracking streamed into UE via WebSockets.",
+        "bulletpoints": [
+          "Built a dynamic room Blueprint system that adapts to different physical wall dimensions without breaking layout or transitions.",
+          "Implemented animated transitions between multiple room configurations and VFX states to keep the experience cohesive across setups.",
+          "Integrated a MediaPipe tracking stream via a Python WebSocket pipeline to drive real-time interaction inputs inside Unreal Engine."
+        ],
+        "dcc": [],
+        "engine": ["Unreal"],
+        "languages": ["Blueprints", "Python"],
+        "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
+        "tags": [
+          "interactive-installation",
+          "spatial-adaptation",
+          "blueprints",
+          "mediapipe",
+          "websockets",
+          "real-time-input",
+          "framework"
+        ],
+        "priority": 4,
+        "status": "complete",
+        "media": {
+          "image": [],
+          "youtube": [
+            "https://www.youtube.com/embed/SJ-r7h9L-m4",
+            "https://www.youtube.com/embed/7p82zrTxtnA"
+          ],
+          "captions": {
+            "https://www.youtube.com/embed/SJ-r7h9L-m4": "Dynamic configuration of the room framework demonstrating spatial adaptation across different layouts.",
+            "https://www.youtube.com/embed/7p82zrTxtnA": "Real-time MediaPipe tracking streamed into Unreal via WebSockets, driving live interaction input."
+          }
+        },
+        "deepDive": {
+          "problem": "Interactive installations often break when deployed in new physical spaces because wall dimensions and projection layouts change, making spatial transitions and effect staging brittle.",
+          "approach": [
+            "Designed a Blueprint-driven room configurator that decoupled spatial layout from effect logic, enabling consistent behavior across different wall sizes.",
+            "Streamed stable body/gesture tracking parameters from a Python + MediaPipe WebSocket service into Unreal for real-time interaction control."
+          ]
+        }
+    },
+    "unrealroom-vfx": {
+        "date": "2022-11-01",
+        "name": "Interactive Niagara VFX Systems",
+        "projectname": "Unreal Room",
+        "company": "Independent",
+        "oneLiner": "Gesture-driven Niagara VFX systems for an interactive installation R&D project, combining multi-emitter effects, custom Niagara modules, and Blueprint-controlled parameters fed by real-time MediaPipe tracking.",
+        "bulletpoints": [
+          "Built multiple advanced Niagara effects using multi-emitter setups, custom modules, and reusable Niagara functions.",
+          "Implemented Blueprint ↔ Niagara data exchange to drive effect behavior through exposed parameters and runtime events.",
+          "Mapped real-time MediaPipe gesture/body tracking into stable interaction signals that controlled VFX behavior live.",
+          "Explored diverse effect styles including volumetric motion, particle/ribbon grids, spline-driven biological scenes, and fluid-sim corridor fills."
+        ],
+        "dcc": [],
+        "engine": ["Unreal"],
+        "languages": ["Blueprints"],
+        "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
+        "tags": [
+          "niagara",
+          "interactive-vfx",
+          "gesture-driven",
+          "mediapipe",
+          "real-time-input",
+          "custom-modules",
+          "fluid-simulation"
+        ],
+        "priority": 2,
+        "status": "complete",
+        "media": {
+          "image": [],
+          "youtube": [
+            "https://www.youtube.com/embed/HnOhTIWuaPE?start=6",
+            "https://www.youtube.com/embed/qXgegQ6clxA",
+            "https://www.youtube.com/embed/iv7WSnxDBDE?start=3",
+            "https://www.youtube.com/embed/_IHlRjQvM6U?start=7"
+          ],
+          "captions": {
+            "https://www.youtube.com/embed/HnOhTIWuaPE?start=6": "Volumetric smoke curtain effect in Niagara, interactively displaced by tracked hand motion.",
+            "https://www.youtube.com/embed/qXgegQ6clxA": "Particle + ribbon world-grid effect built with custom Niagara functions for structured motion and patterns.",
+            "https://www.youtube.com/embed/iv7WSnxDBDE?start=3": "Microscopic inside-the-body scene: spline-driven blood cells, organic walls, and virus-like effects reacting to tracked hands.",
+            "https://www.youtube.com/embed/_IHlRjQvM6U?start=7": "Corridor flood effect inspired by The Shining, created with Niagara fluid simulation (stylized thick-fluid look)."
+          }
+        },
+        "deepDive": {
+          "problem": "Interactive installations need expressive VFX that remain controllable and stable when driven by noisy real-time tracking data, without sacrificing iteration speed or visual complexity.",
+          "approach": [
+            "Built Niagara systems around modular emitters and custom modules, exposing clean control parameters for Blueprint orchestration.",
+            "Translated MediaPipe tracking into stable interaction values in Blueprint, then routed those values into Niagara to drive consistent, responsive behavior."
+          ]
+        }
+    },
+    "cyberpunk-scene-environment":{
+        "date": "2025-01-15",
+        "name": "Cyberpunk Food Court Environment Assembly",
+        "projectname": "Unreal Cyberpunk Food Court Scene",
+        "company": "Atlas",
+        "oneLiner": "Rapid assembly of a cohesive, walkable cyberpunk food court environment in Unreal Engine 5 using AI-generated assets, procedural layout, and real-time iteration under a one-week validation timeline.",
+        "bulletpoints": [
+          "Assembled a medium-scale, walkable UE5 environment from platform-generated props and characters as a solo owner.",
+          "Used procedural content generation and Blueprint-driven setup to establish layout, populate assets, and iterate quickly.",
+          "Unified lighting, materials, shaders, and ambient motion to achieve visual cohesion while maintaining real-time performance."
+        ],
+        "dcc": [],
+        "engine": ["Unreal"],
+        "languages": ["Blueprints"],
+        "skillsets": ["unrealdev", "pipelinedev", "procgen"],
+        "tags": ["environment", "realtime", "procedural", "validation"],
+        "priority": 1,
+        "status": "complete",
+        "media": {
+          "image": [
+            "cyberpunk-scene-environment__01__hero-wide.png",
+            "cyberpunk-scene-environment__02__walkthrough-entry.png",
+            "cyberpunk-scene-environment__03__layout-overview.png",
+            "cyberpunk-scene-environment__04__market-stalls-detail.png",
+            "cyberpunk-scene-environment__06__lighting-mood-shot.png",
+            "cyberpunk-scene-environment__08__character-integration.png",
+            "cyberpunk-scene-environment__09__composition-leading-lines.png"
+          ],
+          "youtube": [
+            "https://www.youtube.com/embed/sSofJzzeDCA"
+          ],
+          "captions": {
+            "cyberpunk-scene-environment__01__hero-wide.png": "Hero wide shot establishing the full food court space, density, and overall cyberpunk mood.",
+            "cyberpunk-scene-environment__02__walkthrough-entry.png": "Entry viewpoint used in the walkthrough, showing immediate readability and lighting direction.",
+            "cyberpunk-scene-environment__03__layout-overview.png": "High-level layout overview that communicates spatial flow, focal points, and scene organization.",
+            "cyberpunk-scene-environment__04__market-stalls-detail.png": "Close-up of stall clustering and prop dressing, demonstrating believable lived-in detail from generated assets.",
+            "cyberpunk-scene-environment__06__lighting-mood-shot.png": "Lighting-focused frame highlighting contrast, color separation, and depth through the scene.",
+            "cyberpunk-scene-environment__08__character-integration.png": "Character/actor integration frame showing scale, placement, and interaction within the environment.",
+            "cyberpunk-scene-environment__09__composition-leading-lines.png": "Composition shot demonstrating deliberate sightlines and guiding the viewer through the space.",
+            "https://www.youtube.com/embed/sSofJzzeDCA": "Real-time walkthrough demonstrating environment cohesion, spatial flow, and consistency using platform-generated assets."
+          }
+        },
+        "deepDive": {
+          "problem": "Determining whether AI-generated assets from the Atlas Platform could be rapidly assembled into a cohesive, performant, and visually compelling real-time environment in Unreal Engine 5.",
+          "approach": [
+            "Imported and organized platform-generated assets into a structured Unreal scene hierarchy optimized for rapid iteration.",
+            "Used procedural content generation and Blueprint-driven logic to establish layout, asset placement, and ambient motion efficiently.",
+            "Applied lighting, shader, and material passes to unify disparate assets into a consistent cyberpunk aesthetic while preserving real-time performance."
+          ]
+        }
+    },
+    "cyberpunk-scene-sequencer":{
+        "date": "2025-01-15",
+        "name": "Cyberpunk Food Court Cinematic Sequencer",
+        "projectname": "Unreal Cyberpunk Food Court Scene",
+        "company": "Atlas",
+        "oneLiner": "Designed and produced a polished Unreal Engine 5 sequencer cinematic to present a cyberpunk environment through controlled camera design, timing, and real-time lighting continuity.",
+        "bulletpoints": [
+          "Authored a sequencer-driven cinematic to present the environment with deliberate pacing and composition.",
+          "Designed camera paths and framing using Unreal Sequencer to guide the viewer through key spatial beats.",
+          "Coordinated lighting and environmental motion within the sequencer timeline to maintain visual continuity."
+        ],
+        "dcc": [],
+        "engine": ["Unreal"],
+        "languages": ["Blueprints"],
+        "skillsets": ["unrealdev"],
+        "tags": ["sequencer", "cinematic", "realtime", "presentation"],
+        "priority": 1,
+        "status": "complete",
+        "media": {
+          "image": [
+            "cyberpunk-scene-sequencer__01__establishing-shot.png",
+            "cyberpunk-scene-sequencer__02__camera-path-overview.png",
+            "cyberpunk-scene-sequencer__03__mid-shot-composition.png",
+            "cyberpunk-scene-sequencer__04__sequencer-lighting-pass.png"
+          ],
+          "youtube": [
+            "https://www.youtube.com/embed/sU12YZB1AWA"
+          ],
+          "captions": {
+            "cyberpunk-scene-sequencer__01__establishing-shot.png": "Opening establishing shot used to introduce scale, spatial layout, and overall mood of the environment.",
+            "cyberpunk-scene-sequencer__02__camera-path-overview.png": "Editor overview illustrating the planned camera path and shot progression authored in Unreal Sequencer.",
+            "cyberpunk-scene-sequencer__03__mid-shot-composition.png": "Sequencer editor view showing camera tracks, timing, and shot arrangement during cinematic authoring.",
+            "cyberpunk-scene-sequencer__04__sequencer-lighting-pass.png": "Sequencer timeline view demonstrating coordination of lighting and environment elements alongside camera animation.",
+            "https://www.youtube.com/embed/sU12YZB1AWA": "Sequencer-exported cinematic showcasing camera design, lighting continuity, and real-time presentation of the environment."
+          }
+        },
+        "deepDive": {
+          "problem": "Presenting a real-time environment in a controlled, cinematic format that clearly communicates mood, scale, and visual quality without relying on interactive exploration.",
+          "approach": [
+            "Planned a concise cinematic structure focused on spatial reveals and visual rhythm rather than exhaustive coverage.",
+            "Used Unreal Sequencer to author camera movement, shot timing, and framing with precise control.",
+            "Managed lighting states and ambient motion within the sequencer timeline to preserve continuity and avoid visual distraction."
+          ]
+        }
+    },
+    "chaosbuildings-spline":{
+      "date": "2025-11-01",
+      "name": "Spline-Driven Urban Authoring System",
+      "projectname": "Chaos Buildings",
+      "company": "Atlas",
+      "oneLiner": "Designer-authored road spline system that encodes spatial intent—such as width, orientation, and intersections—and drives coherent urban layout behavior in real time.",
+      "bulletpoints": [
+        "Built a custom road Blueprint using spline components as the primary authoring interface for urban layout.",
+        "Exposed spline-level parameters (road width, orientation, tags) to encode designer intent rather than static geometry.",
+        "Implemented spline mesh and virtual texture projection to integrate roads with terrain and suppress landscape grass along road paths.",
+        "Designed spline intersection handling to resolve crossings and corners automatically without manual cleanup.",
+        "Encoded directionality at the spline level, enabling downstream systems to reason about orientation-sensitive placement."
+      ],
+      "dcc": [],
+      "engine": ["Unreal"],
+      "languages": ["Blueprints"],
+      "skillsets": ["tooldev", "pipelinedev", "unrealdev", "procgen"],
+      "tags": [
+        "spline-authoring",
+        "urban-tools",
+        "designer-workflows",
+        "procedural-layout",
+        "pcg-input",
+        "terrain-integration"
+      ],
+      "priority": 1,
+      "status": "complete",
+      "media": {
+        "image": [
+          "chaosbuildings-spline_01.png",
+          "chaosbuildings-spline_02.png",
+          "chaosbuildings-spline_03.png"
+        ],
+        "youtube": [
+          "https://www.youtube.com/embed/erOLKPf2rXM"
+        ],
+        "captions": {
+          "chaosbuildings-spline_01.png": "Road spline Blueprint selected in the Unreal Editor, exposing authoring parameters used to encode urban layout intent.",
+          "chaosbuildings-spline_02.png": "Top-down view of authored road splines defining the primary urban layout before contextual PCG interpretation.",
+          "chaosbuildings-spline_03.png": "Intersection case showing spline connectivity and layout constraints used as semantic input for downstream systems.",
+          "https://www.youtube.com/embed/erOLKPf2rXM": "Editor-mode walkthrough showing the spline-authored road network forming the structural backbone of the procedural city layout."
+        }
+    },
+    "chaosbuilding-pcg":{
+      "date": "2024-01-01",
+      "name": "Contextual PCG & Zoning Placement Framework",
+      "projectname": "Chaos Buildings",
+      "company": "Atlas",
+      "oneLiner": "Runtime-aware procedural placement framework that interprets spline metadata, zoning groups, and global rules to generate coherent urban layouts in real time.",
+      "bulletpoints": [
+        "Designed a global PCG actor that acts as a decision engine, interpreting spline metadata, tags, and zoning data rather than performing random scattering.",
+        "Implemented zoning group logic (commercial, residential, density tiers) to drive contextual building selection and placement.",
+        "Built direction-aware placement rules that align cars and props with road spline orientation.",
+        "Added intersection-aware logic to resolve crossings and corners correctly when multiple splines meet.",
+        "Integrated tag-based foliage filtering on packed level actors, allowing density and removal rules to be driven procedurally.",
+        "Enabled sidewalks, props, traffic, and structures to be placed coherently from the same rule set without manual iteration."
+      ],
+      "dcc": [],
+      "engine": ["Unreal"],
+      "languages": ["Blueprints"],
+      "skillsets": ["tooldev", "pipelinedev", "unrealdev"],
+      "tags": [
+        "pcg",
+        "zoning",
+        "procedural-placement",
+        "urban-systems",
+        "context-aware",
+        "designer-intent",
+        "runtime-evaluation"
+      ],
+      "priority": 1,
+      "status": "complete",
+      "media": {
+        "image": [
+          "chaosbuildings-pcg_01.png",
+          "chaosbuildings-pcg_02.png",
+          "chaosbuildings-pcg_03.png",
+          "chaosbuildings-pcg_04.png",
+          "chaosbuildings-pcg_05.png",
+          "chaosbuildings-pcg_06.png",
+          "chaosbuildings-pcg_07.png"
+        ],
+        "youtube": [
+          "https://www.youtube.com/embed/8j5FebcAETY"
+        ],
+        "captions": {
+          "chaosbuildings-pcg_01.png": "Procedurally generated urban layout produced by the global PCG system, interpreting spline metadata and zoning rules to form coherent city blocks.",
+          "chaosbuildings-pcg_02.png": "Global PCG graph showing rule-based evaluation of spline data, zoning groups, and contextual placement logic.",
+          "chaosbuildings-pcg_03.png": "Zoning configuration view demonstrating how different building categories and density tiers are selected procedurally.",
+          "chaosbuildings-pcg_04.png": "Procedural placement of buildings, sidewalks, and props driven by road context and zoning interpretation.",
+          "chaosbuildings-pcg_05.png": "Context-aware building placement adapting to road width, orientation, and surrounding environment.",
+          "chaosbuildings-pcg_06.png": "Intersection-aware PCG resolving crossings and corners to maintain coherent urban structure.",
+          "chaosbuildings-pcg_07.png": "Direction-aware traffic and prop placement aligned to spline orientation within the procedural city.",
+          "https://www.youtube.com/embed/8j5FebcAETY": "Global PCG system interpreting spline metadata and zoning rules to place buildings, sidewalks, props, and traffic coherently."
+        }
+      },
+      "deepDive": {
+        "problem": "Traditional procedural placement often relies on local rules or random distribution, making it difficult to express designer intent, enforce zoning logic, or maintain coherence across complex urban layouts.",
+        "approach": [
+          "Centralized placement logic in a global PCG actor that evaluates spline metadata, zoning groups, and global parameters before making placement decisions.",
+          "Used splines strictly as semantic inputs while allowing the PCG framework to interpret context such as direction, width, and intersections.",
+          "Extended placement rules beyond buildings to include sidewalks, props, vehicles, and foliage, ensuring all elements respond consistently to the same authored intent."
+        ]
+      }
+    },
+    "chaosbuilding-runtime":{
+      "date": "2024-01-01",
+      "name": "Procedural City Runtime & Chaos Destruction",
+      "projectname": "Chaos Buildings",
+      "company": "Atlas",
+      "oneLiner": "Real-time validation of a procedural urban system running on landscape at stable FPS, with Chaos-enabled destructible buildings and interactive stress testing via a third-person runtime harness.",
+      "bulletpoints": [
+        "Validated the full procedural city stack at runtime, combining landscape, PCG placement, foliage, and urban systems in a real-time environment.",
+        "Integrated Chaos destruction by pre-fracturing selected buildings and enabling runtime destruction without breaking systemic coherence.",
+        "Used a simple third-person controller as an interactive harness to navigate the city and trigger destruction scenarios.",
+        "Confirmed stable performance and responsiveness while dynamically interacting with procedurally placed structures.",
+        "Captured runtime footage demonstrating traversal, destruction, and system behavior under real-time conditions."
+      ],
+      "dcc": [],
+      "engine": ["Unreal"],
+      "languages": ["Blueprints"],
+      "skillsets": ["unrealdev", "tooldev", "pipelinedev"],
+      "tags": [
+        "chaos-destruction",
+        "procedural-city",
+        "real-time-performance",
+        "interactive-systems"
+      ],
+      "priority": 2,
+      "status": "complete",
+      "media": {
+        "image": [
+          "chaosbuildings-runtime_01.png",
+          "chaosbuildings-runtime_02.png",
+          "chaosbuildings-runtime_03.png",
+          "chaosbuildings-runtime_04.png"
+        ],
+        "youtube": [
+          "https://www.youtube.com/embed/rnS3XX26NOM"
+        ],
+        "captions": {
+          "chaosbuildings-runtime_01.png": "Procedurally placed building at runtime, shown at the beginning of a Chaos-enabled structural collapse.",
+          "chaosbuildings-runtime_02.png": "Runtime traversal of the procedural city using a third-person validation harness.",
+          "chaosbuildings-runtime_03.png": "Third-person runtime view navigating the procedurally generated urban environment.",
+          "chaosbuildings-runtime_04.png": "Runtime validation view demonstrating stable traversal through the procedural city under real-time conditions.",
+          "https://www.youtube.com/embed/rnS3XX26NOM": "Runtime validation pass showing Chaos-enabled building destruction and real-time traversal of the procedural city."
+        
+        }
+      },
+      "deepDive": {
+        "problem": "Procedural urban systems often look correct in editor previews but fail under real-time conditions when combined with traversal, physics, and destruction.",
+        "approach": [
+          "Ran the full procedural city system at runtime on landscape to validate performance, stability, and system interaction.",
+          "Integrated Chaos destruction as a stress test layer to ensure destructible assets could coexist with procedurally placed structures.",
+          "Used a lightweight third-person controller to interact with the environment and observe system behavior during traversal and destruction."
+        ]
+      }
+    }
+    },
+    "chaosbuildings-pcg":{
+      "date": "2025-11-01",
+      "name": "Contextual PCG & Zoning Placement Framework",
+      "projectname": "Chaos Buildings",
+      "company": "Atlas",
+      "oneLiner": "Runtime-aware procedural placement framework that interprets spline metadata, zoning groups, and global rules to generate coherent urban layouts in real time.",
+      "bulletpoints": [
+        "Designed a global PCG actor that acts as a decision engine, interpreting spline metadata, tags, and zoning data rather than performing random scattering.",
+        "Implemented zoning group logic (commercial, residential, density tiers) to drive contextual building selection and placement.",
+        "Built direction-aware placement rules that align cars and props with road spline orientation.",
+        "Added intersection-aware logic to resolve crossings and corners correctly when multiple splines meet.",
+        "Integrated tag-based foliage filtering on packed level actors, allowing density and removal rules to be driven procedurally.",
+        "Enabled sidewalks, props, traffic, and structures to be placed coherently from the same rule set without manual iteration."
+      ],
+      "dcc": [],
+      "engine": ["Unreal"],
+      "languages": ["Blueprints"],
+      "skillsets": ["tooldev", "pipelinedev", "unrealdev", "procgen"],
+      "tags": [
+        "pcg",
+        "zoning",
+        "procedural-placement",
+        "urban-systems",
+        "context-aware",
+        "designer-intent",
+        "runtime-evaluation"
+      ],
+      "priority": 1,
+      "status": "complete",
+      "media": {
+        "image": [
+          "chaosbuildings-pcg_06.png",
+          "chaosbuildings-pcg_01.png",
+          "chaosbuildings-pcg_02.png",
+          "chaosbuildings-pcg_03.png",
+          "chaosbuildings-pcg_04.png",
+          "chaosbuildings-pcg_05.png",
+          "chaosbuildings-pcg_07.png"
+        ],
+        "youtube": [
+          "https://www.youtube.com/embed/8j5FebcAETY"
+        ],
+        "captions": {
+          "chaosbuildings-pcg_01.png": "Procedurally generated urban layout produced by the global PCG system, interpreting spline metadata and zoning rules to form coherent city blocks.",
+          "chaosbuildings-pcg_02.png": "Global PCG graph showing rule-based evaluation of spline data, zoning groups, and contextual placement logic.",
+          "chaosbuildings-pcg_03.png": "Zoning configuration view demonstrating how different building categories and density tiers are selected procedurally.",
+          "chaosbuildings-pcg_04.png": "Procedural placement of buildings, sidewalks, and props driven by road context and zoning interpretation.",
+          "chaosbuildings-pcg_05.png": "Context-aware building placement adapting to road width, orientation, and surrounding environment.",
+          "chaosbuildings-pcg_06.png": "Intersection-aware PCG resolving crossings and corners to maintain coherent urban structure.",
+          "chaosbuildings-pcg_07.png": "Direction-aware traffic and prop placement aligned to spline orientation within the procedural city.",
+          "https://www.youtube.com/embed/8j5FebcAETY": "Global PCG system interpreting spline metadata and zoning rules to place buildings, sidewalks, props, and traffic coherently."
+        }
+      },
+      "deepDive": {
+        "problem": "Traditional procedural placement often relies on local rules or random distribution, making it difficult to express designer intent, enforce zoning logic, or maintain coherence across complex urban layouts.",
+        "approach": [
+          "Centralized placement logic in a global PCG actor that evaluates spline metadata, zoning groups, and global parameters before making placement decisions.",
+          "Used splines strictly as semantic inputs while allowing the PCG framework to interpret context such as direction, width, and intersections.",
+          "Extended placement rules beyond buildings to include sidewalks, props, vehicles, and foliage, ensuring all elements respond consistently to the same authored intent."
+        ]
+      }
+    },
+    "chaosbuildings-runtime":{
+      "date": "2025-11-01",
+      "name": "Procedural City Runtime & Chaos Destruction",
+      "projectname": "Chaos Buildings",
+      "company": "Atlas",
+      "oneLiner": "Real-time validation of a procedural urban system running on landscape at stable FPS, with Chaos-enabled destructible buildings and interactive stress testing via a third-person runtime harness.",
+      "bulletpoints": [
+        "Validated the full procedural city stack at runtime, combining landscape, PCG placement, foliage, and urban systems in a real-time environment.",
+        "Integrated Chaos destruction by pre-fracturing selected buildings and enabling runtime destruction without breaking systemic coherence.",
+        "Used a simple third-person controller as an interactive harness to navigate the city and trigger destruction scenarios.",
+        "Confirmed stable performance and responsiveness while dynamically interacting with procedurally placed structures.",
+        "Captured runtime footage demonstrating traversal, destruction, and system behavior under real-time conditions."
+      ],
+      "dcc": [],
+      "engine": ["Unreal"],
+      "languages": ["Blueprints"],
+      "skillsets": ["unrealdev", "tooldev", "pipelinedev", "procgen"],
+      "tags": [
+        "chaos-destruction",
+        "procedural-city",
+        "real-time-performance",
+        "interactive-systems"
+      ],
+      "priority": 2,
+      "status": "complete",
+      "media": {
+        "image": [
+          "chaosbuildings-runtime_01.png",
+          "chaosbuildings-runtime_02.png",
+          "chaosbuildings-runtime_03.png",
+          "chaosbuildings-runtime_04.png"
+        ],
+        "youtube": [
+          "https://www.youtube.com/embed/rnS3XX26NOM"
+        ],
+        "captions": {
+          "chaosbuildings-runtime_01.png": "Procedurally placed building at runtime, shown at the beginning of a Chaos-enabled structural collapse.",
+          "chaosbuildings-runtime_02.png": "Runtime traversal of the procedural city using a third-person validation harness.",
+          "chaosbuildings-runtime_03.png": "Third-person runtime view navigating the procedurally generated urban environment.",
+          "chaosbuildings-runtime_04.png": "Runtime validation view demonstrating stable traversal through the procedural city under real-time conditions.",
+          "https://www.youtube.com/embed/rnS3XX26NOM": "Runtime validation pass showing Chaos-enabled building destruction and real-time traversal of the procedural city."
+        
+        }
+      },
+      "deepDive": {
+        "problem": "Procedural urban systems often look correct in editor previews but fail under real-time conditions when combined with traversal, physics, and destruction.",
+        "approach": [
+          "Ran the full procedural city system at runtime on landscape to validate performance, stability, and system interaction.",
+          "Integrated Chaos destruction as a stress test layer to ensure destructible assets could coexist with procedurally placed structures.",
+          "Used a lightweight third-person controller to interact with the environment and observe system behavior during traversal and destruction."
+        ]
+      }
+    },    
+    "atlasplugin-unreal":{
+      "date": "2026-01-01",
+      "name": "Atlas Unreal Editor Integration",
+      "projectname": "Atlas DCC Integration Framework",
+      "company": "Atlas",
+      "oneLiner": "Designed and implemented a native Unreal Editor plugin that exposes Atlas AI workflows through dynamic editor UI, supports full workflow lifecycle management, and imports generated assets directly into Unreal projects.",
+      "bulletpoints": [
+        "Built a native Unreal Editor plugin that allows artists to discover, configure, and execute Atlas workflows directly inside the editor.",
+        "Implemented asynchronous job execution with clear progress feedback, robust error handling, and persistent job history with filtering for iterative workflows.",
+        "Integrated automatic import and organization of generated assets into the Unreal Content Browser using engine-native asset pipelines."
+      ],
+      "dcc": [],
+      "engine": ["Unreal"],
+      "languages": ["C++", "Blueprints"],
+      "skillsets": ["unrealdev", "tooldev", "pipelinedev"],
+      "tags": ["editor-plugin", "workflow", "async", "asset-import", "job-history"],
+      "priority": 1,
+      "status": "complete",
+      "media": {
+        "image": [
+          "atlasplugin-unreal_01_editor-docked-ui.jpg",
+          "atlasplugin-unreal_02_workflow-parameters.jpg",
+          "atlasplugin-unreal_03_job-execution-state.jpg",
+          "atlasplugin-unreal_04_job-history-filtering.jpg",
+          "atlasplugin-unreal_05_imported-assets-browser.jpg"
+        ],
+        "youtube": [
+        ],
+        "captions": {
+          "atlasplugin-unreal_01_editor-docked-ui.jpg": "Atlas workflow plugin docked inside the Unreal Editor, demonstrating native integration and editor-consistent UI layout.",
+          "atlasplugin-unreal_02_workflow-parameters.jpg": "Schema-driven workflow configuration UI allowing artists to select and validate workflow inputs before execution.",
+          "atlasplugin-unreal_03_job-execution-state.jpg": "Asynchronous job execution state displayed in-editor, providing clear progress and status feedback.",
+          "atlasplugin-unreal_04_job-history-filtering.jpg": "Persistent job history panel with filtering options, enabling iteration, debugging, and repeatable workflow usage.",
+          "atlasplugin-unreal_05_imported-assets-browser.jpg": "Generated assets automatically imported and organized inside the Unreal Content Browser."
+        }
+      },
+      "deepDive": {
+        "problem": "Integrating networked AI workflows into the Unreal Editor requires not only execution capabilities, but also persistent state, clear feedback, and safe asset handling to support iterative production use.",
+        "approach": [
+          "Designed a native Unreal Editor plugin architecture that supports the full workflow lifecycle: discovery, configuration, execution, and history review.",
+          "Mapped workflow schemas to dynamic editor UI elements with validation to prevent invalid job submissions.",
+          "Implemented asynchronous job execution with editor-safe callbacks, persistent job tracking, and clear success and error states.",
+          "Integrated Unreal-native asset import and naming conventions so generated outputs behave like first-class engine assets."
+        ]
+      }
+    },
+    "atlasplugin-unity":{
+      "date": "2026-01-01",
+      "name": "Atlas Unity Editor Integration",
+      "projectname": "Atlas DCC Integration Framework",
+      "company": "Atlas",
+      "oneLiner": "Developed a native Unity Editor plugin that exposes Atlas AI workflows through schema-driven UI, supports full workflow lifecycle management, and imports generated assets directly into Unity projects.",
+      "bulletpoints": [
+        "Built a Unity Editor plugin that allows artists to discover, configure, and execute Atlas workflows directly inside the editor.",
+        "Implemented asynchronous job execution with responsive editor feedback, robust error handling, and persistent job history with filtering to support iteration.",
+        "Integrated automatic import and organization of generated assets into Unity’s Project window and Inspector for immediate use."
+      ],
+      "dcc": [],
+      "engine": ["Unity"],
+      "languages": ["C#"],
+      "skillsets": ["unitydev", "tooldev", "pipelinedev"],
+      "tags": ["editor-plugin", "workflow", "dynamic-ui", "job-history", "asset-import"],
+      "priority": 1,
+      "status": "complete",
+      "media": {
+        "image": [
+          "atlasplugin-unity__01__editor-window.jpg",
+          "atlasplugin-unity__02__workflow-parameters.jpg",
+          "atlasplugin-unity__03__job-history-filtering.jpg",
+          "atlasplugin-unity__04__asset-inspector-view.jpg"
+        ],
+        "youtube": [
+        ],
+        "captions": {
+          "atlasplugin-unity__01__editor-window.jpg": "Atlas workflow plugin running as a native Unity Editor window with editor-consistent layout and interaction patterns.",
+          "atlasplugin-unity__02__workflow-parameters.jpg": "Schema-driven workflow configuration UI with dynamically generated and validated parameters.",
+          "atlasplugin-unity__03__job-history-filtering.jpg": "Persistent job history panel with filtering options, enabling iteration, debugging, and result review.",
+          "atlasplugin-unity__04__asset-inspector-view.jpg": "Example generated asset shown in the Unity Inspector, demonstrating immediate usability after import."
+        }
+      },
+      "deepDive": {
+        "problem": "Integrating networked AI workflows into the Unity Editor requires balancing dynamic tooling, responsive feedback, and persistent state while maintaining a clean and intuitive artist-facing UX.",
+        "approach": [
+          "Designed a Unity Editor plugin architecture that supports the full workflow lifecycle: discovery, configuration, execution, and job history review.",
+          "Generated dynamic editor UI from workflow schemas to ensure validated inputs and reduce manual UI maintenance.",
+          "Implemented asynchronous job execution with responsive feedback, persistent job tracking, and clear success and error states.",
+          "Integrated Unity-native asset import and inspector workflows so generated outputs behave like first-class project assets."
+        ]
+      }
+    }
+    
+    
+  }

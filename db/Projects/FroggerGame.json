@@ -1,0 +1,24 @@
+{
+    "name": "Frogger Game Validation",
+    "client": "Atlas",
+    "company": "Atlas (Design Partner Platform)",
+    "media": "Digital",
+    "platform": "PC",
+    "involvement": "Gameplay & Tool Validation",
+    "impact": "Built a fully playable Unreal Engine 5 executable that validated the Atlas Platform’s end-to-end asset generation capabilities, procedural audio integration, and online connectivity through a working high-score REST API and leaderboard system.",
+    "responsibilities": [
+      "Designed the game architecture and implemented gameplay systems, including state management, UI flow, and core mechanics inspired by Frogger.",
+      "Integrated Atlas-generated procedural commentary using LLM-driven text generation and platform audio workflows, dynamically mixed in real time.",
+      "Created a multi-screen UI experience including menus, HUD, leaderboard, and diegetic elements to support polished game flow.",
+      "Implemented REST API connectivity for posting and fetching high scores, creating an online leaderboard supporting persistent user engagement.",
+      "Built and packaged the project as a polished standalone executable to demonstrate production-level deployment capabilities."
+    ],
+    "context": "This project was created as a polished demonstration of the Atlas Platform’s ability to produce fully integrated 3D games with dynamic asset and audio generation. Built in Unreal Engine 5 as a validation of concept, the project showcases a complete executable that includes gameplay logic, procedural audio, network connectivity, and UI systems.",
+    "challenges": "Combining AI-generated assets and audio with real-time gameplay required careful orchestration between the Atlas Platform and Unreal Engine 5. Ensuring responsive gameplay, stable audio mixing, and reliable network integration demanded robust state management and integration layers.",
+    "solutions": "I implemented a cohesive Unreal project that tied together core gameplay mechanics, UI states, procedural audio, and REST API integration. The executable demonstrated both the Atlas Platform’s practical capabilities and my ability to deliver a complete, polished interactive experience from concept to deployment.",
+    "portfolioitems": [
+      "frogger-game-play",
+      "frogger-game-audio",
+      "frogger-game-highscore"
+    ]
+  }

@@ -1,0 +1,45 @@
+{
+    "date": "2026-01-15",
+    "name": "Diegetic Leaderboard and Online High-Score System",
+    "projectname": "Frogger Game Validation",
+    "company": "Atlas (Design Partner Platform)",
+    "oneLiner": "Implemented a fully online, diegetic leaderboard system in Unreal Engine 5 that computes player scores from gameplay results, communicates with a REST API, and triggers dynamic procedural audio commentary for top-ranking entries.",
+    "bulletpoints": [
+      "Designed a diegetic in-world leaderboard UI that displays online high scores without breaking player immersion.",
+      "Computed player scores from multiple gameplay metrics including coins collected, stars earned, remaining lives, and completion time.",
+      "Integrated REST API communication to submit and retrieve scores, enabling persistent online leaderboards and dynamic rank updates."
+    ],
+    "dcc": [],
+    "engine": ["Unreal"],
+    "languages": ["Blueprints"],
+    "skillsets": ["unrealdev"],
+    "tags": ["leaderboard", "rest-api", "diegetic-ui", "scoring", "online"],
+    "priority": 1,
+    "status": "complete",
+    "media": {
+      "image": [
+        "frogger-game-highscore__01__diegetic-leaderboard-empty.png",
+        "frogger-game-highscore__02__diegetic-leaderboard-populated.png",
+        "frogger-game-highscore__03__leaderboard-editor-view.png"
+      ],
+      "youtube": [
+        "https://www.youtube.com/embed/FROGGER_HIGHSCORE_DEMO_ID"
+      ],
+      "captions": {
+        "frogger-game-highscore__01__diegetic-leaderboard-empty.png": "Diegetic leaderboard screen integrated into the game world before any scores are retrieved.",
+        "frogger-game-highscore__02__diegetic-leaderboard-populated.png": "Leaderboard populated with online scores fetched from a REST API, displaying rank, score breakdown, remaining lives, and completion time.",
+        "frogger-game-highscore__03__leaderboard-editor-view.png": "Editor view of the leaderboard system showing UI integration and score data binding during development.",
+        "https://www.youtube.com/embed/FROGGER_HIGHSCORE_DEMO_ID": "Gameplay flow demonstrating score submission, online leaderboard update, and diegetic presentation inside the game world."
+      }
+    },
+    "deepDive": {
+      "problem": "Validating a complete game experience required more than local scoring; the project needed a persistent, online leaderboard that reflected player performance accurately and enhanced the sense of progression and competition.",
+      "approach": [
+        "Defined a structured scoring model that aggregates multiple gameplay metrics (coins, stars, remaining lives, and completion time) into a final score.",
+        "Serialized gameplay results into a JSON payload including player name and selected avatar, and transmitted it via REST API calls to a backend service.",
+        "Fetched and displayed ranked score data in a diegetic in-world leaderboard UI to maintain immersion.",
+        "Triggered procedurally generated audio commentary when player scores entered top-ranking positions, reinforcing achievement through dynamic feedback."
+      ]
+    }
+  }
+  

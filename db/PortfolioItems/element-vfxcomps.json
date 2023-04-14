@@ -1,0 +1,60 @@
+{
+    "date": "2018-12-01",
+    "name": "Code-Driven VFX Animation Toolkit",
+    "projectname": "Element Space",
+    "company": "Sixth Vowel",
+    "oneLiner": "Lightweight MonoBehaviour-based toolkit that let the VFX team build dynamic, animated effects without relying on Unity’s animation systems—improving iteration speed, consistency, and runtime control.",
+    "bulletpoints": [
+      "Created reusable timing and lifecycle components (delayed start, deactivate-by-time, visibility switching) to standardize common VFX behaviors without Animator dependencies.",
+      "Implemented procedural shape utilities like a Circle Renderer (built on LineRenderer) for fast authoring of geometric VFX elements.",
+      "Built an Animation Curves component to drive multiple targets (lights, shader floats, shader colors) with looping, delays, and easy extensibility for new animated parameters."
+    ],
+    "dcc": [],
+    "engine": ["Unity"],
+    "languages": ["C#"],
+    "skillsets": ["tooldev", "vfx", "unitydev","procgen"],
+    "tags": [
+      "vfx-tools",
+      "runtime-animation",
+      "monobehaviours",
+      "animation-curves",
+      "timing",
+      "procedural-shapes",
+      "artist-workflows"
+    ],
+    "priority": 3,
+    "status": "complete",
+    "media": {
+      "image": [
+        "animatedvfxcomponents_portfolio_item-1.png",
+        "animatedvfxcomponents_portfolio_item-2.png",
+        "animatedvfxcomponents_portfolio_item-3.png",
+        "animatedvfxcomponents_portfolio_item-4.png",
+        "vfx_circlerenderer.gif",
+        "animatedvfxcomponents_portfolio_item-6.png",
+        "animatedvfxcomponents_portfolio_item-7.png",
+        "animatedvfxcomponents_portfolio_item-8.png",
+        "vfx_animationcurves.gif"
+      ],
+      "youtube": [],
+      "captions": {
+        "animatedvfxcomponents_portfolio_item-1.png": "VFX_DelayStartComponent inspector: enables a disabled MonoBehaviour after a configurable delay.",
+        "animatedvfxcomponents_portfolio_item-2.png": "VFX_DeactivateByTime inspector: deactivates a target GameObject (or self) after a set duration.",
+        "animatedvfxcomponents_portfolio_item-3.png": "VFX_SwitchVisibility inspector: toggles selected MeshRenderers on/off with a configurable delay.",
+        "animatedvfxcomponents_portfolio_item-4.png": "VFX_CircleRenderer inspector: procedural circle drawing controls (radius, segments, width, color).",
+        "vfx_circlerenderer.gif": "Circle Renderer animated example demonstrating procedural circle generation in-editor.",
+        "animatedvfxcomponents_portfolio_item-6.png": "VFX_AnimationCurves setup driving Light parameters using curve-based animation.",
+        "animatedvfxcomponents_portfolio_item-7.png": "VFX_AnimationCurves setup driving shader float parameters via curves for runtime VFX control.",
+        "animatedvfxcomponents_portfolio_item-8.png": "VFX_AnimationCurves setup driving shader color parameters via curves for dynamic VFX styling.",
+        "vfx_animationcurves.gif": "Animated example of curve-driven parameter animation for VFX without using Unity’s Animator."
+      }
+    },
+    "deepDive": {
+      "problem": "VFX iteration slowed down when effects depended on Unity’s animation systems, increasing setup overhead and reducing flexibility for runtime-controlled behaviors.",
+      "approach": [
+        "Replaced common VFX animation needs with small, composable MonoBehaviour components (timing, activation, visibility) that were easy to reuse and reason about.",
+        "Implemented a generalized curve-driven parameter system to animate multiple target types (lights, shader floats, shader colors) with looping and delay support."
+      ]
+    }
+  }
+  

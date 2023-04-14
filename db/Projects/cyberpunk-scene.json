@@ -1,0 +1,23 @@
+{
+    "name": "Unreal Cyberpunk Food Court Scene",
+    "client": "Atlas (Internal Validation)",
+    "company": "Atlas",
+    "media": "Digital",
+    "platform": "PC",
+    "involvement": "Environment & Visualization Validation",
+    "impact": "Demonstrated rapid environment creation, real-time rendering, and cinematic storytelling using AI-generated assets via the Atlas Platform in Unreal Engine 5, culminating in a sequencer-exported cinematic.",
+    "responsibilities": [
+      "Solely designed and built a medium-scale walkable 3D environment in Unreal Engine 5 using platform-generated assets.",
+      "Utilized procedural content generation, custom shaders, and Blueprints to assemble and animate environmental elements and character actors.",
+      "Set up lighting, VFX, and sequencer cinematics to produce a polished visual presentation.",
+      "Integrated AI-generated character and prop assets into the scene and orchestrated their motion and interaction via Blueprints.",
+      "Captured and exported a cinematic sequence using the Unreal Sequencer to showcase the visual and experiential quality of the environment."
+    ],
+    "context": "This project was a one-week internal validation to test the Atlas Platform’s ability to generate and assemble 3D assets into a cohesive Unreal Engine 5 scene. The environment takes the form of a techno-cyberpunk food court with dynamic lighting, rigged character actors, and visual effects.",
+    "challenges": "Building a visually compelling, walkable environment under a tight time constraint required rapid iteration, robust scene layout tools, and seamless importation of platform-generated assets. Ensuring lighting, character motion, and VFX worked together without performance issues was also critical.",
+    "solutions": "I leveraged procedural content generation, Blueprints, and custom shader work to quickly assemble and iterate the environment. Sequencer was used to craft a cinematic walkthrough that highlighted the platform’s asset quality and lighting fidelity. The result was a polished demo cinematic that validated the platform’s real-time capabilities.",
+    "portfolioitems": [
+      "cyberpunk-scene-environment",
+      "cyberpunk-scene-sequencer"
+    ]
+  }

@@ -1,0 +1,45 @@
+{
+    "date": "2024-11-20",
+    "name": "Atlas Unity Editor Integration",
+    "projectname": "Atlas DCC Integration Framework",
+    "company": "Atlas",
+    "oneLiner": "Developed a native Unity Editor plugin that exposes Atlas AI workflows through schema-driven UI, supports full workflow lifecycle management, and imports generated assets directly into Unity projects.",
+    "bulletpoints": [
+      "Built a Unity Editor plugin that allows artists to discover, configure, and execute Atlas workflows directly inside the editor.",
+      "Implemented asynchronous job execution with responsive editor feedback, robust error handling, and persistent job history with filtering to support iteration.",
+      "Integrated automatic import and organization of generated assets into Unity’s Project window and Inspector for immediate use."
+    ],
+    "dcc": [],
+    "engine": ["Unity"],
+    "languages": ["C#"],
+    "skillsets": ["unitydev", "tooldev", "pipelinedev"],
+    "tags": ["editor-plugin", "workflow", "dynamic-ui", "job-history", "asset-import"],
+    "priority": 1,
+    "status": "complete",
+    "media": {
+      "image": [
+        "atlasplugin-unity__01__editor-window.jpg",
+        "atlasplugin-unity__02__workflow-parameters.jpg",
+        "atlasplugin-unity__03__job-history-filtering.jpg",
+        "atlasplugin-unity__04__asset-inspector-view.jpg"
+      ],
+      "youtube": [
+      ],
+      "captions": {
+        "atlasplugin-unity__01__editor-window.jpg": "Atlas workflow plugin running as a native Unity Editor window with editor-consistent layout and interaction patterns.",
+        "atlasplugin-unity__02__workflow-parameters.jpg": "Schema-driven workflow configuration UI with dynamically generated and validated parameters.",
+        "atlasplugin-unity__03__job-history-filtering.jpg": "Persistent job history panel with filtering options, enabling iteration, debugging, and result review.",
+        "atlasplugin-unity__04__asset-inspector-view.jpg": "Example generated asset shown in the Unity Inspector, demonstrating immediate usability after import."
+      }
+    },
+    "deepDive": {
+      "problem": "Integrating networked AI workflows into the Unity Editor requires balancing dynamic tooling, responsive feedback, and persistent state while maintaining a clean and intuitive artist-facing UX.",
+      "approach": [
+        "Designed a Unity Editor plugin architecture that supports the full workflow lifecycle: discovery, configuration, execution, and job history review.",
+        "Generated dynamic editor UI from workflow schemas to ensure validated inputs and reduce manual UI maintenance.",
+        "Implemented asynchronous job execution with responsive feedback, persistent job tracking, and clear success and error states.",
+        "Integrated Unity-native asset import and inspector workflows so generated outputs behave like first-class project assets."
+      ]
+    }
+  }
+  

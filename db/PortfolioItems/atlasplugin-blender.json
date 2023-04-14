@@ -1,0 +1,57 @@
+{
+    "date": "2024-11-20",
+    "name": "Atlas Blender Add-on Integration",
+    "projectname": "Atlas DCC Integration Framework",
+    "company": "Atlas",
+    "oneLiner": "Developed a Blender add-on that integrates Atlas AI workflows into Blender’s UI, enabling workflow discovery, schema-driven configuration, asynchronous execution, job history review, and direct import of generated results into Blender.",
+    "bulletpoints": [
+      "Built a Blender add-on that follows the same workflow lifecycle as the Unity and Unreal integrations: discovery, configuration, execution, and job history review.",
+      "Implemented schema-driven parameter panels and validated inputs within Blender’s UI constraints while preserving a consistent workflow identity.",
+      "Handled asynchronous job execution and imported generated outputs into Blender data blocks for immediate use in scenes and materials."
+    ],
+    "dcc": ["Blender"],
+    "engine": [],
+    "languages": ["Python"],
+    "skillsets": ["tooldev", "pipelinedev"],
+    "tags": ["blender-addon", "workflow", "dynamic-ui", "job-history", "asset-import"],
+    "priority": 1,
+    "status": "complete",
+    "media": {
+      "image": [
+        "atlasplugin-blender__01__sidebar-panel.png",
+        "atlasplugin-blender__02__workflow-selection.png",
+        "atlasplugin-blender__03__parameter-panels.png",
+        "atlasplugin-blender__04__job-execution-state.png",
+        "atlasplugin-blender__05__job-error-feedback.png",
+        "atlasplugin-blender__06__job-history-filtering.png",
+        "atlasplugin-blender__07__imported-assets-outliner.png",
+        "atlasplugin-blender__08__viewport-result.png",
+        "atlasplugin-blender__09__material-nodes-result.png"
+      ],
+      "youtube": [
+        "https://www.youtube.com/embed/BLENDER_PLUGIN_DEMO_ID"
+      ],
+      "captions": {
+        "atlasplugin-blender__01__sidebar-panel.png": "Atlas add-on embedded in Blender’s sidebar, showing the primary entry point and workflow identity.",
+        "atlasplugin-blender__02__workflow-selection.png": "Workflow discovery and selection UI inside Blender, matching the same lifecycle as the engine integrations.",
+        "atlasplugin-blender__03__parameter-panels.png": "Schema-driven parameter panels adapted to Blender’s UI patterns, with validation before execution.",
+        "atlasplugin-blender__04__job-execution-state.png": "Asynchronous job execution feedback in Blender, showing progress and completion states.",
+        "atlasplugin-blender__05__job-error-feedback.png": "Clear error reporting for invalid inputs or failed executions presented within Blender’s UI.",
+        "atlasplugin-blender__06__job-history-filtering.png": "Persistent job history view with filtering to support iteration and result review.",
+        "atlasplugin-blender__07__imported-assets-outliner.png": "Generated results imported into Blender and visible in the Outliner and data blocks.",
+        "atlasplugin-blender__08__viewport-result.png": "Imported mesh/material result visible in the Blender viewport, ready for scene use.",
+        "atlasplugin-blender__09__material-nodes-result.png": "Example material/node setup showing generated textures or materials wired into Blender’s shader workflow.",
+        "https://www.youtube.com/embed/BLENDER_PLUGIN_DEMO_ID": "End-to-end Blender workflow: select workflow, configure inputs, run job, review history, and import results into the scene."
+      }
+    },
+    "deepDive": {
+      "problem": "Blender add-ons must integrate into Blender’s UI and data model while supporting iterative, networked workflow execution and making generated outputs immediately usable by artists.",
+      "approach": [
+        "Designed a Blender add-on architecture that mirrors the same workflow lifecycle used in Unity and Unreal while remaining Blender-native in interaction and layout.",
+        "Generated schema-driven parameter UI using Blender panels and properties, including validation to prevent invalid submissions.",
+        "Implemented asynchronous job execution with reliable feedback and persistent job tracking suitable for iterative production use.",
+        "Imported generated outputs into Blender data blocks (meshes, images, materials) so results become immediately available in the viewport and shader workflows."
+      ]
+    }
+  }
+  

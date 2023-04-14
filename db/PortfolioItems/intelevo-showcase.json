@@ -1,0 +1,53 @@
+{
+	"date": "2022-10-01",
+	"name": "Live Installation Showcase",
+	"projectname": "Evolution Experience",
+	"company": "Genosha",
+	"oneLiner": "On-site showcase of a large-scale Unreal Engine installation running continuously in a public space, demonstrating stable multi-user interaction, real-time visuals, and a multi-projector surround setup.",
+	"bulletpoints": [
+	  "Deployed and operated a real-time Unreal Engine system in a public installation environment with continuous runtime requirements.",
+	  "Supported live, multi-user audience interaction via tablets, driving real-time visual and behavioral responses.",
+	  "Validated long-running stability, performance, and reliability of the complete system in a real-world setting."
+	],
+	"dcc": ["Blender", "Houdini"],
+	"engine": ["Unreal"],
+	"languages": ["Blueprints"],
+	"skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
+	"tags": [
+	  "live-installation",
+	  "public-deployment",
+	  "interactive-experience",
+	  "nDisplay",
+	  "real-time-systems",
+	  "audience-interaction",
+	  "unreal-engine"
+	],
+	"priority": 3,
+	"status": "complete",
+	"media": {
+	  "image": [
+		"intelevoshowcase_portfolio_item-1.png",
+		"intelevoshowcase_portfolio_item-2.png",
+		"intelevoshowcase_portfolio_item-3.png",
+		"intelevoshowcase_portfolio_item-5.png",
+		"intelevoshowcase_portfolio_item-6.png"
+	  ],
+	  "youtube": ["https://www.youtube.com/embed/t04CSqkdfSM"],
+	  "captions": {
+		"intelevoshowcase_portfolio_item-1.png": "Visitors taking photos with interactive animal characters inside the installation.",
+		"intelevoshowcase_portfolio_item-2.png": "Audience members actively engaging with the interactive experience.",
+		"intelevoshowcase_portfolio_item-3.png": "Visitor interacting with a reactive tiger character in the surround environment.",
+		"intelevoshowcase_portfolio_item-5.png": "Participants using tablets to drive real-time interaction with the installation.",
+		"intelevoshowcase_portfolio_item-6.png": "Multi-user tablet interaction controlling animals and environment behavior.",
+		"https://www.youtube.com/embed/t04CSqkdfSM": "On-site footage showing the surround room installation running live and stable during public operation."
+	  }
+	},
+	"deepDive": {
+	  "problem": "The installation needed to operate reliably for long periods in a public space while supporting concurrent user interaction, synchronized visuals, and continuous real-time rendering.",
+	  "approach": [
+		"Deployed and validated the complete Unreal Engine system on-site, focusing on stability, performance, and fault tolerance.",
+		"Ensured the interaction, rendering, and control systems functioned cohesively under real-world usage conditions over extended runtimes."
+	  ]
+	}
+  }
+  

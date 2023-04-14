@@ -1,0 +1,54 @@
+{
+    "date": "2026-01-15",
+    "name": "MetaSounds Audio System, Mixing Architecture, and Dynamic Radio",
+    "projectname": "Frogger Game Validation",
+    "company": "Atlas (Design Partner Platform)",
+    "oneLiner": "Designed a production-style UE5 audio system using Sound Classes, Control Buses, Submixes, and MetaSounds to support dynamic tutorial commentary, a multi-station radio with tuning UI effects, and layered game ambience and SFX.",
+    "bulletpoints": [
+      "Built a structured audio mixing architecture using Sound Classes, Control Buses, Submixes, and Control Bus Mixes to support both global and user settings.",
+      "Implemented MetaSounds with event-driven triggers to sequence dynamic tutorial commentary from a variable-length pool, creating non-repeating tutorial flows.",
+      "Created an in-game radio system with 7 stations and 45+ tracks, controlled through UI with a radio-tuning effect, plus dedicated start-screen music, ambience, and gameplay SFX."
+    ],
+    "dcc": [],
+    "engine": ["Unreal"],
+    "languages": ["Blueprints"],
+    "skillsets": ["unrealdev"],
+    "tags": ["audio", "metasounds", "mixing", "radio", "dynamic", "ui"],
+    "priority": 1,
+    "status": "complete",
+    "media": {
+      "image": [
+        "frogger-game-audio__01__audio-folder-structure.png",
+        "frogger-game-audio__02__control-buses.png",
+        "frogger-game-audio__03__parameter-patches.png",
+        "frogger-game-audio__04__sound-classes.png",
+        "frogger-game-audio__05__submixes-and-busmixes.png",
+        "frogger-game-audio__06__metasounds-events.png",
+        "frogger-game-audio__07__radio-stations-playlists.png"
+      ],
+      "youtube": [
+        "https://www.youtube.com/embed/FROGGER_AUDIO_SYSTEM_DEMO_ID"
+      ],
+      "captions": {
+        "frogger-game-audio__01__audio-folder-structure.png": "Project audio organization showing the main categories (AudioMix, MetaSounds, Music, SFX) and the Blueprint audio manager entry point.",
+        "frogger-game-audio__02__control-buses.png": "Control Bus setup used to drive mix levels consistently across categories (master/music/radio/sfx/ui/voice) and user overrides.",
+        "frogger-game-audio__03__parameter-patches.png": "Parameter patches used to combine user settings with global mix behavior in a controllable, scalable way.",
+        "frogger-game-audio__04__sound-classes.png": "Sound Classes defining major audio categories and routing, enabling predictable behavior across the project.",
+        "frogger-game-audio__05__submixes-and-busmixes.png": "Sound Submix + Control Bus Mix setup for global mixing, category routing, and runtime level control.",
+        "frogger-game-audio__06__metasounds-events.png": "MetaSounds configured with triggers/events for dynamic playback and Blueprint-driven sequencing (tutorial commentary, radio, and category behaviors).",
+        "frogger-game-audio__07__radio-stations-playlists.png": "Radio system content showing multiple stations and curated track pools used for in-game playback and station switching.",
+        "https://www.youtube.com/embed/FROGGER_AUDIO_SYSTEM_DEMO_ID": "Audio system demo showing dynamic tutorial commentary sequencing, radio station switching with tuning effect, and category mixing behavior."
+      }
+    },
+    "deepDive": {
+      "problem": "A playable validation executable needed a flexible, production-style audio system that could support dynamic commentary of variable length, user-driven mixing controls, and a radio feature without becoming brittle or hard to extend.",
+      "approach": [
+        "Built a clear audio routing and mixing hierarchy using Sound Classes for categorization, Submixes for routing, and Control Buses/Bus Mixes for runtime level control.",
+        "Used parameter patches to combine user settings with global mix behavior, ensuring consistent and scalable control across categories.",
+        "Implemented MetaSounds per category with event triggers so Blueprint systems can drive dynamic playback and sequencing reliably.",
+        "Designed tutorial commentary as a pool of variable-length segments sequenced via Blueprint-triggered events, producing a different tutorial flow each time while preserving correct pacing.",
+        "Created a multi-station radio system (7 stations, 45+ tracks) with UI-driven control and a radio-tuning effect, alongside dedicated start-screen music, ambience, and gameplay SFX."
+      ]
+    }
+  }
+  

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Pablo Vezzini - Technical Artist/Game Developer</title>
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- V3.0 Typography: Inter (body) + JetBrains Mono (code/technical) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- SOCIAL MEDIA ICONS />-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <link href="https://matanga.github.io/style.css" rel="stylesheet" type="text/css"/>/>-->
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <!-- Page Styles -->
+    <link href="css/projectPage.css" rel="stylesheet" type="text/css"/>
+    <link href="css/skillPage.css" rel="stylesheet" type="text/css"/>
+    <link href="css/contactPage.css" rel="stylesheet" type="text/css"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Use local JS files for development -->
+    <script src="js/page.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Page Scripts -->
+    <script src="js/projectPage.js"></script>
+    <script src="js/skillPage.js"></script>
+
+    <style type="text/css">
+
+    </style>
+
+</head>
+<!--
+                                                                                          
+                                                 ==============                           
+                                               +:              :+                         
+                                               %  :=== %=  %%   %                         
+                                               %  =  % %=  ==   %                         
+                                               %   ::  :.  ::   %                         
+                                  -            ==              ==                         
+                                  -##-#-----     ==   =========                           
+                                 *##########*+:   = :::                                   
+                                -#**%*#######-    :=                                      
+                               --#*==*=#%%*###                                            
+                                 ==*+=*=+*=##+                                            
+                                 :+========%*=                                            
+                                 :*****===#%#                                             
+                                 ******#*#%#+                                             
+                                 %%##%%%%%#=:                                             
+                                 -######**==-:                                            
+                                 +#######*******--                                        
+                               -#####*************+                                       
+                             =*********************                                       
+                             **********************                                       
+                             **********************                                       
+                             ++***+**********#*++++                                       
+                             =*=*+*=***********====                                       
+                            .=*-:---:**********====                                       
+                            -=*.   .+:==++++++====:                                       
+                            -=*: : :===++*++*+*++:                                        
+                            :+*-    -############                                         
+                            -=*******************                                         
+                            -+###################                                         
+                            :=###################                                         
+                             :###################                                         
+                              ###################                                         
+                              ########  #########                                         
+                              ########  #########                                         
+                               +++++      +++++                                           
+                               =====      =====                                           
+                                +===      :====                                           
+                                ====       ===+                                           
+                                ====       ====                                           
+                                +=+=       =+=+                                           
+                                =++=       =+++                                           
+                            .:+%##**       *###::                                         
+                           -#%%%%###       %%%%%##.                                       
+                           :::::::::       :+++===:                                       
+
+
+    -->         
+<body>
+    <!-- Procedural background canvas -->
+    <canvas id="bg-colonize" style="display: none;"></canvas>
+
+    <!--------------------->
+    <!----- Top Bar ------->
+    <section class="topbar">
+        <div class="topbar-content">
+
+            <div class="dropdown" id="dropdowncolor">
+                <button class="colorSelector" id="color_selector"></button>
+
+                <div class="dropdown-content">
+                    <button onclick="setSiteColor('#4CC9F0')" style="min-width:20px; min-height: 20px; background-color: #4CC9F0; margin: 5px;" title="Structure"></button>
+                    <button onclick="setSiteColor('#10B981')" style="min-width:20px; min-height: 20px; background-color: #10B981; margin: 5px;" title="Success"></button>
+                    <button onclick="setSiteColor('#FFB703')" style="min-width:20px; min-height: 20px; background-color: #FFB703; margin: 5px;" title="Warning"></button>
+                    <button onclick="setSiteColor('#fe3385')" style="min-width:20px; min-height: 20px; background-color: #fe3385; margin: 5px;" title="Highlight"></button>
+                </div>
+
+            </div>
+
+            <button class="dropbtn" id="btnhome" onclick="page.show('/home')">Home</button>
+
+            <div class="dropdown">
+                <button class="dropbtn" id="btnprojects">Projects</button>
+                <div class="dropdown-content" id="projectsList">
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" id="btnskillsets" >Skillsets</button>
+                <div class="dropdown-content" id="skillsetsList">
+                </div>
+            </div>
+
+            <button class="dropbtn" id="btncontact" onclick="page.show('/contact')">Contact</button>
+
+            <!-- Procedural background toggle -->
+            <button class="bg-toggle-btn" id="bgToggleBtn" onclick="toggleProceduralBg()" title="Toggle procedural background">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L12 6M12 18L12 22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12L6 12M18 12L22 12M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93"/>
+                </svg>
+            </button>
+
+        </div>
+      <div class="topbar-separator"></div>
+    </section>
+
+
+    <!--------------------->
+    <!-- Home SECTION -->
+
+    <section id="home" class="tabcontent">
+
+        <div class="section_wrapper">
+
+            <div class="menu_box hero-section">      
+                <!-- V3.0: Typography-first hero, avatar relocated to contact section -->
+                <div class="hero">
+                    <div class="hero-text">
+                        <h1 class="hero-name">Pablo Vezzini</h1>
+                        <h2 class="hero-title">Lead Technical Artist — Pipelines & Tools</h2>
+                        <p class="hero-tagline">Workflow Architecture across Unreal, Unity & DCCs</p>
+                    </div>
+                    <img src="images/matanga_ok.png" alt="Pablo Vezzini" class="hero-avatar">
+                </div>
+                
+                <p class="hero-bio">I design and own production-grade tools and pipelines used by artists in real projects. With 15+ years of experience, I architect systems that connect procedural generation, networked workflows, and engine-native performance. I've delivered production systems for <span style="color: var(--accent-structure); cursor: pointer;" onclick="LoadProjectByName('2kdam')">2K</span>, <span onclick="LoadProjectByName('dance-monsters')" style="cursor: pointer; color: var(--accent-warning);">Netflix</span>, <span style="color: var(--accent-structure);">EA</span>, and <span style="color: var(--accent-success);">Globant</span>.</p>
+
+                <div class="homelinks">
+
+                <div class="linkprojects">
+                  <p>Take a look at my latest projects</p>
+                  <ul id="homeFeaturedProjects" style="list-style-type:none; padding:0px;">
+                    <!-- Populated dynamically from db/home_config.json -->
+                  </ul>
+                </div>
+
+                <div class="linkskillsets">
+                    <p>Or browse my portfolio by skillset</p>
+                    <ul id="homeFeaturedSkillsets" style="list-style-type:none; padding:0px;">
+                      <!-- Populated dynamically from db/home_config.json -->
+                    </ul>                    
+                </div>
+                </div>
+
+                <p class="philosophy-statement">I own systems end-to-end: from workflow design and editor UX, through implementation and validation, to long-term iteration once teams are actively using them. Whether it's a procedural city generator or a cross-engine integration suite, I build for production adoption—tools that survive real schedules, real constraints, and real shipping pressure.</p>
+
+                <!-- ============================================
+     CORE CAPABILITIES - What I can build/do
+     Edit: Add/remove capability-card divs as needed
+     ============================================ -->
+                <p class="section-label">Core Capabilities</p>
+                
+                <div class="capabilities-grid">
+                    
+                    <!-- CAPABILITY: Pipeline Architecture -->
+                    <div class="capability-card">
+                        <h4 class="capability-title">Pipeline Architecture</h4>
+                        <ul class="capability-list">
+                            <li>Cross-DCC workflows</li>
+                            <li>Automated validation & QC</li>
+                            <li>Schema-driven pipelines</li>
+                        </ul>
+                    </div>
+
+                    <!-- CAPABILITY: Procedural & Systems Architecture -->
+                    <div class="capability-card">
+                        <h4 class="capability-title">Procedural & Systems Architecture</h4>
+                        <ul class="capability-list">
+                            <li>Houdini & PCG frameworks</li>
+                            <li>Data-driven world building</li>
+                            <li>Generative & ML pipeline integration</li>
+                        </ul>
+                    </div>
+
+                    <!-- CAPABILITY: Engine-Native Systems -->
+                    <div class="capability-card">
+                        <h4 class="capability-title">Engine-Native Systems</h4>
+                        <ul class="capability-list">
+                            <li>Unreal: UMG, Slate, C++</li>
+                            <li>Unity: UI Toolkit, C#</li>
+                            <li>Automated asset ingestion</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- ============================================
+                     TECHNICAL STACK - Tools I use
+                     ============================================ -->
+                <p class="section-label">Technical Stack</p>
+                
+                <div class="stack-grid">
+
+                    <!-- STACK: Languages -->
+                    <div class="stack-card">
+                        <h5 class="stack-title">Languages</h5>
+                        <div class="stack-items">
+                            <span class="stack-item">Python</span>
+                            <span class="stack-item">C#</span>
+                            <span class="stack-item">C++</span>
+                            <span class="stack-item">VEX</span>
+                            <span class="stack-item">MaxScript</span>
+                        </div>
+                    </div>
+
+                    <!-- STACK: Engines -->
+                    <div class="stack-card">
+                        <h5 class="stack-title">Engines</h5>
+                        <div class="stack-items">
+                            <span class="stack-item">Unreal Engine 5</span>
+                            <span class="stack-item">Unity</span>
+                        </div>
+                    </div>
+
+                    <!-- STACK: DCC -->
+                    <div class="stack-card">
+                        <h5 class="stack-title">DCC</h5>
+                        <div class="stack-items">
+                            <span class="stack-item">Houdini</span>
+                            <span class="stack-item">Maya</span>
+                            <span class="stack-item">3ds Max</span>
+                            <span class="stack-item">Blender</span>
+                        </div>
+                    </div>
+
+                    <!-- STACK: Integration -->
+                    <div class="stack-card">
+                        <h5 class="stack-title">Integration</h5>
+                        <div class="stack-items">
+                            <span class="stack-item">REST APIs</span>
+                            <span class="stack-item">JSON/XML</span>
+                            <span class="stack-item">Git</span>
+                            <span class="stack-item">Perforce</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--------------------->
+    <!-- Projects SECTION -->
+
+    <section id="projects" class="tabcontent">
+        <div class="section_wrapper">
+
+            <!-- Header -->
+            <div class="proj-section proj-header">
+                <div class="proj-header-accent"><h2>Project</h2></div>
+                <h1 id="proj-project-title">Project Title</h1>
+                <p id="proj-project-impact">Impact statement goes here...</p>
+                <div id="proj-project-meta"></div>
+                <p id="proj-tech-line"></p>
+                <p id="proj-visibility"></p>
+            </div>
+
+            <!-- Responsibilities -->
+            <div class="proj-section proj-responsibilities">
+                <h4 class="proj-section-title">My Responsibilities</h4>
+                <ul id="proj-responsibilities-list">
+                    <li class="proj-responsibility-item">Loading...</li>
+                </ul>
+                <button class="proj-project-details-btn" id="proj-project-details-btn" onclick="toggleProjectDetails()">View Challenges & Solutions</button>
+                <div id="proj-project-details" style="display: none;"></div>
+            </div>
+
+            <!-- Contributions List - Horizontal Carousel -->
+            <div class="proj-section proj-contributions">
+                <h4 class="proj-section-title">Key Systems & Contributions</h4>
+                <p class="proj-section-hint">Select a system to view details and evidence</p>
+                <div class="proj-carousel-wrapper">
+                    <div class="proj-carousel" id="proj-contributions-list">
+                        <!-- Contribution cards rendered here -->
+                    </div>
+                    <div class="proj-carousel-fade proj-carousel-fade-left"></div>
+                    <div class="proj-carousel-fade proj-carousel-fade-right"></div>
+                </div>
+            </div>
+
+            <!-- Selected Contribution Detail -->
+            <div class="proj-section proj-detail">
+                <h4 class="proj-section-title">Selected Contribution</h4>
+                <h3 id="proj-detail-title">Select a contribution above</h3>
+                <p id="proj-detail-oneliner"></p>
+                <div id="proj-evidence-gallery"></div>
+                <div id="proj-detail-bottom">
+                    <div id="proj-detail-built"></div>
+                    <button class="proj-deepdive-btn" id="proj-deepdive-btn" style="display: none;">View Technical Details</button>
+                    <div id="proj-detail-deepdive" style="display: none;"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--------------------->
+    <!-- Skillsets SECTION -->
+
+    <section id="skillsets" class="tabcontent">
+        <div class="section_wrapper skill-page">
+            
+            <!-- 1) SKILL HEADER -->
+            <div class="skill-header-box">
+                <div class="skill-label">Skill</div>
+                <h2 class="skill-title" id="skillTitle">VFX & Interactive Systems</h2>
+                <p class="skill-description" id="skillDescription">Real-time visual effects, procedural animation, and data-driven Niagara systems.</p>
+                <p class="skill-stats" id="skillStats">Used in 6 projects | 12 systems shipped</p>
+                <div class="skill-tech-chips" id="skillTechChips">
+                    <!-- Tech chips inserted via JS -->
+                </div>
+            </div>
+
+            <!-- 2) ALL SYSTEMS - Horizontal Infinite Scroll -->
+            <div class="menu_box skill-systems-box">
+                <div class="skill-section-label">FEATURED SYSTEMS</div>
+                <div class="skill-carousel-wrapper">
+                    <div class="skill-carousel" id="skillCarousel">
+                        <!-- All system cards inserted via JS -->
+                    </div>
+                    <div class="skill-carousel-fade skill-carousel-fade-left"></div>
+                    <div class="skill-carousel-fade skill-carousel-fade-right"></div>
+                </div>
+            </div>
+
+            <!-- 3) SELECTED SYSTEM DETAIL -->
+            <div class="menu_box skill-system-detail" id="skillSystemDetail">
+                <div class="skill-system-header">
+                    <h3 class="skill-system-title" id="skillSystemTitle">Interactive VFX</h3>
+                    <span class="skill-system-status" id="skillSystemStatus"></span>
+                </div>
+                <p class="skill-project-link" id="skillProjectLink"></p>
+                
+                <!-- Showcase First -->
+                <div class="skill-showcase-section">
+                    <div class="skill-section-label">Showcase</div>
+                    <div class="skill-primary-showcase" id="skillPrimaryShowcase">
+                        <!-- Primary video/image inserted via JS -->
+                    </div>
+                    <p class="skill-showcase-caption" id="skillShowcaseCaption"></p>
+                </div>
+
+                <!-- What I Built (collapsed by default) -->
+                <div class="skill-what-i-built" id="skillWhatIBuilt">
+                    <button class="skill-details-toggle" id="skillDetailsToggle" onclick="toggleWhatIBuilt()">
+                        What I Built <span class="toggle-arrow">&#8250;</span>
+                    </button>
+                    <div class="skill-details-content" id="skillDetailsContent" style="display: none;">
+                        <ul class="skill-bullet-list" id="skillBulletList">
+                            <!-- Bullets inserted via JS -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Additional Showcase -->
+                <div class="skill-additional-showcase" id="skillAdditionalShowcase" style="display: none;">
+                    <div class="skill-section-label">More Showcase</div>
+                    <div class="skill-showcase-gallery" id="skillShowcaseGallery">
+                        <!-- Additional media inserted via JS -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--------------------->
+    <!-- CONTACT SECTION -->
+
+    <section id="contact" class="tabcontent">
+        <div class="section_wrapper contact-page">
+
+            <!-- Contact Header -->
+            <div class="contact-header-box">
+                <div class="contact-label">Contact</div>
+                <div class="contact-header-content">
+                    <div class="contact-header-text">
+                        <h2 class="contact-title">Get in Touch</h2>
+                        <p class="contact-description">Open to discussing pipeline architecture, tool development, or technical art leadership roles.</p>
+                    </div>
+                    <img src="images/matanga_ok.png" alt="Pablo Vezzini" class="contact-header-avatar">
+                </div>
+            </div>
+
+            <!-- Resume Download -->
+            <a href="/documents/Pablo_Vezzini_Lead_Technical_Artist_2026.pdf" target="_blank" class="contact-action-link contact-resume-link">
+                <span class="contact-action-text">Download Resume (PDF)</span>
+                <span class="contact-action-arrow">&#8594;</span>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:sublime51@gmail.com" class="contact-action-link contact-email-link">
+                <span class="contact-action-text">Send me an email</span>
+                <span class="contact-action-arrow">&#8594;</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/pablo-vezzini" target="_blank" class="contact-action-link contact-linkedin-link">
+                <span class="contact-action-text">Connect on LinkedIn</span>
+                <span class="contact-action-arrow">&#8594;</span>
+            </a>
+
+            <!-- Contact Form -->
+            <div class="contact-form-box">
+                <p class="contact-form-label">Or send a message directly</p>
+                <form class="contact-form" accept-charset="UTF-8" action="https://usebasin.com/f/77892ffeac1c" enctype="multipart/form-data" method="POST">
+                    <div class="contact-form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="contact-form-group">
+                        <label for="comment">Message</label>
+                        <textarea id="comment" name="comment" placeholder="Short message (optional)"></textarea>
+                    </div>
+                    <button type="submit" class="contact-submit-btn">Send</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!--------------------->
+    <!-- SCRIPTS -->
+
+    <script src="js/carousel.js"></script>
+    <script src="js/space-colonize-bg.js"></script>
+    <script type="text/javascript">
+
+    // Procedural background toggle
+    function toggleProceduralBg() {
+        const btn = document.getElementById('bgToggleBtn');
+        const isActive = SpaceColonize.toggle();
+        btn.classList.toggle('active', isActive);
+    }
+
+    page('/home', function() {
+      window.scrollTo(0, 0);
+      OpenTab('home')
+    });
+
+    page('/projects/:name', function(ctx) {
+        LoadProject(ctx.params.name)
+    });
+
+    page('/skillsets/:name', function(ctx) {
+        LoadSkillPage(ctx.params.name)
+    });
+
+    page('/contact', function() {
+      window.scrollTo(0, 0);
+      OpenTab('contact')
+    });
+
+
+    // Catch-all 404 handler - redirect to home for unknown routes
+    page('*', function() {
+      console.warn('Route not found, redirecting to home');
+      page.show('/home');
+    });
+
+    /*----------------Main--------------------------*/
+    //setCSSProperty('.menu_box','border','1px #f54646 solid')
+    OpenTab('home');
+
+    // Start router immediately but DON'T dispatch the initial route yet
+    // This allows button clicks to work while data is loading
+    page.start({ dispatch: false });
+
+    $(document).ready(function(){
+        // Setup dropdown close/reset handlers
+        setupDropdownResetHandlers();
+        
+        globalPortfolioManager = new PortfolioManager(() => {
+            AddProjectButtons(globalPortfolioManager,"projectsList");
+            const skillsetlist = globalPortfolioManager.getUniqueSkillsets();
+            AddSkillsetButtons(skillsetlist,"skillsetsList");
+            
+            // Load homepage featured items from config
+            loadHomepageFeatured();
+            
+            // Check if we were redirected from 404.html (GitHub Pages SPA workaround)
+            const redirectPath = sessionStorage.getItem('redirectPath');
+            if (redirectPath) {
+                sessionStorage.removeItem('redirectPath');
+                page.show(redirectPath);
+            } else {
+                // NOW dispatch the current URL route (after data is ready)
+                const currentPath = window.location.pathname + window.location.search + window.location.hash;
+                page.replace(currentPath || '/home');
+            }
+        });
+    });
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+  "date": "2023-10-01",
+  "name": "Procedural City Layout & Zoning Pipeline",
+  "projectname": "Procedural World Pipeline R&D Sandbox",
+  "company": "Undisclosed",
+  "oneLiner": "Parametric city-generation pipeline that transforms spline-defined city extents into structured blocks, road hierarchies, lots, zoning, and density data for downstream building generation and Unreal Engine validation.",
+  "bulletpoints": [
+    "Defined cities through a Houdini Digital Asset that can be manually authored or driven by spline data exported from Unreal Engine.",
+    "Subdivided city extents into blocks and generated primary and secondary road hierarchies using procedural rules.",
+    "Generated grid-aligned lots to support modular building constraints and consistent downstream assembly.",
+    "Assigned zoning categories such as residential, commercial, and governmental, influenced by both pipeline rules and Unreal-authored spline data.",
+    "Computed density maps where main streets and key intersections drive higher building density and variation.",
+    "Exported structured city data including streets, sidewalks, lots, zoning, and density for real-time ingestion and iteration inside Unreal Engine."
+  ],
+  "dcc": ["Houdini"],
+  "engine": ["Unreal"],
+  "languages": ["Python", "VEX", "Blueprints"],
+  "skillsets": ["tooldev", "pipelinedev", "unrealdev", "procgen"],
+  "tags": [
+    "procedural-generation",
+    "city-layout",
+    "zoning",
+    "roads",
+    "lots",
+    "density",
+    "data-driven",
+    "pipeline-validation",
+    "r&d"
+  ],
+  "priority": 3,
+  "status": "complete",
+  "media": {
+    "image": [
+      "apocs_city_01.png",
+      "apocs_city_03.png",
+      "apocs_city_04.png",
+      "apocs_city_05.png",
+      "apocs_city_06.gif",
+      "apocs_city_07.png"
+    ],
+    "youtube": [
+      "https://www.youtube.com/embed/qXioipxyH80"
+    ],
+    "captions": {
+      "apocs_city_01.png": "City extents subdivided into procedural blocks driven by spline-defined boundaries.",
+      "apocs_city_03.png": "Grid-aligned lot generation to support modular building workflows.",
+      "apocs_city_04.png": "Zoning assignment across city lots, separating residential, commercial, and governmental areas.",
+      "apocs_city_05.png": "Density computation showing higher intensity along main streets and intersections.",
+      "apocs_city_06.gif": "Structured city data prepared for export and ingestion into Unreal Engine.",
+      "apocs_city_07.png": "View of the city inside Unreal Engine.",
+      "https://www.youtube.com/embed/qXioipxyH80": "City pipeline breakdown showing block subdivision, road generation, zoning rules, and real-time validation in Unreal Engine."
+    }
+  },
+  "deepDive": {
+    "problem": "Procedural cities require structured, editable representations of roads, blocks, lots, zoning, and density that remain consistent across generation stages and compatible with modular building systems and real-time engine validation.",
+    "approach": [
+      "Built a Houdini-based city HDA capable of consuming spline data authored in Unreal or manual inputs for standalone generation.",
+      "Procedurally generated block layouts and hierarchical road networks to define urban structure.",
+      "Created grid-aligned lot systems to match modular building constraints and simplify downstream assembly.",
+      "Applied zoning and density rules influenced by both procedural logic and Unreal-authored spline metadata.",
+      "Exported structured city datasets for ingestion by custom Unreal Engine tools, enabling walkable validation and rapid iteration."
+    ]
+  }
+}

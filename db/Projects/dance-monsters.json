@@ -1,0 +1,42 @@
+{
+    "date": "2021-01-01",
+    "name": "Mocap Ingestion & Normalization Pipeline",
+    "projectname": "Dance Monsters",
+    "company": "Realtime UK",
+    "oneLiner": "Production-scale pipeline subsystem that automated the ingestion, synchronization, and normalization of multi-vendor performance capture data for a high-throughput Netflix broadcast series.",
+    "bulletpoints": [
+      "Designed and owned a mocap ingestion pipeline that normalized body, facial, camera, and lighting data from multiple vendors into a consistent internal format.",
+      "Built automation in Maya and Python to reliably align performance data in time and world space across hundreds of shots per episode.",
+      "Enabled stable, repeatable downstream retargeting and rendering by enforcing strict validation and normalization at ingest time."
+    ],
+    "dcc": ["Maya", "Houdini"],
+    "engine": [],
+    "languages": ["Python", "MEL"],
+    "skillsets": ["pipelinedev", "tooldev"],
+    "tags": ["mocap", "performance-capture", "broadcast", "data-normalization", "ingestion-pipeline", "automation"],
+    "priority": 3,
+    "status": "complete",
+    "media": {
+      "image": [
+        "dm_poster.png",
+        "dm_mocap_actor.png",
+        "dm_maya_pipeline.png",
+        "dm_final_monster.png"
+      ],
+      "youtube": [],
+      "captions": {
+        "dm_poster.png": "Dance Monsters show poster providing context for the broadcast production.",
+        "dm_mocap_actor.png": "On-set performance capture used as source data for the pipeline.",
+        "dm_maya_pipeline.png": "Maya-based pipeline tools used to ingest, synchronize, and validate performance data.",
+        "dm_final_monster.png": "Final monster character driven by processed mocap data, integrated into a production shot."
+      }
+    },
+    "deepDive": {
+      "problem": "Multi-vendor mocap, facial, camera, and lighting data arrived asynchronously and inconsistently, making manual alignment and processing unscalable for episodic broadcast delivery.",
+      "approach": [
+        "Implemented automated ingest and validation stages to normalize all incoming data into a consistent coordinate system and timing reference.",
+        "Centralized synchronization logic in Maya-based tools to ensure reliable downstream retargeting and rendering at production scale."
+      ]
+    }
+  }
+  

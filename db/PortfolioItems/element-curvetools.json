@@ -1,0 +1,52 @@
+{
+    "date": "2018-12-01",
+    "name": "Curve Tools",
+    "projectname": "Element Space",
+    "company": "Sixth Vowel",
+    "oneLiner": "Custom curve-based tooling that enabled artists to author complex, performant VFX geometry in Unity with fast iteration and minimal technical overhead.",
+    "bulletpoints": [
+      "Implemented a reusable curve system with custom Unity editors to support artist-friendly VFX authoring.",
+      "Developed Bezier-based procedural mesh tools used for muzzle flashes, projectiles, and other time-based effects.",
+      "Built a lofting renderer that extrudes shapes along curves, automatically handling geometry generation and UV mapping."
+    ],
+    "dcc": [],
+    "engine": ["Unity"],
+    "languages": ["C#"],
+    "skillsets": ["tooldev", "vfx", "unitydev","procgen"],
+    "tags": [
+      "curves",
+      "bezier",
+      "procedural-geometry",
+      "lofting",
+      "vfx-tools",
+      "editor-tools",
+      "artist-workflows"
+    ],
+    "priority": 4,
+    "status": "complete",
+    "media": {
+      "image": [
+        "curvetools_portfolio_item-1.png",
+        "beziercurve.gif",
+        "curvetools_portfolio_item-2.png",
+        "vfx_loftrenderer.gif",
+        "vfx_loftrenderer2.gif"
+      ],
+      "youtube": [],
+      "captions": {
+        "curvetools_portfolio_item-1.png": "Curve Tools custom editor UI inside Unity for authoring curve-driven VFX geometry.",
+        "beziercurve.gif": "Animated preview of the Bezier curve tool generating procedural VFX meshes in real time.",
+        "curvetools_portfolio_item-2.png": "Alternate view of the Curve Tools editor showing parameter controls and curve configuration.",
+        "vfx_loftrenderer.gif": "VFX Loft Renderer extruding geometry along curves for projectile and muzzle-style effects.",
+        "vfx_loftrenderer2.gif": "Loft Renderer in action with the curve editor, demonstrating rapid iteration and shape control."
+      }
+    },
+    "deepDive": {
+      "problem": "Authoring complex VFX geometry directly in Unity was slow and error-prone, limiting iteration speed and placing a heavy technical burden on artists.",
+      "approach": [
+        "Designed a curve-based abstraction layer with custom editors to hide implementation complexity from artists.",
+        "Implemented procedural mesh generation and lofting tools that produced optimized geometry while automatically handling UV layout."
+      ]
+    }
+  }
+  

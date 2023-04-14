@@ -1,0 +1,53 @@
+{
+  "date": "2024-01-01",
+  "name": "Procedural City Runtime & Chaos Destruction",
+  "projectname": "Chaos Buildings",
+  "company": "Atlas",
+  "oneLiner": "Real-time validation of a procedural urban system running on landscape at stable FPS, with Chaos-enabled destructible buildings and interactive stress testing via a third-person runtime harness.",
+  "bulletpoints": [
+    "Validated the full procedural city stack at runtime, combining landscape, PCG placement, foliage, and urban systems in a real-time environment.",
+    "Integrated Chaos destruction by pre-fracturing selected buildings and enabling runtime destruction without breaking systemic coherence.",
+    "Used a simple third-person controller as an interactive harness to navigate the city and trigger destruction scenarios.",
+    "Confirmed stable performance and responsiveness while dynamically interacting with procedurally placed structures.",
+    "Captured runtime footage demonstrating traversal, destruction, and system behavior under real-time conditions."
+  ],
+  "dcc": [],
+  "engine": ["Unreal"],
+  "languages": ["Blueprints"],
+  "skillsets": ["unrealdev", "tooldev", "pipelinedev","procgen"],
+  "tags": [
+    "chaos-destruction",
+    "procedural-city",
+    "real-time-performance",
+    "interactive-systems"
+  ],
+  "priority": 2,
+  "status": "complete",
+  "media": {
+    "image": [
+      "chaosbuildings-runtime_01.png",
+      "chaosbuildings-runtime_02.png",
+      "chaosbuildings-runtime_03.png",
+      "chaosbuildings-runtime_04.png"
+    ],
+    "youtube": [
+      "https://www.youtube.com/embed/rnS3XX26NOM"
+    ],
+    "captions": {
+      "chaosbuildings-runtime_01.png": "Procedurally placed building at runtime, shown at the beginning of a Chaos-enabled structural collapse.",
+      "chaosbuildings-runtime_02.png": "Runtime traversal of the procedural city using a third-person validation harness.",
+      "chaosbuildings-runtime_03.png": "Third-person runtime view navigating the procedurally generated urban environment.",
+      "chaosbuildings-runtime_04.png": "Runtime validation view demonstrating stable traversal through the procedural city under real-time conditions.",
+      "https://www.youtube.com/embed/rnS3XX26NOM": "Runtime validation pass showing Chaos-enabled building destruction and real-time traversal of the procedural city."
+    
+    }
+  },
+  "deepDive": {
+    "problem": "Procedural urban systems often look correct in editor previews but fail under real-time conditions when combined with traversal, physics, and destruction.",
+    "approach": [
+      "Ran the full procedural city system at runtime on landscape to validate performance, stability, and system interaction.",
+      "Integrated Chaos destruction as a stress test layer to ensure destructible assets could coexist with procedurally placed structures.",
+      "Used a lightweight third-person controller to interact with the environment and observe system behavior during traversal and destruction."
+    ]
+  }
+}

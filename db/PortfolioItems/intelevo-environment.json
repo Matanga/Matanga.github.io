@@ -1,0 +1,49 @@
+{
+	"date": "2022-10-01",
+	"name": "Real-Time Installation Environment Systems",
+	"projectname": "Evolution Experience",
+	"company": "Genosha",
+	"oneLiner": "Data-driven Unreal Engine environment systems designed for a large-scale, multi-projector art installation, combining reactive weather, ambient animation, and performance-stable world logic for continuous public operation.",
+	"bulletpoints": [
+	  "Designed interactive environment systems where weather, ambient elements, and animal behavior responded dynamically to audience interaction.",
+	  "Built data-driven Unreal Engine workflows to support rapid iteration on layout, mood, lighting, and ambient animation under installation constraints.",
+	  "Ensured performance and stability across a surround-room nDisplay setup intended to run continuously in a public space."
+	],
+	"dcc": ["Blender", "Houdini"],
+	"engine": ["Unreal"],
+	"languages": ["Blueprints"],
+	"skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
+	"tags": [
+	  "environment-systems",
+	  "interactive-environments",
+	  "weather-systems",
+	  "ambient-animation",
+	  "nDisplay",
+	  "art-installation",
+	  "blueprints"
+	],
+	"priority": 3,
+	"status": "complete",
+	"media": {
+	  "image": [
+		"intelevoenvironment_portfolio_item-1.png",
+		"intelevoenvironment_portfolio_item-2.png",
+		"intelevoenvironment_portfolio_item-3.png"
+	  ],
+	  "youtube": ["https://www.youtube.com/embed/5nbDx_YLn-k"],
+	  "captions": {
+		"intelevoenvironment_portfolio_item-1.png": "Unreal Editor view showing environment actors and systems used to drive the interactive installation.",
+		"intelevoenvironment_portfolio_item-2.png": "Mood lighting setup used to shape atmosphere and support reactive environmental states.",
+		"intelevoenvironment_portfolio_item-3.png": "Weather system driving dynamic environmental changes in response to interaction and ambient logic.",
+		"https://www.youtube.com/embed/5nbDx_YLn-k": "Environment system showcase video demonstrating real-time lighting, weather, and ambient animation."
+	  }
+	},
+	"deepDive": {
+	  "problem": "The installation required environments that felt alive and reactive while remaining stable, performant, and easy to iterate on across a multi-projector setup running continuously in public.",
+	  "approach": [
+		"Implemented Blueprint-driven environment systems to control weather, lighting, ambient motion, and interaction hooks in a modular, data-driven way.",
+		"Built editor-friendly workflows that allowed rapid tuning of mood, behavior, and performance while validating changes directly within the nDisplay context."
+	  ]
+	}
+  }
+  

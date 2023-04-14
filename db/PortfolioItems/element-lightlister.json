@@ -1,0 +1,47 @@
+{
+	"date": "2018-12-01",
+	"name": "Light Lister",
+	"projectname": "Element Space",
+	"company": "Sixth Vowel",
+	"oneLiner": "Unity editor tool that centralized scene lighting control and enabled rapid iteration by editing lights during play mode and persisting changes back into the editor.",
+	"bulletpoints": [
+	  "Built a custom Unity Editor Window that discovers, groups, and exposes all scene lights for fast editing and troubleshooting.",
+	  "Dynamically populated UI from the current scene and organized lights by type, exposing shared and type-specific properties.",
+	  "Enabled lighting iteration in play mode while preserving adjustments by writing runtime-edited values back to serialized scene lights."
+	],
+	"dcc": [],
+	"engine": ["Unity"],
+	"languages": ["C#"],
+	"skillsets": ["tooldev", "vfx", "unitydev"],
+	"tags": [
+	  "lighting",
+	  "editor-tools",
+	  "scene-tools",
+	  "playmode-iteration",
+	  "unity-editor",
+	  "vfx-workflows"
+	],
+	"priority": 4,
+	"status": "complete",
+	"media": {
+	  "image": [
+		"lightlister_portfolio_item-1.png",
+		"lightlister_portfolio_item-2.png",
+		"lightlister_portfolio_item-3.png"
+	  ],
+	  "youtube": [],
+	  "captions": {
+		"lightlister_portfolio_item-1.png": "Light Lister editor window UI dynamically populated from scene lights for centralized editing.",
+		"lightlister_portfolio_item-2.png": "Grouped-by-type lighting controls showing shared and type-specific properties for fast iteration.",
+		"lightlister_portfolio_item-3.png": "Example Light Lister view demonstrating bulk lighting adjustments driven by current scene contents."
+	  }
+	},
+	"deepDive": {
+	  "problem": "Lighting iteration was slow when artists had to hunt through scenes and lost play-mode tweaks, reducing iteration speed and increasing risk of inconsistent lighting setups.",
+	  "approach": [
+		"Implemented an Editor Window that scans the scene, groups lights by type, and exposes the most relevant controls in a single place.",
+		"Persisted play-mode lighting adjustments by writing modified runtime values back into serialized scene light components when returning to edit mode."
+	  ]
+	}
+  }
+  

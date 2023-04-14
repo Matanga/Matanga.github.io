@@ -1,0 +1,64 @@
+{
+    "date": "2023-10-01",
+    "name": "Procedural Building Assembly Pipeline",
+    "projectname": "Procedural World Pipeline R&D Sandbox",
+    "company": "Undisclosed",
+    "oneLiner": "Data-driven building generation pipeline that assembles complete towns from modular assets using lot metadata, zoning rules, facade systems, and Unreal Engine editor tooling with high runtime efficiency.",
+    "bulletpoints": [
+      "Exported structured data from Houdini for streets, sidewalks, and building lots, where lots are represented as 2D grids enriched with attributes such as zoning, density, and usage type.",
+      "Designed a modular building system where static meshes are unwrapped to support different materials on each side, enabling interior and exterior variation from a shared asset set.",
+      "Created rule-based databases to describe building types, including floors, room and area types, connections, facades, and variability constraints.",
+      "Developed custom Unreal Engine editor tools and data assets to author and manage building definitions and style databases.",
+      "Implemented facade rule systems using string-based descriptors to control facade composition and floor distribution.",
+      "Spawned buildings through Blueprint-driven workflows using a single material instance with atlas textures and custom primitive data.",
+      "Used HISM with custom data attributes to render entire towns using a small number of instanced static meshes and minimal draw calls."
+    ],
+    "dcc": ["Houdini"],
+    "engine": ["Unreal"],
+    "languages": ["Python", "VEX", "Blueprints"],
+    "skillsets": ["tooldev", "pipelinedev", "unrealdev", "procgen"],
+    "tags": [
+      "procedural-generation",
+      "buildings",
+      "modular-assets",
+      "facades",
+      "data-driven",
+      "editor-tools",
+      "performance",
+      "pipeline-validation",
+      "r&d"
+    ],
+    "priority": 3,
+    "status": "complete",
+    "media": {
+      "image": [
+        "apocs_buildings_01.jpg",
+        "apocs_buildings_02.jpg",
+        "apocs_buildings_03.jpg",
+        "apocs_buildings_04.jpg",
+        "apocs_buildings_05.gif"
+      ],
+      "youtube": [
+        "https://www.youtube.com/embed/WXy6JrDf0JM"
+      ],
+      "captions": {
+        "apocs_buildings_01.jpg": "City and lot data exported from Houdini, representing streets, sidewalks, and grid-based building lots with zoning attributes.",
+        "apocs_buildings_02.jpg": "Lot database and building type configuration authored through custom Unreal Engine editor tools.",
+        "apocs_buildings_03.jpg": "Rule-based building definition system describing floors, room layouts, connections, and variability.",
+        "apocs_buildings_04.jpg": "Facade rule system controlling facade composition and floor distribution using string-based descriptors.",
+        "apocs_buildings_05.gif": "Blueprint-driven building spawning using instanced static meshes and custom material data for high-performance rendering.",
+        "https://www.youtube.com/embed/WXy6JrDf0JM": "Building pipeline breakdown covering lot data ingestion, editor tooling, modular assembly, facade rules, and runtime performance validation."
+      }
+    },
+    "deepDive": {
+      "problem": "Procedural buildings must balance variation, authoring control, and runtime performance while remaining compatible with upstream city data and downstream engine constraints.",
+      "approach": [
+        "Represented building lots as structured 2D grids with rich metadata exported from the city pipeline.",
+        "Designed modular building assets that support multi-sided material variation using shared geometry.",
+        "Created rule-based databases to describe building composition, floors, facades, and usage types.",
+        "Built custom Unreal Engine editor tools to author, inspect, and iterate on building definitions.",
+        "Used Blueprint-driven spawning combined with HISM, atlas textures, and custom primitive data to achieve high visual variety with minimal draw calls."
+      ]
+    }
+  }
+  
