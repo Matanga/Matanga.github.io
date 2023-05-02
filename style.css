@@ -3,8 +3,13 @@
   --sec-color: #393646;
   --font-color: #343a40;
 }
+/*
 
+bg main #343541
 
+bg(obsidian) #1e1e1e
+
+*/
 
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
@@ -122,3 +127,101 @@ iframe {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: var(--sec-color);}
 
+
+/*--------------------------------------*/
+/*--------------------------------------*/
+/* Body project template */
+
+
+    body {
+        background-color: #1e1e1e;
+      display:flex;
+      height: 100%;
+      margin: 0;
+      font-family: Arial;
+      align-items: center;
+      align-self: center;
+      align-content: center;
+    }
+
+    .project_wrapper {
+      display: block;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 96%;
+      max-width: 96%;
+
+    }
+
+@media only screen and (min-width: 768px) {
+  .project_wrapper {
+    max-width: 700px;
+  }
+}
+
+/***********************************************************/
+ 
+    #more {display: none;}
+
+    .project_info {
+        width: 100%;
+        /*max-width: 700px;*/
+        background-color: #6e6e6e;
+        padding: 5px 10px;
+        border-radius: 10px;
+        margin-top: 40px;
+    }
+    .btnmore{
+        padding: 5px;
+        margin: 10px;
+    }
+
+
+/***********************************************************/
+
+.project_showcase {
+    background-color: #6e6e6e;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    width: 100%;
+
+}
+
+.showcase_content {
+  padding: 0 18px;
+  /*max-height: 0;*/
+  /*overflow: hidden;*/
+  transition: max-height 0.2s ease-out;
+  background-color: #6e6e6e;
+  display: flex;
+  justify-content: left;
+}
+
+
+.showcaseitem_bar {
+  height: 40px;
+  background-color: #6e6e6e;
+  transition: transform 0.2s ease-in-out;
+}
+
+.showcaseitem_bar.hidden {
+  transform: translateY(-100%);
+}
+
+.dropbtn {
+  min-width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+
+/***********************************************************/
+
+.shocase_iframe{
+    margin: 5px;
+    border: none;
+}
