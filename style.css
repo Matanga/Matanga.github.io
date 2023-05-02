@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #1e1e1e;
+  --bg-color: #434654;
   --sec-color: #393646;
   --font-color: #343a40;
 }
@@ -8,8 +8,7 @@
 
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
-/*------------------------------------------------------*/
-/*------------------------------------------------------*/
+/*Main Body*/
 
 body {
   margin:0px;
@@ -30,23 +29,12 @@ iframe {
 }
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
-/*------------------------------------------------------*/
-/*------------------------------------------------------*/
+/*Top Bar*/
+
 
 /* CONTENT DEF MUST BE IN FRONT FOR SYSTEM TO WORK*/
 
-.content {
-  padding: 0 18px;
-  /*max-height: 0;*/
-  /*overflow: hidden;*/
-  transition: max-height 0.2s ease-out;
-  background-color: var(--bg-color);
-  display: flex;
-  justify-content: center;
-}
-
-
-.top-bar {
+.topbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -57,16 +45,26 @@ iframe {
   transition: transform 0.2s ease-in-out;
 }
 
-.top-bar.hidden {
+.topbar-content {
+  padding: 0 18px;
+  /*max-height: 0;*/
+  /*overflow: hidden;*/
+  transition: max-height 0.2s ease-out;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+}
+
+.topbar.hidden {
   transform: translateY(-100%);
 }
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
-/*------------------------------------------------------*/
-/*------------------------------------------------------*/
+/* Top Bar Dropdowns*/
+
 
 /* Dropdown Button */
-.linkbutton {
+.topbar-linkbtn {
   background-color: var(--sec-color);
   color: white;
   padding: 10px;
@@ -77,7 +75,7 @@ iframe {
 }
 
 /* Show the dropdown menu on hover */
-.linkbutton:hover  {background-color: var(--bg-color);}
+.topbar-linkbtn:hover  {background-color: var(--bg-color);}
 
 
 /* Dropdown Button */
