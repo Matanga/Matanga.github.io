@@ -18,7 +18,19 @@ bg(obsidian) #1e1e1e
 body {
   margin:0px;
   background-color: var(--bg-color);
+  display:flex;
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  align-items: center;
+  align-self: center;
+  align-content: center;
 }
+
+
+
+
+
 
 /* Style the main content area */
 .main {
@@ -132,7 +144,7 @@ iframe {
 /*--------------------------------------*/
 /* Body project template */
 
-
+/*
     body {
         background-color: #1e1e1e;
       display:flex;
@@ -142,7 +154,7 @@ iframe {
       align-items: center;
       align-self: center;
       align-content: center;
-    }
+    }*/
 
     .project_wrapper {
       display: block;
