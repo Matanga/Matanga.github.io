@@ -237,7 +237,6 @@ body {
 
 
 .showcaseitem_bar {
-  height: 40px;
   background-color: #6e6e6e;
   transition: transform 0.2s ease-in-out;
 }
