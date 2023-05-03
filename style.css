@@ -248,10 +248,10 @@ body {
 
 .showcase_content .dropbtn {
   min-width: 80px;
-  height: 40px;
   border-radius: 10px;
   /*margin: 5px;*/
   background-color: var(--sec-color);
+  padding: 10px;
 }
 
 
