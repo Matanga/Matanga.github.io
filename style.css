@@ -1,6 +1,7 @@
 :root {
   --bg-color: #161616;
   --sec-color: #393646;
+  --third-color: #1e1e1e;
   --font-color: #343a40;
 }
 
@@ -193,25 +194,25 @@ body {
 
 /***********************************************************/
  
-    #more {display: none;}
+  #more {display: none;}
 
-    .project_info {
-        width: 100%;
-        /*max-width: 700px;*/
-        background-color: #6e6e6e;
-        padding: 5px 10px;
-        border-radius: 10px;
-    }
-    .btnmore{
-        padding: 5px;
-        margin: 10px;
-    }
+  .project_info {
+      width: 100%;
+      /*max-width: 700px;*/
+      background-color: var(--third-color);
+      padding: 5px 10px;
+      border-radius: 10px;
+  }
+  .btnmore{
+      padding: 5px;
+      margin: 10px;
+  }
 
 
 /***********************************************************/
 
 .project_showcase {
-    background-color: #6e6e6e;
+    background-color: var(--third-color);
     padding: 5px 10px;
     border-radius: 10px;
     margin-top: 5px;
@@ -225,7 +226,7 @@ body {
   /*max-height: 0;*/
   /*overflow: hidden;*/
   transition: max-height 0.2s ease-out;
-  background-color: #6e6e6e;
+  background-color: var(--third-color);
   display: flex;
   justify-content: left;
 }
