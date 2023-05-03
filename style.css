@@ -155,7 +155,11 @@ body {
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: var(--sec-color);}
+/*.dropdown:hover .dropbtn {background-color: var(--sec-color);}*/
+
+.dropbtn:hover {background-color: var(--sec-color);}
+
+
 
 
 /*--------------------------------------*/
