@@ -39,6 +39,20 @@ bg(obsidian) #1e1e1e
   margin: 5px;
 }
 
+.contactlink {
+  background-color: transparent;
+  color: orange;
+  border: none;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+.contactlink:hover {
+  text-decoration: underline;
+}
+
+
+
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
 /*Main Body*/
