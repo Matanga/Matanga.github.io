@@ -251,6 +251,7 @@ body {
   height: 40px;
   border-radius: 10px;
   /*margin: 5px;*/
+  background-color: var(--sec-color);
 }
 
 
