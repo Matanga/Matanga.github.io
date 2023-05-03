@@ -287,16 +287,14 @@ body {
       max-width: 96%;
       margin-top: 40px;
 
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
     }
 
     .project_wrapper::-webkit-scrollbar {
       display: none;
     }
-    /* Hide scrollbar for IE, Edge and Firefox */
-    .project_wrapper {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-    }
+
 
 @media only screen and (min-width: 768px) {
   .project_wrapper {
