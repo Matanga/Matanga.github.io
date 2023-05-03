@@ -318,7 +318,7 @@ body {
 #cccfdb;
    border-radius: 2px;
 } 
-.linkprojects button {
+.linkprojects button, .linkskillsets button  {
   display: inline-block;
   position: relative;
   color: #0087ca;
@@ -327,7 +327,7 @@ body {
   margin: 0 5px;
 }
 
-.linkprojects button:after {
+.linkprojects button:after,.linkskillsets button:after {
   content: '';
   position: absolute;
   width: 100%;
@@ -341,7 +341,7 @@ body {
   transition: transform 0.25s ease-out;
 }
 
-.linkprojects button:hover:after {
+.linkprojects button:hover:after, .linkskillsets button:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
