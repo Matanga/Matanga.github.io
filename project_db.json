@@ -1,0 +1,11 @@
+{
+	"intel-evo":
+	{
+				"name":"Evolution Experience",
+				"description":"Evolution Experience is an interactive installation in Spain that promotes Intel chips. Using Unreal Engine, I created an immersive experience featuring different species of animals that the audience can interact with via tablets. The installation consists of 8 projectors, forming a surround room.",
+				"challenges":"The project presented a few main challenges. Firstly, it was necessary to integrate Unreal with a websocket server to enable audience interaction. Secondly, creating reactive and interactive animals that felt like a part of the world. Thirdly, learning and setting up Ndisplay technology in collaboration with onsite operators was a hurdle. Finally, there was a need to come up with methods for rapidly iterating the level design and ambient animations.",
+				"solutionhow":"To overcome these challenges, I integrated a websocket plugin in Unreal. I also developed animation blueprints and AI controllers for the animals to create a seamless and interactive experience with the audience, collaborated with the onsite team to learn and set up Ndisplay technology, and designed a set of tools for rapid environment iteration. The result was a successful installation that engaged the audience and promoted Intel chips.",
+				"imageLinks":[],
+				"youtubeLinks":[]		
+	}
+}
