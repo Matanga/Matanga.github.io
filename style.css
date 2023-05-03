@@ -26,13 +26,12 @@ bg(obsidian) #1e1e1e
 /*------------------------------------------------------*/
 /*Home Stuff*/
 
-.skillslist {
+.skillslist, .homelinks {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
 }
-.skillslist div {
-
+.skillslist div, .homelinks div {
   border-color: white;
   border: 1px solid;
   padding:5px;
