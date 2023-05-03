@@ -86,7 +86,7 @@ bg(obsidian) #1e1e1e
 
 
 .homelinks .linkprojects  {
-  border: 2px solid snow;
+  border: 1px solid snow;
   transition: border-width 1s ease-in-out;
 }
 
@@ -289,6 +289,15 @@ body {
 
     }
 
+    .project_wrapper::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .project_wrapper {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+
 @media only screen and (min-width: 768px) {
   .project_wrapper {
     max-width: 700px;
@@ -305,6 +314,7 @@ body {
       background-color: var(--third-color);
       padding: 5px 10px;
       border-radius: 10px;
+      margin-top: 10px;
   }
   .btnmore{
       padding: 5px;
