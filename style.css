@@ -322,8 +322,10 @@ body {
 .linkprojects button {
   display: inline-block;
   position: relative;
-  color: 
-#0087ca;
+  color: #0087ca;
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
 }
 
 .linkprojects button:after {
