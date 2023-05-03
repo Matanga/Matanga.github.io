@@ -98,8 +98,8 @@ body {
 /* Top Bar Separator*/
 .topbar-separator {
   width: 100%;
-  height: 2px;
-  background-color:'snow': 
+  height: 1px;
+  background-color: #fffafa; 
 
 }
 
@@ -128,7 +128,7 @@ body {
 .dropbtn {
   background-color: var(--bg-color);
   color: white;
-  padding: 16px;
+  padding: 10px;
   font-size: 16px;
   border: none;
 }
