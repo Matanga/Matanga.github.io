@@ -83,9 +83,6 @@ body {
 }
 
 .topbar-content {
-  padding: 0 18px;
-  /*max-height: 0;*/
-  /*overflow: hidden;*/
   transition: max-height 0.2s ease-out;
   background-color: var(--bg-color);
   display: flex;
@@ -244,11 +241,11 @@ body {
   transform: translateY(-100%);
 }
 
-.dropbtn {
-  min-width: 100px;
+.showcase_content .dropbtn {
+  min-width: 80px;
   height: 40px;
   border-radius: 10px;
-  margin: 5px;
+  /*margin: 5px;*/
 }
 
 
