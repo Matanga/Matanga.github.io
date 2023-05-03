@@ -50,7 +50,42 @@ bg(obsidian) #1e1e1e
   text-decoration: underline;
 }
 
+/***********************************************************/
+/***********************************************************/
+/* Animated Home Links Underline*/
 
+.w3rcontainer{
+   border: 1px solid 
+#cccfdb;
+   border-radius: 2px;
+} 
+.linkprojects button, .linkskillsets button  {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
+}
+
+.linkprojects button:after,.linkskillsets button:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: 
+#0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.linkprojects button:hover:after, .linkskillsets button:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
@@ -309,39 +344,3 @@ body {
 }
 
 
-/***********************************************************/
-/***********************************************************/
-/* Animated Underline*/
-
-.w3rcontainer{
-   border: 1px solid 
-#cccfdb;
-   border-radius: 2px;
-} 
-.linkprojects button, .linkskillsets button  {
-  display: inline-block;
-  position: relative;
-  color: #0087ca;
-  background-color: transparent;
-  border: none;
-  margin: 0 5px;
-}
-
-.linkprojects button:after,.linkskillsets button:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: 
-#0087ca;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.linkprojects button:hover:after, .linkskillsets button:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
