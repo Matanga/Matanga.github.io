@@ -86,24 +86,27 @@ bg(obsidian) #1e1e1e
 
 
 .homelinks .linkprojects  {
-   outline: 1px solid #333;
-   outline-offset: -1px;
-   transition: all 0.3s linear;
-   cursor: pointer;
-}
- .homelinks .linkprojects:hover {
-   outline: 1px solid transparent;
-   background: linear-gradient(90deg, #333 50%, transparent 0) repeat-x, linear-gradient(90deg, #333 50%, transparent 0) repeat-x, linear-gradient(0deg, #333 50%, transparent 0) repeat-y, linear-gradient(0deg, #333 50%, transparent 0) repeat-y;
-   background-size: 4px 1px, 4px 1px, 1px 4px, 1px 4px;
-   background-position: 0 0, 0 100%, 0 0, 100% 0;
-   animation: linearGradientMove 0.3s infinite linear;
-}
- @keyframes linearGradientMove {
-   100% {
-     background-position: 4px 0, -4px 100%, 0 -4px, 100% 4px;
-  }
+  border: 2px solid snow;
+  transition: border-width 1s ease-in-out;
 }
 
+.homelinks .linkprojects:hover {
+  animation-name: border-width-animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes border-width-animation {
+  0% {
+    border-width: 2px;
+  }
+  50% {
+    border-width: 5px;
+  }
+  100% {
+    border-width: 2px;
+  }
+}
 
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
