@@ -239,6 +239,7 @@ body {
 .showcaseitem_bar {
   background-color: #6e6e6e;
   transition: transform 0.2s ease-in-out;
+  margin-top: 10px;
 }
 
 .showcaseitem_bar.hidden {
@@ -253,12 +254,18 @@ body {
   padding: 10px;
 }
 
+/***********************************************************/
+
+.markdown-reading-view {
+  margin-top: -60px;
+}
+
 
 /***********************************************************/
 
 #showcase_iframe{
-    margin: 5px;
     border: none;
     width: 100%;
     height: inherit;
 }
+
