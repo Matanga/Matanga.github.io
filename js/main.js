@@ -81,3 +81,22 @@ function LoadProject(projectName) {
   ApplyElementText("container_proj_solutions", project.solution);
 }
 
+function AddProjectButtons(containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) {
+    console.error(`Container element with ID "${containerId}" not found`);
+    return;
+  }
+  
+  Object.keys(portfolioManager.projects).forEach(projectKey => {
+    const project = portfolioManager.projects[projectKey];
+    const button = document.createElement("button");
+    button.setAttribute("id", "loadBtn");
+    button.setAttribute("data-project", projectKey);
+    button.textContent = project.name;
+    button.addEventListener("click", function() {
+      LoadProject(projectKey);
+    });
+    container.appendChild(button);
+  });
+}
