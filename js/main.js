@@ -110,7 +110,7 @@ function OpenTab(tabName) {
 
 
 function LoadPortfolioItem(item){
-
+  console.log(item.images);
 }
 
 function LoadProject(pm,projectName) {
