@@ -8,7 +8,6 @@ class Project {
   }
 }
 
-
 class PortfolioItem {
   constructor(data) {
     this.date = data.backend.date;
@@ -26,10 +25,6 @@ class PortfolioItem {
     this.urls = data.media.url;
   }
 }
-
-const PROJECTDB = "https://matanga.github.io/db/project_db.json";
-const PORTFOLIOITEMDB = "https://matanga.github.io/db/portfolio_item_db.json";
-
 
 class PortfolioManager {
   constructor() {
@@ -59,6 +54,12 @@ class PortfolioManager {
 }
 
 
+const PROJECTDB = "https://matanga.github.io/db/project_db.json";
+const PORTFOLIOITEMDB = "https://matanga.github.io/db/portfolio_item_db.json";
+const PORTFOLIOMANAGER = new PortfolioManager();
+
+
+
 
 
 
@@ -67,15 +68,16 @@ function ApplyElementText(id, text) {
 document.getElementById(id).innerHTML = text;
 }
 
-// Function to load the JSON object and display its values
-function LoadJson(file_path) {
-fetch(file_path)
-  .then(response => response.json())
-  .then(data => {
-    var intelEvo = data["intel-evo"];
-    ApplyElementText("container_proj_name", intelEvo.name);
-    ApplyElementText("container_proj_description", intelEvo.description);
-    ApplyElementText("container_proj_challenges", intelEvo.challenges);
-    ApplyElementText("container_proj_solutions", intelEvo.solution);
-  });
+function LoadProject(projectName) {
+  const project = PORTFOLIOMANAGER.projects[projectName];
+  if (!project) {
+    console.error(`Project "${projectName}" not found`);
+    return;
+  }
+  
+  ApplyElementText("container_proj_name", project.name);
+  ApplyElementText("container_proj_description", project.description);
+  ApplyElementText("container_proj_challenges", project.challenges);
+  ApplyElementText("container_proj_solutions", project.solutionhow);
 }
+
