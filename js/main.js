@@ -11,7 +11,7 @@ class Project {
 
 class PortfolioItem {
   constructor(data) {
-    this.date = data.backend.date;
+    /*this.date = data.backend.date;
     this.name = data.backend.name;
     this.projectname = data.backend.projectname;
     this.company = data.backend.company;
@@ -23,7 +23,7 @@ class PortfolioItem {
     this.bulletpoints = data.description.bulletpoints;
     this.images = data.media.image;
     this.youtube = data.media.youtube;
-    this.urls = data.media.url;
+    this.urls = data.media.url;*/
   }
 }
 
@@ -31,19 +31,20 @@ class PortfolioManager {
   constructor() {
     this.projects = {};
     this.portfolioItems = {};
-    
+    console.log();
     // Load project data
     fetch(PROJECTDB)
       .then(response => response.json())
       .then(data => {
         Object.keys(data).forEach(key => {
+        	console.log(key);
           this.projects[key] = new Project(data[key]);
         });
       })
       .catch(error => console.error(`Failed to load project data: ${error}`));
     
     // Load portfolio item data
-    fetch(PORTFOLIOITEMDB)
+    /*fetch(PORTFOLIOITEMDB)
       .then(response => response.json())
       .then(data => {
         Object.keys(data).forEach(key => {
@@ -51,13 +52,13 @@ class PortfolioManager {
         });
       })
       .catch(error => console.error(`Failed to load portfolio item data: ${error}`));
+  */
   }
 }
 
 
 const PROJECTDB = "https://matanga.github.io/db/project_db.json";
 const PORTFOLIOITEMDB = "https://matanga.github.io/db/portfolio_item_db.json";
-const PORTFOLIOMANAGER = new PortfolioManager();
 
 
 
@@ -101,3 +102,6 @@ function AddProjectButtons(containerId) {
     container.appendChild(button);
   });
 }
+
+
+const PORTFOLIOMANAGER = new PortfolioManager();

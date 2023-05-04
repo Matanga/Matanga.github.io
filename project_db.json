@@ -7,7 +7,6 @@
 		"solution":"To overcome these challenges, I integrated a websocket plugin in Unreal. I also developed animation blueprints and AI controllers for the animals to create a seamless and interactive experience with the audience, collaborated with the onsite team to learn and set up Ndisplay technology, and designed a set of tools for rapid environment iteration. The result was a successful installation that engaged the audience and promoted Intel chips.",
 		"portfolioitems":["intelevo-environment","intelevo-animals","intelevo-showcase"]
 	},
-
 	"Unreal-Room":
 	{
 		"name":"Unreal Room",
@@ -15,8 +14,7 @@
 		"challenges":"The development of the project presented a multitude of complex technical challenges. The dynamic animation of the virtual room was a considerable challenge, given the variation in real-world sizes of the installation location. Therefore, a dynamic room system was developed that adapted to different real-world sizes without affecting transitions between effects. Additionally, the interpretation of Mediapipe information into useful interactions and the integration of different gestures with different Niagara VFX effects were technically demanding.",
 		"solution":"To overcome these challenges, a comprehensive solution was developed, comprising a dynamic room system in Unreal that could dynamically adapt to different real-world sizes without impacting transitions between effects. A Mediapipe Blueprint was developed, which could detect hand and body gestures and convert them into inputs for the system. Additionally, a sophisticated VFX pipeline was developed to seamlessly integrate these gestures with the different Niagara effects used in the installation. The project demonstrated the technical expertise and knowledge of the artist/developer in creating cutting-edge interactive installations that showcased the latest advancements in digital technologies.",
 		"portfolioitems":["unrealroom-VFX","unrealroom-BPs"]
-	},
-
+	}
 }
 
 
