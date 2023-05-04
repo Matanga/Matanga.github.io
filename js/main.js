@@ -78,6 +78,6 @@ function LoadProject(projectName) {
   ApplyElementText("container_proj_name", project.name);
   ApplyElementText("container_proj_description", project.description);
   ApplyElementText("container_proj_challenges", project.challenges);
-  ApplyElementText("container_proj_solutions", project.solutionhow);
+  ApplyElementText("container_proj_solutions", project.solution);
 }
 
