@@ -23,10 +23,6 @@ bg(obsidian) #1e1e1e
 /*------------------------------------------------------*/
 /*General Stuff*/
 
-.home, .projects, .skillsets, .contact {
-  margin: auto;
-}
-
 
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
@@ -393,7 +389,7 @@ body {
   background-color: #ccc;
 }
 
-`.tabcontent{
+.tabcontent{
   margin: auto;
 
 }
