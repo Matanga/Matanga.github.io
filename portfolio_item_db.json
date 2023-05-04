@@ -1,0 +1,81 @@
+{
+	"intelevo-showcase":
+	{
+			"backend":{
+				"date":"2022-10-01",
+				"name":"Installation Showcase",				
+				"projectname":"Evolution Experience",
+				"company":"Genosha",
+				"dcc":["Blender","Houdini"],
+				"engine":["Unreal"],
+				"languages":["blueprints"],
+				"skillsets":["game development","VFX","tool development","art installation"]
+			},
+			"description":{
+				"main":"These are some images and videos taken at the site.",
+				"bulletpoints":[""]
+			},
+			"media":{				
+				"image":["IntelEvoShowcase_Portfolio_Item-1.png",
+							  "IntelEvoShowcase_Portfolio_Item-2.png",
+							  "IntelEvoShowcase_Portfolio_Item-3.png",
+							  "IntelEvoShowcase_Portfolio_Item-4.png",
+							  "IntelEvoShowcase_Portfolio_Item-5.png",
+							  "IntelEvoShowcase_Portfolio_Item-6.png"
+							],
+				"youtube":["https://www.youtube.com/embed/t04CSqkdfSM"],
+				"url":[""]
+			}
+	},
+
+
+	"intelevo-animals":
+	{
+			"backend":{
+				"date":"2022-10-01",
+				"name":"Animals Showcase",				
+				"projectname":"Evolution Experience",
+				"company":"Genosha",
+				"dcc":["Blender","Houdini"],
+				"engine":["Unreal"],
+				"languages":["blueprints"],
+				"skillsets":["game development","VFX","tool development","art installation"]
+			},
+			"description":{
+				"main":"",
+				"bulletpoints":[""]
+			},
+			"media":{				
+				"image":["IntelEvoAnimals_Portfolio_Item-1.png","IntelEvoAnimals_Portfolio_Item-2.png"],
+				"youtube":["https://www.youtube.com/embed/3xw63__iTmk"],
+				"url":[""]
+		
+			}
+	},
+
+	"intelevo-environment":
+	{
+			"backend":{
+				"date":"2022-10-01",
+				"name":"Installation Showcase",				
+				"projectname":"Evolution Experience",
+				"company":"Genosha",
+				"dcc":["Blender","Houdini"],
+				"engine":["Unreal"],
+				"languages":["blueprints"],
+				"skillsets":["game development","VFX","tool development","art installation"]
+			},
+			"description":{
+				"main":"",
+				"bulletpoints":[""]
+			},
+			"media":{				
+				"image":["IntelEvoAnimals_Portfolio_Item-1.png","IntelEvoAnimals_Portfolio_Item-2.png"],
+				"youtube":["https://www.youtube.com/embed/3xw63__iTmk"],
+				"url":[""]
+			}
+	}
+
+}
+
+
