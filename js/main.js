@@ -164,14 +164,14 @@ function AddPortfolioItemButtons(portfolioItems, containerId) {
     console.error(`Container element with ID "${containerId}" not found`);
     return;
   }
-
+  container.innerHTML = "";
   portfolioItems.forEach(portfolioItem => {
     const button = document.createElement("button");
     button.setAttribute("id", "loadBtn");
     button.setAttribute("class", "topbar-linkbtn");
 
     button.setAttribute("data-portfolio-item", portfolioItem);
-    button.textContent = portfolioItem;
+    button.textContent = portfolioItem.name;
     button.addEventListener("click", function() {
       LoadPortfolioItem(portfolioItem);
     });
