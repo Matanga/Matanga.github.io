@@ -65,6 +65,56 @@ function ApplyElementText(id, text) {
 document.getElementById(id).innerHTML = text;
 }
 
+
+// Changes the tab
+function OpenTab(evt, tabName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("dropbtn");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Changes the tab
+function OpenTab(tabName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="dropbtn" and remove the class "active"
+  tablinks = document.getElementsByClassName("dropbtn");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+
+  let element = document.querySelector(('.'+tabName));
+
+  element.className += " active";
+}
+
+
+
 function LoadProject(pm,projectName) {
   const project = pm.projects[projectName];
   console.log(pm.projects)
@@ -77,6 +127,10 @@ function LoadProject(pm,projectName) {
   ApplyElementText("container_proj_description", project.description);
   ApplyElementText("container_proj_challenges", project.challenges);
   ApplyElementText("container_proj_solutions", project.solution);
+
+
+  OpenTab("projects");
+
 }
 
 
@@ -103,27 +157,6 @@ function AddProjectButtons(pm,containerId) {
   });
 }
 
-// Changes the tab
-function OpenTab(evt, tabName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("dropbtn");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
 
 //Used to show and hide more project content on the project tab 
 function toggleShow() {
