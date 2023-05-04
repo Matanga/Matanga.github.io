@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 class Project {
   constructor(data) {
     this.name = data.name;
@@ -88,8 +89,8 @@ function AddProjectButtons(containerId) {
     return;
   }
   
-  Object.keys(portfolioManager.projects).forEach(projectKey => {
-    const project = portfolioManager.projects[projectKey];
+  Object.keys(PORTFOLIOMANAGER.projects).forEach(projectKey => {
+    const project = PORTFOLIOMANAGER.projects[projectKey];
     const button = document.createElement("button");
     button.setAttribute("id", "loadBtn");
     button.setAttribute("data-project", projectKey);
