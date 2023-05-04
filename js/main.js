@@ -4,7 +4,7 @@ class Project {
     this.name = data.name;
     this.description = data.description;
     this.challenges = data.challenges;
-    this.solutionhow = data.solutionhow;
+    this.solution = data.solution;
     this.portfolioitems = data.portfolioitems;
   }
 }
