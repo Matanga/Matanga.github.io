@@ -1,3 +1,6 @@
+const PROJECTDB = "https://matanga.github.io/db/project_db.json";
+const PORTFOLIOITEMDB = "https://matanga.github.io/db/portfolio_item_db.json";
+
 class Project {
   constructor(data) {
     this.name = data.name;
@@ -55,8 +58,6 @@ class PortfolioManager {
   }
 }
 
-const PROJECTDB = "https://matanga.github.io/db/project_db.json";
-const PORTFOLIOITEMDB = "https://matanga.github.io/db/portfolio_item_db.json";
 
 
 // Function to apply text to an element
@@ -78,6 +79,8 @@ function LoadProject(pm,projectName) {
   ApplyElementText("container_proj_solutions", project.solution);
 }
 
+
+// Initialize Function to Create Buttons
 function AddProjectButtons(pm,containerId) {
   const container = document.getElementById(containerId);
   if (!container) {
@@ -89,6 +92,8 @@ function AddProjectButtons(pm,containerId) {
     const project = pm.projects[projectKey];
     const button = document.createElement("button");
     button.setAttribute("id", "loadBtn");
+    button.setAttribute("class", "topbar-linkbtn");
+
     button.setAttribute("data-project", projectKey);
     button.textContent = project.name;
     button.addEventListener("click", function() {
@@ -98,6 +103,7 @@ function AddProjectButtons(pm,containerId) {
   });
 }
 
+// Changes the tab
 function OpenTab(evt, tabName) {
   // Declare all variables
   var i, tabcontent, tablinks;
@@ -117,4 +123,21 @@ function OpenTab(evt, tabName) {
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
+}
+
+//Used to show and hide more project content on the project tab 
+function toggleShow() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
 }
