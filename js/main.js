@@ -56,17 +56,32 @@ class PortfolioManager {
       callback();
     });
   }
+
+  getPortfolioItemsForProject(projectName) {
+    const project = this.projects[projectName];
+    if (!project) {
+      console.error(`Project ${projectName} not found`);
+      return [];
+    }
+    const portfolioItemNames = project.portfolioitems;
+    const portfolioItems = [];
+    portfolioItemNames.forEach(name => {
+      const portfolioItem = this.portfolioItems[name];
+      if (portfolioItem) {
+        portfolioItems.push(portfolioItem);
+      } else {
+        console.error(`Portfolio item ${name} not found`);
+      }
+    });
+    return portfolioItems;
+  }
+
 }
-
-
 
 // Function to apply text to an element
 function ApplyElementText(id, text) {
 document.getElementById(id).innerHTML = text;
 }
-
-
-
 
 // Changes the tab
 function OpenTab(tabName) {
@@ -94,6 +109,9 @@ function OpenTab(tabName) {
 }
 
 
+function LoadPortfolioItem(item){
+
+}
 
 function LoadProject(pm,projectName) {
   const project = pm.projects[projectName];
@@ -108,11 +126,14 @@ function LoadProject(pm,projectName) {
   ApplyElementText("container_proj_challenges", project.challenges);
   ApplyElementText("container_proj_solutions", project.solution);
 
+  ForceReadLess();
+
+  items = pm.getPortfolioItemsForProject(projectName);
+  AddPortfolioItemButtons(items,'portfolioitemcontainer');
+
 
   OpenTab("projects");
-
 }
-
 
 // Initialize Function to Create Buttons
 function AddProjectButtons(pm,containerId) {
@@ -137,6 +158,40 @@ function AddProjectButtons(pm,containerId) {
   });
 }
 
+function AddPortfolioItemButtons(portfolioItems, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) {
+    console.error(`Container element with ID "${containerId}" not found`);
+    return;
+  }
+
+  portfolioItems.forEach(portfolioItem => {
+    const button = document.createElement("button");
+    button.setAttribute("id", "loadBtn");
+    button.setAttribute("class", "topbar-linkbtn");
+
+    button.setAttribute("data-portfolio-item", portfolioItem);
+    button.textContent = portfolioItem;
+    button.addEventListener("click", function() {
+      LoadPortfolioItem(portfolioItem);
+    });
+    container.appendChild(button);
+  });
+}
+
+
+function ForceReadLess(){
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } 
+}
+
 
 //Used to show and hide more project content on the project tab 
 function toggleShow() {
@@ -154,3 +209,4 @@ function toggleShow() {
     moreText.style.display = "inline";
   }
 }
+
