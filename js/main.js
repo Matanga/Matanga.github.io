@@ -1,4 +1,3 @@
-/*jshint esversion: 6 */
 class Project {
   constructor(data) {
     this.name = data.name;
@@ -6,12 +5,13 @@ class Project {
     this.challenges = data.challenges;
     this.solution = data.solution;
     this.portfolioitems = data.portfolioitems;
+	console.log(data.description);
   }
 }
 
 class PortfolioItem {
   constructor(data) {
-    /*this.date = data.backend.date;
+    this.date = data.backend.date;
     this.name = data.backend.name;
     this.projectname = data.backend.projectname;
     this.company = data.backend.company;
@@ -23,46 +23,40 @@ class PortfolioItem {
     this.bulletpoints = data.description.bulletpoints;
     this.images = data.media.image;
     this.youtube = data.media.youtube;
-    this.urls = data.media.url;*/
+    this.urls = data.media.url;
   }
 }
 
 class PortfolioManager {
-  constructor() {
+  constructor(callback) {
     this.projects = {};
     this.portfolioItems = {};
-    console.log();
-    // Load project data
-    fetch(PROJECTDB)
-      .then(response => response.json())
-      .then(data => {
-        Object.keys(data).forEach(key => {
-        	console.log(key);
-          this.projects[key] = new Project(data[key]);
-        });
-      })
-      .catch(error => console.error(`Failed to load project data: ${error}`));
-    
-    // Load portfolio item data
-    /*fetch(PORTFOLIOITEMDB)
-      .then(response => response.json())
-      .then(data => {
-        Object.keys(data).forEach(key => {
-          this.portfolioItems[key] = new PortfolioItem(data[key]);
-        });
-      })
-      .catch(error => console.error(`Failed to load portfolio item data: ${error}`));
-  */
+
+    Promise.all([
+      fetch(PROJECTDB)
+        .then(response => response.json())
+        .then(data => {
+          Object.keys(data).forEach(key => {
+            this.projects[key] = new Project(data[key]);
+          });
+        })
+        .catch(error => console.error(`Failed to load project data: ${error}`)),
+      fetch(PORTFOLIOITEMDB)
+        .then(response => response.json())
+        .then(data => {
+          Object.keys(data).forEach(key => {
+            this.portfolioItems[key] = new PortfolioItem(data[key]);
+          });
+        })
+        .catch(error => console.error(`Failed to load portfolio item data: ${error}`))
+    ]).then(() => {
+      callback();
+    });
   }
 }
 
-
 const PROJECTDB = "https://matanga.github.io/db/project_db.json";
 const PORTFOLIOITEMDB = "https://matanga.github.io/db/portfolio_item_db.json";
-
-
-
-
 
 
 // Function to apply text to an element
@@ -70,8 +64,9 @@ function ApplyElementText(id, text) {
 document.getElementById(id).innerHTML = text;
 }
 
-function LoadProject(projectName) {
-  const project = PORTFOLIOMANAGER.projects[projectName];
+function LoadProject(pm,projectName) {
+  const project = pm.projects[projectName];
+  console.log(pm.projects)
   if (!project) {
     console.error(`Project "${projectName}" not found`);
     return;
@@ -83,25 +78,43 @@ function LoadProject(projectName) {
   ApplyElementText("container_proj_solutions", project.solution);
 }
 
-function AddProjectButtons(containerId) {
+function AddProjectButtons(pm,containerId) {
   const container = document.getElementById(containerId);
   if (!container) {
     console.error(`Container element with ID "${containerId}" not found`);
     return;
   }
   
-  Object.keys(PORTFOLIOMANAGER.projects).forEach(projectKey => {
-    const project = PORTFOLIOMANAGER.projects[projectKey];
+  Object.keys(pm.projects).forEach(projectKey => {
+    const project = pm.projects[projectKey];
     const button = document.createElement("button");
     button.setAttribute("id", "loadBtn");
     button.setAttribute("data-project", projectKey);
     button.textContent = project.name;
     button.addEventListener("click", function() {
-      LoadProject(projectKey);
+      LoadProject(pm,projectKey);
     });
     container.appendChild(button);
   });
 }
 
+function OpenTab(evt, tabName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
-const PORTFOLIOMANAGER = new PortfolioManager();
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
