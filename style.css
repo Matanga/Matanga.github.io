@@ -331,7 +331,7 @@ body {
 
 .project_showcase {
     background-color: var(--third-color);
-    padding: 5px 10px;
+    padding: 5px;
     border-radius: 10px;
     margin-top: 5px;
     width: 100%;
@@ -391,16 +391,18 @@ body {
   padding-bottom: 5px;
 }
 
-.topbar button#btnhome.active { border-color: :lime; }
-.topbar button#btnprojects.active { border-color: :#fe3385; }
-.topbar button#btnskillsets.active { border-color: :orange; }
-.topbar button#btncontact.active { border-color: :yellow; }
-
-
-
+#btnhome.active { border-color: :lime; }
+#btnprojects.active { border-color: :#fe3385; }
+#btnskillsets.active { border-color: :orange; }
+#btncontact.active { border-color: :yellow; }
 
 
 .tabcontent{
   margin: auto;
 
 }
+
+
+
+
+/*****************Carousel***************************/

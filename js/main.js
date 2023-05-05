@@ -92,7 +92,7 @@ function displayImages(images, elementId) {
   images.forEach(imagePath => {
     const div = document.createElement("div");
     const img = document.createElement("img");
-    img.setAttribute("src", ('images/'+imagePath));
+    img.setAttribute("src", ("images/"+imagePath));
     div.appendChild(img);
     container.appendChild(div);
   });
@@ -131,8 +131,10 @@ function OpenTab(tabName) {
 
 
 function LoadPortfolioItem(item){
-  console.log(item.images);
+  displayImages(item.images,"carousel-img-parent")
 }
+
+
 
 function LoadProject(pm,projectName) {
   const project = pm.projects[projectName];
