@@ -386,8 +386,26 @@ body {
 
 /* Create an active/current tablink class */
 .topbar button.active {
-  background-color: #ccc;
+  /*background-color: #ccc;*/
+  border-bottom:4px solid blue;
+  padding-bottom: 5px;
 }
+
+/* Create an active/current tablink class */
+.topbar button.active {
+  /*background-color: #ccc;*/
+  border-bottom:4px solid blue;
+  padding-bottom: 5px;
+}
+
+.topbar button#btnhome.active { border-color: :lime; }
+.topbar button#btnprojects.active { border-color: :#fe3385; }
+.topbar button#btnskillsets.active { border-color: :orange; }
+.topbar button#btncontact.active { border-color: :yellow; }
+
+
+
+
 
 .tabcontent{
   margin: auto;
