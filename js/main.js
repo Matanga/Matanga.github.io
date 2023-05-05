@@ -2,13 +2,18 @@ const PROJECTDB = "https://matanga.github.io/db/project_db.json";
 const PORTFOLIOITEMDB = "https://matanga.github.io/db/portfolio_item_db.json";
 
 class Project {
-  constructor(data) {
-    this.name = data.name;
-    this.description = data.description;
-    this.challenges = data.challenges;
-    this.solution = data.solution;
-    this.portfolioitems = data.portfolioitems;
-	console.log(data.description);
+  constructor(input) {
+    this.name = input.data.name;
+    this.client=input.data.client;
+    this.company=input.data.company;
+    this.media=input.data.media;
+    this.platform=input.data.platform;
+    this.involvement=input.data.involvement;
+    this.portfolioitems = input.data.portfolioitems;
+
+    this.description = input.description.main;
+    this.challenges = input.description.challenges;
+    this.solution = input.description.solution;
   }
 }
 
@@ -144,7 +149,7 @@ function LoadProject(pm,projectName) {
     return;
   }
   
-  ApplyElementText("container_proj_name", project.name);
+  ApplyElementText("project_showcase", project.name);
   ApplyElementText("container_proj_description", project.description);
   ApplyElementText("container_proj_challenges", project.challenges);
   ApplyElementText("container_proj_solutions", project.solution);

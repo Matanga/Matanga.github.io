@@ -1,19 +1,37 @@
 {
 	"intel-evo":
 	{
-		"name":"Evolution Experience",
-		"description":"Evolution Experience is an interactive installation in Spain that promotes Intel chips. Using Unreal Engine, I created an immersive experience featuring different species of animals that the audience can interact with via tablets. The installation consists of 8 projectors, forming a surround room.",
-		"challenges":"The project presented a few main challenges. Firstly, it was necessary to integrate Unreal with a websocket server to enable audience interaction. Secondly, creating reactive and interactive animals that felt like a part of the world. Thirdly, learning and setting up Ndisplay technology in collaboration with onsite operators was a hurdle. Finally, there was a need to come up with methods for rapidly iterating the level design and ambient animations.",
-		"solution":"To overcome these challenges, I integrated a websocket plugin in Unreal. I also developed animation blueprints and AI controllers for the animals to create a seamless and interactive experience with the audience, collaborated with the onsite team to learn and set up Ndisplay technology, and designed a set of tools for rapid environment iteration. The result was a successful installation that engaged the audience and promoted Intel chips.",
-		"portfolioitems":["intelevo-environment","intelevo-animals","intelevo-showcase"]
-	},
+		"data":{
+			"name":"Evolution Experience",
+			"client":"",
+			"company":"",
+			"media":"",
+			"platform":"",
+			"involvement":"",
+			"portfolioitems":["intelevo-environment","intelevo-animals","intelevo-showcase"]			
+		},
+		"description":{
+			"main":"Evolution Experience is an interactive installation in Spain that promotes Intel chips. Using Unreal Engine, I created an immersive experience featuring different species of animals that the audience can interact with via tablets. The installation consists of 8 projectors, forming a surround room.",
+			"challenges":"The project presented a few main challenges. Firstly, it was necessary to integrate Unreal with a websocket server to enable audience interaction. Secondly, creating reactive and interactive animals that felt like a part of the world. Thirdly, learning and setting up Ndisplay technology in collaboration with onsite operators was a hurdle. Finally, there was a need to come up with methods for rapidly iterating the level design and ambient animations.",
+			"solution":"To overcome these challenges, I integrated a websocket plugin in Unreal. I also developed animation blueprints and AI controllers for the animals to create a seamless and interactive experience with the audience, collaborated with the onsite team to learn and set up Ndisplay technology, and designed a set of tools for rapid environment iteration. The result was a successful installation that engaged the audience and promoted Intel chips.",
+		}
+	},	
 	"Unreal-Room":
 	{
-		"name":"Unreal Room",
-		"description":"This is a personal project. It is a highly interactive installation that leverages the power of Unreal Engine 5 and the Mediapipe API to create an immersive experience for users. It features visually stunning VFX effects that can be manipulated and controlled by users' body movements and expressions, captured through a camera feed. The installation is projected onto a wall and boasts a dynamic room system that can be dynamically resized to fit into different real-world walls and animated during transitions between different effects. The project required expert knowledge of Unreal Engine 5, Mediapipe API, Python programming, and VFX pipeline.",
-		"challenges":"The development of the project presented a multitude of complex technical challenges. The dynamic animation of the virtual room was a considerable challenge, given the variation in real-world sizes of the installation location. Therefore, a dynamic room system was developed that adapted to different real-world sizes without affecting transitions between effects. Additionally, the interpretation of Mediapipe information into useful interactions and the integration of different gestures with different Niagara VFX effects were technically demanding.",
-		"solution":"To overcome these challenges, a comprehensive solution was developed, comprising a dynamic room system in Unreal that could dynamically adapt to different real-world sizes without impacting transitions between effects. A Mediapipe Blueprint was developed, which could detect hand and body gestures and convert them into inputs for the system. Additionally, a sophisticated VFX pipeline was developed to seamlessly integrate these gestures with the different Niagara effects used in the installation. The project demonstrated the technical expertise and knowledge of the artist/developer in creating cutting-edge interactive installations that showcased the latest advancements in digital technologies.",
-		"portfolioitems":["unrealroom-vfx","unrealroom-bps"]
+		"data":{
+			"name":"Unreal Room",
+			"client":"",
+			"company":"",
+			"media":"",
+			"platform":"",
+			"involvement":"",
+			"portfolioitems":["unrealroom-vfx","unrealroom-bps"]	
+		},
+		"description":{
+			"main":"This is a personal project. It is a highly interactive installation that leverages the power of Unreal Engine 5 and the Mediapipe API to create an immersive experience for users. It features visually stunning VFX effects that can be manipulated and controlled by users' body movements and expressions, captured through a camera feed. The installation is projected onto a wall and boasts a dynamic room system that can be dynamically resized to fit into different real-world walls and animated during transitions between different effects. The project required expert knowledge of Unreal Engine 5, Mediapipe API, Python programming, and VFX pipeline.",
+			"challenges":"The development of the project presented a multitude of complex technical challenges. The dynamic animation of the virtual room was a considerable challenge, given the variation in real-world sizes of the installation location. Therefore, a dynamic room system was developed that adapted to different real-world sizes without affecting transitions between effects. Additionally, the interpretation of Mediapipe information into useful interactions and the integration of different gestures with different Niagara VFX effects were technically demanding.",
+			"solution":"To overcome these challenges, a comprehensive solution was developed, comprising a dynamic room system in Unreal that could dynamically adapt to different real-world sizes without impacting transitions between effects. A Mediapipe Blueprint was developed, which could detect hand and body gestures and convert them into inputs for the system. Additionally, a sophisticated VFX pipeline was developed to seamlessly integrate these gestures with the different Niagara effects used in the installation. The project demonstrated the technical expertise and knowledge of the artist/developer in creating cutting-edge interactive installations that showcased the latest advancements in digital technologies.",
+		}
 	}
 }
 
