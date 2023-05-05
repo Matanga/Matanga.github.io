@@ -391,10 +391,10 @@ body {
   padding-bottom: 5px;
 }
 
-#btnhome.active { border-color: :lime; }
-#btnprojects.active { border-color: :#fe3385; }
-#btnskillsets.active { border-color: :orange; }
-#btncontact.active { border-color: :yellow; }
+#btnhome { border-color: :lime; }
+#btnprojects { border-color: :#fe3385; }
+#btnskillsets { border-color: :orange; }
+#btncontact { border-color: :yellow; }
 
 
 .tabcontent{
