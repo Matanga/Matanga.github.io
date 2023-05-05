@@ -1,7 +1,7 @@
 {
 	"intel-evo":
 	{
-		"data":{
+		"info":{
 			"name":"Evolution Experience",
 			"client":"",
 			"company":"",
@@ -18,7 +18,7 @@
 	},	
 	"Unreal-Room":
 	{
-		"data":{
+		"info":{
 			"name":"Unreal Room",
 			"client":"",
 			"company":"",
