@@ -387,14 +387,7 @@ body {
 /* Create an active/current tablink class */
 .topbar button.active {
   /*background-color: #ccc;*/
-  border-bottom:4px solid blue;
-  padding-bottom: 5px;
-}
-
-/* Create an active/current tablink class */
-.topbar button.active {
-  /*background-color: #ccc;*/
-  border-bottom:4px solid blue;
+  border-bottom:4px solid;
   padding-bottom: 5px;
 }
 
