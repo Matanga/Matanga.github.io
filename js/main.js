@@ -148,7 +148,7 @@ function LoadProject(pm,projectName) {
     console.error(`Project "${projectName}" not found`);
     return;
   }
-  
+  console.log(project.name);
   ApplyElementText("project_showcase", project.name);
   ApplyElementText("container_proj_description", project.description);
   ApplyElementText("container_proj_challenges", project.challenges);
