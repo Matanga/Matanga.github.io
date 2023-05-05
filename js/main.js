@@ -3,13 +3,13 @@ const PORTFOLIOITEMDB = "https://matanga.github.io/db/portfolio_item_db.json";
 
 class Project {
   constructor(data) {
-    this.name = data.data.name;
-    this.client=data.data.client;
-    this.company=data.data.company;
-    this.media=data.data.media;
-    this.platform=data.data.platform;
-    this.involvement=data.data.involvement;
-    this.portfolioitems = data.data.portfolioitems;
+    this.name = data.info.name;
+    this.client=data.info.client;
+    this.company=data.info.company;
+    this.media=data.info.media;
+    this.platform=data.info.platform;
+    this.involvement=data.info.involvement;
+    this.portfolioitems = data.info.portfolioitems;
 
     this.description = data.description.main;
     this.challenges = data.description.challenges;
