@@ -181,14 +181,18 @@ function AddProjectButtons(pm,containerId) {
   });
 }
 
+
 function AddPortfolioItemButtons(portfolioItems, containerId) {
   const container = document.getElementById(containerId);
   if (!container) {
     console.error(`Container element with ID "${containerId}" not found`);
     return;
   }
+  let added = 0;
+  let btn;
   container.innerHTML = "";
-  portfolioItems.forEach(portfolioItem => {
+  for (let i = portfolioItems.length - 1; i >= 0; i--) {
+    const portfolioItem = portfolioItems[i];
     const button = document.createElement("button");
     button.setAttribute("id", "loadBtn");
     button.setAttribute("class", "topbar-linkbtn");
@@ -199,8 +203,15 @@ function AddPortfolioItemButtons(portfolioItems, containerId) {
       LoadPortfolioItem(portfolioItem);
     });
     container.appendChild(button);
-  });
+    if (added == 0) {
+      added = 1;
+      btn = button;
+    }
+  }
+  btn.click();
 }
+
+
 
 
 function ForceReadLess(){
