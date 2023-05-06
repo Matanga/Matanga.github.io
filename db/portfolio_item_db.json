@@ -18,10 +18,10 @@
 	        "blueprints"
 	      ],
 	      "skillsets": [
-	        "game development",
-	        "VFX",
-	        "tool development",
-	        "art installation"
+	        "gamedev",
+	        "vfx",
+	        "tooldev",
+	        "artinstallation"
 	      ]
 	    },
 	    "description": {
@@ -64,10 +64,10 @@
 	        "blueprints"
 	      ],
 	      "skillsets": [
-	        "game development",
-	        "VFX",
-	        "tool development",
-	        "art installation"
+	        "gamedev",
+	        "vfx",
+	        "tooldev",
+	        "artinstallation"
 	      ]
 	    },
 	    "description": {
@@ -108,10 +108,10 @@
 	        "blueprints"
 	      ],
 	      "skillsets": [
-	        "game development",
-	        "VFX",
-	        "tool development",
-	        "art installation"
+	        "gamedev",
+	        "vfx",
+	        "tooldev",
+	        "artinstallation"
 	      ]
 	    },
 	    "description": {
@@ -153,10 +153,10 @@
 	        "python"
 	      ],
 	      "skillsets": [
-	        "game development",
-	        "VFX",
-	        "tool development",
-	        "art installation"
+	        "unrealdev",
+	        "vfx",
+	        "tooldev",
+	        "artinstallation"
 	      ]
 	    },
 	    "description": {
@@ -199,10 +199,10 @@
 	        "python"
 	      ],
 	      "skillsets": [
-	        "game development",
-	        "VFX",
-	        "tool development",
-	        "art installation"
+	        "unrealdev",
+	        "vfx",
+	        "tooldev",
+	        "artinstallation"
 	      ]
 	    },
 	    "description": {
@@ -245,9 +245,8 @@
 	      "C Sharp "
 	    ],
 	    "skillsets": [
-	      "tool development",
-	      "Environment VFX",
-	      "Destruction VFX"
+	      "tooldev",
+	      "vfx"
 	    ]
 	  },
 	  "description": {
@@ -287,8 +286,9 @@
 	      "C Sharp "
 	    ],
 	    "skillsets": [
-	      "tool development",
-	      "VFX"
+	      "tooldev",
+	      "vfx",
+	      "unitydev"
 	    ]
 	  },
 	  "description": {
@@ -328,8 +328,9 @@
 	      "C Sharp"
 	    ],
 	    "skillsets": [
-	      "tool development",
-	      "VFX"
+	      "tooldev",
+	      "vfx",
+	      "unitydev"
 	    ]
 	  },
 	  "description": {
@@ -364,8 +365,9 @@
 	      "C Sharp"
 	    ],
 	    "skillsets": [
-	      "tool development",
-	      "VFX"
+	      "tooldev",
+	      "vfx",
+	      "unitydev"
 	    ]
 	  },
 	  "description": {
@@ -402,8 +404,9 @@
 	      "C Sharp"
 	    ],
 	    "skillsets": [
-	      "tool development",
-	      "VFX"
+	      "tooldev",
+	      "vfx",
+	      "unitydev"
 	    ]
 	  },
 	  "description": {
@@ -453,8 +456,8 @@
 	      "melscript"
 	    ],
 	    "skillsets": [
-	      "tool development",
-	      "pipeline development"
+	      "tooldev",
+	      "pipelinedev"
 	    ]
 	  },
 	  "description": {
@@ -493,8 +496,8 @@
 	      "melscript"
 	    ],
 	    "skillsets": [
-	      "tool development",
-	      "pipeline development"
+	      "tooldev",
+	      "pipelinedev"
 	    ]
 	  },
 	  "description": {
