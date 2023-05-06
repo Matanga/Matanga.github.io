@@ -38,7 +38,7 @@
 		    "main": "The objective of the team was to salvage digital assets (3d models, textures, audio, animations and others) and normalize them in order for them to be software agnostic. Once the assets were processed they were added to an internal digital asset manager library(DAM) to be used by the entire company.  Another objective was to add relevant metadata that will be used by the DAM search engine."
 		  },
   		"info": {
-		    "portfolioitems": [],
+		    "portfolioitems": ["2kdam-batch", "2kdam-inventory"],
 		    "involvement": "Pipeline/Tool Development",
 		    "platform": "PC",
 		    "media": "",
@@ -54,7 +54,7 @@
 		    "main": "The objective of the team was to salvage digital assets (3d models, textures, audio, animations and others) and normalize them in order for them to be software agnostic. Once the assets were processed they were added to an internal digital asset manager library(DAM) to be used by the entire company.  Another objective was to add relevant metadata that will be used by the DAM search engine."
 		  },
   		"info": {
-		    "portfolioitems": [],
+		    "portfolioitems": ["element-vfx","element-textools","element-lightlister","element-curvetools","element-vfxcomps"],
 		    "involvement": "Pipeline/Tool Development",
 		    "platform": "PC",
 		    "media": "",
