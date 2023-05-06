@@ -14,6 +14,11 @@
 }
 
 /*
+
+fluo colors 
+
+#fe3385, lime, aqua, yellow, orange, #d90b09
+
 Jirord Ref
 Jirord bg 161616
 bg main #343541
@@ -405,9 +410,99 @@ body {
 }
 
 
+.project_summary {
+    background-color: var(--third-color);
+    padding: 5px;
+    border-radius: 10px;    
+    width: 100%;
 
 
-/*****************Carousel***************************/
+}
+.project_summary ul {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: -10px;
+}
+
+
+.project_summary li {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.project_summary li div:first-child {
+  margin-right: 10px;
+}
+
+.logo{
+
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -100px;
+}
+
+
+
+
+
+/*----------------------------------------*/
+/*---------Contact Section----------------*/
+
+.socialmedia {
+
+    
+}
+
+.contactform {
+    width:400px;
+    border: 1px solid;
+    border-color: snow;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: var(--third-color);
+    border-radius: 10px;
+}
+.contactform input{
+    background-color: #000000;
+    color: snow;
+    width: 75%;
+}
+.contactform textarea {
+    height:200px;
+    background-color: #000000;
+    color: snow;
+    width: 100%;
+    margin-top: 5px;
+}
+.contactform button {
+    margin-top: 15px;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: 0;
+    color: #fff;
+    background: #ff5000;
+    line-height: 1.15;
+    font-size: 16px;
+    :hover {
+        transition: all .1s ease;
+        box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+    }
+}
+.contactform button:hover {
+    box-shadow: 0 2px 2px rgb(39 44 52 / 12%);
+}
+
+
+
+/*----------------------------------------*/
+/*----------------Carousel----------------*/
 
 .videoWrapper iframe{
     margin-top: 20px;
