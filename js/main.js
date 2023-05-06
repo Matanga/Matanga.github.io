@@ -136,7 +136,31 @@ function OpenTab(tabName) {
 
 
 function LoadPortfolioItem(item){
-  displayImages(item.images,"carousel-img-parent")
+  displayImages(item.images,"carousel-img-parent");
+  addVideosToElement("youtube-parent",item.youtube);
+}
+
+
+
+
+function addVideosToElement(id, paths) {
+  const element = document.getElementById(id);
+  if (!element) {
+    console.error(`Element with id ${id} not found`);
+    return;
+  }
+  element.innerHTML="";
+  for (const path of paths) {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('videoWrapper');
+    const iframe = document.createElement('iframe');
+    iframe.src = path;
+    iframe.title = 'YouTube video player';
+    iframe.allowFullscreen = true;
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    wrapper.appendChild(iframe);
+    element.appendChild(wrapper);
+  }
 }
 
 

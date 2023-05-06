@@ -1,139 +1,221 @@
 {
-	"intelevo-showcase":
-	{
-			"backend":{
-				"date":"2022-10-01",
-				"name":"Installation Showcase",				
-				"projectname":"Evolution Experience",
-				"company":"Genosha",
-				"dcc":["Blender","Houdini"],
-				"engine":["Unreal"],
-				"languages":["blueprints"],
-				"skillsets":["game development","VFX","tool development","art installation"]
-			},
-			"description":{
-				"main":"These are some images and videos taken at the site.",
-				"bulletpoints":[""]
-			},
-			"media":{				
-				"image":["IntelEvoShowcase_Portfolio_Item-1.png",
-							  "IntelEvoShowcase_Portfolio_Item-2.png",
-							  "IntelEvoShowcase_Portfolio_Item-3.png",
-							  "IntelEvoShowcase_Portfolio_Item-5.png",
-							  "IntelEvoShowcase_Portfolio_Item-6.png"
-							],
-				"youtube":["https://www.youtube.com/embed/t04CSqkdfSM"],
-				"url":[""]
-			}
-	},
-	"intelevo-animals":
-	{
-			"backend":{
-				"date":"2022-10-01",
-				"name":"Animals Showcase",				
-				"projectname":"Evolution Experience",
-				"company":"Genosha",
-				"dcc":["Blender","Houdini"],
-				"engine":["Unreal"],
-				"languages":["blueprints"],
-				"skillsets":["game development","VFX","tool development","art installation"]
-			},
-			"description":{
-				"main":"",
-				"bulletpoints":[""]
-			},
-			"media":{				
-				"image":["IntelEvoAnimals_Portfolio_Item-1.png","IntelEvoAnimals_Portfolio_Item-2.png"],
-				"youtube":["https://www.youtube.com/embed/3xw63__iTmk"],
-				"url":[""]
-		
-			}
-	},
-	
-	"intelevo-environment":
-	{
-			"backend":{
-				"date":"2022-10-01",
-				"name":"Environment Showcase",				
-				"projectname":"Evolution Experience",
-				"company":"Genosha",
-				"dcc":["Blender","Houdini"],
-				"engine":["Unreal"],
-				"languages":["blueprints"],
-				"skillsets":["game development","VFX","tool development","art installation"]
-			},
-			"description":{
-				"main":"",
-				"bulletpoints":[""]
-			},
-			"media":{				
-				"image":["IntelEvoAnimals_Portfolio_Item-1.png","IntelEvoAnimals_Portfolio_Item-2.png"],
-				"youtube":["https://www.youtube.com/embed/3xw63__iTmk"],
-				"url":[""]
-			}
-	},
-
-
-	"unrealroom-vfx":
-	{
-			"backend":{
-				"date":"2022-11-01",
-				"name":"Unreal Room VFX",				
-				"projectname":"Unreal Room",
-				"company":"",
-				"dcc":["Houdini"],
-				"engine":["Unreal"],
-				"languages":["blueprints","python"],
-				"skillsets":["game development","VFX","tool development","art installation"]
-			},
-			"description":{
-				"main":"Series of dynamic VFX made using Niagara",
-				"bulletpoints":["Advances particle systems with multiple subsystems  ",
-								"Systems send and receive data from blueprints",
-								"Custom modules were created for all effects",
-								"Effects can interact with input from mediapipe and other sources"]
-			},
-			"media":{				
-				"image":[],
-				"youtube":["https://www.youtube.com/embed/HnOhTIWuaPE?start=6",
-					"https://www.youtube.com/embed/qXgegQ6clxA",
-					"https://www.youtube.com/embed/iv7WSnxDBDE?start=3",
-					"https://www.youtube.com/embed/_IHlRjQvM6U?start=7"],
-				"url":[""]
-			}
-	},
-	"unrealroom-bps":
-	{
-			"backend":{
-				"date":"2022-11-01",
-				"name":"Unreal Room BPs",				
-				"projectname":"Unreal Room",
-				"company":"",
-				"dcc":["Houdini"],
-				"engine":["Unreal"],
-				"languages":["blueprints","python"],
-				"skillsets":["game development","VFX","tool development","art installation"]
-			},
-			"description":{
-				"main":"The Dynamic Room Blueprint is a key component of the interactive art installation, designed to accommodate the various sizes of real-world walls and dynamically animate transitions between different VFX effects. Here are some of the key features of the Dynamic Room Blueprint",
-				"bulletpoints":["Dynamically resizes to fit different real-world walls",
-								"Animates dynamically during transitions between different effects",
-								"Seamless transition between different room setups",
-								"Able to be customized for different installations or events",
-								"Provides a unified framework for the various VFX effects to operate within",
-								"Improves the overall user experience by providing a cohesive and immersive environment for the user to interact with"]
-			},
-			"media":{				
-				"image":[],
-				"youtube":["https://www.youtube.com/embed/SJ-r7h9L-m4",
-					"https://www.youtube.com/embed/7p82zrTxtnA"],
-				"url":[""]
-			}
-	}
-
-
-
-
+  "intelevo-showcase": {
+    "backend": {
+      "date": "2022-10-01",
+      "name": "Installation Showcase",
+      "projectname": "Evolution Experience",
+      "company": "Genosha",
+      "dcc": [
+        "Blender",
+        "Houdini"
+      ],
+      "engine": [
+        "Unreal"
+      ],
+      "languages": [
+        "blueprints"
+      ],
+      "skillsets": [
+        "game development",
+        "VFX",
+        "tool development",
+        "art installation"
+      ]
+    },
+    "description": {
+      "main": "These are some images and videos taken at the site.",
+      "bulletpoints": [
+        ""
+      ]
+    },
+    "media": {
+      "image": [
+        "IntelEvoShowcase_Portfolio_Item-1.png",
+        "IntelEvoShowcase_Portfolio_Item-2.png",
+        "IntelEvoShowcase_Portfolio_Item-3.png",
+        "IntelEvoShowcase_Portfolio_Item-5.png",
+        "IntelEvoShowcase_Portfolio_Item-6.png"
+      ],
+      "youtube": [
+        "https://www.youtube.com/embed/t04CSqkdfSM"
+      ],
+      "url": [
+        ""
+      ]
+    }
+  },
+  "intelevo-animals": {
+    "backend": {
+      "date": "2022-10-01",
+      "name": "Animals Showcase",
+      "projectname": "Evolution Experience",
+      "company": "Genosha",
+      "dcc": [
+        "Blender",
+        "Houdini"
+      ],
+      "engine": [
+        "Unreal"
+      ],
+      "languages": [
+        "blueprints"
+      ],
+      "skillsets": [
+        "game development",
+        "VFX",
+        "tool development",
+        "art installation"
+      ]
+    },
+    "description": {
+      "main": "",
+      "bulletpoints": [
+        ""
+      ]
+    },
+    "media": {
+      "image": [
+        "IntelEvoAnimals_Portfolio_Item-1.png",
+        "IntelEvoAnimals_Portfolio_Item-2.png"
+      ],
+      "youtube": [
+        "https://www.youtube.com/embed/3xw63__iTmk"
+      ],
+      "url": [
+        ""
+      ]
+    }
+  },
+  "intelevo-environment": {
+    "backend": {
+      "date": "2022-10-01",
+      "name": "Environment Showcase",
+      "projectname": "Evolution Experience",
+      "company": "Genosha",
+      "dcc": [
+        "Blender",
+        "Houdini"
+      ],
+      "engine": [
+        "Unreal"
+      ],
+      "languages": [
+        "blueprints"
+      ],
+      "skillsets": [
+        "game development",
+        "VFX",
+        "tool development",
+        "art installation"
+      ]
+    },
+    "description": {
+      "main": "",
+      "bulletpoints": [
+        ""
+      ]
+    },
+    "media": {
+      "image": [
+        "IntelEvoAnimals_Portfolio_Item-1.png",
+        "IntelEvoAnimals_Portfolio_Item-2.png"
+      ],
+      "youtube": [
+        "https://www.youtube.com/embed/3xw63__iTmk"
+      ],
+      "url": [
+        ""
+      ]
+    }
+  },
+  "unrealroom-vfx": {
+    "backend": {
+      "date": "2022-11-01",
+      "name": "Unreal Room VFX",
+      "projectname": "Unreal Room",
+      "company": "",
+      "dcc": [
+        "Houdini"
+      ],
+      "engine": [
+        "Unreal"
+      ],
+      "languages": [
+        "blueprints",
+        "python"
+      ],
+      "skillsets": [
+        "game development",
+        "VFX",
+        "tool development",
+        "art installation"
+      ]
+    },
+    "description": {
+      "main": "Series of dynamic VFX made using Niagara",
+      "bulletpoints": [
+        "Advances particle systems with multiple subsystems  ",
+        "Systems send and receive data from blueprints",
+        "Custom modules were created for all effects",
+        "Effects can interact with input from mediapipe and other sources"
+      ]
+    },
+    "media": {
+      "image": [],
+      "youtube": [
+        "https://www.youtube.com/embed/HnOhTIWuaPE?start=6",
+        "https://www.youtube.com/embed/qXgegQ6clxA",
+        "https://www.youtube.com/embed/iv7WSnxDBDE?start=3",
+        "https://www.youtube.com/embed/_IHlRjQvM6U?start=7"
+      ],
+      "url": [
+        ""
+      ]
+    }
+  },
+  "unrealroom-bps": {
+    "backend": {
+      "date": "2022-11-01",
+      "name": "Unreal Room BPs",
+      "projectname": "Unreal Room",
+      "company": "",
+      "dcc": [
+        "Houdini"
+      ],
+      "engine": [
+        "Unreal"
+      ],
+      "languages": [
+        "blueprints",
+        "python"
+      ],
+      "skillsets": [
+        "game development",
+        "VFX",
+        "tool development",
+        "art installation"
+      ]
+    },
+    "description": {
+      "main": "The Dynamic Room Blueprint is a key component of the interactive art installation, designed to accommodate the various sizes of real-world walls and dynamically animate transitions between different VFX effects. Here are some of the key features of the Dynamic Room Blueprint",
+      "bulletpoints": [
+        "Dynamically resizes to fit different real-world walls",
+        "Animates dynamically during transitions between different effects",
+        "Seamless transition between different room setups",
+        "Able to be customized for different installations or events",
+        "Provides a unified framework for the various VFX effects to operate within",
+        "Improves the overall user experience by providing a cohesive and immersive environment for the user to interact with"
+      ]
+    },
+    "media": {
+      "image": [],
+      "youtube": [
+        "https://www.youtube.com/embed/SJ-r7h9L-m4",
+        "https://www.youtube.com/embed/7p82zrTxtnA"
+      ],
+      "url": [
+        ""
+      ]
+    }
+  }
 }
-
-
