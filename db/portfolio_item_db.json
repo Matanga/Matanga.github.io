@@ -260,9 +260,9 @@
 	  },
 	  "media": {
 	    "image": [
-	      "VFXShowcase_Portfolio_Item-2.png",
-	      "VFXShowcase_Portfolio_Item-3.png",
-	      "VFXShowcase_Portfolio_Item-4.png"
+	      "vfshowcase_portfolio_item-2.png",
+	      "vfshowcase_portfolio_item-3.png",
+	      "vfshowcase_portfolio_item-4.png"
 	    ],
 	    "youtube": [
 	      "https://www.youtube.com/embed/GRmn-bm99Kc"
@@ -301,13 +301,13 @@
 	  },
 	  "media": {
 	    "image": [
-	      "TextureToolComponents_Portfolio_Item-1.png",
-	      "VFX_MuzzleRenderer.gif",
-	      "TextureToolComponents_Portfolio_Item-4.png",
-	      "TextureToolComponents_Portfolio_Item-2.png",
-	      "VFX_SpritesheetUtils 1.gif",
-	      "TextureToolComponents_Portfolio_Item-3.png",
-	      "VFX_TextureOffset.gif"
+	      "texturetoolcomponents_portfolio_item-1.png",
+	      "vfx_muzzlerenderer.gif",
+	      "texturetoolcomponents_portfolio_item-4.png",
+	      "texturetoolcomponents_portfolio_item-2.png",
+	      "vfx_spritesheetutils 1.gif",
+	      "texturetoolcomponents_portfolio_item-3.png",
+	      "vfx_textureoffset.gif"
 	    ],
 	    "youtube": [],
 	    "url": []
@@ -341,9 +341,9 @@
 	  },
 	  "media": {
 	    "image": [
-	      "LightLister_Portfolio_Item-1.png",
-	      "LightLister_Portfolio_Item-2.png",
-	      "LightLister_Portfolio_Item-3.png"
+	      "lightlister_portfolio_item-1.png",
+	      "lightlister_portfolio_item-2.png",
+	      "lightlister_portfolio_item-3.png"
 	    ],
 	    "youtube": [],
 	    "url": []
@@ -377,11 +377,11 @@
 	  },
 	  "media": {
 	    "image": [
-	      "CurveTools_Portfolio_Item-1.png",
-	      "BezierCurve.gif",
-	      "CurveTools_Portfolio_Item-2.png",
-	      "VFX_LoftRenderer.gif",
-	      "VFX_LoftRenderer2.gif"
+	      "curveTools_portfolio_Item-1.png",
+	      "beziercurve.gif",
+	      "curvetools_portfolio_Item-2.png",
+	      "vfx_loftrenderer.gif",
+	      "vfx_loftrenderer2.gif"
 	    ],
 	    "youtube": [],
 	    "url": []
@@ -418,16 +418,16 @@
 	  },
 	  "media": {
 	    "image": [
-	      "AnimatedVFXComponents_Portfolio_Item-1.png",
-	      "AnimatedVFXComponents_Portfolio_Item-2.png",
-	      "AnimatedVFXComponents_Portfolio_Item-3.png",
-	      "AnimatedVFXComponents_Portfolio_Item-4.png",
+	      "animatedvfxcomponents_portfolio_item-1.png",
+	      "animatedvfxcomponents_portfolio_item-2.png",
+	      "animatedvfxcomponents_portfolio_item-3.png",
+	      "animatedvfxcomponents_portfolio_item-4.png",
 	      "VFX_CircleRenderer.gif",
-	      "AnimatedVFXComponents_Portfolio_Item-5.png",
-	      "AnimatedVFXComponents_Portfolio_Item-6.png",
-	      "AnimatedVFXComponents_Portfolio_Item-7.png",
-	      "AnimatedVFXComponents_Portfolio_Item-8.png",
-	      "VFX_AnimationCurves.gif"
+	      "qnimatedvfxcomponents_portfolio_item-5.png",
+	      "qnimatedvfxcomponents_portfolio_item-6.png",
+	      "qnimatedvfxcomponents_portfolio_item-7.png",
+	      "qnimatedvfxcomponents_portfolio_item-8.png",
+	      "vfx_animationcurves.gif"
 	    ],
 	    "youtube": [],
 	    "url": []
