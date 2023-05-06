@@ -32,11 +32,11 @@
 	    },
 	    "media": {
 	      "image": [
-	        "IntelEvoShowcase_Portfolio_Item-1.png",
-	        "IntelEvoShowcase_Portfolio_Item-2.png",
-	        "IntelEvoShowcase_Portfolio_Item-3.png",
-	        "IntelEvoShowcase_Portfolio_Item-5.png",
-	        "IntelEvoShowcase_Portfolio_Item-6.png"
+	        "intelevoshowcase_portfolio_item-1.png",
+	        "intelevoshowcase_portfolio_item-2.png",
+	        "intelevoshowcase_portfolio_item-3.png",
+	        "intelevoshowcase_portfolio_item-5.png",
+	        "intelevoshowcase_portfolio_item-6.png"
 	      ],
 	      "youtube": [
 	        "https://www.youtube.com/embed/t04CSqkdfSM"
@@ -79,8 +79,8 @@
 	    "media": {
 	      "image": [
 	      	"intelevoshowcase_portfolio_item-7.png",
-	        "IntelEvoAnimals_Portfolio_Item-1.png",
-	        "IntelEvoAnimals_Portfolio_Item-2.png"
+	        "intelevoanimals_portfolio_item-1.png",
+	        "intelevoanimals_portfolio_item-2.png"
 	      ],
 	      "youtube": [
 	        "https://www.youtube.com/embed/3xw63__iTmk"
