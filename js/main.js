@@ -189,9 +189,6 @@ function LoadProjectByName(projectName) {
 
     });
 
-
-
-
 }
 
 
@@ -223,6 +220,13 @@ function LoadProject(pm,projectName) {
 
   OpenTab("projects");
 }
+
+
+
+
+
+
+
 
 // Initialize Function to Create Buttons
 function AddProjectButtons(pm,containerId) {
@@ -276,8 +280,6 @@ function AddPortfolioItemButtons(portfolioItems, containerId) {
   }
   btn.click();
 }
-
-
 
 
 function ForceReadLess(){
