@@ -103,7 +103,6 @@ function displayImages(images, elementId) {
   });
 }
 
-
 // Function to apply text to an element
 function ApplyElementText(id, text) {
 document.getElementById(id).innerHTML = text;
@@ -134,14 +133,10 @@ function OpenTab(tabName) {
   element.className += " active";
 }
 
-
 function LoadPortfolioItem(item){
   displayImages(item.images,"carousel-img-parent");
   addVideosToElement("youtube-parent",item.youtube);
 }
-
-
-
 
 function addVideosToElement(id, paths) {
   const element = document.getElementById(id);
@@ -163,8 +158,6 @@ function addVideosToElement(id, paths) {
   }
 }
 
-
-
 function LoadProject(pm,projectName) {
   const project = pm.projects[projectName];
   console.log(pm.projects)
@@ -174,6 +167,13 @@ function LoadProject(pm,projectName) {
   }
   console.log(project.name);
   ApplyElementText("project-name-container", project.name);
+  ApplyElementText("project-media-container", project.media);
+  ApplyElementText("project-client-container", project.client);
+  ApplyElementText("project-platform-container", project.platform);
+  ApplyElementText("project-company-container", project.company);
+  ApplyElementText("project-involvement-container", project.involvement);
+
+
   ApplyElementText("container_proj_description", project.description);
   ApplyElementText("container_proj_challenges", project.challenges);
   ApplyElementText("container_proj_solutions", project.solution);
