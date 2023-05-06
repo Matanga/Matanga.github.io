@@ -465,7 +465,8 @@
 	  },
 	  "media": {
 	    "image": [
-	      "BatchSequencer_PortfolioItem_1.png"
+	      "BatchSequencer_PortfolioItem_1.png",
+	      "BatchSequencer_PortfolioItem_2.png"
 	    ],
 	    "youtube": [],
 	    "url": []
@@ -503,7 +504,7 @@
 	    ]
 	  },
 	  "media": {
-	    "image": [],
+	    "image": ["2kdam-inventory-1.png","2kdam-inventory-2.png"],
 	    "youtube": [],
 	    "url": []
 	  }
