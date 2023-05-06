@@ -31,7 +31,23 @@
 			"solution": "To overcome these challenges, a comprehensive solution was developed, comprising a dynamic room system in Unreal that could dynamically adapt to different real-world sizes without impacting transitions between effects. A Mediapipe Blueprint was developed, which could detect hand and body gestures and convert them into inputs for the system. Additionally, a sophisticated VFX pipeline was developed to seamlessly integrate these gestures with the different Niagara effects used in the installation. The project demonstrated the technical expertise and knowledge of the artist/developer in creating cutting-edge interactive installations that showcased the latest advancements in digital technologies."
 		}
 	},
-	"2KDAM":{
+	"2kdam":{
+  		"description": {
+		    "solution": "I developed an ecosystem of tools to achieve the expected results in an optimized, scalable way that would be as adaptable as possible to future projects. Some of those tools were the Batch Sequencer, Tag Tool, Metadata Tool, Inventory Report Tool.",
+		    "challenges": " The assets to be salvaged came from a wide variety of production pipelines, different studios, softwares, sometimes different decades. The project was being worked on by a small team that had to come up with a new manual processing workflow for each new repository.",
+		    "main": "The objective of the team was to salvage digital assets (3d models, textures, audio, animations and others) and normalize them in order for them to be software agnostic. Once the assets were processed they were added to an internal digital asset manager library(DAM) to be used by the entire company.  Another objective was to add relevant metadata that will be used by the DAM search engine."
+		  },
+  		"info": {
+		    "portfolioitems": [],
+		    "involvement": "Pipeline/Tool Development",
+		    "platform": "PC",
+		    "media": "",
+		    "company": "Globant",
+		    "client": "2K",
+		    "name": "Asset Library"
+		  }
+		},
+	"element-space":{
   		"description": {
 		    "solution": "I developed an ecosystem of tools to achieve the expected results in an optimized, scalable way that would be as adaptable as possible to future projects. Some of those tools were the Batch Sequencer, Tag Tool, Metadata Tool, Inventory Report Tool.",
 		    "challenges": " The assets to be salvaged came from a wide variety of production pipelines, different studios, softwares, sometimes different decades. The project was being worked on by a small team that had to come up with a new manual processing workflow for each new repository.",
@@ -47,6 +63,7 @@
 		    "name": "Asset Library"
 		  }
 		}
-	}
+	
+
 }
 
