@@ -158,6 +158,43 @@ function addVideosToElement(id, paths) {
   }
 }
 
+function LoadProjectByName(projectName) {
+
+    const portfolioManager = new PortfolioManager(() => {
+        // Your code that needs access to the `projects` and `portfolioItems` dictionaries goes here
+
+      const project = portfolioManager.projects[projectName];
+      if (!project) {
+        console.error(`Project "${projectName}" not found`);
+        return;
+      }
+      ApplyElementText("project-name-container", project.name);
+      ApplyElementText("project-media-container", project.media);
+      ApplyElementText("project-client-container", project.client);
+      ApplyElementText("project-platform-container", project.platform);
+      ApplyElementText("project-company-container", project.company);
+      ApplyElementText("project-involvement-container", project.involvement);
+
+
+      ApplyElementText("container_proj_description", project.description);
+      ApplyElementText("container_proj_challenges", project.challenges);
+      ApplyElementText("container_proj_solutions", project.solution);
+
+      ForceReadLess();
+
+      items = portfolioManager.getPortfolioItemsForProject(projectName);
+      AddPortfolioItemButtons(items,'portfolioitemcontainer');
+
+      OpenTab("projects");
+
+    });
+
+
+
+
+}
+
+
 function LoadProject(pm,projectName) {
   const project = pm.projects[projectName];
   console.log(pm.projects)
