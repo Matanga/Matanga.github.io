@@ -36,6 +36,10 @@ bg(obsidian) #1e1e1e
 /*------------------------------------------------------*/
 /*Home Stuff*/
 
+.home_info h3 {
+  padding-right: 100px;
+}
+
 
 .skillslist, .homelinks {
   display: grid;
@@ -48,6 +52,7 @@ bg(obsidian) #1e1e1e
   padding:5px;
   margin: 5px;
 }
+
 
 .contactlink {
   background-color: transparent;
@@ -320,7 +325,7 @@ body {
  
   #more {display: none;}
 
-  .project_info {
+  .project_info, .home_info {
       width: 100%;
       /*max-width: 700px;*/
       background-color: var(--third-color);
@@ -437,7 +442,7 @@ body {
 }
 
 .logo{
-
+    margin-top: 10px;
     display: flex;
     justify-content: flex-end;
     margin-bottom: -100px;
