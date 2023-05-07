@@ -255,7 +255,7 @@ body {
   background-color: var(--sec-color);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 9999;
 }
 
 /* Links inside the dropdown */
@@ -408,28 +408,22 @@ body {
 #btnskillsets { border-color: :orange; }
 #btncontact { border-color: :yellow; }
 
-
 .tabcontent{
   margin: auto;
-
 }
-
 
 .project_summary {
     background-color: var(--third-color);
     padding: 5px;
     border-radius: 10px;    
     width: 100%;
-
-
 }
-.project_summary ul {
 
+.project_summary ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: -10px;
 }
-
 
 .project_summary li {
   display: flex;
@@ -447,10 +441,6 @@ body {
     justify-content: flex-end;
     margin-bottom: -100px;
 }
-
-
-
-
 
 /*----------------------------------------*/
 /*---------Contact Section----------------*/
