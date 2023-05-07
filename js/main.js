@@ -312,3 +312,73 @@ function toggleShow() {
   }
 }
 
+/*--------------------------------------------------*/
+/*--------------Skillsets---------------------------*/
+
+
+    function get_skillset_label(skillset) {
+        const skillsetLabels = {
+            "tooldev": "Tool Development",
+            "unrealdev": "Unreal Development",
+            "unitydev": "Unity Development",
+            "vr": "VR",
+            "pipelinedev": "Pipeline Development",
+            "artinstallation": "Art installation",
+            "proceduralgeneration": "Procedural Generation",
+            "vfx": "VFX"
+        };  
+        return skillsetLabels[skillset] || skillset;
+    }
+
+    function getUniqueSkillsets(portfolioManager) {
+      const uniqueSkillsets = new Set();
+      Object.values(portfolioManager.portfolioItems).forEach(portfolioItem => {
+        portfolioItem.skillsets.forEach(skillset => uniqueSkillsets.add(skillset));
+      });
+      return Array.from(uniqueSkillsets);
+    }
+
+    function LoadSkillsetsTab(skillset) {
+        const portfolioManager = new PortfolioManager(() => {
+
+            const portfolioItems = Object.values(portfolioManager.portfolioItems);
+            const matchingItems = [];
+
+            portfolioItems.forEach(item => {
+            if (item.skillsets.includes(skillset)) {
+              matchingItems.push(item);
+            }
+            });
+
+            //return matchingItems;
+            console.log(matchingItems)
+            AddPortfolioItemButtons(matchingItems,'skillsetPortfolioItems');
+
+            OpenTab("skillsets");
+        });
+
+    }
+
+    // Initialize Function to Create Buttons
+    function AddSkillsetButtons(list,containerId) {
+      const container = document.getElementById(containerId);
+      if (!container) {
+        console.error(`Container element with ID "${containerId}" not found`);
+        return;
+      }
+      
+        list.forEach(function(element) {
+            const button = document.createElement("button");
+            button.setAttribute("id", "loadBtn");
+            button.setAttribute("class", "topbar-linkbtn");
+
+            button.setAttribute("data-skillset", element);
+            button.textContent = get_skillset_label(element);
+            button.addEventListener("click", function() {
+              LoadSkillsetsTab(element);
+            });
+            container.appendChild(button);
+          console.log(element);
+        });
+
+    }
