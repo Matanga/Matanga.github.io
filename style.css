@@ -129,6 +129,35 @@ bg(obsidian) #1e1e1e
 }
 */
 
+.wrapper ol {
+    list-style: none;
+    columns: 14rem;
+    padding-inline-start:0;
+}
+
+.wrapper li.main {
+    list-style-type: none;
+    height: auto;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.wrapper li.main div {
+    border: 1px solid;
+    margin-left: 10px;
+}
+.main ul{
+    list-style: none;
+}
+
+
+
 
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
@@ -220,11 +249,13 @@ body {
 .topbar-linkbtn {
   background-color: var(--sec-color);
   color: white;
-  padding: 10px;
+  padding: 5px;
   font-size: 16px;
   border: none;
   width:100%;
   text-align: left;
+
+
 }
 
 /* Show the dropdown menu on hover */
