@@ -28,147 +28,6 @@ bg(obsidian) #1e1e1e
 
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
-/*General Stuff*/
-
-
-/*------------------------------------------------------*/
-/*------------------------------------------------------*/
-/*------------------------------------------------------*/
-/*Home Stuff*/
-
-.home_info h3 {
-  padding-right: 100px;
-}
-
-
-.skillslist, .homelinks {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
-}
-.skillslist div, .homelinks div {
-  border-color: white;
-  border: 1px solid;
-  padding:5px;
-  margin: 5px;
-}
-
-
-.contactlink {
-  background-color: transparent;
-  color: orange;
-  border: none;
-  font-family: Arial;
-  font-size: 16px;
-}
-
-.contactlink:hover {
-  text-decoration: underline;
-}
-
-/***********************************************************/
-/* Animated Links Underline*/
-
-.w3rcontainer{
-   border: 1px solid 
-#cccfdb;
-   border-radius: 2px;
-} 
-.linkprojects button, .linkskillsets button  {
-  display: inline-block;
-  position: relative;
-  color: #0087ca;
-  background-color: transparent;
-  border: none;
-  margin: 0px -40px;
-  font-size: 16px;
-}
-
-.linkprojects button:after,.linkskillsets button:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: 
-#0087ca;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.linkprojects button:hover:after, .linkskillsets button:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-
-.homelinks .linkprojects  {
-  border: 1px solid snow;
-  transition: border-width 1s ease-in-out;
-}
-
-
-
-
-/*
-.homelinks .linkprojects:hover {
-  animation-name: border-width-animation;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes border-width-animation {
-  0% {
-    border-width: 2px;
-  }
-  50% {
-    border-width: 5px;
-  }
-  100% {
-    border-width: 2px;
-  }
-}
-*/
-
-.wrapper ol {
-    list-style: none;
-    columns: 14rem;
-    padding-inline-start:0;
-}
-
-/* Style the main content area */
-.skillsetContainer {
-  margin: auto; /* Same width as the sidebar */
-}
-.wrapper li.skillsetContainer {
-    list-style-type: none;
-    height: auto;
-    border: 1px solid;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-    break-inside: avoid;
-    page-break-inside: avoid;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.wrapper li.skillsetContainer div {
-    border: 1px solid;
-    margin-left: 10px;
-}
-.skillsetContainer ul{
-    list-style: none;
-}
-
-
-
-
-/*------------------------------------------------------*/
-/*------------------------------------------------------*/
-/*------------------------------------------------------*/
 /*Main Body*/
 
 body {
@@ -185,30 +44,50 @@ body {
 }
 
 
-
-
 @media only screen and (min-width: 768px) {
+  
   section {
     max-width: 700px;
   }
 
-:root {
-  --mwidth: 700px;
-}
+  :root {
+    --mwidth: 700px;
+  }
   
 }
 
+/* Body project template */
 
-/* Style the iframe */
-#contentFrame {
-  width: 100%;
-  height: 100%;
-  border: none;
+.section_wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
+.section_wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .section_wrapper {
+    max-width: 700px;
+  }
+
+  section {
+    max-width: 700px;
+  }
+
+}
+
+
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
-/*Top Bar*/
+/*--------------- SECTION Top Bar-----------------------*/
 
 /* CONTENT DEF MUST BE IN FRONT FOR SYSTEM TO WORK*/
 
@@ -240,7 +119,6 @@ body {
   width: 100%;
   height: 1px;
   background-color: #fffafa; 
-
 }
 
 
@@ -258,8 +136,6 @@ body {
   border: none;
   width:100%;
   text-align: left;
-
-
 }
 
 /* Show the dropdown menu on hover */
@@ -313,50 +189,117 @@ body {
 .dropbtn:hover {background-color: var(--sec-color);}
 
 
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-----------SECTION Home--------------------------------------------*/
 
-
-/*--------------------------------------*/
-/*--------------------------------------*/
-/* Body project template */
-
-/*
-    body {
-        background-color: #1e1e1e;
-      display:flex;
-      height: 100%;
-      margin: 0;
-      font-family: Arial;
-      align-items: center;
-      align-self: center;
-      align-content: center;
-    }*/
-
-    .project_wrapper {
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 40px;
-
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-    }
-
-    .project_wrapper::-webkit-scrollbar {
-      display: none;
-    }
-
-
-@media only screen and (min-width: 768px) {
-  .project_wrapper {
-    max-width: 700px;
-  }
-
-  section {
-    max-width: 700px;
-  }
-
+.home_info h3 {
+  padding-right: 100px;
 }
+
+.skillslist, .homelinks {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+}
+
+.skillslist div, .homelinks div {
+  border-color: white;
+  border: 1px solid;
+  padding:5px;
+  margin: 5px;
+}
+
+.contactlink {
+  background-color: transparent;
+  color: orange;
+  border: none;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+.contactlink:hover {
+  text-decoration: underline;
+}
+
+.logo{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -100px;
+}
+
+/* Animated Links Underline*/
+
+.linkprojects button, .linkskillsets button  {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+  background-color: transparent;
+  border: none;
+  margin: 0px -40px;
+  font-size: 16px;
+}
+
+.linkprojects button:after,.linkskillsets button:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.linkprojects button:hover:after, .linkskillsets button:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.homelinks .linkprojects  {
+  border: 1px solid snow;
+  transition: border-width 1s ease-in-out;
+}
+
+.wrapper ol {
+    list-style: none;
+    columns: 14rem;
+    padding-inline-start:0;
+}
+
+/* Style the main content area */
+.skillsetContainer {
+  margin: auto; /* Same width as the sidebar */
+}
+
+.wrapper li.skillsetContainer {
+    list-style-type: none;
+    height: auto;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.wrapper li.skillsetContainer div {
+    border: 1px solid;
+    margin-left: 10px;
+}
+
+.skillsetContainer ul{
+    list-style: none;
+}
+
+
+
 
 /***********************************************************/
  
@@ -473,18 +416,13 @@ body {
   margin-right: 10px;
 }
 
-.logo{
-    margin-top: 10px;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: -100px;
-}
+
 
 /*----------------------------------------*/
-/*---------Contact Section----------------*/
+/*----------------------------------------*/
+/*------------SECTION Contact-------------*/
 
 .socialmedia {
-
     
 }
 
@@ -533,6 +471,25 @@ body {
 }
 
 
+/*-------------------------------------------*/
+/*--Wrap Youtube iframes to match div width--*/
+
+
+.videoWrapper{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.videoWrapper iframe{
+  position: absolute;
+  top:0;*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid lime;
+  padding: 5px;
+}
 
 /*----------------------------------------*/
 /*----------------Carousel----------------*/
