@@ -186,8 +186,13 @@ body {
 /*-------------------------------------------------------------------*/
 /*-----------SECTION Home--------------------------------------------*/
 
-.home_info h3 {
+.menu_box h3 {
   padding-right: 100px;
+  margin: 5px 0;
+}
+
+h2 .titleName {
+  margin: 5px 0;
 }
 
 .skillslist, .homelinks {
@@ -216,7 +221,6 @@ body {
 }
 
 .logo{
-    margin-top: 10px;
     display: flex;
     justify-content: flex-end;
     margin-bottom: -100px;
@@ -399,6 +403,36 @@ body {
 .project_summary li div:first-child {
   margin-right: 10px;
 }
+
+
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*------------SECTION Skillsets-------------*/
+
+
+
+
+#skillsetPortfolioItems{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(150px, 1fr));
+    grid-row-gap:5px;
+    grid-column-gap: 5px;
+}
+
+#skillsetPortfolioItems button{
+    padding: 5px;
+    /*margin: 0 5px;*/
+    border-top: 10px solid #E7E328;
+    -webkit-border-radius: 0px 0px 15px 0px;
+    border-radius: 0px 0px 15px 0px;
+    font-size: 15px;
+}
+
+.project_showcase div{
+    max-width: 100%;
+}
+
+
 
 
 
