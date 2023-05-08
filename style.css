@@ -109,6 +109,9 @@ bg(obsidian) #1e1e1e
   transition: border-width 1s ease-in-out;
 }
 
+
+
+
 /*
 .homelinks .linkprojects:hover {
   animation-name: border-width-animation;
@@ -185,16 +188,14 @@ body {
 
 
 @media only screen and (min-width: 768px) {
-  .main {
+  section {
     max-width: 700px;
   }
 
 :root {
   --mwidth: 700px;
 }
-
-
-
+  
 }
 
 
@@ -212,7 +213,7 @@ body {
 /* CONTENT DEF MUST BE IN FRONT FOR SYSTEM TO WORK*/
 
 .topbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -350,20 +351,32 @@ body {
   .project_wrapper {
     max-width: 700px;
   }
+
+  section {
+    max-width: 700px;
+  }
+
 }
 
 /***********************************************************/
  
   #more {display: none;}
 
-  .project_info, .home_info {
+  .menu_box {
       width: 100%;
       /*max-width: 700px;*/
       background-color: var(--third-color);
-      padding: 5px 10px;
+      padding: 0px 10px;
       border-radius: 10px;
       margin-top: 10px;
   }
+
+
+
+
+
+
+
   .btnmore{
       padding: 5px;
       margin: 10px;
@@ -443,12 +456,6 @@ body {
   margin: auto;
 }
 
-.project_summary {
-    background-color: var(--third-color);
-    padding: 5px;
-    border-radius: 10px;    
-    width: 100%;
-}
 
 .project_summary ul {
   display: grid;
