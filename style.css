@@ -44,17 +44,6 @@ body {
 }
 
 
-@media only screen and (min-width: 768px) {
-  
-  section {
-    max-width: 700px;
-  }
-
-  :root {
-    --mwidth: 700px;
-  }
-  
-}
 
 /* Body project template */
 
@@ -81,7 +70,7 @@ body {
   section {
     max-width: 700px;
   }
-
+  
 }
 
 
@@ -92,14 +81,17 @@ body {
 /* CONTENT DEF MUST BE IN FRONT FOR SYSTEM TO WORK*/
 
 .topbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   height: 50px;
   background-color: var(--bg-color);
   color: white;
   transition: transform 0.2s ease-in-out;
+
+  /*This centers the bar */
+  position: absolute;
+  top: 0;
+  left:   50%;
+  transform: translate(-50%, 0);
+
 }
 
 .topbar-content {
@@ -300,33 +292,25 @@ body {
 
 
 
+/*-------------------------------------------------------*/
+/*-------------------------------------------------------*/
+/*----SECTION Projects--------*/
 
-/***********************************************************/
- 
-  #more {display: none;}
+#more {display: none;}
 
-  .menu_box {
-      width: 100%;
-      /*max-width: 700px;*/
-      background-color: var(--third-color);
-      padding: 0px 10px;
-      border-radius: 10px;
-      margin-top: 10px;
-  }
+.menu_box {
+    width: 100%;
+    /*max-width: 700px;*/
+    background-color: var(--third-color);
+    padding: 0px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
 
-
-
-
-
-
-
-  .btnmore{
-      padding: 5px;
-      margin: 10px;
-  }
-
-
-/***********************************************************/
+.btnmore{
+    padding: 5px;
+    margin: 10px;
+}
 
 .project_showcase {
     background-color: var(--third-color);
@@ -347,7 +331,6 @@ body {
   display: flex;
   justify-content: left;
 }
-
 
 .showcaseitem_bar {
   background-color: #6e6e6e;
