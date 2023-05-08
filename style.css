@@ -333,8 +333,8 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 96%;
-      max-width: 96%;
+     /* width: 96%;
+      max-width: 96%;*/
       margin-top: 40px;
 
       -ms-overflow-style: none;  /* IE and Edge */
@@ -374,11 +374,11 @@ body {
 
 .project_showcase {
     background-color: var(--third-color);
-    padding: 5px;
+    /*padding: 5px;*/
     border-radius: 10px;
-    margin-top: 5px;
+    /*margin-top: 5px;*/
     width: 100%;
-    height: 600px;
+    /*height: 600px;*/
     display: table;
 }
 
@@ -530,12 +530,21 @@ body {
 /*----------------------------------------*/
 /*----------------Carousel----------------*/
 
+
+.videoWrapper{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
 .videoWrapper iframe{
-    margin-top: 20px;
-    width: 650px;
-    height: 366px;
-    border: 1px solid lime;
-    padding: 5px;
+  position: absolute;
+  top:0;*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid lime;
+  padding: 5px;
 }
 
 
