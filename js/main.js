@@ -296,6 +296,23 @@ function ForceReadLess(){
 
 
 //Used to show and hide more project content on the project tab 
+function toggleShow(section,optionA, optionB) {
+  var dots = document.getElementById(section+"dots");
+  var moreText = document.getElementById(section+"more");
+  var btnText = document.getElementById(section+"myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = optionA;
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = optionB;
+    moreText.style.display = "inline";
+  }
+}
+
+//Used to show and hide more project content on the project tab 
 function toggleShow() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
@@ -382,3 +399,4 @@ function toggleShow() {
         });
 
     }
+
