@@ -102,10 +102,16 @@ class NonRepeatRandomColorSelector {
   }
 }
 
+/*------------------------------------------------*/
+/*-------------  Dynamic HTML --------------------*/
 
+// Function to apply text to an element
+function ApplyElementText(id, text) {
 
+  document.getElementById(id).innerHTML = text;
+}
 
-function displayImages(images, elementId) {
+function addImagesToElement(images, elementId) {
   const container = document.getElementById(elementId);
   if (!container) {
     console.error(`Element with ID "${elementId}" not found`);
@@ -123,41 +129,6 @@ function displayImages(images, elementId) {
     div.appendChild(img);
     container.appendChild(div);
   });
-}
-
-// Function to apply text to an element
-function ApplyElementText(id, text) {
-document.getElementById(id).innerHTML = text;
-}
-
-// Changes the tab
-function OpenTab(tabName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="dropbtn" and remove the class "active"
-  tablinks = document.getElementsByClassName("dropbtn");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tabName).style.display = "block";
-
-  let element = document.getElementById(('btn'+tabName));
-
-  element.className += " active";
-}
-
-function LoadPortfolioItem(item){
-  displayImages(item.images,"carousel-img-parent");
-  addVideosToElement("youtube-parent",item.youtube);
 }
 
 function addVideosToElement(id, paths) {
@@ -180,71 +151,8 @@ function addVideosToElement(id, paths) {
   }
 }
 
-function LoadProjectByName(projectName) {
-
-    const portfolioManager = new PortfolioManager(() => {
-        // Your code that needs access to the `projects` and `portfolioItems` dictionaries goes here
-
-      const project = portfolioManager.projects[projectName];
-      if (!project) {
-        console.error(`Project "${projectName}" not found`);
-        return;
-      }
-      ApplyElementText("project-name-container", project.name);
-      ApplyElementText("project-media-container", project.media);
-      ApplyElementText("project-client-container", project.client);
-      ApplyElementText("project-platform-container", project.platform);
-      ApplyElementText("project-company-container", project.company);
-      ApplyElementText("project-involvement-container", project.involvement);
-
-
-      ApplyElementText("container_proj_description", project.description);
-      ApplyElementText("container_proj_challenges", project.challenges);
-      ApplyElementText("container_proj_solutions", project.solution);
-
-      ForceReadLess();
-
-      items = portfolioManager.getPortfolioItemsForProject(projectName);
-      AddPortfolioItemButtons(items,'portfolioitemcontainer');
-
-      OpenTab("projects");
-
-    });
-
-}
-
-
-function LoadProject(pm,projectName) {
-  const project = pm.projects[projectName];
-  console.log(pm.projects)
-  if (!project) {
-    console.error(`Project "${projectName}" not found`);
-    return;
-  }
-  console.log(project.name);
-  ApplyElementText("project-name-container", project.name);
-  ApplyElementText("project-media-container", project.media);
-  ApplyElementText("project-client-container", project.client);
-  ApplyElementText("project-platform-container", project.platform);
-  ApplyElementText("project-company-container", project.company);
-  ApplyElementText("project-involvement-container", project.involvement);
-
-
-  ApplyElementText("container_proj_description", project.description);
-  ApplyElementText("container_proj_challenges", project.challenges);
-  ApplyElementText("container_proj_solutions", project.solution);
-
-  ForceReadLess();
-
-  items = pm.getPortfolioItemsForProject(projectName);
-  AddPortfolioItemButtons(items,'portfolioitemcontainer');
-
-
-  OpenTab("projects");
-}
-
-
-
+/*------------------------------------------------*/
+/*-------------  Dynamic Database Items --------------------*/
 
 // Initialize Function to Create Buttons
 function AddProjectButtons(pm,containerId) {
@@ -268,7 +176,6 @@ function AddProjectButtons(pm,containerId) {
     container.appendChild(button);
   });
 }
-
 
 function AddPortfolioItemButtons(portfolioItems, containerId) {
   const container = document.getElementById(containerId);
@@ -308,25 +215,105 @@ function AddPortfolioItemButtons(portfolioItems, containerId) {
   btn.click();
 }
 
+/*------------------------------------------------*/
+/*-------------  Navigation ----------------------*/
 
 
+// Changes the tab
+function OpenTab(tabName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
-function ForceReadLess(){
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
-  } 
+  // Get all elements with class="dropbtn" and remove the class "active"
+  tablinks = document.getElementsByClassName("dropbtn");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+
+  let element = document.getElementById(('btn'+tabName));
+
+  element.className += " active";
 }
+
+function LoadPortfolioItem(item){
+  addImagesToElement(item.images,"carousel-img-parent");
+  addVideosToElement("youtube-parent",item.youtube);
+}
+
+function LoadProjectByName(projectName) {
+
+    const portfolioManager = new PortfolioManager(() => {
+        // Your code that needs access to the `projects` and `portfolioItems` dictionaries goes here
+
+      const project = portfolioManager.projects[projectName];
+      if (!project) {
+        console.error(`Project "${projectName}" not found`);
+        return;
+      }
+      ApplyElementText("project-name-container", project.name);
+      ApplyElementText("project-media-container", project.media);
+      ApplyElementText("project-client-container", project.client);
+      ApplyElementText("project-platform-container", project.platform);
+      ApplyElementText("project-company-container", project.company);
+      ApplyElementText("project-involvement-container", project.involvement);
+
+
+      ApplyElementText("container_proj_description", project.description);
+      ApplyElementText("container_proj_challenges", project.challenges);
+      ApplyElementText("container_proj_solutions", project.solution);
+
+      ForceReadLess();
+
+      items = portfolioManager.getPortfolioItemsForProject(projectName);
+      AddPortfolioItemButtons(items,'portfolioitemcontainer');
+
+      OpenTab("projects");
+
+    });
+}
+
+function LoadProject(pm,projectName) {
+  const project = pm.projects[projectName];
+  console.log(pm.projects)
+  if (!project) {
+    console.error(`Project "${projectName}" not found`);
+    return;
+  }
+  console.log(project.name);
+  ApplyElementText("project-name-container", project.name);
+  ApplyElementText("project-media-container", project.media);
+  ApplyElementText("project-client-container", project.client);
+  ApplyElementText("project-platform-container", project.platform);
+  ApplyElementText("project-company-container", project.company);
+  ApplyElementText("project-involvement-container", project.involvement);
+
+
+  ApplyElementText("container_proj_description", project.description);
+  ApplyElementText("container_proj_challenges", project.challenges);
+  ApplyElementText("container_proj_solutions", project.solution);
+
+  ForceReadLess();
+
+  items = pm.getPortfolioItemsForProject(projectName);
+  AddPortfolioItemButtons(items,'portfolioitemcontainer');
+
+
+  OpenTab("projects");
+}
+
 
 
 /*--------------------------------------------------*/
 /*--------------Toggle / Show more buttons----------*/
-
 
 
 //Used to show and hide more project content on the project tab 
@@ -346,7 +333,6 @@ function toggleShowSkillsets(section,optionA, optionB) {
   }
 }
 
-
 //Used to show and hide more project content on the project tab 
 function toggleShow() {
   var dots = document.getElementById("dots");
@@ -363,6 +349,30 @@ function toggleShow() {
     moreText.style.display = "inline";
   }
 }
+
+
+function ForceReadLess(){
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  var dotsSkills = document.getElementById("skillsetsdots");
+  var moreTextSkills = document.getElementById("moreSkillItem");
+  var btnTextSkills = document.getElementById("skillsetsmyBtn");
+
+  if (dotsSkills.style.display === "none") {
+    dotsSkills.style.display = "inline";
+    btnTextSkills.innerHTML = "Show Info";
+    moreTextSkills.style.display = "none";
+  } 
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } 
+}
+
 
 /*--------------------------------------------------*/
 /*--------------Skillsets---------------------------*/
