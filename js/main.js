@@ -81,6 +81,13 @@ class PortfolioManager {
     return portfolioItems;
   }
 
+  getUniqueSkillsets() {
+    const uniqueSkillsets = new Set();
+    Object.values(this.portfolioItems).forEach(portfolioItem => {
+      portfolioItem.skillsets.forEach(skillset => uniqueSkillsets.add(skillset));
+    });
+    return Array.from(uniqueSkillsets);
+  }
 }
 
 class NonRepeatRandomColorSelector {
@@ -215,9 +222,9 @@ function AddPortfolioItemButtons(portfolioItems, containerId) {
   btn.click();
 }
 
+
 /*------------------------------------------------*/
 /*-------------  Navigation ----------------------*/
-
 
 // Changes the tab
 function OpenTab(tabName) {
@@ -311,10 +318,8 @@ function LoadProject(pm,projectName) {
 }
 
 
-
 /*--------------------------------------------------*/
 /*--------------Toggle / Show more buttons----------*/
-
 
 //Used to show and hide more project content on the project tab 
 function toggleShowSkillsets(section,optionA, optionB) {
@@ -392,13 +397,6 @@ function get_skillset_label(skillset) {
     return skillsetLabels[skillset] || skillset;
 }
 
-function getUniqueSkillsets(portfolioManager) {
-  const uniqueSkillsets = new Set();
-  Object.values(portfolioManager.portfolioItems).forEach(portfolioItem => {
-    portfolioItem.skillsets.forEach(skillset => uniqueSkillsets.add(skillset));
-  });
-  return Array.from(uniqueSkillsets);
-}
 
 function LoadSkillsetsTab(skillset) {
     const portfolioManager = new PortfolioManager(() => {
