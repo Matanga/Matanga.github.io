@@ -135,7 +135,11 @@ bg(obsidian) #1e1e1e
     padding-inline-start:0;
 }
 
-.wrapper li.main {
+/* Style the main content area */
+.skillsetContainer {
+  margin: auto; /* Same width as the sidebar */
+}
+.wrapper li.skillsetContainer {
     list-style-type: none;
     height: auto;
     border: 1px solid;
@@ -148,11 +152,11 @@ bg(obsidian) #1e1e1e
     flex-direction: row;
     justify-content: center;
 }
-.wrapper li.main div {
+.wrapper li.skillsetContainer div {
     border: 1px solid;
     margin-left: 10px;
 }
-.main ul{
+.skillsetContainer ul{
     list-style: none;
 }
 
@@ -178,20 +182,19 @@ body {
 }
 
 
-/* Style the main content area */
-.main {
-  margin-top: 25px; /* Same width as the sidebar */
-  margin: auto; /* Same width as the sidebar */
-  height: 100vh;
 
-  width: 96%;
-  max-width: 96%;
-}
 
 @media only screen and (min-width: 768px) {
   .main {
     max-width: 700px;
   }
+
+:root {
+  --mwidth: 700px;
+}
+
+
+
 }
 
 
