@@ -133,22 +133,6 @@ function getLoadReferences(key){
     return dictSkillsetsReferences[key];
 }
 
-function GetToggleID(toggleType){
-    const dict = {
-        "projectInfo":{
-            'more':"projectInfoMore",
-            'btn':"projectInfoBtn"
-        },
-        "projectItem":{
-            'more':"projectsItem",
-            'btn':"projectItemBtn"
-        },
-        "skillsetItem":{
-
-        }
-    };
-    return dict[toggleType];
-}
 
 
 
@@ -303,7 +287,7 @@ function AddPortfolioItemDescription(containerId,  item) {
     </div>
   `;
   container.innerHTML = html;
-  toggleHide('');
+  toggleHide('projectInfo');
 }
 
 
@@ -438,8 +422,25 @@ function LoadSkillsetsTab(skillset) {
 /*--------------------------------------------------*/
 /*--------------Toggle / Show more buttons----------*/
 
-//Used to show and hide more project content on the project tab 
+function GetToggleID(toggleType){
+    const dict = {
+        "projectInfo":{
+            'more':"projectInfoMore",
+            'btn':"projectInfoBtn"
+        },
+        "projectItem":{
+            'more':"projectsItem",
+            'btn':"projectItemBtn"
+        },
+        "skillsetItem":{
 
+        }
+    };
+    return dict[toggleType];
+}
+
+
+//Used to show and hide more project content on the project tab 
 function toggleShow(toggleID) {
     const id = GetToggleID(toggleID);
     var moreText = document.getElementById(id.more);
