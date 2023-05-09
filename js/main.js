@@ -120,7 +120,7 @@ function getLoadReferences(key){
         'skillset': {
             "title":"skillsetItemTitle",
             "carousel":"skillsetCarousel",
-            "description":"moreSkillItem",
+            "description":"skillsetsMore",
             "youtube":"youtube-parentSkillset"
         },        
         'project': {
@@ -226,7 +226,7 @@ function AddPortfolioItemButtons(portfolioItems, containerId, loadRefs) {
     const portfolioItem = portfolioItems[i];
     const button = document.createElement("button");
     button.setAttribute("id", "loadBtn");
-    button.setAttribute("class", "topbar-linkbtn");
+    button.setAttribute("class", "portfolioItemBtn");
 
 
     const color = randomColorSelector.getRandomColor();
@@ -433,7 +433,8 @@ function GetToggleID(toggleType){
             'btn':"projectItemBtn"
         },
         "skillsetItem":{
-
+            'more':"skillsetsMore",
+            'btn':"skillsetsBtn"
         }
     };
     return dict[toggleType];

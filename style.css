@@ -122,6 +122,22 @@ body {
 
 
 /* Dropdown Button */
+.portfolioItemBtn {
+  background-color: var(--sec-color);
+  color: white;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  width:100%;
+  text-align: left;
+  margin: 0 5px;
+  -webkit-border-radius: 0px 0px 15px 0px;
+  border-radius: 0px 0px 15px 0px;
+}
+
+
+
+/* Dropdown Button */
 .topbar-linkbtn {
   background-color: var(--sec-color);
   color: white;
@@ -131,6 +147,8 @@ body {
   width:100%;
   text-align: left;
 }
+
+
 
 /* Show the dropdown menu on hover */
 .topbar-linkbtn:hover  {background-color: var(--bg-color);}
