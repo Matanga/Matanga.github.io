@@ -184,7 +184,7 @@ function AddProjectButtons(pm,containerId) {
   });
 }
 
-function AddPortfolioItemButtons(portfolioItems, containerId) {
+function AddPortfolioItemButtons(portfolioItems, containerId, loadRefs) {
   const container = document.getElementById(containerId);
   if (!container) {
     console.error(`Container element with ID "${containerId}" not found`);
@@ -211,7 +211,7 @@ function AddPortfolioItemButtons(portfolioItems, containerId) {
     button.setAttribute("data-portfolio-item", portfolioItem);
     button.textContent = portfolioItem.name;
     button.addEventListener("click", function() {
-      LoadPortfolioItem(portfolioItem);
+      LoadPortfolioItem(portfolioItem,loadRefs);
     });
     container.appendChild(button);
     if (added == 0) {
@@ -304,7 +304,7 @@ function LoadProjectByName(projectName) {
       ForceReadLess();
 
       items = portfolioManager.getPortfolioItemsForProject(projectName);
-      AddPortfolioItemButtons(items,'portfolioitemcontainer');
+      AddPortfolioItemButtons(items,'portfolioitemcontainer','project');
 
       OpenTab("projects");
 
@@ -334,7 +334,7 @@ function LoadProject(pm,projectName) {
   ForceReadLess();
 
   items = pm.getPortfolioItemsForProject(projectName);
-  AddPortfolioItemButtons(items,'portfolioitemcontainer');
+  AddPortfolioItemButtons(items,'portfolioitemcontainer','project');
 
 
   OpenTab("projects");
