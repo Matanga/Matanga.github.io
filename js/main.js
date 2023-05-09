@@ -222,6 +222,28 @@ function AddPortfolioItemButtons(portfolioItems, containerId) {
   btn.click();
 }
 
+// Initialize Function to Create Buttons
+function AddSkillsetButtons(list,containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) {
+    console.error(`Container element with ID "${containerId}" not found`);
+    return;
+  }
+  
+    list.forEach(function(element) {
+        const button = document.createElement("button");
+        button.setAttribute("id", "loadBtn");
+        button.setAttribute("class", "topbar-linkbtn");
+
+        button.setAttribute("data-skillset", element);
+        button.textContent = get_skillset_label(element);
+        button.addEventListener("click", function() {
+          LoadSkillsetsTab(element);
+        });
+        container.appendChild(button);
+      console.log(element);
+    });
+}
 
 /*------------------------------------------------*/
 /*-------------  Navigation ----------------------*/
@@ -317,6 +339,26 @@ function LoadProject(pm,projectName) {
   OpenTab("projects");
 }
 
+function LoadSkillsetsTab(skillset) {
+    const portfolioManager = new PortfolioManager(() => {
+
+        const portfolioItems = Object.values(portfolioManager.portfolioItems);
+        const matchingItems = [];
+
+        portfolioItems.forEach(item => {
+        if (item.skillsets.includes(skillset)) {
+          matchingItems.push(item);
+        }
+        });
+
+        //return matchingItems;
+        console.log(matchingItems)
+        AddPortfolioItemButtons(matchingItems,'skillsetPortfolioItems');
+
+        OpenTab("skillsets");
+    });
+}
+
 
 /*--------------------------------------------------*/
 /*--------------Toggle / Show more buttons----------*/
@@ -380,7 +422,7 @@ function ForceReadLess(){
 
 
 /*--------------------------------------------------*/
-/*--------------Skillsets---------------------------*/
+/*--------------Utiltities---------------------------*/
 
 
 function get_skillset_label(skillset) {
@@ -398,47 +440,4 @@ function get_skillset_label(skillset) {
 }
 
 
-function LoadSkillsetsTab(skillset) {
-    const portfolioManager = new PortfolioManager(() => {
-
-        const portfolioItems = Object.values(portfolioManager.portfolioItems);
-        const matchingItems = [];
-
-        portfolioItems.forEach(item => {
-        if (item.skillsets.includes(skillset)) {
-          matchingItems.push(item);
-        }
-        });
-
-        //return matchingItems;
-        console.log(matchingItems)
-        AddPortfolioItemButtons(matchingItems,'skillsetPortfolioItems');
-
-        OpenTab("skillsets");
-    });
-}
-
-// Initialize Function to Create Buttons
-function AddSkillsetButtons(list,containerId) {
-  const container = document.getElementById(containerId);
-  if (!container) {
-    console.error(`Container element with ID "${containerId}" not found`);
-    return;
-  }
-  
-    list.forEach(function(element) {
-        const button = document.createElement("button");
-        button.setAttribute("id", "loadBtn");
-        button.setAttribute("class", "topbar-linkbtn");
-
-        button.setAttribute("data-skillset", element);
-        button.textContent = get_skillset_label(element);
-        button.addEventListener("click", function() {
-          LoadSkillsetsTab(element);
-        });
-        container.appendChild(button);
-      console.log(element);
-    });
-
-}
 
