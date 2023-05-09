@@ -309,14 +309,23 @@ h2 .titleName {
     width: 100%;
     /*max-width: 700px;*/
     background-color: var(--third-color);
-    padding: 0px 10px;
+    padding: 5px 5px;
     border-radius: 10px;
     margin-top: 10px;
 }
 
+.menu_box h4 {
+    margin: 5px 0;
+}
+
+.menu_box p {
+    margin: 10px 0;
+}
+
+
 .btnmore{
-    padding: 5px;
-    margin: 10px;
+    padding: 3px;
+    margin: 5px;
 }
 
 .project_showcase {
@@ -538,7 +547,7 @@ h2 .titleName {
     display: grid;
     align-items: center;
     justify-items: center;
-    padding: 20px 0px;
+    padding: 5px 0px;
 }
 .img-carousel-container {
     width: var(--carousel-size);
@@ -550,8 +559,8 @@ h2 .titleName {
     -webkit-overflow-scrolling: touch; 
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth; 
-    padding-bottom: 5px; 
-    margin: 10px 0px;
+    padding: 10px; 
+    margin: 0px 0px;
 }
 .img-carousel div {
     flex: none;

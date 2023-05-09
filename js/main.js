@@ -274,6 +274,7 @@ function OpenTab(tabName) {
 }
 
 function LoadPortfolioItem(item){
+
   addImagesToElement(item.images,"carousel-img-parent");
   addVideosToElement("youtube-parent",item.youtube);
 }
