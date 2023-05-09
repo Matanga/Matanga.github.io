@@ -109,6 +109,49 @@ class NonRepeatRandomColorSelector {
   }
 }
 
+
+/*------------------------------------------------*/
+/*-------------  References Utilities --------------------*/
+
+function getLoadReferences(key){
+
+    const dictSkillsetsReferences =
+    {
+        'skillset': {
+            "title":"skillsetItemTitle",
+            "carousel":"skillsetCarousel",
+            "description":"moreSkillItem",
+            "youtube":"youtube-parentSkillset"
+        },        
+        'project': {
+            "title":"projectsItemTitle",
+            "carousel":"projectsCarousel",
+            "description":"projectsItem",
+            "youtube":"youtube-parent"
+        }
+    };
+    return dictSkillsetsReferences[key];
+}
+
+function GetToggleID(toggleType){
+    const dict = {
+        "projectInfo":{
+            'more':"projectInfoMore",
+            'btn':"projectInfoBtn"
+        },
+        "projectItem":{
+            'more':"projectsItem",
+            'btn':"projectItemBtn"
+        },
+        "skillsetItem":{
+
+        }
+    };
+    return dict[toggleType];
+}
+
+
+
 /*------------------------------------------------*/
 /*-------------  Dynamic HTML --------------------*/
 
@@ -245,6 +288,26 @@ function AddSkillsetButtons(list,containerId) {
     });
 }
 
+
+function AddPortfolioItemDescription(containerId,  item) {
+  const container = document.getElementById(containerId);
+  if (!container) {
+    console.error(`Container element with ID "${containerId}" not found`);
+    return;
+  }
+  const bulletPoints = item.bulletpoints.map(bulletPoint => `<li>${bulletPoint}</li>`).join('');
+  const html = `
+    <div class="itemDescription">
+      <p>${item.mainDescription}</p>
+      <ul class="itemBulletPts">${bulletPoints}</ul>
+    </div>
+  `;
+  container.innerHTML = html;
+  toggleHide('');
+}
+
+
+
 /*------------------------------------------------*/
 /*-------------  Navigation ----------------------*/
 
@@ -273,10 +336,21 @@ function OpenTab(tabName) {
   element.className += " active";
 }
 
-function LoadPortfolioItem(item){
+function LoadPortfolioItem(item,loadRefs){
+    /*
+        'project': {
+            "title":"projectsItemTitle",
+            "carousel":"projectsCarousel",
+            "description":"projectsItem",
+            "youtube":"youtube-parent"
+        }
+    */
+    const id = getLoadReferences(loadRefs);
 
-  addImagesToElement(item.images,"carousel-img-parent");
-  addVideosToElement("youtube-parent",item.youtube);
+    ApplyElementText(id.title,item.name)
+    AddPortfolioItemDescription(id.description,item)
+    const newCarousel = new Carousel(id.carousel,item.images)
+    addVideosToElement(id.youtube,item.youtube);
 }
 
 function LoadProjectByName(projectName) {
@@ -301,7 +375,7 @@ function LoadProjectByName(projectName) {
       ApplyElementText("container_proj_challenges", project.challenges);
       ApplyElementText("container_proj_solutions", project.solution);
 
-      ForceReadLess();
+      toggleHide('projectInfo');
 
       items = portfolioManager.getPortfolioItemsForProject(projectName);
       AddPortfolioItemButtons(items,'portfolioitemcontainer','project');
@@ -331,7 +405,7 @@ function LoadProject(pm,projectName) {
   ApplyElementText("container_proj_challenges", project.challenges);
   ApplyElementText("container_proj_solutions", project.solution);
 
-  ForceReadLess();
+  toggleHide('projectInfo');
 
   items = pm.getPortfolioItemsForProject(projectName);
   AddPortfolioItemButtons(items,'portfolioitemcontainer','project');
@@ -341,6 +415,7 @@ function LoadProject(pm,projectName) {
 }
 
 function LoadSkillsetsTab(skillset) {
+
     const portfolioManager = new PortfolioManager(() => {
 
         const portfolioItems = Object.values(portfolioManager.portfolioItems);
@@ -352,73 +427,45 @@ function LoadSkillsetsTab(skillset) {
         }
         });
 
-        //return matchingItems;
-        console.log(matchingItems)
-        AddPortfolioItemButtons(matchingItems,'skillsetPortfolioItems');
+        AddPortfolioItemButtons(matchingItems,'skillsetPortfolioItems','skillset');
+
+        LoadPortfolioItem(matchingItems[matchingItems.length-1],'skillset');
 
         OpenTab("skillsets");
     });
 }
 
-
 /*--------------------------------------------------*/
 /*--------------Toggle / Show more buttons----------*/
 
 //Used to show and hide more project content on the project tab 
-function toggleShowSkillsets(section,optionA, optionB) {
-  var dots = document.getElementById("skillsetsdots");
-  var moreText = document.getElementById("moreSkillItem");
-  var btnText = document.getElementById("skillsetsmyBtn");
 
-  if (dots.style.display === "none") {
-    dots.style.display = "block";
-    btnText.innerHTML = 'Show Info';
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = 'Hide Info';
-    moreText.style.display = "block";
-  }
+function toggleShow(toggleID) {
+    const id = GetToggleID(toggleID);
+    var moreText = document.getElementById(id.more);
+    var btnText = document.getElementById(id.btn);
+
+    console.log(moreText.style.display);
+
+    if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        btnText.innerHTML = "Read less";
+    } else {
+        moreText.style.display = "none";
+        btnText.innerHTML = "Read more";
+    }
 }
 
-//Used to show and hide more project content on the project tab 
-function toggleShow() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline";
-  }
-}
+function toggleHide(toggleID){
+    const id = GetToggleID(toggleID);
+    var moreText = document.getElementById(id.more);
+    var btnText = document.getElementById(id.btn);
 
 
-function ForceReadLess(){
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  var dotsSkills = document.getElementById("skillsetsdots");
-  var moreTextSkills = document.getElementById("moreSkillItem");
-  var btnTextSkills = document.getElementById("skillsetsmyBtn");
-
-  if (dotsSkills.style.display === "none") {
-    dotsSkills.style.display = "inline";
-    btnTextSkills.innerHTML = "Show Info";
-    moreTextSkills.style.display = "none";
-  } 
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
-  } 
+    if (moreText.style.display === "inline") {
+        moreText.style.display = "none";
+        btnText.innerHTML = "Read more";
+    }
 }
 
 

@@ -302,8 +302,7 @@ h2 .titleName {
 /*-------------------------------------------------------*/
 /*----SECTION Projects--------*/
 
-#more, #moreSkillItem {display: none;}
-
+#projectInfoMore, #moreSkillItem {display: none;}
 
 .menu_box {
     width: 100%;
