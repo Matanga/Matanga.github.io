@@ -216,7 +216,7 @@ h2 .titleName {
 }
 
 .skillslist, .homelinks {
-  display: grid;
+  columns: 14rem;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
 }
@@ -225,7 +225,6 @@ h2 .titleName {
   border-color: white;
   border: 1px solid;
   padding:5px;
-  margin: 5px;
 }
 
 .contactlink {
