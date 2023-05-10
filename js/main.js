@@ -295,6 +295,8 @@ function AddPortfolioItemDescription(containerId,  item) {
 /*------------------------------------------------*/
 /*-------------  Navigation ----------------------*/
 
+
+
 // Changes the tab
 function OpenTab(tabName) {
   // Declare all variables
@@ -414,6 +416,8 @@ function LoadSkillsetsTab(skillset) {
         AddPortfolioItemButtons(matchingItems,'skillsetPortfolioItems','skillset');
 
         LoadPortfolioItem(matchingItems[matchingItems.length-1],'skillset');
+
+        ApplyElementText("selectedSkillset",get_skillset_label(skillset));
 
         OpenTab("skillsets");
     });
