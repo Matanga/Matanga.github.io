@@ -92,7 +92,10 @@ class PortfolioManager {
 
 class NonRepeatRandomColorSelector {
   constructor() {
-    this.colors = ["#fe3385", "lime", "yellow", "#d90b09", "aqua", "orange"];
+    this.colorsNames = ["#fe3385", "lime", "yellow", "#d90b09", "aqua", "orange"];
+    this.colors = ["#fe3385", "#00FF00", "#FFFF00 ", "#d90b09", "#00ffff  ", "#ffa500 "];
+
+
     this.lastTwoColors = [];
   }
 
@@ -134,10 +137,15 @@ function getLoadReferences(key){
 }
 
 
-
-
 /*------------------------------------------------*/
 /*-------------  Dynamic HTML --------------------*/
+
+function setCSSProperty(selector, property, value) {
+  const elements = document.querySelectorAll(selector);
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].style[property] = value;
+  }
+}
 
 // Function to apply text to an element
 function ApplyElementText(id, text) {
@@ -229,10 +237,17 @@ function AddPortfolioItemButtons(portfolioItems, containerId, loadRefs) {
     button.setAttribute("class", "portfolioItemBtn");
 
 
+
+
     const color = randomColorSelector.getRandomColor();
     button.style.borderTop = `3px solid ${color}`;
     button.style.borderColor  = `${color}`; 
     //button.style.backgroundColor = `transparent`;
+
+    //Set On Hover background
+    button.setAttribute('onmouseenter', "this.style.backgroundColor='var(--main-transparent)'");
+    button.setAttribute('onmouseleave', "this.style.backgroundColor='transparent'");
+
 
 
     button.setAttribute("data-portfolio-item", portfolioItem);
