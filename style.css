@@ -60,6 +60,7 @@ body {
 
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  padding: 5px 5px;
 }
 
 .section_wrapper::-webkit-scrollbar {
@@ -78,6 +79,25 @@ body {
   
 }
 
+.menu_box {
+    width: 100%;
+    /*max-width: 700px;*/
+    background: linear-gradient(0deg, var(--main-transparent) 0%, rgba(17, 17, 17, 0) 100%);
+
+  border: 1px var(--main-color) solid;
+
+    padding: 15px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.menu_box hr {
+    background-color: var(--main-transparent);
+    align:center;
+    height: 1px;
+    border-color: var(--main-transparent);
+    margin:10px -15px;
+}
 
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
@@ -325,17 +345,6 @@ h2 .titleName {
 
 #projectInfoMore, #moreSkillItem {display: none;}
 
-.menu_box {
-    width: 100%;
-    /*max-width: 700px;*/
-    background: linear-gradient(0deg, var(--main-transparent) 0%, rgba(17, 17, 17, 0) 100%);
-
-  border: 1px var(--main-color) solid;
-
-    padding: 15px 15px;
-    border-radius: 10px;
-    margin-top: 10px;
-}
 
 .menu_box h4 {
     margin: 5px 0;
