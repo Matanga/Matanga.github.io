@@ -4,7 +4,7 @@
   --third-color: #1e1e1e;
   --font-color: #343a40;
   --carousel-size:650px;
-
+  --main-color: rgb(255 255 255 / 10%) ;
 }
 
 * { 
@@ -32,7 +32,8 @@ bg(obsidian) #1e1e1e
 
 body {
   margin:0px;
-  background-color: var(--bg-color);
+  /*background-color: var(--bg-color);*/
+   background: var(--bg-color) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQYV2P8//+/FCMj4zMGJMCIzIGxKRQEAJgPBAbJqUVTAAAAAElFTkSuQmCC) repeat;
   display:flex;
   height: 100%;
   margin: 0;
@@ -360,13 +361,13 @@ h2 .titleName {
   /*max-height: 0;*/
   /*overflow: hidden;*/
   transition: max-height 0.2s ease-out;
-  background-color: var(--third-color);
+  background-color: transparent;
   display: flex;
   justify-content: left;
 }
 
 .showcaseitem_bar {
-  background-color: #6e6e6e;
+  background-color: transparent;
   transition: transform 0.2s ease-in-out;
   margin-top: 10px;
 }
