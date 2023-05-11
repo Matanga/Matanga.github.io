@@ -91,7 +91,10 @@ body {
     padding: 15px 15px;
     border-radius: 10px;
     margin-top: 10px;
+    position: relative;
+
 }
+
 
 .menu_box hr {
     background-color: var(--main-transparent);
@@ -101,6 +104,27 @@ body {
     margin:10px -15px;
 }
 
+.h3Box {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:0;
+    /*border-radius: 5px;*/
+    -webkit-border-radius: 5px 5px 0px px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.h3Box h3 {
+  margin:5px 10px;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.h3Separator {
+    margin-bottom: 25px;
+}
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
 /*--------------- SECTION Top Bar-----------------------*/
