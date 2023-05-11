@@ -31,7 +31,7 @@
         },
         "media": {
             "image": [
-                "BatchSequencer_PortfolioItem_1.png",
+                "BatchSequencer_PortfolioItem_1.jpg",
                 "BatchSequencer_PortfolioItem_2.png"
             ],
             "youtube": [],
@@ -179,9 +179,9 @@
         },
         "media": {
             "image": [
-                "curveTools_portfolio_Item-1.png",
+                "curvetools_portfolio_item-1.png",
                 "beziercurve.gif",
-                "curvetools_portfolio_Item-2.png",
+                "curvetools_portfolio_item-2.png",
                 "vfx_loftrenderer.gif",
                 "vfx_loftrenderer2.gif"
             ],
@@ -260,7 +260,7 @@
                 "vfx_muzzlerenderer.gif",
                 "texturetoolcomponents_portfolio_item-4.png",
                 "texturetoolcomponents_portfolio_item-2.png",
-                "vfx_spritesheetutils 1.gif",
+                "vfx_spritesheetutils-1.gif",
                 "texturetoolcomponents_portfolio_item-3.png",
                 "vfx_textureoffset.gif"
             ],
@@ -298,9 +298,9 @@
         },
         "media": {
             "image": [
-                "vfshowcase_portfolio_item-2.png",
-                "vfshowcase_portfolio_item-3.png",
-                "vfshowcase_portfolio_item-4.png"
+                "vfxshowcase_portfolio_item-2.png",
+                "vfxshowcase_portfolio_item-3.png",
+                "vfxshowcase_portfolio_item-4.png"
             ],
             "youtube": [
                 "https://www.youtube.com/embed/GRmn-bm99Kc"
@@ -330,11 +330,11 @@
         "description": {
             "main": "This is an assortment of some of the components i created in C# that allowed the VFX team to create dynamic effects completely with monobehaviours without the need of using any animation system. ",
             "bulletpoints": [
-                "VFX_DelayStartComponent : Component that enables a disabled\u00c2\u00a0 monobehaviour within a given timeframe",
-                "VFX_DeactivateByTime : Component that disables the referenced GO within the current time. If no GameObject is referenced then\u00c2\u00a0 the GameObjects that owns this component will be deactivated",
+                "VFX_DelayStartComponent : Component that enables a disabled\u00c2  monobehaviour within a given timeframe",
+                "VFX_DeactivateByTime : Component that disables the referenced GO within the current time. If no GameObject is referenced then\u00c2  the GameObjects that owns this component will be deactivated",
                 "VFX_SwitchVisibility : Toggles the selected mesh renderes on or off according to a starting value with a chosen delay time",
-                "VFX_CircleRenderer : \u00c2\u00a0Component that works along a line renderer component to easily draw  circles. Options to control radius, segments, width, color. ",
-                "VFX_AnimationCurves : \u00c2\u00a0Component that allows to\u00c2\u00a0 quickly add animation to some components and values. The animation can be looped and can be started with a delay. Setting up new values to animate is really easy."
+                "VFX_CircleRenderer : \u00c2 Component that works along a line renderer component to easily draw  circles. Options to control radius, segments, width, color. ",
+                "VFX_AnimationCurves : \u00c2 Component that allows to\u00c2  quickly add animation to some components and values. The animation can be looped and can be started with a delay. Setting up new values to animate is really easy."
             ]
         },
         "media": {
@@ -343,11 +343,11 @@
                 "animatedvfxcomponents_portfolio_item-2.png",
                 "animatedvfxcomponents_portfolio_item-3.png",
                 "animatedvfxcomponents_portfolio_item-4.png",
-                "VFX_CircleRenderer.gif",
-                "qnimatedvfxcomponents_portfolio_item-5.png",
-                "qnimatedvfxcomponents_portfolio_item-6.png",
-                "qnimatedvfxcomponents_portfolio_item-7.png",
-                "qnimatedvfxcomponents_portfolio_item-8.png",
+                "vfx_circlerenderer.gif",
+                "animatedvfxcomponents_portfolio_item-5.png",
+                "animatedvfxcomponents_portfolio_item-6.png",
+                "animatedvfxcomponents_portfolio_item-7.png",
+                "animatedvfxcomponents_portfolio_item-8.png",
                 "vfx_animationcurves.gif"
             ],
             "youtube": [],
