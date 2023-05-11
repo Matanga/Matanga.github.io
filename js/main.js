@@ -93,7 +93,7 @@ class PortfolioManager {
 class NonRepeatRandomColorSelector {
   constructor() {
     this.colorsNames = ["#fe3385", "lime", "yellow", "#d90b09", "aqua", "orange"];
-    this.colors = ["#fe3385", "#00FF00", "#FFFF00 ", "#d90b09", "#00ffff  ", "#ffa500 "];
+    this.colors = ["#fe3385", "#00FF00", "#FFFF00", "#d90b09", "#00ffff", "#ffa500"];
 
 
     this.lastTwoColors = [];

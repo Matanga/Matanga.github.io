@@ -285,7 +285,7 @@ body {
 
 .menu_box h3 {
   padding-right: 100px;
-  margin: 5px 0;
+  margin: 5px 5px;
 }
 
 h2 .titleName {
@@ -392,7 +392,11 @@ h2 .titleName {
     list-style: none;
 }
 
+/* Make the company names in the home page bold*/
+.menu_box p span {
+    font-weight: 1000;
 
+}
 
 /*-------------------------------------------------------*/
 /*-------------------------------------------------------*/
