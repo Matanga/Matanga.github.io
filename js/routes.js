@@ -17,3 +17,4 @@ page('/projects/:name', function(ctx) {
 page('/contact', function() {
   // code to load the contact page
 });
+console.log('CREATED THE PAGE')
