@@ -13,7 +13,7 @@ class Project {
 
     this.description = data.description.main;
     this.challenges = data.description.challenges;
-    this.solutions = data.description.solution;
+    this.solution = data.description.solutions;
   }
 }
 
