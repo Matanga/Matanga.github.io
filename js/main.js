@@ -177,26 +177,6 @@ function ApplyElementText(id, text) {
   document.getElementById(id).innerHTML = text;
 }
 
-function addImagesToElement(images, elementId) {
-  const container = document.getElementById(elementId);
-  if (!container) {
-    console.error(`Element with ID "${elementId}" not found`);
-    return;
-  }
-
-  // Clear existing child elements
-  container.innerHTML = "";
-
-  // Loop through the images and create a new div with an image element child for each one
-  images.forEach(imagePath => {
-    const div = document.createElement("div");
-    const img = document.createElement("img");
-    img.setAttribute("src", ("https://matanga.github.io/images/"+imagePath));
-    div.appendChild(img);
-    container.appendChild(div);
-  });
-}
-
 function addVideosToElement(id, paths) {
   const element = document.getElementById(id);
   if (!element) {
