@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Pablo Vezzini - Technical Artist/Game Developer</title>
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SOCIAL MEDIA ICONS />-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://matanga.github.io/style.css" rel="stylesheet" type="text/css"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script src="https://matanga.github.io/js/page.js"></script>
+    <script src="https://matanga.github.io/js/main.js"></script>
+    <script src="https://matanga.github.io/js/routes.js"></script>
+
+
+    <style type="text/css">
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  
+  background-color: var(--bg-color);
+  color:var(--bg-color);
+
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 9999;
+
+
+-webkit-border-radius: 0px 0px 5px 5px;
+ border-radius: 0px 0px 5px 5px;
+
+
+}
+
+
+/* Buttons inside the dropdown*/
+.dropdown-content button {
+background-color: var(--bg-color);
+  color:var(--main-color);
+
+}
+.dropdown-content button:hover {
+background-color: var(--bg-color)   ;
+  color:snow;
+}
+
+
+.dropdown .dropbtn{
+    position:  relative;    
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--bg-color);
+    color:var(--main-color);   
+    outline: 2px solid var(--main-color);
+    margin-bottom:  -4px;
+    z-index: 3000;
+
+}
+
+.dropdown:hover .dropdown-content {
+    /*border-bottom: 2px solid var(--main-color);
+    border-right: 2px solid var(--main-color);
+    border-left: 2px solid var(--main-color);*/
+    border: 2px solid var(--main-color);
+}
+
+#contact .logo {
+    float: right;   
+}
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <!--------------------->
+    <!----- Top Bar ------->
+    <section class="topbar">
+        <div class="topbar-content">
+
+            <div class="dropdown" id="dropdowncolor">
+                <button class="colorSelector" id="color_selector"></button>
+
+                <div class="dropdown-content" >
+                    <button onclick="setSiteColor('#00ff00')" style="min-width:20px; min-height: 20px; background-color: #00ff00; margin: 5px;" ></button>
+
+                    <button onclick="setSiteColor('#d90b09')" style="min-width:20px; min-height: 20px; background-color: #d90b09; margin: 5px;" ></button>
+                    <button onclick="setSiteColor('#f5d546')" style="min-width:20px; min-height: 20px; background-color: #f5d546; margin: 5px;" ></button>
+
+                </div>
+
+            </div>
+
+
+
+            <button class="dropbtn" id="btnhome" onclick="OpenTab('home')">Home</button>
+
+            <div class="dropdown">
+                <button class="dropbtn" id="btnprojects">Projects</button>
+                <div class="dropdown-content" id="projectsList">
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" id="btnskillsets" >Skillsets</button>
+                <div class="dropdown-content" id="skillsetsList">
+                </div>
+            </div>
+
+            <button class="dropbtn" id="btncontact" onclick="OpenTab('contact')">Contact</button>
+
+        </div>
+      <div class="topbar-separator"></div>
+    </section>
+
+
+    <!--------------------->
+    <!-- Home SECTION -->
+
+    <section id="home" class="tabcontent">
+
+        <div class="section_wrapper">
+
+            <div class="menu_box">      
+                <div class="logo"><img width="125px" src="images/matanga_ok.png"></div>      
+                <h2 class="titleName">Pablo Vezzini </h2>
+                <h3 class="logoTitle">Technical Artist/Game Developer/Creative Technologist</h3>
+                <p>Hello! I am a technical artist and game developer with extensive experience in crafting immersive experiences and developing tools and pipelines to enhance production workflows. I have had the privilege of working with various companies, including <span style="color:#00ff00; cursor: pointer;
+" onclick="LoadProjectByName('2kdam')">2K</span>, <span style="color:#d90b09;">Facebook</span>, <span  onclick="LoadProjectByName('dance-monsters')" style="cursor: pointer;
+ color:#f5d546;">Netflix</span>,<span style="color:#00ffff;"> EA</span>, and <span style="color:#ffa500;">Globant</span>. My portfolio demonstrates my expertise in interactive installations, game development, tool and pipeline development, and R&D. I am dedicated to staying up-to-date with the latest trends and technologies and am always eager to tackle new challenges that come my way. <button class="contactlink">Let's make your vision a reality.</button></p>
+
+
+                <div class="homelinks">
+                <div class="linkprojects" style="border-radius:10px">
+                    <p>Take a look at some of my latest projects</p>
+                    <ul style="list-style-type:none">
+                        <li><button onclick="LoadProjectByName('2kdam')">2K Dam</button></li>
+                        <li><button onclick="LoadProjectByName('intel-evo')">Intel Evo</button></li>
+                        <li><button onclick="LoadProjectByName('element-space')">Element Space</button></li>
+                        <li><button onclick="LoadProjectByName('Unreal-Room')">Unreal Room</button></li>
+                    </ul>
+                </div>
+                <div class="linkskillsets" style="border-radius:10px">
+                    <p>Or browse my portfolio by skillset</p>
+                    <ul style="list-style-type:none">
+                        <li><button>Unreal</button></li>
+                        <li><button>Unity</button></li>
+                        <li><button>Tool Development</button></li>
+                        <li><button>Game Development</button></li>
+                    </ul>                    
+                </div>
+                </div>
+
+                <p>As a technical artist with a strong foundation in both art and technology, I am able to bridge the gap between creative and technical teams. My ability to understand the needs and constraints of both sides allows me to develop solutions that satisfy both artistic and technical requirements. Whether working on a large-scale game development project or a small interactive installation, I am committed to delivering work that meets and exceeds client expectations while maintaining open communication and collaboration throughout the project lifecycle.</p>
+                <p>Thank you for considering me for your next project. Let's work together to <button class="contactlink">bring your ideas to life!</button></p>
+
+                <p>Here are some of the skills that I picked up along the way:</p>
+                
+                <div class="wrapper">
+                    <ol>
+                        <li class="skillsetContainer" style="border-color:#fe3385; color:#fe3385" >
+                                <p style="flex-grow:1;">DCC</p>
+                                <div></div>
+                                <ul style="flex-grow:1;">
+                                <li>Houdini SideFX</li>
+                                <li>Autodesk 3ds Max</li>
+                                <li>Autodesk Maya</li>
+                                <li>Adobe Photoshop </li>
+                                <li>Blender</li>
+                                </ul>
+                        </li>
+                        <li class="skillsetContainer" style="border-color:aqua; color:aqua">
+                            <p style="flex-grow:1;">Engines and IDEs</p>
+                            <div></div>
+
+                            <ul style="flex-grow:1;">
+                            <li>Unreal </li>
+                            <li>Unity Engine</li>
+                            <li>PyCharm</li>
+                            <li>Visual Studio</li>
+                            </ul>
+                        </li>
+                        <li class="skillsetContainer" style="border-color:yellow; color:yellow">
+                            <p style="flex-grow:1;">Version Control</p>
+                            <div></div>
+                            <ul style="flex-grow:1;">
+                            <li>Git</li>
+                            <li>Github</li>
+                            <li>Perforce</li>
+                            </ul>
+                        </li>
+                        <li class="skillsetContainer" style="border-color:lime; color:lime">
+                            <p style="flex-grow:1;">Languages</p>
+                            <div></div>
+
+                                <ul style="flex-grow:1;">
+                                <li>Python</li>
+                                <li>C#   </li>
+                                <li>Maxscript</li>
+                                <li>Melscript</li>
+                                <li>Vex</li>
+                                <li>CSS/HTML</li>
+                                <li>Javascript</li>
+                                </ul>
+                        </li>
+
+                        <li class="skillsetContainer" style="border-color:orange; color:orange">
+                            <p style="flex-grow:1;">Prototyping and electronics</p>
+                            <div></div>
+                                <ul style="flex-grow:1;">
+                                <li>Arduino</li>
+                                <li>Raspberry Pi </li>
+                                <li>Sensors/Actuators</li>
+                                </ul>
+                        </li>
+                        <li class="skillsetContainer" style="border-color:#d90b09; color:#d90b09">
+                            <p style="flex-grow:1;">Computer vision</p>
+                            <div></div>
+                                <ul style="flex-grow:1;">
+                                <li>OpenCV</li>
+                                </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--------------------->
+    <!-- Projects SECTION -->
+
+    <section id="projects" class="tabcontent">
+
+        <div class="section_wrapper">
+
+            <div class="menu_box project_summary">
+                <div class="h3Box">
+                    <h3>Project Info</h3>
+                </div>
+                <div class="h3Separator"></div>
+                <ul class="project_info">
+                    <li class="summarypair"><div style="color:#fe3385">Name:</div><div id='project-name-container'>Project Name</div></li> 
+                    <li class="summarypair"><div style="color:lime">Media:</div><div id='project-media-container'>Unreal</div></li>  
+                    <li class="summarypair"><div style="color:aqua">Client:</div><div id='project-client-container'>Client</div></li>
+                    <li class="summarypair"><div style="color:yellow">Platform:</div><div id='project-platform-container'>Unreal</div></li>
+                    <li class="summarypair"><div style="color:#d90b09">Company:</div><div id='project-company-container'>Company</div></li>    
+                    <li class="summarypair"><div style="color:orange">Involvement:</div><div id='project-involvement-container'>Technical and VFX Artist</div></li>
+
+                </ul>  
+                <span id="projectInfoMore" style="display: none;">    
+                    <div>
+                        <h4 >Description</h4>
+                        <p id="container_proj_description"></p>
+                    </div>
+                    <div>
+                        <h3>Challenges</h3>
+                        <p id="container_proj_challenges"></p>
+                    </div>
+                      
+                    <div>
+                        <h3>Solutions</h3>
+                        <p id="container_proj_solutions"></p>
+                    </div>
+                </span>   
+
+                <button class="btnmore" onclick="toggleShow('projectInfo')" id="projectInfoBtn">Read more</button>
+
+            </div>
+
+
+            <div class="menu_box PortfolioItems" >
+                <div class="h3Box">
+                    <h3 id="container_proj_name">Project Items</h3>
+                </div>
+                <div class="h3Separator"></div>
+
+                <div class="showcaseitem_bar">
+                    <div class="showcase_content" id="portfolioitemcontainer">
+                    </div>
+                </div>         
+            </div>
+
+            <div class="menu_box">
+                <div class="h3Box">
+                <h3 id="projectsItemTitle" >Portfolio Item Title</h3>
+                </div>
+                <div class="h3Separator"></div>
+                <span id="projectsItem" style="display: none;"></span>   
+                <button class="btnmore" id="projectItemBtn" onclick="toggleShow('projectItem')">Show Info</button>
+                <hr />
+                <div id="projectsCarousel"></div>
+                <hr />
+                <div class="youtube-container" id='youtube-parent'>  </div>
+                    
+            </div>
+
+
+
+
+     
+        </div>
+    </section>
+
+    <!--------------------->
+    <!-- Skillsets SECTION -->
+
+    <section id="skillsets" class="tabcontent">
+        <div class="section_wrapper">
+            <div class="menu_box" >  
+                <div class="h3Box">
+                    <h3 ><span id='selectedSkillset'>Skillset</span> Items</h3>
+                </div>
+                <div class="h3Separator"></div>
+
+
+              <div class="showcaseitem_bar">
+                <div class="showcase_content" id="skillsetPortfolioItems">
+                  </div>
+              </div>     
+            </div>
+
+            <div class="menu_box" >
+                <div class="h3Box">
+                    <h3 id="skillsetItemTitle" >Portfolio Item Title</h3>
+                </div>
+                <div class="h3Separator"></div>
+
+                      
+                <span id="skillsetsMore" style="display: none;">    
+                
+                </span>   
+                <button class="btnmore" onclick="toggleShow('skillsetItem')" id="skillsetsBtn">Show Info</button>
+                <hr />
+                <div id="skillsetCarousel"></div>
+                <hr />
+                <div class="youtube-container" id='youtube-parentSkillset'></div>  
+
+            </div>    
+
+        </div>
+    </section>
+
+    <!--------------------->
+    <!-- CONTACT SECTION -->
+
+    <section id="contact" class="tabcontent">
+
+        <div class="section_wrapper">
+
+            <div class="menu_box">
+
+                <div class="socialmedia">
+                        <div class="logo"><img width="125px" src="images/matanga_ok.png"></div>      
+
+                </div>
+
+                <div class="contactform">
+                    <h1>Lets Talk!</h1>
+                    <form accept-charset="UTF-8" action="https://usebasin.com/f/77892ffeac1c" enctype="multipart/form-data" method="POST">
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required>
+                      <textarea rows="4" cols="50" name="comment" required></textarea>
+                      <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--------------------->
+    <!-- SCRIPTS -->
+
+    <script src="https://matanga.github.io/js/carousel.js"></script>
+    <script type="text/javascript">
+
+    page('/contactme', function() {
+      OpenTab('contact')
+    });
+
+
+    page('/proj/:name', function(ctx) {
+        console.log('------------------')
+        console.log(ctx.params.name)
+        LoadProjectByName(ctx.params.name)
+    });
+
+
+
+/*----------------Main--------------------------*/
+    //setCSSProperty('.menu_box','border','1px #f54646 solid')
+    OpenTab('home');
+
+    $(document).ready(function(){
+        const portfolioManager = new PortfolioManager(() => {
+            // Your code that needs access to the `projects` and `portfolioItems` dictionaries goes here
+            AddProjectButtons(portfolioManager,"projectsList");
+
+
+
+            const skillsetlist = portfolioManager.getUniqueSkillsets();
+            AddSkillsetButtons(skillsetlist,"skillsetsList");
+
+        });
+    });
+
+    page.start();
+
+
+    </script>
+
+
+</body>
+</html>
