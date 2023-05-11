@@ -114,6 +114,7 @@ body {
     /*border-radius: 5px;*/
     -webkit-border-radius: 5px 5px 0px px;
     border-radius: 5px 5px 0px 0px;
+    opacity: 0.65;
 }
 
 .h3Box h3 {
@@ -285,7 +286,7 @@ body {
 
 .menu_box h3 {
   padding-right: 100px;
-  margin: 5px 5px;
+  margin: 2px 15px;
 }
 
 h2 .titleName {
