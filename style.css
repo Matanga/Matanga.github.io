@@ -233,6 +233,28 @@ body {
 .dropbtn:hover {background-color: var(--sec-color);}
 
 
+ #dropdowncolor{
+    position: absolute;
+    left: 0;
+    margin: 10px;  
+}
+
+.colorSelector{
+    min-width: 20px;
+    min-height: 20px;
+    background-color: #f5d546;
+}
+
+.colorSelector .dropdown-content{
+    display: flex !important;
+    flex-direction: column !important;
+    max-width: 30px !important;
+}
+
+
+
+
+
 /*-------------------------------------------------------------------*/
 /*-------------------------------------------------------------------*/
 /*-----------SECTION Home--------------------------------------------*/

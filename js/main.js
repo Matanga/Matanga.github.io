@@ -114,7 +114,7 @@ class NonRepeatRandomColorSelector {
 
 
 /*------------------------------------------------*/
-/*-------------  References Utilities --------------------*/
+/*-------------  Utilities --------------------*/
 
 function getLoadReferences(key){
 
@@ -136,6 +136,30 @@ function getLoadReferences(key){
     return dictSkillsetsReferences[key];
 }
 
+function setSiteColor(color) {
+  // Format the color in the same way as --main-color
+
+  // Update the value of --main-color
+  document.documentElement.style.setProperty('--main-color', color);
+
+  document.documentElement.style.setProperty('--main-transparent', getTransparentColor(color));
+
+  // Set the background color of the element with ID 'color_selector'
+  const colorSelector = document.getElementById('color_selector');
+  if (colorSelector) {
+    colorSelector.style.backgroundColor = color;
+  }
+}
+
+function getTransparentColor(color) {
+  // Parse the input color string into its RGB components
+  const r = parseInt(color.slice(1, 3), 16);
+  const g = parseInt(color.slice(3, 5), 16);
+  const b = parseInt(color.slice(5, 7), 16);
+  
+  // Convert the RGB components into an RGBA string with opacity of 0.1
+  return `rgba(${r}, ${g}, ${b}, 0.1)`;
+}
 
 /*------------------------------------------------*/
 /*-------------  Dynamic HTML --------------------*/
@@ -243,9 +267,14 @@ function AddPortfolioItemButtons(portfolioItems, containerId, loadRefs) {
     button.style.borderTop = `3px solid ${color}`;
     button.style.borderColor  = `${color}`; 
     //button.style.backgroundColor = `transparent`;
+    button.style.color  = `${color}`; 
+
+
 
     //Set On Hover background
-    button.setAttribute('onmouseenter', "this.style.backgroundColor='var(--main-transparent)'");
+    const trans = getTransparentColor(color);
+
+    button.setAttribute('onmouseenter', `this.style.backgroundColor='${trans}'`);
     button.setAttribute('onmouseleave', "this.style.backgroundColor='transparent'");
 
 
