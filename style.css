@@ -286,6 +286,7 @@ h2 .titleName {
   border: none;
   margin: 0px -40px;
   font-size: 16px;
+  font-family: monospace;
 }
 
 .linkprojects button:after,.linkskillsets button:after {
