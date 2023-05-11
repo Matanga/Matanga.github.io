@@ -191,7 +191,7 @@ function addImagesToElement(images, elementId) {
   images.forEach(imagePath => {
     const div = document.createElement("div");
     const img = document.createElement("img");
-    img.setAttribute("src", ("images/"+imagePath));
+    img.setAttribute("src", ("https://matanga.github.io/images/"+imagePath));
     div.appendChild(img);
     container.appendChild(div);
   });
