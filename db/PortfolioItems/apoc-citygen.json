@@ -1,1 +1,35 @@
-{"backend": {"date": "", "name": "", "projectname": "", "company": "", "dcc": [""], "engine": [""], "languages": [""], "skillsets": [""]}, "description": {"main": "", "bulletpoints": [""]}, "media": {"image": [""], "youtube": [""], "url": [""]}}
+{
+    "backend": {
+        "date": "",
+        "name": "",
+        "projectname": "",
+        "company": "",
+        "dcc": [
+            ""
+        ],
+        "engine": [
+            ""
+        ],
+        "languages": [
+            ""
+        ],
+        "skillsets": []
+    },
+    "description": {
+        "main": "",
+        "bulletpoints": [
+            ""
+        ]
+    },
+    "media": {
+        "image": [
+            ""
+        ],
+        "youtube": [
+            ""
+        ],
+        "url": [
+            ""
+        ]
+    }
+}
