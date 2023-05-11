@@ -1,0 +1,45 @@
+{
+	    "backend": {
+	      "date": "2022-10-01",
+	      "name": "Installation Showcase",
+	      "projectname": "Evolution Experience",
+	      "company": "Genosha",
+	      "dcc": [
+	        "Blender",
+	        "Houdini"
+	      ],
+	      "engine": [
+	        "Unreal"
+	      ],
+	      "languages": [
+	        "blueprints"
+	      ],
+	      "skillsets": [
+	        "unrealdev",
+	        "vfx",
+	        "tooldev",
+	        "artinstallation"
+	      ]
+	    },
+	    "description": {
+	      "main": "These are some images and videos taken at the site.",
+	      "bulletpoints": [
+	        ""
+	      ]
+	    },
+	    "media": {
+	      "image": [
+	        "intelevoshowcase_portfolio_item-1.png",
+	        "intelevoshowcase_portfolio_item-2.png",
+	        "intelevoshowcase_portfolio_item-3.png",
+	        "intelevoshowcase_portfolio_item-5.png",
+	        "intelevoshowcase_portfolio_item-6.png"
+	      ],
+	      "youtube": [
+	        "https://www.youtube.com/embed/t04CSqkdfSM"
+	      ],
+	      "url": [
+	        ""
+	      ]
+	    }
+  	}

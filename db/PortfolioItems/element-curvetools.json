@@ -1,0 +1,38 @@
+{
+    "backend": {
+        "date": "2018-12-01",
+        "name": "Curve Tools",
+        "projectname": "Element Space",
+        "company": "Sixth Vowel",
+        "dcc": [],
+        "engine": [
+            "Unity"
+        ],
+        "languages": [
+            "C Sharp"
+        ],
+        "skillsets": [
+            "tooldev",
+            "vfx",
+            "unitydev"
+        ]
+    },
+    "description": {
+        "main": "I implemented a curve system along with the necessary custom editors for ease of use. I also created procedural geometry tools that leveraged the curve system.",
+        "bulletpoints": [
+            "BezierCurve : Tool to create parametric meshes used for muzzle VFXx. With options to choose width, length , amount of planes, and Z Offset. These type of meshes can be used in many effects such as projectiles, muzzles and others.",
+            "VFX_LoftRenderer : Component that allow to extrude a shape along another shape, this behaviour is usually called \u201clofting\u201d in 3d packages. In its default state the tool draws ciruclar lofts. But there is an option to loft along a custom bezier curve. This allows for very elaborate meshes to be created very easyly. The tool also takes care of uvmapping"
+        ]
+    },
+    "media": {
+        "image": [
+            "curveTools_portfolio_Item-1.png",
+            "beziercurve.gif",
+            "curvetools_portfolio_Item-2.png",
+            "vfx_loftrenderer.gif",
+            "vfx_loftrenderer2.gif"
+        ],
+        "youtube": [],
+        "url": []
+    }
+}

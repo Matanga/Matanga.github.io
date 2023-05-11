@@ -1,0 +1,39 @@
+{
+	  "backend": {
+	    "date": "2020-12-01",
+	    "name": "Batch Sequencer",
+	    "projectname": "Asset Library",
+	    "company": "Globant",
+	    "dcc": [
+	      "maya",
+	      "3ds max",
+	      "houdini"
+	    ],
+	    "engine": [],
+	    "languages": [
+	      "python",
+	      "maxscript",
+	      "melscript"
+	    ],
+	    "skillsets": [
+	      "tooldev",
+	      "pipelinedev"
+	    ]
+	  },
+	  "description": {
+	    "main": "The Batch Sequencer is a tool for asset processing, built on Maxscript and Python, utilizing a node-based hierarchical structure. It enables the creation of intricate action sequences that operate on both 3D scene and operating system levels.",
+	    "bulletpoints": [
+	      "A dynamic user interface facilitates efficient modification and testing of new sequences. These action sequences, or \"manifests,\" are saved as XML templates, allowing for easy sharing and reusability across different projects and pipelines.",
+	      "Each node is a self contained object that encapsulates all the necessary code to store, set and modify its parameters, draw its own UI and perform its own tasks.",
+	      "The flexibility of the Batch Sequencer's node-based structure allows it to serve as a central hub for    all automated tasks, enabling users to execute multiple tasks and sequences in a streamlined manner."
+	    ]
+	  },
+	  "media": {
+	    "image": [
+	      "BatchSequencer_PortfolioItem_1.png",
+	      "BatchSequencer_PortfolioItem_2.png"
+	    ],
+	    "youtube": [],
+	    "url": []
+	  }
+	}

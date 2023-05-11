@@ -1,520 +1,580 @@
 {
-
-  "intelevo-showcase": 
-    {
-	    "backend": {
-	      "date": "2022-10-01",
-	      "name": "Installation Showcase",
-	      "projectname": "Evolution Experience",
-	      "company": "Genosha",
-	      "dcc": [
-	        "Blender",
-	        "Houdini"
-	      ],
-	      "engine": [
-	        "Unreal"
-	      ],
-	      "languages": [
-	        "blueprints"
-	      ],
-	      "skillsets": [
-	        "unrealdev",
-	        "vfx",
-	        "tooldev",
-	        "artinstallation"
-	      ]
-	    },
-	    "description": {
-	      "main": "These are some images and videos taken at the site.",
-	      "bulletpoints": [
-	        ""
-	      ]
-	    },
-	    "media": {
-	      "image": [
-	        "intelevoshowcase_portfolio_item-1.png",
-	        "intelevoshowcase_portfolio_item-2.png",
-	        "intelevoshowcase_portfolio_item-3.png",
-	        "intelevoshowcase_portfolio_item-5.png",
-	        "intelevoshowcase_portfolio_item-6.png"
-	      ],
-	      "youtube": [
-	        "https://www.youtube.com/embed/t04CSqkdfSM"
-	      ],
-	      "url": [
-	        ""
-	      ]
-	    }
-  	},
-  "intelevo-animals": 
-  	{
-	    "backend": {
-	      "date": "2022-10-01",
-	      "name": "Animals Showcase",
-	      "projectname": "Evolution Experience",
-	      "company": "Genosha",
-	      "dcc": [
-	        "Blender",
-	        "Houdini"
-	      ],
-	      "engine": [
-	        "Unreal"
-	      ],
-	      "languages": [
-	        "blueprints"
-	      ],
-	      "skillsets": [
-	        "unrealdev",
-	        "vfx",
-	        "tooldev",
-	        "artinstallation"
-	      ]
-	    },
-	    "description": {
-	      "main": "",
-	      "bulletpoints": [
-	        ""
-	      ]
-	    },
-	    "media": {
-	      "image": [
-	      	"intelevoshowcase_portfolio_item-7.png",
-	        "intelevoanimals_portfolio_item-1.png",
-	        "intelevoanimals_portfolio_item-2.png"
-	      ],
-	      "youtube": [
-	        "https://www.youtube.com/embed/3xw63__iTmk"
-	      ],
-	      "url": [
-	        ""
-	      ]
-	    }
-  	},
-  "intelevo-environment": 
-  	{
-	    "backend": {
-	      "date": "2022-10-01",
-	      "name": "Environment Showcase",
-	      "projectname": "Evolution Experience",
-	      "company": "Genosha",
-	      "dcc": [
-	        "Blender",
-	        "Houdini"
-	      ],
-	      "engine": [
-	        "Unreal"
-	      ],
-	      "languages": [
-	        "blueprints"
-	      ],
-	      "skillsets": [
-	        "unrealdev",
-	        "vfx",
-	        "tooldev",
-	        "artinstallation"
-	      ]
-	    },
-	    "description": {
-	      "main": "",
-	      "bulletpoints": [
-	        ""
-	      ]
-	    },
-	    "media": {
-	      "image": [
-	        "intelevoenvironment_portfolio_item-1.png",
-	        "intelevoenvironment_portfolio_item-2.png",
-	        "intelevoenvironment_portfolio_item-3.png"
-	      ],
-	      "youtube": [
-	        "https://www.youtube.com/embed/5nbDx_YLn-k"
-	      ],
-	      "url": [
-	        ""
-	      ]
-	    }
-  	},
-
-  "unrealroom-vfx": 
-  	{
-	    "backend": {
-	      "date": "2022-11-01",
-	      "name": "Unreal Room VFX",
-	      "projectname": "Unreal Room",
-	      "company": "",
-	      "dcc": [
-	        "Houdini"
-	      ],
-	      "engine": [
-	        "Unreal"
-	      ],
-	      "languages": [
-	        "blueprints",
-	        "python"
-	      ],
-	      "skillsets": [
-	        "unrealdev",
-	        "vfx",
-	        "tooldev",
-	        "artinstallation"
-	      ]
-	    },
-	    "description": {
-	      "main": "Series of dynamic VFX made using Niagara",
-	      "bulletpoints": [
-	        "Advances particle systems with multiple subsystems  ",
-	        "Systems send and receive data from blueprints",
-	        "Custom modules were created for all effects",
-	        "Effects can interact with input from mediapipe and other sources"
-	      ]
-	    },
-	    "media": {
-	      "image": [],
-	      "youtube": [
-	        "https://www.youtube.com/embed/HnOhTIWuaPE?start=6",
-	        "https://www.youtube.com/embed/qXgegQ6clxA",
-	        "https://www.youtube.com/embed/iv7WSnxDBDE?start=3",
-	        "https://www.youtube.com/embed/_IHlRjQvM6U?start=7"
-	      ],
-	      "url": [
-	        ""
-	      ]
-	    }
-  	},
-  "unrealroom-bps": 
-	  	{
-	    "backend": {
-	      "date": "2022-11-01",
-	      "name": "Unreal Room BPs",
-	      "projectname": "Unreal Room",
-	      "company": "",
-	      "dcc": [
-	        "Houdini"
-	      ],
-	      "engine": [
-	        "Unreal"
-	      ],
-	      "languages": [
-	        "blueprints",
-	        "python"
-	      ],
-	      "skillsets": [
-	        "unrealdev",
-	        "vfx",
-	        "tooldev",
-	        "artinstallation"
-	      ]
-	    },
-	    "description": {
-	      "main": "The Dynamic Room Blueprint is a key component of the interactive art installation, designed to accommodate the various sizes of real-world walls and dynamically animate transitions between different VFX effects. Here are some of the key features of the Dynamic Room Blueprint",
-	      "bulletpoints": [
-	        "Dynamically resizes to fit different real-world walls",
-	        "Animates dynamically during transitions between different effects",
-	        "Seamless transition between different room setups",
-	        "Able to be customized for different installations or events",
-	        "Provides a unified framework for the various VFX effects to operate within",
-	        "Improves the overall user experience by providing a cohesive and immersive environment for the user to interact with"
-	      ]
-	    },
-	    "media": {
-	      "image": [],
-	      "youtube": [
-	        "https://www.youtube.com/embed/SJ-r7h9L-m4",
-	        "https://www.youtube.com/embed/7p82zrTxtnA"
-	      ],
-	      "url": [
-	        ""
-	      ]
-	    }
-  	},
-
-  "element-vfx": 
-	{
-	  "backend": {
-	    "date": "2018-12-01",
-	    "name": "VFX Showcase",
-	    "projectname": "Element Space",
-	    "company": "Sixth Vowel",
-	    "dcc": [
-	      "3ds max"
-	    ],
-	    "engine": [
-	      "Unity"
-	    ],
-	    "languages": [
-	      "C Sharp "
-	    ],
-	    "skillsets": [
-	      "tooldev",
-	      "vfx"
-	    ]
-	  },
-	  "description": {
-	    "main": "This is a scene in realtime to showcase my work on Environment VFX and Destruction VFX",
-	    "bulletpoints": [
-	      "Fire, Steam, Sparks, haze VFX. ",
-	      "Destructible environment props.",
-	      "A Technical Document was created regarding scalable destruction best practices for different materials."
-	    ]
-	  },
-	  "media": {
-	    "image": [
-	      "vfshowcase_portfolio_item-2.png",
-	      "vfshowcase_portfolio_item-3.png",
-	      "vfshowcase_portfolio_item-4.png"
-	    ],
-	    "youtube": [
-	      "https://www.youtube.com/embed/GRmn-bm99Kc"
-	    ],
-	    "url": []
-	  }
-	},
-  "element-textools": 
-    {
-	  "backend": {
-	    "date": "2018-12-01",
-	    "name": "Texture Tool Components",
-	    "projectname": "Element Space",
-	    "company": "Sixth Vowel",
-	    "dcc": [
-	      "3ds max"
-	    ],
-	    "engine": [
-	      "Unity"
-	    ],
-	    "languages": [
-	      "C Sharp "
-	    ],
-	    "skillsets": [
-	      "tooldev",
-	      "vfx",
-	      "unitydev"
-	    ]
-	  },
-	  "description": {
-	    "main": "Some tool components i created in C# that allowed the team to  dynamically control textures for various gameplay areas like VFX, Level Creation and more. ",
-	    "bulletpoints": [
-	      " VFX_MuzzleRenderer : Tool to create parametric meshes used for muzzle VFXx. With options to choose width, length , amount of planes, and Z Offset. These type of meshes can be used in many effects such as projectiles, muzzles and others.",
-	      "VFX_SpritesheetUtils : Utility that checks if the component has a material with a texture and allows to setup it as a spritesheet and lets the user choose which spritesheet to use or setup up some randomization.",
-	      "VFX_TextureOffset : Tool that offsets a Texture2D in a material. Possibility to chose the MeshRenderer to affect which material index, and the speeds. Also allows to configure multiple offsets within the same component."
-	    ]
-	  },
-	  "media": {
-	    "image": [
-	      "texturetoolcomponents_portfolio_item-1.png",
-	      "vfx_muzzlerenderer.gif",
-	      "texturetoolcomponents_portfolio_item-4.png",
-	      "texturetoolcomponents_portfolio_item-2.png",
-	      "vfx_spritesheetutils 1.gif",
-	      "texturetoolcomponents_portfolio_item-3.png",
-	      "vfx_textureoffset.gif"
-	    ],
-	    "youtube": [],
-	    "url": []
-	  }
-	},
-  "element-lightlister": 
-	{
-	  "backend": {
-	    "date": "2018-12-01",
-	    "name": "Light Lister",
-	    "projectname": "Element Space",
-	    "company": "Sixth Vowel",
-	    "dcc": [],
-	    "engine": [
-	      "Unity"
-	    ],
-	    "languages": [
-	      "C Sharp"
-	    ],
-	    "skillsets": [
-	      "tooldev",
-	      "vfx",
-	      "unitydev"
-	    ]
-	  },
-	  "description": {
-	    "main": "Custom Editor Window Wizard that allows for quick accessing and editing of all lights in the scene. Nowadays unity has a specialized tool for this same purpose. **One major  feature was  the possibility of editing lights in play mode and keeping those values when returning to editor mode.**",
-	    "bulletpoints": [
-	      "Works like the light explorer but has additional features.",
-	      "The wizard will find all existing lights in the scene and sort them according to their light type. It will then show some  properties that are shared by all lights and and some properties that are specific for that type of light."
-	    ]
-	  },
-	  "media": {
-	    "image": [
-	      "lightlister_portfolio_item-1.png",
-	      "lightlister_portfolio_item-2.png",
-	      "lightlister_portfolio_item-3.png"
-	    ],
-	    "youtube": [],
-	    "url": []
-	  }
-	},
-  "element-curvetools": 
-	{
-	  "backend": {
-	    "date": "2018-12-01",
-	    "name": "Curve Tools",
-	    "projectname": "Element Space",
-	    "company": "Sixth Vowel",
-	    "dcc": [],
-	    "engine": [
-	      "Unity"
-	    ],
-	    "languages": [
-	      "C Sharp"
-	    ],
-	    "skillsets": [
-	      "tooldev",
-	      "vfx",
-	      "unitydev"
-	    ]
-	  },
-	  "description": {
-	    "main": "I implemented a curve system along with the necessary custom editors for ease of use. I also created procedural geometry tools that leveraged the curve system.",
-	    "bulletpoints": [
-	      "BezierCurve : Tool to create parametric meshes used for muzzle VFXx. With options to choose width, length , amount of planes, and Z Offset. These type of meshes can be used in many effects such as projectiles, muzzles and others.",
-	      "VFX_LoftRenderer : Component that allow to extrude a shape along another shape, this behaviour is usually called “lofting” in 3d packages. In its default state the tool draws ciruclar lofts. But there is an option to loft along a custom bezier curve. This allows for very elaborate meshes to be created very easyly. The tool also takes care of uvmapping"
-	    ]
-	  },
-	  "media": {
-	    "image": [
-	      "curveTools_portfolio_Item-1.png",
-	      "beziercurve.gif",
-	      "curvetools_portfolio_Item-2.png",
-	      "vfx_loftrenderer.gif",
-	      "vfx_loftrenderer2.gif"
-	    ],
-	    "youtube": [],
-	    "url": []
-	  }
-	},
-  "element-vfxcomps": 
-	{
-	  "backend": {
-	    "date": "2018-12-01",
-	    "name": "Animated VFX Components",
-	    "projectname": "Element Space",
-	    "company": "Sixth Vowel",
-	    "dcc": [],
-	    "engine": [
-	      "Unity"
-	    ],
-	    "languages": [
-	      "C Sharp"
-	    ],
-	    "skillsets": [
-	      "tooldev",
-	      "vfx",
-	      "unitydev"
-	    ]
-	  },
-	  "description": {
-	    "main": "This is an assortment of some of the components i created in C# that allowed the VFX team to create dynamic effects completely with monobehaviours without the need of using any animation system. ",
-	    "bulletpoints": [
-	      "VFX_DelayStartComponent : Component that enables a disabled  monobehaviour within a given timeframe",
-	      "VFX_DeactivateByTime : Component that disables the referenced GO within the current time. If no GameObject is referenced then  the GameObjects that owns this component will be deactivated",
-	      "VFX_SwitchVisibility : Toggles the selected mesh renderes on or off according to a starting value with a chosen delay time",
-	      "VFX_CircleRenderer :  Component that works along a line renderer component to easily draw  circles. Options to control radius, segments, width, color. ",
-	      "VFX_AnimationCurves :  Component that allows to  quickly add animation to some components and values. The animation can be looped and can be started with a delay. Setting up new values to animate is really easy."
-	    ]
-	  },
-	  "media": {
-	    "image": [
-	      "animatedvfxcomponents_portfolio_item-1.png",
-	      "animatedvfxcomponents_portfolio_item-2.png",
-	      "animatedvfxcomponents_portfolio_item-3.png",
-	      "animatedvfxcomponents_portfolio_item-4.png",
-	      "VFX_CircleRenderer.gif",
-	      "qnimatedvfxcomponents_portfolio_item-5.png",
-	      "qnimatedvfxcomponents_portfolio_item-6.png",
-	      "qnimatedvfxcomponents_portfolio_item-7.png",
-	      "qnimatedvfxcomponents_portfolio_item-8.png",
-	      "vfx_animationcurves.gif"
-	    ],
-	    "youtube": [],
-	    "url": []
-	  }
-	},
-
-  "2kdam-batch": 
-	{
-	  "backend": {
-	    "date": "2020-12-01",
-	    "name": "Batch Sequencer",
-	    "projectname": "Asset Library",
-	    "company": "Globant",
-	    "dcc": [
-	      "maya",
-	      "3ds max",
-	      "houdini"
-	    ],
-	    "engine": [],
-	    "languages": [
-	      "python",
-	      "maxscript",
-	      "melscript"
-	    ],
-	    "skillsets": [
-	      "tooldev",
-	      "pipelinedev"
-	    ]
-	  },
-	  "description": {
-	    "main": "The Batch Sequencer is a tool for asset processing, built on Maxscript and Python, utilizing a node-based hierarchical structure. It enables the creation of intricate action sequences that operate on both 3D scene and operating system levels.",
-	    "bulletpoints": [
-	      "A dynamic user interface facilitates efficient modification and testing of new sequences. These action sequences, or \"manifests,\" are saved as XML templates, allowing for easy sharing and reusability across different projects and pipelines.",
-	      "Each node is a self contained object that encapsulates all the necessary code to store, set and modify its parameters, draw its own UI and perform its own tasks.",
-	      "The flexibility of the Batch Sequencer's node-based structure allows it to serve as a central hub for    all automated tasks, enabling users to execute multiple tasks and sequences in a streamlined manner."
-	    ]
-	  },
-	  "media": {
-	    "image": [
-	      "BatchSequencer_PortfolioItem_1.png",
-	      "BatchSequencer_PortfolioItem_2.png"
-	    ],
-	    "youtube": [],
-	    "url": []
-	  }
-	},
-  "2kdam-inventory": 
-	{
-	  "backend": {
-	    "date": "2020-12-01",
-	    "name": "Inventory Report",
-	    "projectname": "Asset Library",
-	    "company": "Globant",
-	    "dcc": [
-	      "maya",
-	      "3ds max",
-	      "houdini"
-	    ],
-	    "engine": [],
-	    "languages": [
-	      "python",
-	      "maxscript",
-	      "melscript"
-	    ],
-	    "skillsets": [
-	      "tooldev",
-	      "pipelinedev"
-	    ]
-	  },
-	  "description": {
-	    "main": "The purpose of this tool was to have a central hub where the project manager could have a general overview of the project and be able to more efficiently assign resources and make decisions.",
-	    "bulletpoints": [
-	      "It was created using Google Spreadsheets, the google API and python.",
-	      "The system would periodically track the team work repository, gather information, format it , and uploaded it to an online spreadsheet.",
-	      "Once this tool was online, tracking progress became a non issue and the increased visibility added a lot of value to management besides reducing their workload"
-	    ]
-	  },
-	  "media": {
-	    "image": ["2kdam-inventory-1.png","2kdam-inventory-2.png"],
-	    "youtube": [],
-	    "url": []
-	  }
-	}
-
-
-
+    "2kdam-batch": {
+        "backend": {
+            "date": "2020-12-01",
+            "name": "Batch Sequencer",
+            "projectname": "Asset Library",
+            "company": "Globant",
+            "dcc": [
+                "maya",
+                "3ds max",
+                "houdini"
+            ],
+            "engine": [],
+            "languages": [
+                "python",
+                "maxscript",
+                "melscript"
+            ],
+            "skillsets": [
+                "tooldev",
+                "pipelinedev"
+            ]
+        },
+        "description": {
+            "main": "The Batch Sequencer is a tool for asset processing, built on Maxscript and Python, utilizing a node-based hierarchical structure. It enables the creation of intricate action sequences that operate on both 3D scene and operating system levels.",
+            "bulletpoints": [
+                "A dynamic user interface facilitates efficient modification and testing of new sequences. These action sequences, or \"manifests,\" are saved as XML templates, allowing for easy sharing and reusability across different projects and pipelines.",
+                "Each node is a self contained object that encapsulates all the necessary code to store, set and modify its parameters, draw its own UI and perform its own tasks.",
+                "The flexibility of the Batch Sequencer's node-based structure allows it to serve as a central hub for    all automated tasks, enabling users to execute multiple tasks and sequences in a streamlined manner."
+            ]
+        },
+        "media": {
+            "image": [
+                "BatchSequencer_PortfolioItem_1.png",
+                "BatchSequencer_PortfolioItem_2.png"
+            ],
+            "youtube": [],
+            "url": []
+        }
+    },
+    "2kdam-inventory": {
+        "backend": {
+            "date": "2020-12-01",
+            "name": "Inventory Report",
+            "projectname": "Asset Library",
+            "company": "Globant",
+            "dcc": [
+                "maya",
+                "3ds max",
+                "houdini"
+            ],
+            "engine": [],
+            "languages": [
+                "python",
+                "maxscript",
+                "melscript"
+            ],
+            "skillsets": [
+                "tooldev",
+                "pipelinedev"
+            ]
+        },
+        "description": {
+            "main": "The purpose of this tool was to have a central hub where the project manager could have a general overview of the project and be able to more efficiently assign resources and make decisions.",
+            "bulletpoints": [
+                "It was created using Google Spreadsheets, the google API and python.",
+                "The system would periodically track the team work repository, gather information, format it , and uploaded it to an online spreadsheet.",
+                "Once this tool was online, tracking progress became a non issue and the increased visibility added a lot of value to management besides reducing their workload"
+            ]
+        },
+        "media": {
+            "image": [
+                "2kdam-inventory-1.png",
+                "2kdam-inventory-2.png"
+            ],
+            "youtube": [],
+            "url": []
+        }
+    },
+    "apoc-citygen": {
+        "backend": {
+            "date": "",
+            "name": "",
+            "projectname": "",
+            "company": "",
+            "dcc": [
+                ""
+            ],
+            "engine": [
+                ""
+            ],
+            "languages": [
+                ""
+            ],
+            "skillsets": [
+                ""
+            ]
+        },
+        "description": {
+            "main": "",
+            "bulletpoints": [
+                ""
+            ]
+        },
+        "media": {
+            "image": [
+                ""
+            ],
+            "youtube": [
+                ""
+            ],
+            "url": [
+                ""
+            ]
+        }
+    },
+    "dm-showcase": {
+        "backend": {
+            "date": "2021-10-01",
+            "name": "Dance Monsters Showcase",
+            "projectname": "Dance Monsters",
+            "company": "Realtime UK",
+            "dcc": [
+                "Maya",
+                "Houdini"
+            ],
+            "engine": [],
+            "languages": [
+                "Python",
+                "Melscript",
+                "VEX"
+            ],
+            "skillsets": [
+                "tooldev",
+                "pipelinedev"
+            ]
+        },
+        "description": {
+            "main": "These are some links to the trailers and media from the show. Much of the code and tools are protected by NDA, but I would be more than happy to further explain them on request.",
+            "bulletpoints": []
+        },
+        "media": {
+            "image": [
+                "dm-showcase-1.jpg",
+                "dm-showcase-2.jpg",
+                "dm-showcase-3.jpg",
+                "dm-showcase-4.jpg"
+            ],
+            "youtube": [
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/rlB4PZpgHRk?start=8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/mPlXXrqpubg\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+            ],
+            "url": []
+        }
+    },
+    "element-curvetools": {
+        "backend": {
+            "date": "2018-12-01",
+            "name": "Curve Tools",
+            "projectname": "Element Space",
+            "company": "Sixth Vowel",
+            "dcc": [],
+            "engine": [
+                "Unity"
+            ],
+            "languages": [
+                "C Sharp"
+            ],
+            "skillsets": [
+                "tooldev",
+                "vfx",
+                "unitydev"
+            ]
+        },
+        "description": {
+            "main": "I implemented a curve system along with the necessary custom editors for ease of use. I also created procedural geometry tools that leveraged the curve system.",
+            "bulletpoints": [
+                "BezierCurve : Tool to create parametric meshes used for muzzle VFXx. With options to choose width, length , amount of planes, and Z Offset. These type of meshes can be used in many effects such as projectiles, muzzles and others.",
+                "VFX_LoftRenderer : Component that allow to extrude a shape along another shape, this behaviour is usually called \u201clofting\u201d in 3d packages. In its default state the tool draws ciruclar lofts. But there is an option to loft along a custom bezier curve. This allows for very elaborate meshes to be created very easyly. The tool also takes care of uvmapping"
+            ]
+        },
+        "media": {
+            "image": [
+                "curveTools_portfolio_Item-1.png",
+                "beziercurve.gif",
+                "curvetools_portfolio_Item-2.png",
+                "vfx_loftrenderer.gif",
+                "vfx_loftrenderer2.gif"
+            ],
+            "youtube": [],
+            "url": []
+        }
+    },
+    "element-lightlister": {
+        "backend": {
+            "date": "2018-12-01",
+            "name": "Light Lister",
+            "projectname": "Element Space",
+            "company": "Sixth Vowel",
+            "dcc": [],
+            "engine": [
+                "Unity"
+            ],
+            "languages": [
+                "C Sharp"
+            ],
+            "skillsets": [
+                "tooldev",
+                "vfx",
+                "unitydev"
+            ]
+        },
+        "description": {
+            "main": "Custom Editor Window Wizard that allows for quick accessing and editing of all lights in the scene. Nowadays unity has a specialized tool for this same purpose. **One major\u00c2\u00a0 feature was\u00c2\u00a0 the possibility of editing lights in play mode and keeping those values when returning to editor mode.**",
+            "bulletpoints": [
+                "Works like the light explorer but has additional features.",
+                "The wizard will find all existing lights in the scene and sort them according to their light type. It will then show some\u00c2\u00a0 properties that are shared by all lights and and some properties that are specific for that type of light."
+            ]
+        },
+        "media": {
+            "image": [
+                "lightlister_portfolio_item-1.png",
+                "lightlister_portfolio_item-2.png",
+                "lightlister_portfolio_item-3.png"
+            ],
+            "youtube": [],
+            "url": []
+        }
+    },
+    "element-textools": {
+        "backend": {
+            "date": "2018-12-01",
+            "name": "Texture Tool Components",
+            "projectname": "Element Space",
+            "company": "Sixth Vowel",
+            "dcc": [
+                "3ds max"
+            ],
+            "engine": [
+                "Unity"
+            ],
+            "languages": [
+                "C Sharp "
+            ],
+            "skillsets": [
+                "tooldev",
+                "vfx",
+                "unitydev"
+            ]
+        },
+        "description": {
+            "main": "Some tool components i created in C# that allowed the team to  dynamically control textures for various gameplay areas like VFX, Level Creation and more. ",
+            "bulletpoints": [
+                " VFX_MuzzleRenderer : Tool to create parametric meshes used for muzzle VFXx. With options to choose width, length , amount of planes, and Z Offset. These type of meshes can be used in many effects such as projectiles, muzzles and others.",
+                "VFX_SpritesheetUtils : Utility that checks if the component has a material with a texture and allows to setup it as a spritesheet and lets the user choose which spritesheet to use or setup up some randomization.",
+                "VFX_TextureOffset : Tool that offsets a Texture2D in a material. Possibility to chose the MeshRenderer to affect which material index, and the speeds. Also allows to configure multiple offsets within the same component."
+            ]
+        },
+        "media": {
+            "image": [
+                "texturetoolcomponents_portfolio_item-1.png",
+                "vfx_muzzlerenderer.gif",
+                "texturetoolcomponents_portfolio_item-4.png",
+                "texturetoolcomponents_portfolio_item-2.png",
+                "vfx_spritesheetutils 1.gif",
+                "texturetoolcomponents_portfolio_item-3.png",
+                "vfx_textureoffset.gif"
+            ],
+            "youtube": [],
+            "url": []
+        }
+    },
+    "element-vfx": {
+        "backend": {
+            "date": "2018-12-01",
+            "name": "VFX Showcase",
+            "projectname": "Element Space",
+            "company": "Sixth Vowel",
+            "dcc": [
+                "3ds max"
+            ],
+            "engine": [
+                "Unity"
+            ],
+            "languages": [
+                "C Sharp "
+            ],
+            "skillsets": [
+                "tooldev",
+                "vfx"
+            ]
+        },
+        "description": {
+            "main": "This is a scene in realtime to showcase my work on Environment VFX and Destruction VFX",
+            "bulletpoints": [
+                "Fire, Steam, Sparks, haze VFX. ",
+                "Destructible environment props.",
+                "A Technical Document was created regarding scalable destruction best practices for different materials."
+            ]
+        },
+        "media": {
+            "image": [
+                "vfshowcase_portfolio_item-2.png",
+                "vfshowcase_portfolio_item-3.png",
+                "vfshowcase_portfolio_item-4.png"
+            ],
+            "youtube": [
+                "https://www.youtube.com/embed/GRmn-bm99Kc"
+            ],
+            "url": []
+        }
+    },
+    "element-vfxcomps": {
+        "backend": {
+            "date": "2018-12-01",
+            "name": "Animated VFX Components",
+            "projectname": "Element Space",
+            "company": "Sixth Vowel",
+            "dcc": [],
+            "engine": [
+                "Unity"
+            ],
+            "languages": [
+                "C Sharp"
+            ],
+            "skillsets": [
+                "tooldev",
+                "vfx",
+                "unitydev"
+            ]
+        },
+        "description": {
+            "main": "This is an assortment of some of the components i created in C# that allowed the VFX team to create dynamic effects completely with monobehaviours without the need of using any animation system. ",
+            "bulletpoints": [
+                "VFX_DelayStartComponent : Component that enables a disabled\u00c2\u00a0 monobehaviour within a given timeframe",
+                "VFX_DeactivateByTime : Component that disables the referenced GO within the current time. If no GameObject is referenced then\u00c2\u00a0 the GameObjects that owns this component will be deactivated",
+                "VFX_SwitchVisibility : Toggles the selected mesh renderes on or off according to a starting value with a chosen delay time",
+                "VFX_CircleRenderer : \u00c2\u00a0Component that works along a line renderer component to easily draw  circles. Options to control radius, segments, width, color. ",
+                "VFX_AnimationCurves : \u00c2\u00a0Component that allows to\u00c2\u00a0 quickly add animation to some components and values. The animation can be looped and can be started with a delay. Setting up new values to animate is really easy."
+            ]
+        },
+        "media": {
+            "image": [
+                "animatedvfxcomponents_portfolio_item-1.png",
+                "animatedvfxcomponents_portfolio_item-2.png",
+                "animatedvfxcomponents_portfolio_item-3.png",
+                "animatedvfxcomponents_portfolio_item-4.png",
+                "VFX_CircleRenderer.gif",
+                "qnimatedvfxcomponents_portfolio_item-5.png",
+                "qnimatedvfxcomponents_portfolio_item-6.png",
+                "qnimatedvfxcomponents_portfolio_item-7.png",
+                "qnimatedvfxcomponents_portfolio_item-8.png",
+                "vfx_animationcurves.gif"
+            ],
+            "youtube": [],
+            "url": []
+        }
+    },
+    "intelevo-animals": {
+        "backend": {
+            "date": "2022-10-01",
+            "name": "Animals Showcase",
+            "projectname": "Evolution Experience",
+            "company": "Genosha",
+            "dcc": [
+                "Blender",
+                "Houdini"
+            ],
+            "engine": [
+                "Unreal"
+            ],
+            "languages": [
+                "blueprints"
+            ],
+            "skillsets": [
+                "unrealdev",
+                "vfx",
+                "tooldev",
+                "artinstallation"
+            ]
+        },
+        "description": {
+            "main": "",
+            "bulletpoints": [
+                ""
+            ]
+        },
+        "media": {
+            "image": [
+                "intelevoshowcase_portfolio_item-7.png",
+                "intelevoanimals_portfolio_item-1.png",
+                "intelevoanimals_portfolio_item-2.png"
+            ],
+            "youtube": [
+                "https://www.youtube.com/embed/3xw63__iTmk"
+            ],
+            "url": [
+                ""
+            ]
+        }
+    },
+    "intelevo-environment": {
+        "backend": {
+            "date": "2022-10-01",
+            "name": "Environment Showcase",
+            "projectname": "Evolution Experience",
+            "company": "Genosha",
+            "dcc": [
+                "Blender",
+                "Houdini"
+            ],
+            "engine": [
+                "Unreal"
+            ],
+            "languages": [
+                "blueprints"
+            ],
+            "skillsets": [
+                "unrealdev",
+                "vfx",
+                "tooldev",
+                "artinstallation"
+            ]
+        },
+        "description": {
+            "main": "",
+            "bulletpoints": [
+                ""
+            ]
+        },
+        "media": {
+            "image": [
+                "intelevoenvironment_portfolio_item-1.png",
+                "intelevoenvironment_portfolio_item-2.png",
+                "intelevoenvironment_portfolio_item-3.png"
+            ],
+            "youtube": [
+                "https://www.youtube.com/embed/5nbDx_YLn-k"
+            ],
+            "url": [
+                ""
+            ]
+        }
+    },
+    "intelevo-showcase": {
+        "backend": {
+            "date": "2022-10-01",
+            "name": "Installation Showcase",
+            "projectname": "Evolution Experience",
+            "company": "Genosha",
+            "dcc": [
+                "Blender",
+                "Houdini"
+            ],
+            "engine": [
+                "Unreal"
+            ],
+            "languages": [
+                "blueprints"
+            ],
+            "skillsets": [
+                "unrealdev",
+                "vfx",
+                "tooldev",
+                "artinstallation"
+            ]
+        },
+        "description": {
+            "main": "These are some images and videos taken at the site.",
+            "bulletpoints": [
+                ""
+            ]
+        },
+        "media": {
+            "image": [
+                "intelevoshowcase_portfolio_item-1.png",
+                "intelevoshowcase_portfolio_item-2.png",
+                "intelevoshowcase_portfolio_item-3.png",
+                "intelevoshowcase_portfolio_item-5.png",
+                "intelevoshowcase_portfolio_item-6.png"
+            ],
+            "youtube": [
+                "https://www.youtube.com/embed/t04CSqkdfSM"
+            ],
+            "url": [
+                ""
+            ]
+        }
+    },
+    "unrealroom-bps": {
+        "backend": {
+            "date": "2022-11-01",
+            "name": "Unreal Room BPs",
+            "projectname": "Unreal Room",
+            "company": "",
+            "dcc": [
+                "Houdini"
+            ],
+            "engine": [
+                "Unreal"
+            ],
+            "languages": [
+                "blueprints",
+                "python"
+            ],
+            "skillsets": [
+                "unrealdev",
+                "vfx",
+                "tooldev",
+                "artinstallation"
+            ]
+        },
+        "description": {
+            "main": "The Dynamic Room Blueprint is a key component of the interactive art installation, designed to accommodate the various sizes of real-world walls and dynamically animate transitions between different VFX effects. Here are some of the key features of the Dynamic Room Blueprint",
+            "bulletpoints": [
+                "Dynamically resizes to fit different real-world walls",
+                "Animates dynamically during transitions between different effects",
+                "Seamless transition between different room setups",
+                "Able to be customized for different installations or events",
+                "Provides a unified framework for the various VFX effects to operate within",
+                "Improves the overall user experience by providing a cohesive and immersive environment for the user to interact with"
+            ]
+        },
+        "media": {
+            "image": [],
+            "youtube": [
+                "https://www.youtube.com/embed/SJ-r7h9L-m4",
+                "https://www.youtube.com/embed/7p82zrTxtnA"
+            ],
+            "url": [
+                ""
+            ]
+        }
+    },
+    "unrealroom-vfx": {
+        "backend": {
+            "date": "2022-11-01",
+            "name": "Unreal Room VFX",
+            "projectname": "Unreal Room",
+            "company": "",
+            "dcc": [
+                "Houdini"
+            ],
+            "engine": [
+                "Unreal"
+            ],
+            "languages": [
+                "blueprints",
+                "python"
+            ],
+            "skillsets": [
+                "unrealdev",
+                "vfx",
+                "tooldev",
+                "artinstallation"
+            ]
+        },
+        "description": {
+            "main": "Series of dynamic VFX made using Niagara",
+            "bulletpoints": [
+                "Advances particle systems with multiple subsystems  ",
+                "Systems send and receive data from blueprints",
+                "Custom modules were created for all effects",
+                "Effects can interact with input from mediapipe and other sources"
+            ]
+        },
+        "media": {
+            "image": [],
+            "youtube": [
+                "https://www.youtube.com/embed/HnOhTIWuaPE?start=6",
+                "https://www.youtube.com/embed/qXgegQ6clxA",
+                "https://www.youtube.com/embed/iv7WSnxDBDE?start=3",
+                "https://www.youtube.com/embed/_IHlRjQvM6U?start=7"
+            ],
+            "url": [
+                ""
+            ]
+        }
+    }
 }

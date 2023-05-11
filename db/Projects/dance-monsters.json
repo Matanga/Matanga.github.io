@@ -1,0 +1,18 @@
+{
+    "info": {
+        "name": "Dance Monsters",
+        "client": "Netflix",
+        "company": "Realtime UK",
+        "media": "Broadcast",
+        "platform": "PC",
+        "involvement": "Pipeline Development",
+        "portfolioitems": [
+            ""
+        ]
+    },
+    "description": {
+        "main": "Dance Monsters is a show that is available in Neflix about a dance competition between monsters. Those monsters are digitally created. All the information is captured in mocap studios and then processed and rendered into the final shots used in the show. I was part of the pipeline team that developed the backend necessary to process and render the hundreds of shots used in every show.",
+        "challenges": "There were many different types of data delivered from many different vendors in different formats. The light , camera, body mocap, and face mocap information all came from different sources and had to be normalized to match in time and in world space. Also, all the motion information had to be retargeted to our own rigs  ",
+        "solutions": "I created a set of tools tha allowed to automatically sort files from different vendors, merge and process them to match the pipeline requirements. This allowed for a quick iteration and was the backbone for an agile system that allowd to process and iterate the hundreds of shots needed for every episode. I also created tools in houdini to import the created outputs into the rendering and vfx pipeline."
+    }
+}

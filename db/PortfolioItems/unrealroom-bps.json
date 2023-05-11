@@ -1,0 +1,45 @@
+{
+	    "backend": {
+	      "date": "2022-11-01",
+	      "name": "Unreal Room BPs",
+	      "projectname": "Unreal Room",
+	      "company": "",
+	      "dcc": [
+	        "Houdini"
+	      ],
+	      "engine": [
+	        "Unreal"
+	      ],
+	      "languages": [
+	        "blueprints",
+	        "python"
+	      ],
+	      "skillsets": [
+	        "unrealdev",
+	        "vfx",
+	        "tooldev",
+	        "artinstallation"
+	      ]
+	    },
+	    "description": {
+	      "main": "The Dynamic Room Blueprint is a key component of the interactive art installation, designed to accommodate the various sizes of real-world walls and dynamically animate transitions between different VFX effects. Here are some of the key features of the Dynamic Room Blueprint",
+	      "bulletpoints": [
+	        "Dynamically resizes to fit different real-world walls",
+	        "Animates dynamically during transitions between different effects",
+	        "Seamless transition between different room setups",
+	        "Able to be customized for different installations or events",
+	        "Provides a unified framework for the various VFX effects to operate within",
+	        "Improves the overall user experience by providing a cohesive and immersive environment for the user to interact with"
+	      ]
+	    },
+	    "media": {
+	      "image": [],
+	      "youtube": [
+	        "https://www.youtube.com/embed/SJ-r7h9L-m4",
+	        "https://www.youtube.com/embed/7p82zrTxtnA"
+	      ],
+	      "url": [
+	        ""
+	      ]
+	    }
+  	}

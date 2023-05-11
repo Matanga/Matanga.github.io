@@ -1,0 +1,40 @@
+{
+	  "backend": {
+	    "date": "2018-12-01",
+	    "name": "VFX Showcase",
+	    "projectname": "Element Space",
+	    "company": "Sixth Vowel",
+	    "dcc": [
+	      "3ds max"
+	    ],
+	    "engine": [
+	      "Unity"
+	    ],
+	    "languages": [
+	      "C Sharp "
+	    ],
+	    "skillsets": [
+	      "tooldev",
+	      "vfx"
+	    ]
+	  },
+	  "description": {
+	    "main": "This is a scene in realtime to showcase my work on Environment VFX and Destruction VFX",
+	    "bulletpoints": [
+	      "Fire, Steam, Sparks, haze VFX. ",
+	      "Destructible environment props.",
+	      "A Technical Document was created regarding scalable destruction best practices for different materials."
+	    ]
+	  },
+	  "media": {
+	    "image": [
+	      "vfshowcase_portfolio_item-2.png",
+	      "vfshowcase_portfolio_item-3.png",
+	      "vfshowcase_portfolio_item-4.png"
+	    ],
+	    "youtube": [
+	      "https://www.youtube.com/embed/GRmn-bm99Kc"
+	    ],
+	    "url": []
+	  }
+	}

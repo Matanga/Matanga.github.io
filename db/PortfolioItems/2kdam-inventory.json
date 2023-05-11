@@ -1,0 +1,39 @@
+{
+    "backend": {
+        "date": "2020-12-01",
+        "name": "Inventory Report",
+        "projectname": "Asset Library",
+        "company": "Globant",
+        "dcc": [
+            "maya",
+            "3ds max",
+            "houdini"
+        ],
+        "engine": [],
+        "languages": [
+            "python",
+            "maxscript",
+            "melscript"
+        ],
+        "skillsets": [
+            "tooldev",
+            "pipelinedev"
+        ]
+    },
+    "description": {
+        "main": "The purpose of this tool was to have a central hub where the project manager could have a general overview of the project and be able to more efficiently assign resources and make decisions.",
+        "bulletpoints": [
+            "It was created using Google Spreadsheets, the google API and python.",
+            "The system would periodically track the team work repository, gather information, format it , and uploaded it to an online spreadsheet.",
+            "Once this tool was online, tracking progress became a non issue and the increased visibility added a lot of value to management besides reducing their workload"
+        ]
+    },
+    "media": {
+        "image": [
+            "2kdam-inventory-1.png",
+            "2kdam-inventory-2.png"
+        ],
+        "youtube": [],
+        "url": []
+    }
+}

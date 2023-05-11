@@ -1,0 +1,43 @@
+{
+	  "backend": {
+	    "date": "2018-12-01",
+	    "name": "Texture Tool Components",
+	    "projectname": "Element Space",
+	    "company": "Sixth Vowel",
+	    "dcc": [
+	      "3ds max"
+	    ],
+	    "engine": [
+	      "Unity"
+	    ],
+	    "languages": [
+	      "C Sharp "
+	    ],
+	    "skillsets": [
+	      "tooldev",
+	      "vfx",
+	      "unitydev"
+	    ]
+	  },
+	  "description": {
+	    "main": "Some tool components i created in C# that allowed the team to  dynamically control textures for various gameplay areas like VFX, Level Creation and more. ",
+	    "bulletpoints": [
+	      " VFX_MuzzleRenderer : Tool to create parametric meshes used for muzzle VFXx. With options to choose width, length , amount of planes, and Z Offset. These type of meshes can be used in many effects such as projectiles, muzzles and others.",
+	      "VFX_SpritesheetUtils : Utility that checks if the component has a material with a texture and allows to setup it as a spritesheet and lets the user choose which spritesheet to use or setup up some randomization.",
+	      "VFX_TextureOffset : Tool that offsets a Texture2D in a material. Possibility to chose the MeshRenderer to affect which material index, and the speeds. Also allows to configure multiple offsets within the same component."
+	    ]
+	  },
+	  "media": {
+	    "image": [
+	      "texturetoolcomponents_portfolio_item-1.png",
+	      "vfx_muzzlerenderer.gif",
+	      "texturetoolcomponents_portfolio_item-4.png",
+	      "texturetoolcomponents_portfolio_item-2.png",
+	      "vfx_spritesheetutils 1.gif",
+	      "texturetoolcomponents_portfolio_item-3.png",
+	      "vfx_textureoffset.gif"
+	    ],
+	    "youtube": [],
+	    "url": []
+	  }
+	}

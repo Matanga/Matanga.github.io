@@ -1,69 +1,100 @@
 {
-	"intel-evo": {
-		"info": {
-			"name": "Evolution Experience",
-			"client": "Intel",
-			"company": "Genosha",
-			"media": "Art Installation",
-			"platform": "PC",
-			"involvement": "Development",
-			"portfolioitems": ["intelevo-environment", "intelevo-animals", "intelevo-showcase"]
-		},
-		"description": {
-			"main": "Evolution Experience is an interactive installation in Spain that promotes Intel chips. Using Unreal Engine, I created an immersive experience featuring different species of animals that the audience can interact with via tablets. The installation consists of 8 projectors, forming a surround room.",
-			"challenges": "The project presented a few main challenges. Firstly, it was necessary to integrate Unreal with a websocket server to enable audience interaction. Secondly, creating reactive and interactive animals that felt like a part of the world. Thirdly, learning and setting up Ndisplay technology in collaboration with onsite operators was a hurdle. Finally, there was a need to come up with methods for rapidly iterating the level design and ambient animations.",
-			"solution": "To overcome these challenges, I integrated a websocket plugin in Unreal. I also developed animation blueprints and AI controllers for the animals to create a seamless and interactive experience with the audience, collaborated with the onsite team to learn and set up Ndisplay technology, and designed a set of tools for rapid environment iteration. The result was a successful installation that engaged the audience and promoted Intel chips."
-		}
-	},
-	"Unreal-Room": {
-		"info": {
-			"name": "Unreal Room",
-			"client": "",
-			"company": "",
-			"media": "Art Installation",
-			"platform": "PC",
-			"involvement": "Development",
-			"portfolioitems": ["unrealroom-vfx", "unrealroom-bps"]
-		},
-		"description": {
-			"main": "This is a personal project. It is a highly interactive installation that leverages the power of Unreal Engine 5 and the Mediapipe API to create an immersive experience for users. It features visually stunning VFX effects that can be manipulated and controlled by users' body movements and expressions, captured through a camera feed. The installation is projected onto a wall and boasts a dynamic room system that can be dynamically resized to fit into different real-world walls and animated during transitions between different effects. The project required expert knowledge of Unreal Engine 5, Mediapipe API, Python programming, and VFX pipeline.",
-			"challenges": "The development of the project presented a multitude of complex technical challenges. The dynamic animation of the virtual room was a considerable challenge, given the variation in real-world sizes of the installation location. Therefore, a dynamic room system was developed that adapted to different real-world sizes without affecting transitions between effects. Additionally, the interpretation of Mediapipe information into useful interactions and the integration of different gestures with different Niagara VFX effects were technically demanding.",
-			"solution": "To overcome these challenges, a comprehensive solution was developed, comprising a dynamic room system in Unreal that could dynamically adapt to different real-world sizes without impacting transitions between effects. A Mediapipe Blueprint was developed, which could detect hand and body gestures and convert them into inputs for the system. Additionally, a sophisticated VFX pipeline was developed to seamlessly integrate these gestures with the different Niagara effects used in the installation. The project demonstrated the technical expertise and knowledge of the artist/developer in creating cutting-edge interactive installations that showcased the latest advancements in digital technologies."
-		}
-	},
-	"2kdam":{
-  		"description": {
-		    "solution": "I developed an ecosystem of tools to achieve the expected results in an optimized, scalable way that would be as adaptable as possible to future projects. Some of those tools were the Batch Sequencer, Tag Tool, Metadata Tool, Inventory Report Tool.",
-		    "challenges": " The assets to be salvaged came from a wide variety of production pipelines, different studios, softwares, sometimes different decades. The project was being worked on by a small team that had to come up with a new manual processing workflow for each new repository.",
-		    "main": "The objective of the team was to salvage digital assets (3d models, textures, audio, animations and others) and normalize them in order for them to be software agnostic. Once the assets were processed they were added to an internal digital asset manager library(DAM) to be used by the entire company.  Another objective was to add relevant metadata that will be used by the DAM search engine."
-		  },
-  		"info": {
-		    "portfolioitems": ["2kdam-batch", "2kdam-inventory"],
-		    "involvement": "Pipeline/Tool Development",
-		    "platform": "PC",
-		    "media": "",
-		    "company": "Globant",
-		    "client": "2K",
-		    "name": "Asset Library"
-		  }
-		},
-	"element-space":{
-  		"description": {
-		    "solution": "I developed an ecosystem of tools to achieve the expected results in an optimized, scalable way that would be as adaptable as possible to future projects. Some of those tools were the Batch Sequencer, Tag Tool, Metadata Tool, Inventory Report Tool.",
-		    "challenges": " The assets to be salvaged came from a wide variety of production pipelines, different studios, softwares, sometimes different decades. The project was being worked on by a small team that had to come up with a new manual processing workflow for each new repository.",
-		    "main": "The objective of the team was to salvage digital assets (3d models, textures, audio, animations and others) and normalize them in order for them to be software agnostic. Once the assets were processed they were added to an internal digital asset manager library(DAM) to be used by the entire company.  Another objective was to add relevant metadata that will be used by the DAM search engine."
-		  },
-  		"info": {
-		    "portfolioitems": ["element-vfx","element-textools","element-lightlister","element-curvetools","element-vfxcomps"],
-		    "involvement": "Pipeline/Tool Development",
-		    "platform": "PC",
-		    "media": "",
-		    "company": "Globant",
-		    "client": "2K",
-		    "name": "Element Space"
-		  }
-		}
-	
-
+    "2kdam": {
+        "info": {
+            "name": "Asset Library",
+            "client": "2K",
+            "company": "Globant",
+            "media": "Digital",
+            "platform": "PC",
+            "involvement": "Pipeline/Tool Development",
+            "portfolioitems": [
+                "2kdam-batch",
+                "2kdam-inventory"
+            ]
+        },
+        "description": {
+            "main": "The objective of the team was to salvage digital assets (3d models, textures, audio, animations and others) and normalize them in order for them to be software agnostic. Once the assets were processed they were added to an internal digital asset manager library(DAM) to be used by the entire company.\u00c2  Another objective was to add relevant metadata that will be used by the DAM search engine.",
+            "challenges": " The assets to be salvaged came from a wide variety of production pipelines, different studios, softwares, sometimes different decades. The project was being worked on by a small team that had to come up with a new manual processing workflow for each new repository.",
+            "solutions": "I developed an ecosystem of tools to achieve the expected results in an optimized, scalable way that would be as adaptable as possible to future projects. Some of those tools were the Batch Sequencer, Tag Tool, Metadata Tool, Inventory Report Tool."
+        }
+    },
+    "dance-monsters": {
+        "info": {
+            "name": "Dance Monsters",
+            "client": "Netflix",
+            "company": "Realtime UK",
+            "media": "Broadcast",
+            "platform": "PC",
+            "involvement": "Pipeline Development",
+            "portfolioitems": [
+                ""
+            ]
+        },
+        "description": {
+            "main": "Dance Monsters is a show that is available in Neflix about a dance competition between monsters. Those monsters are digitally created. All the information is captured in mocap studios and then processed and rendered into the final shots used in the show. I was part of the pipeline team that developed the backend necessary to process and render the hundreds of shots used in every show.",
+            "challenges": "There were many different types of data delivered from many different vendors in different formats. The light , camera, body mocap, and face mocap information all came from different sources and had to be normalized to match in time and in world space. Also, all the motion information had to be retargeted to our own rigs  ",
+            "solutions": "I created a set of tools tha allowed to automatically sort files from different vendors, merge and process them to match the pipeline requirements. This allowed for a quick iteration and was the backbone for an agile system that allowd to process and iterate the hundreds of shots needed for every episode. I also created tools in houdini to import the created outputs into the rendering and vfx pipeline."
+        }
+    },
+    "element-space": {
+        "info": {
+            "name": "Element Space",
+            "client": "2K",
+            "company": "Globant",
+            "media": "Digital",
+            "platform": "PC",
+            "involvement": "Pipeline/Tool Development",
+            "portfolioitems": [
+                "element-vfx",
+                "element-textools",
+                "element-lightlister",
+                "element-curvetools",
+                "element-vfxcomps"
+            ]
+        },
+        "description": {
+            "main": "The objective of the team was to salvage digital assets (3d models, textures, audio, animations and others) and normalize them in order for them to be software agnostic. Once the assets were processed they were added to an internal digital asset manager library(DAM) to be used by the entire company.\u00c2  Another objective was to add relevant metadata that will be used by the DAM search engine.",
+            "challenges": " The assets to be salvaged came from a wide variety of production pipelines, different studios, softwares, sometimes different decades. The project was being worked on by a small team that had to come up with a new manual processing workflow for each new repository.",
+            "solutions": "I developed an ecosystem of tools to achieve the expected results in an optimized, scalable way that would be as adaptable as possible to future projects. Some of those tools were the Batch Sequencer, Tag Tool, Metadata Tool, Inventory Report Tool."
+        }
+    },
+    "intel-evo": {
+        "info": {
+            "name": "Evolution Experience",
+            "client": "Intel",
+            "company": "Genosha",
+            "media": "Art Installation",
+            "platform": "PC",
+            "involvement": "Development",
+            "portfolioitems": [
+                "intelevo-environment",
+                "intelevo-animals",
+                "intelevo-showcase"
+            ]
+        },
+        "description": {
+            "main": "Evolution Experience is an interactive installation in Spain that promotes Intel chips. Using Unreal Engine, I created an immersive experience featuring different species of animals that the audience can interact with via tablets. The installation consists of 8 projectors, forming a surround room.",
+            "challenges": "The project presented a few main challenges. Firstly, it was necessary to integrate Unreal with a websocket server to enable audience interaction. Secondly, creating reactive and interactive animals that felt like a part of the world. Thirdly, learning and setting up Ndisplay technology in collaboration with onsite operators was a hurdle. Finally, there was a need to come up with methods for rapidly iterating the level design and ambient animations.",
+            "solutions": "To overcome these challenges, I integrated a websocket plugin in Unreal. I also developed animation blueprints and AI controllers for the animals to create a seamless and interactive experience with the audience, collaborated with the onsite team to learn and set up Ndisplay technology, and designed a set of tools for rapid environment iteration. The result was a successful installation that engaged the audience and promoted Intel chips."
+        }
+    },
+    "unreal-room": {
+        "info": {
+            "name": "Unreal Room",
+            "client": "",
+            "company": "",
+            "media": "Art Installation",
+            "platform": "PC",
+            "involvement": "Development",
+            "portfolioitems": [
+                "unrealroom-vfx",
+                "unrealroom-bps"
+            ]
+        },
+        "description": {
+            "main": "This is a personal project. It is a highly interactive installation that leverages the power of Unreal Engine 5 and the Mediapipe API to create an immersive experience for users. It features visually stunning VFX effects that can be manipulated and controlled by users' body movements and expressions, captured through a camera feed. The installation is projected onto a wall and boasts a dynamic room system that can be dynamically resized to fit into different real-world walls and animated during transitions between different effects. The project required expert knowledge of Unreal Engine 5, Mediapipe API, Python programming, and VFX pipeline.",
+            "challenges": "The development of the project presented a multitude of complex technical challenges. The dynamic animation of the virtual room was a considerable challenge, given the variation in real-world sizes of the installation location. Therefore, a dynamic room system was developed that adapted to different real-world sizes without affecting transitions between effects. Additionally, the interpretation of Mediapipe information into useful interactions and the integration of different gestures with different Niagara VFX effects were technically demanding.",
+            "solutions": "To overcome these challenges, a comprehensive solution was developed, comprising a dynamic room system in Unreal that could dynamically adapt to different real-world sizes without impacting transitions between effects. A Mediapipe Blueprint was developed, which could detect hand and body gestures and convert them into inputs for the system. Additionally, a sophisticated VFX pipeline was developed to seamlessly integrate these gestures with the different Niagara effects used in the installation. The project demonstrated the technical expertise and knowledge of the artist/developer in creating cutting-edge interactive installations that showcased the latest advancements in digital technologies."
+        }
+    }
 }
-

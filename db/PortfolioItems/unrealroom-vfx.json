@@ -1,0 +1,45 @@
+{
+	    "backend": {
+	      "date": "2022-11-01",
+	      "name": "Unreal Room VFX",
+	      "projectname": "Unreal Room",
+	      "company": "",
+	      "dcc": [
+	        "Houdini"
+	      ],
+	      "engine": [
+	        "Unreal"
+	      ],
+	      "languages": [
+	        "blueprints",
+	        "python"
+	      ],
+	      "skillsets": [
+	        "unrealdev",
+	        "vfx",
+	        "tooldev",
+	        "artinstallation"
+	      ]
+	    },
+	    "description": {
+	      "main": "Series of dynamic VFX made using Niagara",
+	      "bulletpoints": [
+	        "Advances particle systems with multiple subsystems  ",
+	        "Systems send and receive data from blueprints",
+	        "Custom modules were created for all effects",
+	        "Effects can interact with input from mediapipe and other sources"
+	      ]
+	    },
+	    "media": {
+	      "image": [],
+	      "youtube": [
+	        "https://www.youtube.com/embed/HnOhTIWuaPE?start=6",
+	        "https://www.youtube.com/embed/qXgegQ6clxA",
+	        "https://www.youtube.com/embed/iv7WSnxDBDE?start=3",
+	        "https://www.youtube.com/embed/_IHlRjQvM6U?start=7"
+	      ],
+	      "url": [
+	        ""
+	      ]
+	    }
+  	}

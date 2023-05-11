@@ -1,0 +1,43 @@
+{
+	    "backend": {
+	      "date": "2022-10-01",
+	      "name": "Animals Showcase",
+	      "projectname": "Evolution Experience",
+	      "company": "Genosha",
+	      "dcc": [
+	        "Blender",
+	        "Houdini"
+	      ],
+	      "engine": [
+	        "Unreal"
+	      ],
+	      "languages": [
+	        "blueprints"
+	      ],
+	      "skillsets": [
+	        "unrealdev",
+	        "vfx",
+	        "tooldev",
+	        "artinstallation"
+	      ]
+	    },
+	    "description": {
+	      "main": "",
+	      "bulletpoints": [
+	        ""
+	      ]
+	    },
+	    "media": {
+	      "image": [
+	      	"intelevoshowcase_portfolio_item-7.png",
+	        "intelevoanimals_portfolio_item-1.png",
+	        "intelevoanimals_portfolio_item-2.png"
+	      ],
+	      "youtube": [
+	        "https://www.youtube.com/embed/3xw63__iTmk"
+	      ],
+	      "url": [
+	        ""
+	      ]
+	    }
+  	}

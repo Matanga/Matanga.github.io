@@ -1,0 +1,36 @@
+{
+	  "backend": {
+	    "date": "2018-12-01",
+	    "name": "Light Lister",
+	    "projectname": "Element Space",
+	    "company": "Sixth Vowel",
+	    "dcc": [],
+	    "engine": [
+	      "Unity"
+	    ],
+	    "languages": [
+	      "C Sharp"
+	    ],
+	    "skillsets": [
+	      "tooldev",
+	      "vfx",
+	      "unitydev"
+	    ]
+	  },
+	  "description": {
+	    "main": "Custom Editor Window Wizard that allows for quick accessing and editing of all lights in the scene. Nowadays unity has a specialized tool for this same purpose. **One major  feature was  the possibility of editing lights in play mode and keeping those values when returning to editor mode.**",
+	    "bulletpoints": [
+	      "Works like the light explorer but has additional features.",
+	      "The wizard will find all existing lights in the scene and sort them according to their light type. It will then show some  properties that are shared by all lights and and some properties that are specific for that type of light."
+	    ]
+	  },
+	  "media": {
+	    "image": [
+	      "lightlister_portfolio_item-1.png",
+	      "lightlister_portfolio_item-2.png",
+	      "lightlister_portfolio_item-3.png"
+	    ],
+	    "youtube": [],
+	    "url": []
+	  }
+	}

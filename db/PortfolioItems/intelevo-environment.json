@@ -1,0 +1,43 @@
+{
+	    "backend": {
+	      "date": "2022-10-01",
+	      "name": "Environment Showcase",
+	      "projectname": "Evolution Experience",
+	      "company": "Genosha",
+	      "dcc": [
+	        "Blender",
+	        "Houdini"
+	      ],
+	      "engine": [
+	        "Unreal"
+	      ],
+	      "languages": [
+	        "blueprints"
+	      ],
+	      "skillsets": [
+	        "unrealdev",
+	        "vfx",
+	        "tooldev",
+	        "artinstallation"
+	      ]
+	    },
+	    "description": {
+	      "main": "",
+	      "bulletpoints": [
+	        ""
+	      ]
+	    },
+	    "media": {
+	      "image": [
+	        "intelevoenvironment_portfolio_item-1.png",
+	        "intelevoenvironment_portfolio_item-2.png",
+	        "intelevoenvironment_portfolio_item-3.png"
+	      ],
+	      "youtube": [
+	        "https://www.youtube.com/embed/5nbDx_YLn-k"
+	      ],
+	      "url": [
+	        ""
+	      ]
+	    }
+  	}

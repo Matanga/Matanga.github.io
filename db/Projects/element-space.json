@@ -1,0 +1,22 @@
+{
+    "info": {
+        "name": "Element Space",
+        "client": "2K",
+        "company": "Globant",
+        "media": "Digital",
+        "platform": "PC",
+        "involvement": "Pipeline/Tool Development",
+        "portfolioitems": [
+            "element-vfx",
+            "element-textools",
+            "element-lightlister",
+            "element-curvetools",
+            "element-vfxcomps"
+        ]
+    },
+    "description": {
+        "main": "The objective of the team was to salvage digital assets (3d models, textures, audio, animations and others) and normalize them in order for them to be software agnostic. Once the assets were processed they were added to an internal digital asset manager library(DAM) to be used by the entire company.\u00c2  Another objective was to add relevant metadata that will be used by the DAM search engine.",
+        "challenges": " The assets to be salvaged came from a wide variety of production pipelines, different studios, softwares, sometimes different decades. The project was being worked on by a small team that had to come up with a new manual processing workflow for each new repository.",
+        "solutions": "I developed an ecosystem of tools to achieve the expected results in an optimized, scalable way that would be as adaptable as possible to future projects. Some of those tools were the Batch Sequencer, Tag Tool, Metadata Tool, Inventory Report Tool."
+    }
+}

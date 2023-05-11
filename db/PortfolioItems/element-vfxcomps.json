@@ -1,0 +1,46 @@
+{
+	  "backend": {
+	    "date": "2018-12-01",
+	    "name": "Animated VFX Components",
+	    "projectname": "Element Space",
+	    "company": "Sixth Vowel",
+	    "dcc": [],
+	    "engine": [
+	      "Unity"
+	    ],
+	    "languages": [
+	      "C Sharp"
+	    ],
+	    "skillsets": [
+	      "tooldev",
+	      "vfx",
+	      "unitydev"
+	    ]
+	  },
+	  "description": {
+	    "main": "This is an assortment of some of the components i created in C# that allowed the VFX team to create dynamic effects completely with monobehaviours without the need of using any animation system. ",
+	    "bulletpoints": [
+	      "VFX_DelayStartComponent : Component that enables a disabled  monobehaviour within a given timeframe",
+	      "VFX_DeactivateByTime : Component that disables the referenced GO within the current time. If no GameObject is referenced then  the GameObjects that owns this component will be deactivated",
+	      "VFX_SwitchVisibility : Toggles the selected mesh renderes on or off according to a starting value with a chosen delay time",
+	      "VFX_CircleRenderer :  Component that works along a line renderer component to easily draw  circles. Options to control radius, segments, width, color. ",
+	      "VFX_AnimationCurves :  Component that allows to  quickly add animation to some components and values. The animation can be looped and can be started with a delay. Setting up new values to animate is really easy."
+	    ]
+	  },
+	  "media": {
+	    "image": [
+	      "animatedvfxcomponents_portfolio_item-1.png",
+	      "animatedvfxcomponents_portfolio_item-2.png",
+	      "animatedvfxcomponents_portfolio_item-3.png",
+	      "animatedvfxcomponents_portfolio_item-4.png",
+	      "VFX_CircleRenderer.gif",
+	      "qnimatedvfxcomponents_portfolio_item-5.png",
+	      "qnimatedvfxcomponents_portfolio_item-6.png",
+	      "qnimatedvfxcomponents_portfolio_item-7.png",
+	      "qnimatedvfxcomponents_portfolio_item-8.png",
+	      "vfx_animationcurves.gif"
+	    ],
+	    "youtube": [],
+	    "url": []
+	  }
+	}
