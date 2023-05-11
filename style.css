@@ -40,7 +40,9 @@ body {
   display:flex;
   height: 100%;
   margin: 0;
-  font-family: Arial;
+  /*font-family: Arial;*/
+  font-family: monospace;
+  font-size: 14px;
   align-items: center;
   align-self: center;
   align-content: center;
@@ -148,7 +150,8 @@ body {
   background-color: transparent;
   color: white;
   padding: 5px;
-  font-size: 16px;
+  font-family: monospace;
+  font-size: 14px;
   border: 1px solid;
   width:100%;
   text-align: left;
@@ -169,6 +172,7 @@ body {
   background-color: var(--sec-color);
   color: white;
   padding: 5px;
+  font-family: monospace;
   font-size: 16px;
   border: none;
   width:100%;
@@ -186,6 +190,7 @@ body {
   background-color: var(--bg-color);
   color: white;
   padding: 10px;
+  font-family: monospace;
   font-size: 16px;
   border: none;
 }
