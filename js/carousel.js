@@ -65,7 +65,7 @@ class Carousel {
       img.setAttribute("src", ("https://matanga.github.io/images/"+imagePath));
       div.appendChild(img);
       container.appendChild(div);
-    
+    /*
       // Used With the modal system
       var modal = document.getElementById("modalWindow");
       var modalImg = document.getElementById("modalImage");
@@ -77,7 +77,7 @@ class Carousel {
       captionText.innerHTML = this.alt;
     }
 
-
+*/
 
     });
   }
