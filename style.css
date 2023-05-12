@@ -338,6 +338,9 @@ background-color: var(--bg-color)   ;
 /*-------------------------------------------------------------------*/
 /*-----------SECTION Home--------------------------------------------*/
 
+.homelinks button, .linkskillsets button { cursor:pointer; }
+
+
 .menu_box h3 {
   padding-right: 100px;
   margin: 2px 15px;
