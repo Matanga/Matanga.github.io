@@ -7,11 +7,11 @@
         "platform": "PC",
         "involvement": "Pipeline/Tool Development",
         "portfolioitems": [
-            "element-vfx",
+            "element-vfxcomps",
             "element-textools",
             "element-lightlister",
             "element-curvetools",
-            "element-vfxcomps"
+            "element-vfx"
         ]
     },
     "description": {
