@@ -112,9 +112,22 @@ class NonRepeatRandomColorSelector {
   }
 }
 
-
 /*------------------------------------------------*/
 /*-------------  Utilities --------------------*/
+
+function get_skillset_label(skillset) {
+    const skillsetLabels = {
+        "tooldev": "Tool Development",
+        "unrealdev": "Unreal Development",
+        "unitydev": "Unity Development",
+        "vr": "VR",
+        "pipelinedev": "Pipeline Development",
+        "artinstallation": "Art installation",
+        "proceduralgeneration": "Procedural Generation",
+        "vfx": "VFX"
+    };  
+    return skillsetLabels[skillset] || skillset;
+}
 
 function getLoadReferences(key){
 
@@ -217,11 +230,38 @@ function AddProjectButtons(pm,containerId) {
     button.setAttribute("data-project", projectKey);
     button.textContent = project.name;
     button.addEventListener("click", function() {
-      LoadProject(pm,projectKey);
+      page.show('/projects/'+projectKey)
+      //LoadProject(pm,projectKey);
     });
     container.appendChild(button);
   });
 }
+
+// Initialize Function to Create Buttons
+function AddSkillsetButtons(list,containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) {
+    console.error(`Container element with ID "${containerId}" not found`);
+    return;
+  }
+  
+    list.forEach(function(element) {
+        const button = document.createElement("button");
+        button.setAttribute("id", "loadBtn");
+        button.setAttribute("class", "topbar-linkbtn");
+
+        button.setAttribute("data-skillset", element);
+        button.textContent = get_skillset_label(element);
+        button.addEventListener("click", function() {
+          //LoadSkillsetsTab(element);
+          page.show('/skillsets/'+element)
+
+        });
+        container.appendChild(button);
+    });
+}
+
+
 
 function AddPortfolioItemButtons(portfolioItems, containerId, loadRefs) {
   const container = document.getElementById(containerId);
@@ -273,28 +313,6 @@ function AddPortfolioItemButtons(portfolioItems, containerId, loadRefs) {
   btn.click();
 }
 
-// Initialize Function to Create Buttons
-function AddSkillsetButtons(list,containerId) {
-  const container = document.getElementById(containerId);
-  if (!container) {
-    console.error(`Container element with ID "${containerId}" not found`);
-    return;
-  }
-  
-    list.forEach(function(element) {
-        const button = document.createElement("button");
-        button.setAttribute("id", "loadBtn");
-        button.setAttribute("class", "topbar-linkbtn");
-
-        button.setAttribute("data-skillset", element);
-        button.textContent = get_skillset_label(element);
-        button.addEventListener("click", function() {
-          LoadSkillsetsTab(element);
-        });
-        container.appendChild(button);
-      console.log(element);
-    });
-}
 
 
 function AddPortfolioItemDescription(containerId,  item) {
@@ -501,21 +519,6 @@ function toggleHide(toggleID){
 
 /*--------------------------------------------------*/
 /*--------------Utiltities---------------------------*/
-
-
-function get_skillset_label(skillset) {
-    const skillsetLabels = {
-        "tooldev": "Tool Development",
-        "unrealdev": "Unreal Development",
-        "unitydev": "Unity Development",
-        "vr": "VR",
-        "pipelinedev": "Pipeline Development",
-        "artinstallation": "Art installation",
-        "proceduralgeneration": "Procedural Generation",
-        "vfx": "VFX"
-    };  
-    return skillsetLabels[skillset] || skillset;
-}
 
 
 
