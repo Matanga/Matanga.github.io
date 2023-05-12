@@ -11,65 +11,11 @@
     <link href="https://matanga.github.io/style.css" rel="stylesheet" type="text/css"/>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
     <script src="https://matanga.github.io/js/page.js"></script>
     <script src="https://matanga.github.io/js/main.js"></script>
-    <script src="https://matanga.github.io/js/routes.js"></script>
 
     <style type="text/css">
 
-    /* Dropdown Content (Hidden by Default) */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      
-      background-color: var(--bg-color);
-      color:var(--bg-color);
-
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 9999;
-
-    -webkit-border-radius: 0px 0px 5px 5px;
-     border-radius: 0px 0px 5px 5px;
-    }
-
-    /* Buttons inside the dropdown*/
-    .dropdown-content button {
-    background-color: var(--bg-color);
-      color:var(--main-color);
-
-    }
-    .dropdown-content button:hover {
-    background-color: var(--bg-color)   ;
-      color:snow;
-    }
-
-    .dropdown .dropbtn{
-        position:  relative;    
-    }
-
-    .dropdown:hover .dropbtn {
-        background-color: var(--bg-color);
-        color:var(--main-color);   
-        outline: 2px solid var(--main-color);
-        margin-bottom:  -4px;
-        z-index: 3000;
-
-    }
-
-    .dropdown:hover .dropdown-content {
-        /*border-bottom: 2px solid var(--main-color);
-        border-right: 2px solid var(--main-color);
-        border-left: 2px solid var(--main-color);*/
-        border: 2px solid var(--main-color);
-    }
-
-    #contact .logo {
-        float: right;   
-    }
 
     </style>
 
@@ -165,17 +111,24 @@
                                 <li>Blender</li>
                                 </ul>
                         </li>
-                        <li class="skillsetContainer" style="border-color:aqua; color:aqua">
-                            <p style="flex-grow:1;">Engines and IDEs</p>
+                        <li class="skillsetContainer" style="border-color:orange; color:orange">
+                            <p style="flex-grow:1;">Engines</p>
                             <div></div>
-
                             <ul style="flex-grow:1;">
                             <li>Unreal </li>
                             <li>Unity Engine</li>
-                            <li>PyCharm</li>
-                            <li>Visual Studio</li>
                             </ul>
                         </li>
+                        <li class="skillsetContainer" style="border-color:aqua; color:aqua">
+                            <p style="flex-grow:1;">IDEs</p>
+                            <div></div>
+                            <ul style="flex-grow:1;">
+                            <li>Visual Studio</li>
+                            <li>PyCharm</li>
+                            <li>Sublime</li>
+                            </ul>
+                        </li>
+
                         <li class="skillsetContainer" style="border-color:yellow; color:yellow">
                             <p style="flex-grow:1;">Version Control</p>
                             <div></div>
@@ -321,7 +274,6 @@
                     <h3 id="skillsetItemTitle" >Portfolio Item Title</h3>
                 </div>
                 <div class="h3Separator"></div>
-
                       
                 <span id="skillsetsMore" style="display: none;">    
                 
@@ -410,7 +362,6 @@
 
             const skillsetlist = portfolioManager.getUniqueSkillsets();
             AddSkillsetButtons(skillsetlist,"skillsetsList");
-
         });
     });
 

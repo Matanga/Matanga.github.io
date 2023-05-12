@@ -183,6 +183,7 @@ body {
   margin: 0 5px;
   -webkit-border-radius: 0px 0px 15px 0px;
   border-radius: 0px 0px 15px 0px;
+  cursor: pointer;
 }
 
 .portfolioItemBtn:hover {
@@ -202,6 +203,7 @@ body {
   border: none;
   width:100%;
   text-align: left;
+  cursor: pointer;
 }
 
 
@@ -218,6 +220,7 @@ body {
   font-family: monospace;
   font-size: 16px;
   border: none;
+  cursor: pointer;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -232,11 +235,57 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--sec-color);
+  
+  background-color: var(--bg-color);
+  color:var(--bg-color);
+
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 9999;
+
+-webkit-border-radius: 0px 0px 5px 5px;
+ border-radius: 0px 0px 5px 5px;
 }
+
+/* Buttons inside the dropdown*/
+.dropdown-content button {
+background-color: var(--bg-color);
+  color:var(--main-color);
+
+}
+.dropdown-content button:hover {
+background-color: var(--bg-color)   ;
+  color:snow;
+}
+
+.dropdown .dropbtn{
+    position:  relative;    
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--bg-color);
+    color:var(--main-color);   
+    outline: 2px solid var(--main-color);
+    margin-bottom:  -4px;
+    z-index: 3000;
+
+}
+
+.dropdown:hover .dropdown-content {
+    /*border-bottom: 2px solid var(--main-color);
+    border-right: 2px solid var(--main-color);
+    border-left: 2px solid var(--main-color);*/
+    border: 2px solid var(--main-color);
+}
+
+#contact .logo {
+    float: right;   
+}
+
+
+
+
+
 
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -268,7 +317,12 @@ body {
     min-width: 20px;
     min-height: 20px;
     background-color: #f5d546;
+    cursor: pointer;
 }
+#dropdowncolor button{
+    cursor: pointer;
+}
+
 
 .colorSelector .dropdown-content{
     display: flex !important;

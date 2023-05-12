@@ -1,7 +1,3 @@
-function loadProject(projectName) {
-  // code to load the project with the given name
-}
-
 page('/home', function() {
   OpenTab('home')
 });
