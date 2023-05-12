@@ -3,7 +3,7 @@ function loadProject(projectName) {
 }
 
 page('/home', function() {
-  // code to load the home page
+  OpenTab('home')
 });
 
 page('/about', function() {
@@ -15,6 +15,5 @@ page('/projects/:name', function(ctx) {
 });
 
 page('/contact', function() {
-  // code to load the contact page
+  OpenTab('contact')
 });
-console.log('CREATED THE PAGE')
