@@ -215,7 +215,7 @@ body {
 .dropbtn {
   background-color: var(--bg-color);
   color: white;
-  padding: 10px;
+  padding: 10px 5px;
   font-family: monospace;
   font-size: 16px;
   border: none;
@@ -315,7 +315,7 @@ background-color: var(--bg-color)   ;
 .colorSelector{
     min-width: 20px;
     min-height: 20px;
-    background-color: #f5d546;
+    background-color: #00ff00;
     cursor: pointer;
 }
 #dropdowncolor button{
