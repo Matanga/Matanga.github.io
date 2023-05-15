@@ -5,9 +5,8 @@
   --font-color: #343a40;
   --carousel-size:650px;
 
-  --main-color: rgb(245 213 70 / 100%) ;
-  --main-transparent:rgb(245 213 70 / 10%);
-
+  --main-color: #00ff00 ;
+  --main-transparent:rgb(0 255 0 / 10%);
 }
 
 * { 
