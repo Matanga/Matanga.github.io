@@ -96,5 +96,26 @@
             "challenges": "The development of the project presented a multitude of complex technical challenges. The dynamic animation of the virtual room was a considerable challenge, given the variation in real-world sizes of the installation location. Therefore, a dynamic room system was developed that adapted to different real-world sizes without affecting transitions between effects. Additionally, the interpretation of Mediapipe information into useful interactions and the integration of different gestures with different Niagara VFX effects were technically demanding.",
             "solutions": "To overcome these challenges, a comprehensive solution was developed, comprising a dynamic room system in Unreal that could dynamically adapt to different real-world sizes without impacting transitions between effects. A Mediapipe Blueprint was developed, which could detect hand and body gestures and convert them into inputs for the system. Additionally, a sophisticated VFX pipeline was developed to seamlessly integrate these gestures with the different Niagara effects used in the installation. The project demonstrated the technical expertise and knowledge of the artist/developer in creating cutting-edge interactive installations that showcased the latest advancements in digital technologies."
         }
+    },
+        "procedural-landscape": {
+        "info": {
+            "name": "Procedural Landscape",
+            "client": "",
+            "company": "",
+            "media": "Game",
+            "platform": "PC",
+            "involvement": "Development",
+            "portfolioitems": [
+                "unrealroom-vfx",
+                "unrealroom-bps"
+            ]
+        },
+        "description": {
+            "main": "This is a personal project. It is a highly interactive installation that leverages the power of Unreal Engine 5 and the Mediapipe API to create an immersive experience for users. It features visually stunning VFX effects that can be manipulated and controlled by users' body movements and expressions, captured through a camera feed. The installation is projected onto a wall and boasts a dynamic room system that can be dynamically resized to fit into different real-world walls and animated during transitions between different effects. The project required expert knowledge of Unreal Engine 5, Mediapipe API, Python programming, and VFX pipeline.",
+            "challenges": "The development of the project presented a multitude of complex technical challenges. The dynamic animation of the virtual room was a considerable challenge, given the variation in real-world sizes of the installation location. Therefore, a dynamic room system was developed that adapted to different real-world sizes without affecting transitions between effects. Additionally, the interpretation of Mediapipe information into useful interactions and the integration of different gestures with different Niagara VFX effects were technically demanding.",
+            "solutions": "To overcome these challenges, a comprehensive solution was developed, comprising a dynamic room system in Unreal that could dynamically adapt to different real-world sizes without impacting transitions between effects. A Mediapipe Blueprint was developed, which could detect hand and body gestures and convert them into inputs for the system. Additionally, a sophisticated VFX pipeline was developed to seamlessly integrate these gestures with the different Niagara effects used in the installation. The project demonstrated the technical expertise and knowledge of the artist/developer in creating cutting-edge interactive installations that showcased the latest advancements in digital technologies."
+        }
     }
+
+
 }
