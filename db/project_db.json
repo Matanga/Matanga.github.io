@@ -1,4 +1,25 @@
 {
+
+    "apocs":
+    {
+        "info": {
+            "name": "Apoc Sandbox",
+            "client": "Undisclosed",
+            "company": "Undisclosed",
+            "media": "Digital",
+            "platform": "PC",
+            "involvement": "Pipeline/Tool Development",
+            "portfolioitems": [
+                "apocs-overview"
+            ]
+        },
+        "description": {
+            "main": "This showcases the ongoing development of tools and pipelines for an undisclosed company's game. The game world is an expansive open world resembling a vast plain with farms and towns. Our project's focal points are swift iteration, optimal performance, and extensive customizability.",
+            "challenges": "The primary challenges arise from the project's extensive scale. Encompassing an area exceeding 25 square kilometers, we are confronted with the demanding task of ensuring a high level of detail for a third-person view, which includes creating interiors for every building. With limited team resources, our central focus is on emphasizing swift iteration speed, delivering high-performance content, and ensuring user-friendliness for the designers.",
+            "solutions": "I designed and implemented a procedural pipeline from scratch using Houdini and Unreal to create landscapes, towns, infrastructure, and more. Leveraging heightfields, SOP networks, PDG, VEX, and Python in Houdini, foundational data is generated. Subsequently, custom tools in Unreal facilitated the import of landscapes, towns, road networks, and more. Utilizing a range of tools, including World Partition, PCG, shaders, grass layers, RVTs, blueprints, custom editor widgets, and Niagara, elements throughout the world were efficiently spawned and edited."
+        }
+    },
+
     "2kdam": {
         "info": {
             "name": "Asset Library",
@@ -18,6 +39,7 @@
             "solutions": "I developed an ecosystem of tools to achieve the expected results in an optimized, scalable way that would be as adaptable as possible to future projects. Some of those tools were the Batch Sequencer, Tag Tool, Metadata Tool, Inventory Report Tool."
         }
     },
+
     "dance-monsters": {
         "info": {
             "name": "Dance Monsters",
@@ -97,4 +119,8 @@
             "solutions": "To overcome these challenges, a comprehensive solution was developed, comprising a dynamic room system in Unreal that could dynamically adapt to different real-world sizes without impacting transitions between effects. A Mediapipe Blueprint was developed, which could detect hand and body gestures and convert them into inputs for the system. Additionally, a sophisticated VFX pipeline was developed to seamlessly integrate these gestures with the different Niagara effects used in the installation. The project demonstrated the technical expertise and knowledge of the artist/developer in creating cutting-edge interactive installations that showcased the latest advancements in digital technologies."
         }
     }
+
+
+
+
 }

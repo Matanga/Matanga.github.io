@@ -1,0 +1,18 @@
+{
+    "info": {
+        "name": "Apoc Sandbox",
+        "client": "Undisclosed",
+        "company": "Undisclosed",
+        "media": "Digital",
+        "platform": "PC",
+        "involvement": "Pipeline/Tool Development",
+        "portfolioitems": [
+            "apocs-overview"
+        ]
+    },
+    "description": {
+        "main": "This showcases the ongoing development of tools and pipelines for an undisclosed company's game. The game world is an expansive open world resembling a vast plain with farms and towns. Our project's focal points are swift iteration, optimal performance, and extensive customizability.",
+        "challenges": "The primary challenges arise from the project's extensive scale. Encompassing an area exceeding 25 square kilometers, we are confronted with the demanding task of ensuring a high level of detail for a third-person view, which includes creating interiors for every building. With limited team resources, our central focus is on emphasizing swift iteration speed, delivering high-performance content, and ensuring user-friendliness for the designers.",
+        "solutions": "I designed and implemented a procedural pipeline from scratch using Houdini and Unreal to create landscapes, towns, infrastructure, and more. Leveraging heightfields, SOP networks, PDG, VEX, and Python in Houdini, foundational data is generated. Subsequently, custom tools in Unreal facilitated the import of landscapes, towns, road networks, and more. Utilizing a range of tools, including World Partition, PCG, shaders, grass layers, RVTs, blueprints, custom editor widgets, and Niagara, elements throughout the world were efficiently spawned and edited."
+    }
+}
