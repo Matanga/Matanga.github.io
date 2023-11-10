@@ -384,7 +384,7 @@ h2 .titleName {
 .linkprojects button, .linkskillsets button  {
   display: inline-block;
   position: relative;
-  color: #0087ca;
+  color: #ffffff;
   background-color: transparent;
   border: none;
   margin: 0px -40px;
@@ -394,6 +394,7 @@ h2 .titleName {
   padding-bottom: 10%;
   padding-top: 10%;
   margin-bottom: 2%;
+  text-align: right;
 }
 
 .linkprojects button:after,.linkskillsets button:after {
