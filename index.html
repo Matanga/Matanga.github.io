@@ -360,9 +360,7 @@
 
     $(document).ready(function(){
         const portfolioManager = new PortfolioManager(() => {
-            // Your code that needs access to the `projects` and `portfolioItems` dictionaries goes here
             AddProjectButtons(portfolioManager,"projectsList");
-
             const skillsetlist = portfolioManager.getUniqueSkillsets();
             AddSkillsetButtons(skillsetlist,"skillsetsList");
         });
