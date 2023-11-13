@@ -700,9 +700,16 @@ margin-top: 0px;
 /*----------------------------------------*/
 /*------------SECTION Contact-------------*/
 
-.socialmedia {
-    
+
+.linkedin {  
+    width: 400px;
+    margin: 20px auto;    
+    display: flex;
 }
+ .linkedin span {
+
+    margin: auto  25px auto 0px;
+ }
 
 .contactform {
     width:400px;
@@ -713,6 +720,7 @@ margin-top: 0px;
     padding: 10px;
     background-color: var(--third-color);
     border-radius: 10px;
+    opacity: 70%;
 }
 .contactform input{
     background-color: #000000;
