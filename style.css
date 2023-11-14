@@ -703,11 +703,26 @@ margin-top: 0px;
 
 .linkedin {  
     width: 400px;
-    margin: 20px auto;    
     display: flex;
-}
- .linkedin span {
 
+
+    border: 1px solid;
+    border-color: snow;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: var(--third-color);
+    border-radius: 10px;
+    opacity: 70%;
+
+}
+
+ .linkedin a {
+
+    margin: auto;
+
+ }
+
+ .linkedin span {
     margin: auto  25px auto 0px;
  }
 
