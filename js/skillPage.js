@@ -38,10 +38,10 @@ function renderSkillHeader(header) {
   const statsText = `Used in ${header.stats.projectCount} project${header.stats.projectCount !== 1 ? 's' : ''} | ${header.stats.systemCount} system${header.stats.systemCount !== 1 ? 's' : ''} shipped`;
   document.getElementById('skillStats').textContent = statsText;
 
-  // Render tech chips
+  // Render tech chips (show more since we now have specific tech data)
   const chipsContainer = document.getElementById('skillTechChips');
   chipsContainer.innerHTML = header.techChips
-    .slice(0, 6) // Limit to 6 chips
+    .slice(0, 12) // Increased limit to show more relevant tech
     .map(chip => `<span class="skill-chip">${chip}</span>`)
     .join('');
 }
@@ -527,20 +527,23 @@ async function LoadSkillPage(skillId) {
 
   const allSystems = matchingItems.map(buildSystemCard);
 
-  // Aggregate tech
-  const engines = new Set();
-  const dccs = new Set();
-  const languages = new Set();
+  // Aggregate tech - prioritize specific tech/frameworks for recruiter visibility
+  const tech = new Set();      // Specific frameworks, APIs, tools (most important for Ctrl+F)
+  const engines = new Set();   // Unreal, Unity
+  const dccs = new Set();      // Houdini, Maya, etc.
+  const languages = new Set(); // Python, C++, C#, etc.
   const projects = new Set();
   
   matchingItems.forEach(item => {
+    (item.tech || []).forEach(t => tech.add(t));
     (item.engine || []).forEach(e => engines.add(e));
     (item.dcc || []).forEach(d => dccs.add(d));
     (item.languages || []).forEach(l => languages.add(l));
     if (item.projectname) projects.add(item.projectname);
   });
 
-  const techChips = [...engines, ...dccs, ...languages];
+  // Order: tech first (specific tools/frameworks), then engines, dccs, languages
+  const techChips = [...tech, ...engines, ...dccs, ...languages];
 
   // Get first image from first system for header background
   let headerBackgroundImage = null;

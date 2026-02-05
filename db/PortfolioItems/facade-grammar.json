@@ -1,0 +1,51 @@
+
+{
+    "date": "2023-08-01",
+    "name": "Procedural Building Grammar & Resolution System",
+    "projectname": "Interactive Building Grammar (IBG) System",
+    "company": "Square Enix (R&D Collaboration)",
+    "oneLiner": "Designed a deterministic grammar and resolution system that expands symbolic facade definitions into width-accurate, production-ready building layouts.",
+    "bulletpoints": [
+      "Designed a formal grammar model for procedural building facades with clear separation between fixed structural intent and repeatable variation.",
+      "Implemented a deterministic resolution algorithm that expands symbolic expressions to fit target widths without breaking structure.",
+      "Established a RIGID-first, FILL-second evaluation model to guarantee correctness before procedural expansion.",
+      "Supported multi-floor grammar resolution with automatic normalization of incomplete or missing facade data.",
+      "Introduced canonical grammar serialization and blueprint caching to ensure repeatable outputs and performant iteration."
+    ],
+    "dcc": [],
+    "engine": [],
+    "languages": ["Python"],
+    "skillsets": ["procedural", "pipelinedev"],
+    "tags": [
+      "procedural-grammar",
+      "deterministic-systems",
+      "constraint-solving",
+      "data-modeling"
+    ],
+    "priority": 2,
+    "status": "complete",
+    "media": {
+      "image": [
+        "ibg-grammar__01__symbolic-expression.jpg",
+        "ibg-grammar__02__resolved-layout.jpg"
+      ],
+      "youtube": [
+        "https://www.youtube.com/embed/REPLACE_WITH_ITEM2_VIDEO_ID"
+      ],
+      "captions": {
+        "ibg-grammar__01__symbolic-expression.jpg": "Example symbolic facade grammar prior to resolution.",
+        "ibg-grammar__02__resolved-layout.jpg": "Resolved facade layout after deterministic width-based expansion.",
+        "https://www.youtube.com/embed/REPLACE_WITH_ITEM2_VIDEO_ID": "Demonstration of grammar resolution showing fixed elements preserved while repeatable sections expand to fit different target widths."
+      }
+    },
+    "deepDive": {
+      "problem": "Naive procedural repetition leads to broken proportions, invalid layouts, and non-repeatable results when scaling building systems.",
+      "approach": [
+        "Defined explicit grammar semantics separating fixed structure from procedural variation.",
+        "Resolved grammars deterministically based on target dimensions to guarantee predictable results.",
+        "Ensured outputs were stable, cacheable, and suitable for downstream procedural pipelines."
+      ]
+    },
+    "context": "This system was developed as part of a broader R&D effort to explore robust procedural building workflows. The grammar and resolution engine was fully implemented and validated before the initiative was later deprioritized due to internal roadmap shifts."
+  }
+  

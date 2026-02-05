@@ -1,0 +1,49 @@
+{
+    "date": "2023-08-01",
+    "name": "Procedural Building Content & Asset Management Framework",
+    "projectname": "Interactive Building Grammar (IBG) System",
+    "company": "Square Enix (R&D Collaboration)",
+    "oneLiner": "Designed a structured content and asset management framework to support scalable procedural building authoring and pipeline integration.",
+    "bulletpoints": [
+      "Designed a manifest-driven content framework to organize procedural building assets, floor style libraries, and configuration data.",
+      "Separated reusable floor styles from individual building documents to promote consistency and reduce duplication.",
+      "Implemented explicit mapping layers between editor-facing assets and engine-side procedural module identifiers.",
+      "Supported safe duplication, renaming, and deletion of procedural content while preserving data integrity.",
+      "Ensured all managed content could be exported in clean, normalized formats suitable for engine-side procedural pipelines."
+    ],
+    "dcc": [],
+    "engine": ["Unreal Engine"],
+    "languages": ["Python"],
+    "skillsets": ["pipelinedev", "procedural"],
+    "tags": [
+      "asset-management",
+      "procedural-pipelines",
+      "data-driven-workflows",
+      "content-framework"
+    ],
+    "priority": 3,
+    "status": "complete",
+    "media": {
+      "image": [
+        "facade-content__01__floor-style.jpg",
+        "facade-content__02__module-mapping.jpg"
+      ],
+      "youtube": [
+        "https://www.youtube.com/embed/REPLACE_WITH_ITEM3_VIDEO_ID"
+      ],
+      "captions": {
+        "facade-content__01__floor-style.jpg": "Floor Style Library used to define reusable, multi-facade floor templates. Each floor style encapsulates height, facade patterns, and module composition, enabling consistent reuse across multiple building definitions while supporting rapid iteration and reordering.",
+        "facade-content__02__module-mapping.jpg": "Module Mapping Editor bridging editor-facing procedural modules with engine-side Unreal module identifiers. This explicit mapping layer decouples authoring workflows from engine implementations while ensuring deterministic, pipeline-ready outputs."
+      }
+    },
+    "deepDive": {
+      "problem": "Procedural tools break down in production without structured content management, leading to duplication, inconsistency, and fragile integrations.",
+      "approach": [
+        "Introduced a clear separation between authored buildings and reusable content libraries.",
+        "Designed explicit mapping and manifest systems to keep editor data aligned with engine-side pipelines.",
+        "Focused on data integrity and repeatability to support long-term scalability."
+      ]
+    },
+    "context": "This framework was developed as part of an R&D initiative exploring scalable procedural building workflows. While the broader project was later deprioritized due to internal roadmap changes, the content system reached a complete and production-ready prototype state."
+  }
+  

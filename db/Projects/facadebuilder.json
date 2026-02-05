@@ -1,0 +1,24 @@
+{
+  "name": "Procedural Grammar Editor",
+  "client": "Square Enix (NDA)",
+  "company": "Atlas (Design Partner)",
+  "media": "Digital",
+  "platform": "PC",
+  "involvement": "Pipeline / Tool Development",
+  "impact": "Designed and developed a standalone procedural building authoring system that replaced manual grammar editing with a visual, deterministic workflow. The project validated an end-to-end approach for artist-driven procedural facade creation, producing pipeline-ready data suitable for Unreal Engine–based procedural systems.",
+  "responsibilities": [
+    "Solely architected and implemented a standalone desktop application for procedural building authoring using Python and Qt.",
+    "Designed an artist-facing visual grammar workflow enabling intuitive construction of complex, multi-floor building facades.",
+    "Developed real-time 2D and 3D preview systems to allow immediate validation of structural and proportional changes.",
+    "Built deterministic grammar resolution and normalization systems to ensure correct, repeatable outputs.",
+    "Designed content and asset management workflows to support reusable floor styles, module catalogs, and engine-facing data exports."
+  ],
+  "context": "This project was developed as an R&D prototype in collaboration with Square Enix’s internal research group through Atlas as a design partner. The goal was to explore scalable, artist-friendly workflows for procedural building facade authoring. The system reached a fully functional, end-to-end prototype stage and successfully validated the technical and UX concepts before the initiative was later deprioritized due to internal roadmap shifts.",
+  "challenges": "Procedural building grammars are traditionally authored as opaque text expressions, making them error-prone, difficult to visualize, and inaccessible to artists. Additionally, ensuring deterministic, width-accurate results across multiple floors and facades introduced significant system design and validation challenges.",
+  "solutions": "I designed a visual grammar authoring tool backed by a formal, deterministic grammar resolution system. Artists interact directly with modular facade elements and structural groups, while the system maintains a canonical grammar representation and produces normalized, pipeline-ready outputs. Real-time visual feedback and structured content management ensured rapid iteration without sacrificing correctness or scalability.",
+  "portfolioitems": [
+    "facade-editor",
+    "facade-grammarsystem",
+    "facade-contentmanagement"
+  ]
+}

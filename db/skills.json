@@ -1,38 +1,38 @@
 {
   "_comment": "Skill metadata for the Skill page. Each key matches a skillset ID used in portfolio items.",
 
-  "vfx": {
-    "title": "VFX & Interactive Systems",
-    "description": "Real-time visual effects, procedural animation, and data-driven Niagara systems integrated with gameplay and external inputs."
-  },
-
   "tooldev": {
     "title": "Tool Development",
-    "description": "Custom editor tools, automation systems, and artist-facing workflows that accelerate production and reduce manual work."
+    "description": "Production tools should treat artists as first-class users. With 15+ years across Unreal, Unity, and Houdini, I design schema-driven editors and async job systems that hide complexity while ensuring production-scale reliability."
   },
 
   "pipelinedev": {
     "title": "Pipeline Development",
-    "description": "End-to-end production pipelines connecting DCCs, game engines, and data systems for scalable content creation."
+    "description": "Automation backbone for multi-studio environments, processing tens of thousands of assets. I build modular, inspectable ingestion layers that connect legacy data, mocap, and AI-generated content into unified game-ready pipelines."
   },
 
   "unrealdev": {
     "title": "Unreal Engine Development",
-    "description": "Blueprints, Niagara, PCG, and custom editor tools for real-time experiences in Unreal Engine."
+    "description": "Native C++ plugins, procedural city systems, and runtime interaction frameworks—extending Unreal Engine at the core level. My focus is delivering stable, performant environments that hold up under real production conditions, not just editor previews."
   },
 
   "unitydev": {
     "title": "Unity Development",
-    "description": "C# components, custom editors, and VFX systems for Unity-based games and tools."
-  },
-
-  "artinstallation": {
-    "title": "Art Installations",
-    "description": "Interactive real-time installations combining projection mapping, body tracking, and immersive VFX."
+    "description": "Technical friction slows artists down. In Unity, I build custom C# curve editors, lighting dashboards, and attribute-driven VFX components that replace brittle manual workflows with safe, iterative inspector-based authoring."
   },
 
   "procgen": {
     "title": "Procedural Generation",
-    "description": "Algorithmic content creation utilizing Houdini, Unreal PCG, and grammar-based rules to automate level design and asset assembly."
+    "description": "Procedural systems should encode designer intent, not random distribution. Using Houdini and Unreal PCG, I build validation-ready pipelines that transform sparse inputs—splines, zoning maps—into massive, destructible, performant worlds."
+  },
+
+  "vfx": {
+    "title": "VFX & Interactive Systems",
+    "description": "VFX that respond to the world in real time—Niagara fluids driven by gesture tracking, procedural geometry reacting to gameplay. Bridging art and code to deliver expressive visuals that remain stable and performant at runtime."
+  },
+
+  "artinstallation": {
+    "title": "Art Installations",
+    "description": "Public-facing installations demand 24/7 stability with unpredictable audiences. I deploy fault-tolerant Unreal experiences integrating computer vision and nDisplay multi-projection, built for continuous operation in live environments."
   }
 }

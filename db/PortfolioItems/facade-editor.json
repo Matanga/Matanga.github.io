@@ -1,0 +1,53 @@
+{
+    "date": "2023-08-01",
+    "name": "Interactive Building Grammar Editor",
+    "projectname": "Interactive Building Grammar (IBG) System",
+    "company": "Square Enix (R&D Collaboration)",
+    "oneLiner": "Designed and built a standalone desktop application that allows artists to visually author, edit, and preview procedural building facades with immediate 3D feedback.",
+    "bulletpoints": [
+      "Architected and implemented a full standalone desktop tool using Python and PySide6 (Qt), owning the system end-to-end.",
+      "Designed an artist-first visual editing workflow for constructing facade layouts using modular elements and structural groups.",
+      "Implemented multi-floor, multi-facade editing with synchronized visual canvas, underlying grammar representation, and real-time 3D preview.",
+      "Built a live update pipeline where changes in the editor immediately regenerate the building preview without manual refresh.",
+      "Delivered a polished, production-grade UX focused on usability, discoverability, and rapid iteration."
+    ],
+    "dcc": [],
+    "engine": [],
+    "languages": ["Python"],
+    "skillsets": ["tooldev", "procedural"],
+    "tags": [
+      "artist-tools",
+      "standalone-tool",
+      "procedural-authoring",
+      "qt-application",
+      "real-time-preview"
+    ],
+    "priority": 1,
+    "status": "complete",
+    "media": {
+      "image": [
+        "facade-editor__01__main-workspace.jpg",
+        "facade-editor__02__floor-stack-editor.jpg",
+        "facade-editor__03__grammar-and-3d-preview.jpg"
+      ],
+      "youtube": [
+        "https://www.youtube.com/embed/V3ZaBijZ3FY"
+      ],
+      "captions": {
+        "facade-editor__01__main-workspace.jpg": "Main editor workspace showing module libraries, visual facade canvas, and live 3D building preview.",
+        "facade-editor__02__floor-stack-editor.jpg": "Floor stack editor used to assemble multi-floor buildings through direct manipulation.",
+        "facade-editor__03__grammar-and-3d-preview.jpg": "Visual editor and 3D preview kept in sync during live authoring.",
+        "https://www.youtube.com/embed/V3ZaBijZ3FY": "Editor walkthrough demonstrating visual facade authoring, live updates, multi-floor editing, and real-time 3D feedback."
+      }
+    },
+    "deepDive": {
+      "problem": "Procedural building systems are often difficult for artists to use due to opaque data representations and slow iteration cycles.",
+      "approach": [
+        "Designed a visual editing paradigm that allows artists to construct procedural buildings through direct manipulation rather than manual data editing.",
+        "Maintained continuous synchronization between the editor state and the 3D preview to support fast, confident iteration.",
+        "Focused on UX clarity and responsiveness to ensure the tool could be adopted in real production workflows."
+      ]
+    },
+    "context": "This project was developed as an R&D prototype in collaboration with Square Enix’s internal research group to explore artist-friendly procedural building workflows. The system reached a fully functional prototype stage and successfully validated the core UX and tooling concepts. The initiative was later deprioritized due to internal roadmap shifts."
+  }
+  

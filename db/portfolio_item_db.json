@@ -16,6 +16,7 @@
       "dcc": ["Houdini"],
       "engine": ["Unreal"],
       "languages": ["Python", "VEX", "Blueprints"],
+      "tech": ["Houdini HDAs", "Heightfields", "Spline Components"],
       "skillsets": ["tooldev", "pipelinedev", "procgen"],
       "tags": [
         "procedural-generation",
@@ -76,6 +77,7 @@
       "dcc": ["Houdini"],
       "engine": ["Unreal"],
       "languages": ["Python", "VEX", "Blueprints"],
+      "tech": ["Houdini HDAs", "Spline Components"],
       "skillsets": ["tooldev", "pipelinedev", "unrealdev", "procgen"],
       "tags": [
         "procedural-generation",
@@ -141,6 +143,7 @@
       "dcc": ["Houdini"],
       "engine": ["Unreal"],
       "languages": ["Python", "VEX", "Blueprints"],
+      "tech": ["Houdini HDAs", "HISM", "Atlas Textures", "Data Assets", "Custom Primitive Data"],
       "skillsets": ["tooldev", "pipelinedev", "unrealdev", "procgen"],
       "tags": [
         "procedural-generation",
@@ -200,6 +203,7 @@
         "dcc": ["Maya", "3ds Max", "Houdini"],
         "engine": [],
         "languages": ["Python", "Maxscript", "MEL"],
+        "tech": ["Maya API", "3ds Max SDK", "Node Graph UI"],
         "skillsets": ["tooldev", "pipelinedev"],
         "tags": ["batch-processing", "automation", "normalization", "dam", "scalable-tools"],
         "priority": 3,
@@ -237,6 +241,7 @@
         "dcc": ["Maya", "3ds Max", "Houdini"],
         "engine": [],
         "languages": ["Python", "Maxscript", "MEL"],
+        "tech": ["Google Sheets API", "Google APIs"],
         "skillsets": ["tooldev", "pipelinedev"],
         "tags": ["inventory", "dashboard", "reporting", "google-sheets", "google-api", "automation", "production-visibility", "dam"],
         "priority": 3,
@@ -271,6 +276,7 @@
         "dcc": ["Maya", "Houdini"],
         "engine": [],
         "languages": ["Python", "MEL"],
+        "tech": ["Maya API", "Mocap Data Processing"],
         "skillsets": ["pipelinedev", "tooldev"],
         "tags": ["mocap", "performance-capture", "broadcast", "data-normalization", "ingestion-pipeline", "automation"],
         "priority": 3,
@@ -312,6 +318,7 @@
         "dcc": [],
         "engine": ["Unity"],
         "languages": ["C#"],
+        "tech": ["Unity Editor API", "Custom Inspectors", "Bezier Curves", "Procedural Mesh"],
         "skillsets": ["tooldev", "vfx", "unitydev", "procgen"],
         "tags": [
           "curves",
@@ -363,6 +370,7 @@
         "dcc": [],
         "engine": ["Unity"],
         "languages": ["C#"],
+        "tech": ["Unity Editor API", "EditorWindow", "SerializedObject"],
         "skillsets": ["tooldev", "vfx", "unitydev"],
         "tags": [
           "lighting",
@@ -409,6 +417,7 @@
         "dcc": [],
         "engine": ["Unity"],
         "languages": ["C#"],
+        "tech": ["Unity Editor API", "Custom Inspectors", "Spritesheets", "Material Property Blocks"],
         "skillsets": ["tooldev", "vfx", "unitydev"],
         "tags": [
           "vfx-tools",
@@ -464,6 +473,7 @@
         "dcc": [],
         "engine": ["Unity"],
         "languages": ["C#"],
+        "tech": ["Particle Systems", "Destruction Systems"],
         "skillsets": ["tooldev", "vfx"],
         "tags": [
           "realtime-vfx",
@@ -513,6 +523,7 @@
         "dcc": [],
         "engine": ["Unity"],
         "languages": ["C#"],
+        "tech": ["MonoBehaviour", "Animation Curves", "LineRenderer", "Shader Property Control"],
         "skillsets": ["tooldev", "vfx", "unitydev", "procgen"],
         "tags": [
           "vfx-tools",
@@ -572,6 +583,7 @@
         "dcc": [],
         "engine": ["Unreal"],
         "languages": ["Blueprints"],
+        "tech": ["AI Controllers", "Behavior Trees", "Animation Blueprints", "State Machines"],
         "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
         "tags": [
           "ai-behavior",
@@ -620,6 +632,7 @@
         "dcc": [],
         "engine": ["Unreal"],
         "languages": ["Blueprints"],
+        "tech": ["nDisplay", "Weather Systems", "Data-Driven Design"],
         "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
         "tags": [
           "environment-systems",
@@ -668,6 +681,7 @@
         "dcc": ["Blender", "Houdini"],
         "engine": ["Unreal"],
         "languages": ["Blueprints"],
+        "tech": ["nDisplay", "Multi-Projector Setup", "Tablet Integration"],
         "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
         "tags": [
           "live-installation",
@@ -720,6 +734,7 @@
         "dcc": [],
         "engine": ["Unreal"],
         "languages": ["Blueprints", "Python"],
+        "tech": ["MediaPipe", "WebSockets", "Spline Components", "Computer Vision"],
         "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
         "tags": [
           "interactive-installation",
@@ -766,6 +781,7 @@
         "dcc": [],
         "engine": ["Unreal"],
         "languages": ["Blueprints"],
+        "tech": ["Niagara", "Niagara Modules", "Niagara Functions", "MediaPipe", "Fluid Simulation"],
         "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
         "tags": [
           "niagara",
@@ -815,6 +831,7 @@
         "dcc": [],
         "engine": ["Unreal"],
         "languages": ["Blueprints"],
+        "tech": ["Unreal PCG", "Lumen", "Nanite"],
         "skillsets": ["unrealdev", "pipelinedev", "procgen"],
         "tags": ["environment", "realtime", "procedural", "validation"],
         "priority": 1,
@@ -866,6 +883,7 @@
         "dcc": [],
         "engine": ["Unreal"],
         "languages": ["Blueprints"],
+        "tech": ["Sequencer", "Camera Rigs", "Cine Camera"],
         "skillsets": ["unrealdev"],
         "tags": ["sequencer", "cinematic", "realtime", "presentation"],
         "priority": 1,
@@ -913,6 +931,7 @@
       "dcc": [],
       "engine": ["Unreal"],
       "languages": ["Blueprints"],
+      "tech": ["Spline Components", "Spline Mesh", "Runtime Virtual Texture", "Landscape Grass"],
       "skillsets": ["tooldev", "pipelinedev", "unrealdev", "procgen"],
       "tags": [
         "spline-authoring",
@@ -957,6 +976,7 @@
       "dcc": [],
       "engine": ["Unreal"],
       "languages": ["Blueprints"],
+      "tech": ["Unreal PCG", "Packed Level Actors", "Data Assets"],
       "skillsets": ["tooldev", "pipelinedev", "unrealdev"],
       "tags": [
         "pcg",
@@ -1018,6 +1038,7 @@
       "dcc": [],
       "engine": ["Unreal"],
       "languages": ["Blueprints"],
+      "tech": ["Chaos Physics", "Chaos Destruction", "Geometry Collection", "Fracture"],
       "skillsets": ["unrealdev", "tooldev", "pipelinedev"],
       "tags": [
         "chaos-destruction",
@@ -1073,6 +1094,7 @@
       "dcc": [],
       "engine": ["Unreal"],
       "languages": ["Blueprints"],
+      "tech": ["Unreal PCG", "Packed Level Actors", "Data Assets"],
       "skillsets": ["tooldev", "pipelinedev", "unrealdev", "procgen"],
       "tags": [
         "pcg",
@@ -1134,6 +1156,7 @@
       "dcc": [],
       "engine": ["Unreal"],
       "languages": ["Blueprints"],
+      "tech": ["Chaos Physics", "Chaos Destruction", "Geometry Collection", "Fracture"],
       "skillsets": ["unrealdev", "tooldev", "pipelinedev", "procgen"],
       "tags": [
         "chaos-destruction",
@@ -1185,6 +1208,7 @@
       "dcc": [],
       "engine": ["Unreal"],
       "languages": ["C++", "Blueprints"],
+      "tech": ["Slate UI", "Editor Subsystems", "REST API", "Async Tasks", "FHttpModule"],
       "skillsets": ["unrealdev", "tooldev", "pipelinedev"],
       "tags": ["editor-plugin", "workflow", "async", "asset-import", "job-history"],
       "priority": 1,
@@ -1231,6 +1255,7 @@
       "dcc": [],
       "engine": ["Unity"],
       "languages": ["C#"],
+      "tech": ["Unity Editor API", "EditorWindow", "REST API", "UnityWebRequest", "Async/Await"],
       "skillsets": ["unitydev", "tooldev", "pipelinedev"],
       "tags": ["editor-plugin", "workflow", "dynamic-ui", "job-history", "asset-import"],
       "priority": 1,
@@ -1260,7 +1285,158 @@
           "Integrated Unity-native asset import and inspector workflows so generated outputs behave like first-class project assets."
         ]
       }
-    }
-    
+    },
+    "facade-editor":{
+      "date": "2023-08-01",
+      "name": "Interactive Building Grammar Editor",
+      "projectname": "Interactive Building Grammar (IBG) System",
+      "company": "Square Enix (R&D Collaboration)",
+      "oneLiner": "Designed and built a standalone desktop application that allows artists to visually author, edit, and preview procedural building facades with immediate 3D feedback.",
+      "bulletpoints": [
+        "Architected and implemented a full standalone desktop tool using Python and PySide6 (Qt), owning the system end-to-end.",
+        "Designed an artist-first visual editing workflow for constructing facade layouts using modular elements and structural groups.",
+        "Implemented multi-floor, multi-facade editing with synchronized visual canvas, underlying grammar representation, and real-time 3D preview.",
+        "Built a live update pipeline where changes in the editor immediately regenerate the building preview without manual refresh.",
+        "Delivered a polished, production-grade UX focused on usability, discoverability, and rapid iteration."
+      ],
+      "dcc": [],
+      "engine": [],
+      "languages": ["Python"],
+      "tech": ["PySide6", "Qt", "OpenGL", "MVC Architecture"],
+      "skillsets": ["tooldev", "procedural"],
+      "tags": [
+        "artist-tools",
+        "standalone-tool",
+        "procedural-authoring",
+        "qt-application",
+        "real-time-preview"
+      ],
+      "priority": 1,
+      "status": "complete",
+      "media": {
+        "image": [
+          "facade-editor__01__main-workspace.jpg",
+          "facade-editor__02__floor-stack-editor.jpg",
+          "facade-editor__03__grammar-and-3d-preview.jpg"
+        ],
+        "youtube": [
+          "https://www.youtube.com/embed/V3ZaBijZ3FY"
+        ],
+        "captions": {
+          "facade-editor__01__main-workspace.jpg": "Main editor workspace showing module libraries, visual facade canvas, and live 3D building preview.",
+          "facade-editor__02__floor-stack-editor.jpg": "Floor stack editor used to assemble multi-floor buildings through direct manipulation.",
+          "facade-editor__03__grammar-and-3d-preview.jpg": "Visual editor and 3D preview kept in sync during live authoring.",
+          "https://www.youtube.com/embed/V3ZaBijZ3FY": "Editor walkthrough demonstrating visual facade authoring, live updates, multi-floor editing, and real-time 3D feedback."
+        }
+      },
+      "deepDive": {
+        "problem": "Procedural building systems are often difficult for artists to use due to opaque data representations and slow iteration cycles.",
+        "approach": [
+          "Designed a visual editing paradigm that allows artists to construct procedural buildings through direct manipulation rather than manual data editing.",
+          "Maintained continuous synchronization between the editor state and the 3D preview to support fast, confident iteration.",
+          "Focused on UX clarity and responsiveness to ensure the tool could be adopted in real production workflows."
+        ]
+      },
+      "context": "This project was developed as an R&D prototype in collaboration with Square Enix’s internal research group to explore artist-friendly procedural building workflows. The system reached a fully functional prototype stage and successfully validated the core UX and tooling concepts. The initiative was later deprioritized due to internal roadmap shifts."
+    },
+    "facade-grammar":
+    {
+        "date": "2023-08-01",
+        "name": "Procedural Building Grammar & Resolution System",
+        "projectname": "Interactive Building Grammar (IBG) System",
+        "company": "Square Enix (R&D Collaboration)",
+        "oneLiner": "Designed a deterministic grammar and resolution system that expands symbolic facade definitions into width-accurate, production-ready building layouts.",
+        "bulletpoints": [
+          "Designed a formal grammar model for procedural building facades with clear separation between fixed structural intent and repeatable variation.",
+          "Implemented a deterministic resolution algorithm that expands symbolic expressions to fit target widths without breaking structure.",
+          "Established a RIGID-first, FILL-second evaluation model to guarantee correctness before procedural expansion.",
+          "Supported multi-floor grammar resolution with automatic normalization of incomplete or missing facade data.",
+          "Introduced canonical grammar serialization and blueprint caching to ensure repeatable outputs and performant iteration."
+        ],
+        "dcc": [],
+        "engine": [],
+        "languages": ["Python"],
+        "tech": ["Grammar Systems", "Constraint Resolution", "JSON Serialization"],
+        "skillsets": ["procedural", "pipelinedev"],
+        "tags": [
+          "procedural-grammar",
+          "deterministic-systems",
+          "constraint-solving",
+          "data-modeling"
+        ],
+        "priority": 2,
+        "status": "complete",
+        "media": {
+          "image": [
+            "facade-grammar__01__symbolic-expression.jpg",
+            "facade-grammar__02__resolved-layout.jpg"
+          ],
+          "youtube": [
+            "https://www.youtube.com/embed/V3ZaBijZ3FY"
+          ],
+          "captions": {
+            "facade-grammar__01__symbolic-expression.jpg": "Example symbolic facade grammar prior to resolution.",
+            "facade-grammar__02__resolved-layout.jpg": "Resolved facade layout after deterministic width-based expansion.",
+            "https://www.youtube.com/embed/V3ZaBijZ3FY": "Editor walkthrough demonstrating visual facade authoring, live updates, multi-floor editing, and real-time 3D feedback."
+          }
+        },
+        "deepDive": {
+          "problem": "Naive procedural repetition leads to broken proportions, invalid layouts, and non-repeatable results when scaling building systems.",
+          "approach": [
+            "Defined explicit grammar semantics separating fixed structure from procedural variation.",
+            "Resolved grammars deterministically based on target dimensions to guarantee predictable results.",
+            "Ensured outputs were stable, cacheable, and suitable for downstream procedural pipelines."
+          ]
+        },
+        "context": "This system was developed as part of a broader R&D effort to explore robust procedural building workflows. The grammar and resolution engine was fully implemented and validated before the initiative was later deprioritized due to internal roadmap shifts."
+      },
+      "facade-content":{
+        "date": "2023-08-01",
+        "name": "Procedural Building Content & Asset Management Framework",
+        "projectname": "Interactive Building Grammar (IBG) System",
+        "company": "Square Enix (R&D Collaboration)",
+        "oneLiner": "Designed a structured content and asset management framework to support scalable procedural building authoring and pipeline integration.",
+        "bulletpoints": [
+          "Designed a manifest-driven content framework to organize procedural building assets, floor style libraries, and configuration data.",
+          "Separated reusable floor styles from individual building documents to promote consistency and reduce duplication.",
+          "Implemented explicit mapping layers between editor-facing assets and engine-side procedural module identifiers.",
+          "Supported safe duplication, renaming, and deletion of procedural content while preserving data integrity.",
+          "Ensured all managed content could be exported in clean, normalized formats suitable for engine-side procedural pipelines."
+        ],
+        "dcc": [],
+        "engine": ["Unreal Engine"],
+        "languages": ["Python"],
+        "tech": ["Manifest Systems", "JSON Schema", "Data Validation"],
+        "skillsets": ["pipelinedev", "procedural"],
+        "tags": [
+          "asset-management",
+          "procedural-pipelines",
+          "data-driven-workflows",
+          "content-framework"
+        ],
+        "priority": 3,
+        "status": "complete",
+        "media": {
+          "image": [
+            "facade-content__01__floor-style.jpg",
+            "facade-content__02__module-mapping.jpg"
+          ],
+          "youtube": [
+          ],
+          "captions": {
+            "facade-content__01__floor-style.jpg": "Floor Style Library used to define reusable, multi-facade floor templates. Each floor style encapsulates height, facade patterns, and module composition, enabling consistent reuse across multiple building definitions while supporting rapid iteration and reordering.",
+            "facade-content__02__module-mapping.jpg": "Module Mapping Editor bridging editor-facing procedural modules with engine-side Unreal module identifiers. This explicit mapping layer decouples authoring workflows from engine implementations while ensuring deterministic, pipeline-ready outputs."
+          }
+        },
+        "deepDive": {
+          "problem": "Procedural tools break down in production without structured content management, leading to duplication, inconsistency, and fragile integrations.",
+          "approach": [
+            "Introduced a clear separation between authored buildings and reusable content libraries.",
+            "Designed explicit mapping and manifest systems to keep editor data aligned with engine-side pipelines.",
+            "Focused on data integrity and repeatability to support long-term scalability."
+          ]
+        },
+        "context": "This framework was developed as part of an R&D initiative exploring scalable procedural building workflows. While the broader project was later deprioritized due to internal roadmap changes, the content system reached a complete and production-ready prototype state."
+      }
     
   }

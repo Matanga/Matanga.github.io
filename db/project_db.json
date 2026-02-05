@@ -1,122 +1,120 @@
 {
 
-    "apocs":
-    {
-        "name": "Procedural World Pipeline R&D Sandbox",
-        "client": "Undisclosed",
-        "company": "Undisclosed",
-        "media": "Digital",
-        "platform": "PC",
-        "involvement": "Pipeline & Tool Development",
-        "impact": "Designed and explored a large-scale procedural world pipeline to validate workflows for terrain, settlements, and infrastructure generation with a strong focus on iteration speed and performance.",
-        "responsibilities": [
-          "Designed and implemented an end-to-end procedural world generation pipeline as a solo R&D initiative.",
-          "Built Houdini-based systems for generating landscapes, towns, and infrastructure using heightfields, SOP networks, PDG, VEX, and Python.",
-          "Developed Unreal Engine tooling to ingest, visualize, and iterate on large-scale procedural data efficiently."
-        ],
-        "context": "This project was an internal-style R&D sandbox focused on exploring and validating procedural world generation workflows using Houdini and Unreal Engine 4. The goal was to prototype scalable pipelines capable of supporting large environments while maintaining fast iteration cycles and high runtime performance.",
-        "challenges": "The primary challenge was managing the complexity and scale of a large procedural environment while working solo. The project required balancing world size, visual fidelity, performance constraints, and usability, all while ensuring that workflows remained flexible and iteration-friendly.",
-        "solutions": "I designed a modular procedural pipeline in Houdini to generate foundational world data, then created custom Unreal Engine workflows to import and refine that data using World Composition, shaders, grass layers, RVTs, blueprints, custom editor widgets, and Niagara. This approach allowed rapid iteration on large environments while validating the technical feasibility of the pipeline.",
-        "portfolioitems": [
-          "apocs-landscape",
-          "apocs-city",
-          "apocs-building"
-        ]
+      "apocs":
+      {
+          "name": "Procedural World Pipeline R&D Sandbox",
+          "client": "Undisclosed",
+          "company": "Undisclosed",
+          "media": "Digital",
+          "platform": "PC",
+          "involvement": "Pipeline & Tool Development",
+          "impact": "Designed and explored a large-scale procedural world pipeline to validate workflows for terrain, settlements, and infrastructure generation with a strong focus on iteration speed and performance.",
+          "responsibilities": [
+            "Designed and implemented an end-to-end procedural world generation pipeline as a solo R&D initiative.",
+            "Built Houdini-based systems for generating landscapes, towns, and infrastructure using heightfields, SOP networks, PDG, VEX, and Python.",
+            "Developed Unreal Engine tooling to ingest, visualize, and iterate on large-scale procedural data efficiently."
+          ],
+          "context": "This project was an internal-style R&D sandbox focused on exploring and validating procedural world generation workflows using Houdini and Unreal Engine 4. The goal was to prototype scalable pipelines capable of supporting large environments while maintaining fast iteration cycles and high runtime performance.",
+          "challenges": "The primary challenge was managing the complexity and scale of a large procedural environment while working solo. The project required balancing world size, visual fidelity, performance constraints, and usability, all while ensuring that workflows remained flexible and iteration-friendly.",
+          "solutions": "I designed a modular procedural pipeline in Houdini to generate foundational world data, then created custom Unreal Engine workflows to import and refine that data using World Composition, shaders, grass layers, RVTs, blueprints, custom editor widgets, and Niagara. This approach allowed rapid iteration on large environments while validating the technical feasibility of the pipeline.",
+          "portfolioitems": [
+            "apocs-landscape",
+            "apocs-city",
+            "apocs-building"
+          ]
       },
-
-    "2kdam": {
-        "name": "Enterprise Digital Asset Library (DAM)",
-        "client": "2K",
-        "company": "Globant",
-        "media": "Digital",
-        "platform": "PC",
-        "involvement": "Pipeline & Tool Development",
-        "impact": "Standardized and centralized tens of thousands of legacy assets into a global, searchable, software-agnostic DAM used across multiple 2K teams.",
-        "responsibilities": [
-          "Owned the design and implementation of a scalable asset normalization pipeline spanning multiple DCCs and legacy repositories.",
-          "Developed a suite of internal tools to automate batch processing, metadata extraction, validation, and reporting at scale.",
-          "Defined and enforced metadata and tagging standards to significantly improve asset discoverability and cross-team reuse."
-        ],
-        "context": "As a Senior Technical Artist, I worked on a global 2K initiative focused on salvaging, normalizing, and centralizing digital assets from multiple studios and production pipelines into a unified internal Digital Asset Manager (DAM). The goal was to make assets software-agnostic, searchable, and reusable at scale across teams worldwide.",
-        "challenges": "The asset pool consisted of tens of thousands of files originating from different studios, tools, pipelines, and production eras, often with inconsistent structure and missing metadata. With a small team, early workflows required custom manual handling for each new repository.",
-        "solutions": "I designed and built an extensible ecosystem of tools and batch-driven workflows that replaced manual processing with automated, scalable pipelines. These systems enabled consistent normalization, metadata enrichment, and inventory reporting, while remaining flexible enough to support new repositories and future projects.",
-        "portfolioitems": [
-          "2kdam-batch",
-          "2kdam-inventory"
-        ]
+      "2kdam": {
+          "name": "Enterprise Digital Asset Library (DAM)",
+          "client": "2K",
+          "company": "Globant",
+          "media": "Digital",
+          "platform": "PC",
+          "involvement": "Pipeline & Tool Development",
+          "impact": "Standardized and centralized tens of thousands of legacy assets into a global, searchable, software-agnostic DAM used across multiple 2K teams.",
+          "responsibilities": [
+            "Owned the design and implementation of a scalable asset normalization pipeline spanning multiple DCCs and legacy repositories.",
+            "Developed a suite of internal tools to automate batch processing, metadata extraction, validation, and reporting at scale.",
+            "Defined and enforced metadata and tagging standards to significantly improve asset discoverability and cross-team reuse."
+          ],
+          "context": "As a Senior Technical Artist, I worked on a global 2K initiative focused on salvaging, normalizing, and centralizing digital assets from multiple studios and production pipelines into a unified internal Digital Asset Manager (DAM). The goal was to make assets software-agnostic, searchable, and reusable at scale across teams worldwide.",
+          "challenges": "The asset pool consisted of tens of thousands of files originating from different studios, tools, pipelines, and production eras, often with inconsistent structure and missing metadata. With a small team, early workflows required custom manual handling for each new repository.",
+          "solutions": "I designed and built an extensible ecosystem of tools and batch-driven workflows that replaced manual processing with automated, scalable pipelines. These systems enabled consistent normalization, metadata enrichment, and inventory reporting, while remaining flexible enough to support new repositories and future projects.",
+          "portfolioitems": [
+            "2kdam-batch",
+            "2kdam-inventory"
+          ]
       },
-
-    "dance-monsters": {
-        "name": "Dance Monsters",
-        "client": "Netflix",
-        "company": "Realtime UK",
-        "media": "Broadcast",
-        "platform": "Broadcast",
-        "involvement": "Pipeline Development",
-        "impact": "Designed and owned critical pipeline subsystems that enabled the ingestion, normalization, and processing of hundreds of mocap-driven shots per episode for a large-scale Netflix broadcast production.",
-        "responsibilities": [
-          "Designed and owned pipeline subsystems for ingesting, normalizing, and processing multi-vendor mocap, camera, and lighting data.",
-          "Built automation tools in Python, Maya, and MEL to align body mocap, facial capture, camera, and lighting data in time and world space.",
-          "Implemented retargeting workflows to adapt incoming motion data to proprietary character rigs at production scale.",
-          "Collaborated closely with the wider pipeline team to ensure tools met real production needs and supported rapid iteration."
-        ],
-        "context": "Dance Monsters is a Netflix broadcast series featuring digitally created characters driven by full-performance motion capture. As a Pipeline TD / Pipeline Engineer, I worked on the backend systems responsible for processing, validating, and preparing performance data for rendering and VFX across hundreds of shots per episode.",
-        "challenges": "Production data was delivered by multiple vendors in different formats, with body mocap, facial capture, camera, and lighting data arriving asynchronously and often misaligned. All data needed to be normalized, synchronized, and retargeted reliably to support high-throughput episodic delivery.",
-        "solutions": "I designed and implemented robust pipeline subsystems that automatically sorted, validated, and merged incoming data into a consistent internal format. These tools formed the backbone of an agile processing pipeline, enabling fast iteration and reliable shot throughput at broadcast scale. Additional Houdini-based tools were developed to integrate processed data into the rendering and VFX pipeline.",
-        "portfolioitems": [
-          "dm-showcase"
-        ]
+      "dance-monsters": {
+          "name": "Dance Monsters",
+          "client": "Netflix",
+          "company": "Realtime UK",
+          "media": "Broadcast",
+          "platform": "Broadcast",
+          "involvement": "Pipeline Development",
+          "impact": "Designed and owned critical pipeline subsystems that enabled the ingestion, normalization, and processing of hundreds of mocap-driven shots per episode for a large-scale Netflix broadcast production.",
+          "responsibilities": [
+            "Designed and owned pipeline subsystems for ingesting, normalizing, and processing multi-vendor mocap, camera, and lighting data.",
+            "Built automation tools in Python, Maya, and MEL to align body mocap, facial capture, camera, and lighting data in time and world space.",
+            "Implemented retargeting workflows to adapt incoming motion data to proprietary character rigs at production scale.",
+            "Collaborated closely with the wider pipeline team to ensure tools met real production needs and supported rapid iteration."
+          ],
+          "context": "Dance Monsters is a Netflix broadcast series featuring digitally created characters driven by full-performance motion capture. As a Pipeline TD / Pipeline Engineer, I worked on the backend systems responsible for processing, validating, and preparing performance data for rendering and VFX across hundreds of shots per episode.",
+          "challenges": "Production data was delivered by multiple vendors in different formats, with body mocap, facial capture, camera, and lighting data arriving asynchronously and often misaligned. All data needed to be normalized, synchronized, and retargeted reliably to support high-throughput episodic delivery.",
+          "solutions": "I designed and implemented robust pipeline subsystems that automatically sorted, validated, and merged incoming data into a consistent internal format. These tools formed the backbone of an agile processing pipeline, enabling fast iteration and reliable shot throughput at broadcast scale. Additional Houdini-based tools were developed to integrate processed data into the rendering and VFX pipeline.",
+          "portfolioitems": [
+            "dm-showcase"
+          ]
       },
-    "element-space": {
-        "name": "Element Space",
-        "client": "2K",
-        "company": "Globant",
-        "media": "Digital",
-        "platform": "PC",
-        "involvement": "Technical Art & VFX Pipeline Development",
-        "impact": "Enabled scalable VFX production and faster iteration on a shipped Unity title by combining artist-facing tools with optimized, production-ready VFX systems.",
-        "responsibilities": [
-          "Worked as a hybrid Technical Artist and VFX Artist on a shipped top-down, turn-based tactical shooter.",
-          "Designed and developed artist-facing tools to support VFX creation, scene management, and content generation within Unity.",
-          "Created and maintained VFX systems and representative assets while ensuring performance and engine compatibility.",
-          "Enabled non-technical artists to author and iterate on VFX content independently through simplified workflows and tooling."
-        ],
-        "context": "Element Space is a commercially released, top-down, turn-based tactical shooter available on Steam. This project marked my first official Technical Artist role, where I combined hands-on VFX production with tool and workflow development to support a large, multidisciplinary team.",
-        "challenges": "Key challenges included balancing visual quality with performance constraints, ensuring VFX compatibility across different target systems, and supporting a large team with varying technical skill levels. Iteration speed and usability were critical to maintaining production velocity.",
-        "solutions": "I developed a combination of Unity-based tools and VFX workflows that reduced iteration time and lowered the technical barrier for content creation. By collaborating closely with designers and artists, I ensured the tools integrated smoothly into the production pipeline, allowing the team to produce consistent, optimized VFX at scale.",
-        "portfolioitems": [
-          "element-vfxcomps",
-          "element-textools",
-          "element-lightlister",
-          "element-curvetools",
-          "element-vfx"
-        ]
+      "element-space": {
+          "name": "Element Space",
+          "client": "2K",
+          "company": "Globant",
+          "media": "Digital",
+          "platform": "PC",
+          "involvement": "Technical Art & VFX Pipeline Development",
+          "impact": "Enabled scalable VFX production and faster iteration on a shipped Unity title by combining artist-facing tools with optimized, production-ready VFX systems.",
+          "responsibilities": [
+            "Worked as a hybrid Technical Artist and VFX Artist on a shipped top-down, turn-based tactical shooter.",
+            "Designed and developed artist-facing tools to support VFX creation, scene management, and content generation within Unity.",
+            "Created and maintained VFX systems and representative assets while ensuring performance and engine compatibility.",
+            "Enabled non-technical artists to author and iterate on VFX content independently through simplified workflows and tooling."
+          ],
+          "context": "Element Space is a commercially released, top-down, turn-based tactical shooter available on Steam. This project marked my first official Technical Artist role, where I combined hands-on VFX production with tool and workflow development to support a large, multidisciplinary team.",
+          "challenges": "Key challenges included balancing visual quality with performance constraints, ensuring VFX compatibility across different target systems, and supporting a large team with varying technical skill levels. Iteration speed and usability were critical to maintaining production velocity.",
+          "solutions": "I developed a combination of Unity-based tools and VFX workflows that reduced iteration time and lowered the technical barrier for content creation. By collaborating closely with designers and artists, I ensured the tools integrated smoothly into the production pipeline, allowing the team to produce consistent, optimized VFX at scale.",
+          "portfolioitems": [
+            "element-vfxcomps",
+            "element-textools",
+            "element-lightlister",
+            "element-curvetools",
+            "element-vfx"
+          ]
       },
-    "intel-evo": {
-        "name": "Evolution Experience",
-        "client": "Intel",
-        "company": "Genosha",
-        "media": "Art Installation",
-        "platform": "PC",
-        "involvement": "Interactive Systems & Unreal Development",
-        "impact": "Delivered a large-scale, real-time interactive installation for Intel by designing and implementing the complete Unreal Engine system powering multi-user interaction, AI-driven characters, and an 8-projector nDisplay setup running continuously in a public space.",
-        "responsibilities": [
-          "Owned and implemented the entire Unreal Engine side of the installation as the sole Unreal developer.",
-          "Designed and built interactive environments, animation systems, AI controllers, and tooling to support real-time audience interaction.",
-          "Integrated real-time communication between tablets and Unreal using WebSocket-based networking.",
-          "Configured and deployed an 8-projector nDisplay setup for a surround-room experience, collaborating with onsite operators to ensure stability and correct calibration.",
-          "Developed editor tools and data-driven workflows to enable rapid iteration on level design, ambient animation, and interaction behavior."
-        ],
-        "context": "Evolution Experience is a large-scale interactive art installation deployed in Spain to promote Intel technology. The experience featured a surround room driven by eight projectors, where audiences could interact with different animal species in real time using tablets. The installation was designed to run continuously for extended periods in a public setting.",
-        "challenges": "The project required building a robust real-time system capable of handling concurrent audience interactions, synchronizing visuals across multiple projectors, and maintaining stability during long-running sessions. Additional challenges included integrating external input via WebSockets, creating believable reactive animal behavior, and supporting rapid creative iteration under installation constraints.",
-        "solutions": "I designed and implemented a complete Unreal-based solution that combined WebSocket-driven interaction, animation blueprints, AI controllers, and nDisplay-based rendering. By building custom tools and data-driven workflows, I enabled fast iteration while maintaining performance and reliability. The final system delivered a stable, immersive experience that engaged audiences continuously and supported the operational demands of a live installation.",
-        "portfolioitems": [
-          "intelevo-environment",
-          "intelevo-animals",
-          "intelevo-showcase"
-        ]
+      "intel-evo": {
+          "name": "Evolution Experience",
+          "client": "Intel",
+          "company": "Genosha",
+          "media": "Art Installation",
+          "platform": "PC",
+          "involvement": "Interactive Systems & Unreal Development",
+          "impact": "Delivered a large-scale, real-time interactive installation for Intel by designing and implementing the complete Unreal Engine system powering multi-user interaction, AI-driven characters, and an 8-projector nDisplay setup running continuously in a public space.",
+          "responsibilities": [
+            "Owned and implemented the entire Unreal Engine side of the installation as the sole Unreal developer.",
+            "Designed and built interactive environments, animation systems, AI controllers, and tooling to support real-time audience interaction.",
+            "Integrated real-time communication between tablets and Unreal using WebSocket-based networking.",
+            "Configured and deployed an 8-projector nDisplay setup for a surround-room experience, collaborating with onsite operators to ensure stability and correct calibration.",
+            "Developed editor tools and data-driven workflows to enable rapid iteration on level design, ambient animation, and interaction behavior."
+          ],
+          "context": "Evolution Experience is a large-scale interactive art installation deployed in Spain to promote Intel technology. The experience featured a surround room driven by eight projectors, where audiences could interact with different animal species in real time using tablets. The installation was designed to run continuously for extended periods in a public setting.",
+          "challenges": "The project required building a robust real-time system capable of handling concurrent audience interactions, synchronizing visuals across multiple projectors, and maintaining stability during long-running sessions. Additional challenges included integrating external input via WebSockets, creating believable reactive animal behavior, and supporting rapid creative iteration under installation constraints.",
+          "solutions": "I designed and implemented a complete Unreal-based solution that combined WebSocket-driven interaction, animation blueprints, AI controllers, and nDisplay-based rendering. By building custom tools and data-driven workflows, I enabled fast iteration while maintaining performance and reliability. The final system delivered a stable, immersive experience that engaged audiences continuously and supported the operational demands of a live installation.",
+          "portfolioitems": [
+            "intelevo-environment",
+            "intelevo-animals",
+            "intelevo-showcase"
+          ]
       },
-    "unreal-room": {
+      "unreal-room": {
         "name": "Unreal Room",
         "client": "Personal R&D",
         "company": "Independent",
@@ -253,5 +251,30 @@
         "portfolioitems": [
           "atlasplugin-unity",
           "atlasplugin-unreal"        ]
+      },      
+      "facadebuilder":{
+        "name": "Procedural Grammar Editor",
+        "client": "Square Enix (NDA)",
+        "company": "Atlas (Design Partner)",
+        "media": "Digital",
+        "platform": "PC",
+        "involvement": "Pipeline / Tool Development",
+        "impact": "Designed and developed a standalone procedural building authoring system that replaced manual grammar editing with a visual, deterministic workflow. The project validated an end-to-end approach for artist-driven procedural facade creation, producing pipeline-ready data suitable for Unreal Engine–based procedural systems.",
+        "responsibilities": [
+          "Solely architected and implemented a standalone desktop application for procedural building authoring using Python and Qt.",
+          "Designed an artist-facing visual grammar workflow enabling intuitive construction of complex, multi-floor building facades.",
+          "Developed real-time 2D and 3D preview systems to allow immediate validation of structural and proportional changes.",
+          "Built deterministic grammar resolution and normalization systems to ensure correct, repeatable outputs.",
+          "Designed content and asset management workflows to support reusable floor styles, module catalogs, and engine-facing data exports."
+        ],
+        "context": "This project was developed as an R&D prototype in collaboration with Square Enix’s internal research group through Atlas as a design partner. The goal was to explore scalable, artist-friendly workflows for procedural building facade authoring. The system reached a fully functional, end-to-end prototype stage and successfully validated the technical and UX concepts before the initiative was later deprioritized due to internal roadmap shifts.",
+        "challenges": "Procedural building grammars are traditionally authored as opaque text expressions, making them error-prone, difficult to visualize, and inaccessible to artists. Additionally, ensuring deterministic, width-accurate results across multiple floors and facades introduced significant system design and validation challenges.",
+        "solutions": "I designed a visual grammar authoring tool backed by a formal, deterministic grammar resolution system. Artists interact directly with modular facade elements and structural groups, while the system maintains a canonical grammar representation and produces normalized, pipeline-ready outputs. Real-time visual feedback and structured content management ensured rapid iteration without sacrificing correctness or scalability.",
+        "portfolioitems": [
+          "facade-editor",
+          "facade-grammar",
+          "facade-contentmanagement"
+        ]
       }
+      
 }
