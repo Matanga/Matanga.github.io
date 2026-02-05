@@ -38,10 +38,9 @@ function renderSkillHeader(header) {
   const statsText = `Used in ${header.stats.projectCount} project${header.stats.projectCount !== 1 ? 's' : ''} | ${header.stats.systemCount} system${header.stats.systemCount !== 1 ? 's' : ''} shipped`;
   document.getElementById('skillStats').textContent = statsText;
 
-  // Render tech chips (show more since we now have specific tech data)
+  // Render tech chips - show all aggregated tech for this skillset
   const chipsContainer = document.getElementById('skillTechChips');
   chipsContainer.innerHTML = header.techChips
-    .slice(0, 12) // Increased limit to show more relevant tech
     .map(chip => `<span class="skill-chip">${chip}</span>`)
     .join('');
 }
