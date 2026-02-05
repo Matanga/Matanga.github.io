@@ -57,6 +57,7 @@ class PortfolioItem {
     this.dcc = data.dcc || [];
     this.engine = data.engine || [];
     this.languages = data.languages || [];
+    this.tech = data.tech || [];  // Specific frameworks, APIs, tools
     this.skillsets = data.skillsets || [];
     this.oneLiner = data.oneLiner;
     this.bulletpoints = data.bulletpoints || [];
