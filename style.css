@@ -681,9 +681,15 @@ h3.logoTitle {
 /* --- Capabilities Grid (top tier) --- */
 .capabilities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-bottom: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .capability-card {
@@ -706,6 +712,10 @@ h3.logoTitle {
 
 .capability-card:nth-child(3) {
   border-left-color: var(--accent-warning);
+}
+
+.capability-card:nth-child(4) {
+  border-left-color: var(--accent-highlight, #a855f7);
 }
 
 .capability-title {
@@ -746,6 +756,10 @@ h3.logoTitle {
 
 .capability-card:nth-child(3) .capability-list li::before {
   color: var(--accent-warning);
+}
+
+.capability-card:nth-child(4) .capability-list li::before {
+  color: var(--accent-highlight, #a855f7);
 }
 
 /* --- Technical Stack Grid (bottom tier) --- */
