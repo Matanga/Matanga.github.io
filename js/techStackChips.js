@@ -116,6 +116,10 @@ function renderTechStackChips(containerId, techData, skillsetName) {
     </span>`;
   }).join('');
 
+  console.log(`[TechStackChips] Building component with ${allChips.length} chips`);
+  console.log(`[TechStackChips] techData:`, techData);
+  console.log(`[TechStackChips] allChips:`, allChips);
+
   // Render complete component
   container.innerHTML = `
     <div class="tsc-header">
