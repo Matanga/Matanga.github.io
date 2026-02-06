@@ -78,6 +78,10 @@
   border: 1px solid var(--border-dim);
   border-radius: 0 0 4px 4px;
   z-index: 2;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .tsc-container:active {

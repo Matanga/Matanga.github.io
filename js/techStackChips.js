@@ -163,6 +163,7 @@ function setupTechStackDrag(wrapper) {
 
   container.addEventListener('mousedown', (e) => {
     if (e.target.closest('.tsc-legend')) return;
+    e.preventDefault(); // Prevent text selection
     isDragging = true;
     startY = e.clientY;
     container.style.cursor = 'grabbing';
@@ -170,6 +171,8 @@ function setupTechStackDrag(wrapper) {
 
   document.addEventListener('mousemove', (e) => {
     if (!isDragging) return;
+    e.preventDefault(); // Prevent text selection while dragging
+    
     const deltaY = e.clientY - startY;
     currentY = scrollY + deltaY;
 
@@ -196,10 +199,11 @@ function setupTechStackDrag(wrapper) {
     if (e.target.closest('.tsc-legend')) return;
     isDragging = true;
     startY = e.touches[0].clientY;
-  });
+  }, { passive: true });
 
   document.addEventListener('touchmove', (e) => {
     if (!isDragging) return;
+    
     const deltaY = e.touches[0].clientY - startY;
     currentY = scrollY + deltaY;
 
@@ -210,7 +214,7 @@ function setupTechStackDrag(wrapper) {
     currentY = Math.max(minScroll, Math.min(maxScroll, currentY));
 
     content.style.transform = `translateY(${currentY}px)`;
-  });
+  }, { passive: true });
 
   document.addEventListener('touchend', () => {
     if (isDragging) {
