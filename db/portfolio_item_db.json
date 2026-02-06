@@ -1377,7 +1377,7 @@
       "engine": [],
       "languages": ["Python"],
       "tech": ["PySide6", "Qt", "OpenGL", "MVC Architecture"],
-      "skillsets": ["tooldev", "procedural"],
+      "skillsets": ["tooldev", "procgen"],
       "tags": [
         "artist-tools",
         "standalone-tool",
@@ -1431,7 +1431,7 @@
         "engine": [],
         "languages": ["Python"],
         "tech": ["Grammar Systems", "Constraint Resolution", "JSON Serialization"],
-        "skillsets": ["procedural", "pipelinedev"],
+        "skillsets": ["procgen", "pipelinedev"],
         "tags": [
           "procedural-grammar",
           "deterministic-systems",
@@ -1481,7 +1481,7 @@
         "engine": ["Unreal Engine"],
         "languages": ["Python"],
         "tech": ["Manifest Systems", "JSON Schema", "Data Validation"],
-        "skillsets": ["pipelinedev", "procedural"],
+        "skillsets": ["pipelinedev", "procgen"],
         "tags": [
           "asset-management",
           "procedural-pipelines",

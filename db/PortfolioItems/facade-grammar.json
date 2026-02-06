@@ -15,7 +15,7 @@
     "dcc": [],
     "engine": [],
     "languages": ["Python"],
-    "skillsets": ["procedural", "pipelinedev"],
+    "skillsets": ["procgen", "pipelinedev"],
     "tags": [
       "procedural-grammar",
       "deterministic-systems",

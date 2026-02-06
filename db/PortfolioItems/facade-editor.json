@@ -14,7 +14,7 @@
     "dcc": [],
     "engine": [],
     "languages": ["Python"],
-    "skillsets": ["tooldev", "procedural"],
+    "skillsets": ["tooldev", "procgen"],
     "tags": [
       "artist-tools",
       "standalone-tool",

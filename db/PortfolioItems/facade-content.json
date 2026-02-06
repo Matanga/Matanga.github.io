@@ -14,7 +14,7 @@
     "dcc": [],
     "engine": ["Unreal Engine"],
     "languages": ["Python"],
-    "skillsets": ["pipelinedev", "procedural"],
+    "skillsets": ["pipelinedev", "procgen"],
     "tags": [
       "asset-management",
       "procedural-pipelines",
