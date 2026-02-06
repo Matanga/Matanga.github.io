@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Visualization Prototype</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0a0f;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: #e0e0e0;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #4ecdc4;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    .description {
+      color: #888;
+      margin-bottom: 20px;
+      max-width: 700px;
+      line-height: 1.5;
+    }
+
+    .viz-container {
+      width: 100%;
+      max-width: 900px;
+      height: 400px;
+      background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    /* Collapsible variant for Option 1 */
+    .viz-container.collapsible {
+      height: 120px;
+      cursor: pointer;
+      transition: height 0.4s ease, border-color 0.3s ease;
+    }
+
+    .viz-container.collapsible:hover {
+      border-color: #4ecdc4;
+    }
+
+    .viz-container.collapsible.expanded {
+      height: 400px;
+      cursor: default;
+    }
+
+    /* Hover overlay */
+    .viz-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(13, 17, 23, 0.85);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    .viz-container.collapsible:hover .viz-overlay {
+      opacity: 1;
+    }
+
+    .viz-container.collapsible.expanded .viz-overlay {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .viz-overlay-text {
+      color: #4ecdc4;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .viz-overlay-icon {
+      font-size: 20px;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+
+    .viz-overlay-hint {
+      color: #666;
+      font-size: 11px;
+      margin-top: 6px;
+    }
+
+    /* Collapse button (shown when expanded) */
+    .viz-collapse-btn {
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      background: rgba(78, 205, 196, 0.15);
+      border: 1px solid rgba(78, 205, 196, 0.3);
+      color: #4ecdc4;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease, background 0.2s ease;
+      z-index: 25;
+    }
+
+    .viz-container.collapsible.expanded .viz-collapse-btn {
+      opacity: 1;
+    }
+
+    .viz-collapse-btn:hover {
+      background: rgba(78, 205, 196, 0.3);
+    }
+
+    /* ===== OPTION 4: Morphing Constellation ===== */
+    .viz-container.morphing {
+      height: 150px;
+      cursor: pointer;
+      transition: height 0.5s ease;
+    }
+
+    .viz-container.morphing.expanded {
+      height: 550px;
+      cursor: default;
+    }
+
+    .viz-hint {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #666;
+      font-size: 11px;
+      transition: opacity 0.3s;
+    }
+
+    .viz-container.morphing.expanded .viz-hint {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Collapsed state: Floating chips like Option 2 */
+    .morph-chips-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 45px 30px 30px;
+      height: 100%;
+    }
+
+    .viz-container.morphing.expanded .morph-chips-container {
+      pointer-events: none;
+    }
+    
+    .morph-chip.transitioning {
+      position: fixed;
+      animation: none !important;
+      transition: transform 0.6s ease-out, opacity 0.4s ease;
+      z-index: 100;
+    }
+    
+    .morph-chip.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .morph-chip {
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: floatChip var(--duration) ease-in-out infinite;
+      animation-delay: var(--delay);
+    }
+
+    .morph-chip:hover {
+      transform: scale(1.08) translateY(-2px);
+      box-shadow: 0 0 25px var(--glow-color);
+    }
+
+    @keyframes floatChip {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* Expanded state: SVG constellation */
+    .morph-svg-container {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .viz-container.morphing.expanded .morph-svg-container {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .morph-svg-container svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .category-node-expanded {
+      cursor: grab;
+    }
+
+    .category-node-expanded:active {
+      cursor: grabbing;
+    }
+
+    .category-label-expanded {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      fill: #fff;
+      pointer-events: none;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+
+    .tech-node-expanded {
+      pointer-events: none;
+    }
+
+    .tech-label-expanded {
+      font-family: 'Consolas', monospace;
+      font-size: 10px;
+      fill: #ccc;
+      pointer-events: none;
+      text-anchor: middle;
+    }
+
+    .morph-link {
+      pointer-events: none;
+    }
+
+    /* Collapse button */
+    .morph-collapse-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #aaa;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-size: 11px;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 30;
+    }
+
+    .viz-container.morphing.expanded .morph-collapse-btn {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ===== OPTION 5: Circle Bloom Styles ===== */
+    .viz-container.bloom {
+      height: 160px;
+      transition: height 0.5s ease;
+      cursor: pointer;
+    }
+
+    .viz-container.bloom.expanded {
+      height: 500px;
+      cursor: default;
+    }
+
+    .viz-container.bloom svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .bloom-hint {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #666;
+      font-size: 12px;
+      transition: opacity 0.3s ease;
+    }
+
+    .viz-container.bloom.expanded .bloom-hint {
+      opacity: 0;
+    }
+
+    .bloom-category {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .bloom-category:hover circle {
+      filter: brightness(1.2);
+    }
+
+    .bloom-category-circle {
+      transition: r 0.4s ease, opacity 0.3s ease;
+    }
+
+    .bloom-category-label {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-weight: 600;
+      fill: #fff;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      pointer-events: none;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .bloom-tech {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .bloom-tech.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .bloom-tech-circle {
+      transition: r 0.3s ease;
+    }
+
+    .bloom-tech-label {
+      font-family: 'Consolas', monospace;
+      font-size: 9px;
+      fill: #ddd;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      pointer-events: none;
+    }
+
+    .bloom-link {
+      stroke-opacity: 0;
+      transition: stroke-opacity 0.4s ease;
+    }
+
+    .bloom-link.visible {
+      stroke-opacity: 0.3;
+    }
+
+    .morph-collapse-btn:hover {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+    }
+
+    .viz-title {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      font-size: 12px;
+      color: #4ecdc4;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      z-index: 10;
+    }
+
+    /* ===== OPTION 1: Force-Directed Graph ===== */
+    #viz1 svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    #viz1 .node {
+      cursor: pointer;
+      transition: filter 0.2s;
+    }
+
+    #viz1 .node:hover {
+      filter: brightness(1.4);
+    }
+
+    #viz1 .node-label {
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 11px;
+      fill: #e0e0e0;
+      pointer-events: none;
+      text-anchor: middle;
+    }
+
+    #viz1 .link {
+      stroke: #4ecdc4;
+      stroke-opacity: 0.15;
+    }
+
+    /* ===== OPTION 2: Floating Particles ===== */
+    #viz2 {
+      height: 150px !important;
+      overflow: hidden;
+      cursor: grab;
+      position: relative;
+    }
+
+    #viz2:active {
+      cursor: grabbing;
+    }
+
+    #viz2-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: center;
+      gap: 8px;
+      padding: 15px 20px 25px;
+      position: absolute;
+      width: 100%;
+      min-height: 100%;
+      transition: transform 0.05s ease-out;
+    }
+
+    #viz2 .viz-title {
+      position: absolute;
+      top: 8px;
+      left: 15px;
+      z-index: 10;
+    }
+
+    #viz2 .legend {
+      z-index: 10;
+    }
+
+    .viz2-drag-hint {
+      display: none;
+    }
+
+    .viz2-scroll-indicator {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      pointer-events: none;
+      opacity: 0.4;
+      transition: opacity 0.3s ease;
+    }
+
+    .viz-container.viz2-clean:hover .viz2-scroll-indicator {
+      opacity: 0.7;
+    }
+
+    .viz2-scroll-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      color: #4ecdc4;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .viz2-scroll-arrow {
+      transform: rotate(90deg);
+      animation: scrollBounce 1.5s ease-in-out infinite;
+    }
+
+    .viz2-scroll-arrow.up {
+      animation-delay: 0s;
+    }
+
+    .viz2-scroll-arrow.down {
+      animation-delay: 0.75s;
+    }
+
+    .viz2-scroll-dots {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #30363d;
+    }
+
+    @keyframes scrollBounce {
+      0%, 100% { opacity: 0.3; transform: rotate(90deg) translateX(0); }
+      50% { opacity: 1; transform: rotate(90deg) translateX(3px); }
+    }
+
+    /* Header outside container */
+    .viz2-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: linear-gradient(135deg, #1a1f26 0%, #0d1117 100%);
+      border: 1px solid #30363d;
+      border-bottom: none;
+      border-radius: 12px 12px 0 0;
+      max-width: 900px;
+    }
+
+    .viz2-header-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: #4ecdc4;
+      letter-spacing: 1px;
+    }
+
+    .viz2-header-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 10px;
+    }
+
+    .viz2-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #888;
+    }
+
+    .viz2-legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .viz-container.viz2-clean {
+      border-radius: 0 0 12px 12px;
+      margin-top: 0;
+    }
+
+    .float-chip {
+      background: rgba(78, 205, 196, 0.1);
+      border: 1px solid rgba(78, 205, 196, 0.3);
+      color: #4ecdc4;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-family: 'Consolas', monospace;
+      font-size: 12px;
+      cursor: default;
+      animation: float var(--duration) ease-in-out infinite;
+      animation-delay: var(--delay);
+      transition: all 0.3s ease;
+    }
+
+    .float-chip:hover {
+      background: rgba(78, 205, 196, 0.25);
+      border-color: #4ecdc4;
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(78, 205, 196, 0.4);
+    }
+
+    .float-chip.category-engine {
+      --color: #ff6b6b;
+      background: rgba(255, 107, 107, 0.1);
+      border-color: rgba(255, 107, 107, 0.3);
+      color: #ff6b6b;
+    }
+    .float-chip.category-engine:hover {
+      background: rgba(255, 107, 107, 0.25);
+      border-color: #ff6b6b;
+      box-shadow: 0 0 20px rgba(255, 107, 107, 0.4);
+    }
+
+    .float-chip.category-lang {
+      --color: #ffd93d;
+      background: rgba(255, 217, 61, 0.1);
+      border-color: rgba(255, 217, 61, 0.3);
+      color: #ffd93d;
+    }
+    .float-chip.category-lang:hover {
+      background: rgba(255, 217, 61, 0.25);
+      border-color: #ffd93d;
+      box-shadow: 0 0 20px rgba(255, 217, 61, 0.4);
+    }
+
+    .float-chip.category-dcc {
+      --color: #f97316;
+      background: rgba(249, 115, 22, 0.1);
+      border-color: rgba(249, 115, 22, 0.3);
+      color: #f97316;
+    }
+    .float-chip.category-dcc:hover {
+      background: rgba(249, 115, 22, 0.25);
+      border-color: #f97316;
+      box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+    }
+
+    /* NEW TECH CATEGORIES */
+    .float-chip.category-editor_tools {
+      --color: #06b6d4;
+      background: rgba(6, 182, 212, 0.1);
+      border-color: rgba(6, 182, 212, 0.3);
+      color: #06b6d4;
+    }
+    .float-chip.category-editor_tools:hover {
+      background: rgba(6, 182, 212, 0.25);
+      border-color: #06b6d4;
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+    }
+
+    .float-chip.category-procedural {
+      --color: #22c55e;
+      background: rgba(34, 197, 94, 0.1);
+      border-color: rgba(34, 197, 94, 0.3);
+      color: #22c55e;
+    }
+    .float-chip.category-procedural:hover {
+      background: rgba(34, 197, 94, 0.25);
+      border-color: #22c55e;
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+    }
+
+    .float-chip.category-graphics_vfx {
+      --color: #a855f7;
+      background: rgba(168, 85, 247, 0.1);
+      border-color: rgba(168, 85, 247, 0.3);
+      color: #a855f7;
+    }
+    .float-chip.category-graphics_vfx:hover {
+      background: rgba(168, 85, 247, 0.25);
+      border-color: #a855f7;
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+    }
+
+    .float-chip.category-runtime_simulation {
+      --color: #ec4899;
+      background: rgba(236, 72, 153, 0.1);
+      border-color: rgba(236, 72, 153, 0.3);
+      color: #ec4899;
+    }
+    .float-chip.category-runtime_simulation:hover {
+      background: rgba(236, 72, 153, 0.25);
+      border-color: #ec4899;
+      box-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
+    }
+
+    .float-chip.category-pipeline_integration {
+      --color: #f59e0b;
+      background: rgba(245, 158, 11, 0.1);
+      border-color: rgba(245, 158, 11, 0.3);
+      color: #f59e0b;
+    }
+    .float-chip.category-pipeline_integration:hover {
+      background: rgba(245, 158, 11, 0.25);
+      border-color: #f59e0b;
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+
+    /* ===== OPTION 3: Constellation with Canvas ===== */
+    #viz3 canvas {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Legend */
+    .legend {
+      position: absolute;
+      bottom: 15px;
+      right: 20px;
+      display: flex;
+      gap: 15px;
+      font-size: 10px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .legend-dot.tech { background: #4ecdc4; }
+    .legend-dot.engine { background: #ff6b6b; }
+    .legend-dot.lang { background: #ffd93d; }
+
+    /* Comparison section */
+    h2 {
+      color: #fff;
+      margin: 30px 0 15px;
+      font-size: 18px;
+    }
+
+    .note {
+      color: #666;
+      font-size: 13px;
+      margin-top: 10px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tech Visualization Prototypes</h1>
+  <p class="description">
+    Exploring procedural ways to display tech keywords. All options keep text in the DOM for Ctrl+F searchability.
+  </p>
+
+  <!-- OPTION 5: Circle Bloom (THE NEW BEST) - AT TOP -->
+  <h2>⭐ Option 5: Circle Bloom (Radial Clusters)</h2>
+  <p style="color: #888; margin-bottom: 10px;">Loading real data from <code>db/portfolio_item_db.json</code> - Click categories to bloom tech items</p>
+  <div class="viz-container bloom" id="viz5">
+    <div class="viz-title" id="viz5-title">TECH STACK</div>
+    <svg id="viz5-svg"></svg>
+    <div class="bloom-hint" id="viz5-hint">Click a category to expand</div>
+  </div>
+  <p class="note">Click category circles to expand/collapse. Clean radial layout, all labels visible and searchable.</p>
+
+  <!-- OPTION 4: Morphing Constellation -->
+  <h2>⭐ Option 4: Morphing Constellation (The Ultimate)</h2>
+  <p style="color: #888; margin-bottom: 10px;">Loading real data from <code>db/portfolio_item_db.json</code> - filtering by skillset</p>
+  <div class="viz-container morphing" id="viz4">
+    <div class="viz-title" id="viz4-title">Tech Stack</div>
+    
+    <!-- Collapsed: Floating chips -->
+    <div class="morph-chips-container" id="viz4-chips"></div>
+    
+    <!-- Expanded: SVG constellation -->
+    <div class="morph-svg-container" id="viz4-svg"></div>
+    
+    <!-- Collapse button -->
+    <button class="morph-collapse-btn" id="viz4-collapse">✕ Close</button>
+    
+    <div class="viz-hint" id="viz4-hint">Click to explore connections</div>
+  </div>
+  <p class="note">Click to expand into constellation, close button to collapse. Categories morph into nodes with mouse repulsion.</p>
+
+  <!-- OPTION 1: Force-Directed Graph (Collapsible) -->
+  <h2>Option 1: Force-Directed Constellation (Collapsible)</h2>
+  <div class="viz-container collapsible" id="viz1">
+    <div class="viz-title">Tech Stack</div>
+    
+    <!-- Hover overlay -->
+    <div class="viz-overlay">
+      <div class="viz-overlay-text">
+        <span class="viz-overlay-icon">⚡</span>
+        Click to explore tech constellation
+      </div>
+      <div class="viz-overlay-hint">Interactive • Drag nodes • Mouse repulsion</div>
+    </div>
+    
+    <!-- Collapse button (visible when expanded) -->
+    <button class="viz-collapse-btn" onclick="toggleViz1(event)">↑ Collapse</button>
+    
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot tech"></div> Frameworks</div>
+      <div class="legend-item"><div class="legend-dot engine"></div> Engines</div>
+      <div class="legend-item"><div class="legend-dot lang"></div> Languages</div>
+    </div>
+  </div>
+
+  <!-- OPTION 2: Floating Chips -->
+  <h2>Option 2: Floating Chips (Draggable)</h2>
+  <p style="color: #888; margin-bottom: 10px;">Loading real data from <code>db/portfolio_item_db.json</code> - tooldev skillset</p>
+  
+  <!-- Title + Legend OUTSIDE container -->
+  <div class="viz2-header">
+    <div class="viz2-header-title" id="viz2-title">TECH STACK: TOOLDEV</div>
+    <div class="viz2-header-legend">
+      <span class="viz2-legend-item"><span class="viz2-legend-dot" style="background: #06b6d4;"></span>Editor</span>
+      <span class="viz2-legend-item"><span class="viz2-legend-dot" style="background: #22c55e;"></span>Procedural</span>
+      <span class="viz2-legend-item"><span class="viz2-legend-dot" style="background: #a855f7;"></span>Graphics</span>
+      <span class="viz2-legend-item"><span class="viz2-legend-dot" style="background: #ec4899;"></span>Runtime</span>
+      <span class="viz2-legend-item"><span class="viz2-legend-dot" style="background: #f59e0b;"></span>Pipeline</span>
+      <span class="viz2-legend-item"><span class="viz2-legend-dot" style="background: #ff6b6b;"></span>Engines</span>
+      <span class="viz2-legend-item"><span class="viz2-legend-dot" style="background: #f97316;"></span>DCCs</span>
+      <span class="viz2-legend-item"><span class="viz2-legend-dot" style="background: #ffd93d;"></span>Languages</span>
+    </div>
+  </div>
+  
+  <div class="viz-container viz2-clean" id="viz2">
+    <div id="viz2-content"></div>
+    <div class="viz2-scroll-indicator">
+      <div class="viz2-scroll-icon">
+        <span class="viz2-scroll-arrow up">‹</span>
+        <span class="viz2-scroll-dots">•••</span>
+        <span class="viz2-scroll-arrow down">›</span>
+      </div>
+    </div>
+  </div>
+  <p class="note">Drag to scroll. All text visible and Ctrl+F searchable.</p>
+
+  <!-- OPTION 3: Canvas Constellation -->
+  <h2>Option 3: Interactive Canvas Constellation</h2>
+  <div class="viz-container" id="viz3">
+    <div class="viz-title">Tech Stack</div>
+    <canvas id="constellation"></canvas>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot tech"></div> Frameworks</div>
+      <div class="legend-item"><div class="legend-dot engine"></div> Engines</div>
+      <div class="legend-item"><div class="legend-dot lang"></div> Languages</div>
+    </div>
+    <!-- Hidden text for Ctrl+F -->
+    <div style="position:absolute;left:-9999px;" id="viz3-searchable"></div>
+  </div>
+  <p class="note">Mouse interaction - nodes repel from cursor. Subtle animated connections.</p>
+
+  <!-- D3.js for force simulation -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  
+  <script>
+    // Sample tech data (would come from your skill page)
+    const techData = {
+      tech: [
+        "PySide6", "Qt", "OpenGL", "Slate UI", "REST API", "Async Tasks", 
+        "Unity Editor API", "EditorWindow", "Niagara", "Niagara Modules",
+        "MediaPipe", "WebSockets", "Houdini HDAs", "Heightfields", 
+        "HISM", "Behavior Trees", "nDisplay", "Unreal PCG", "Chaos Physics"
+      ],
+      engines: ["Unreal", "Unity", "Houdini", "Blender", "Maya", "3ds Max"],
+      languages: ["Python", "C++", "C#", "Blueprints", "VEX", "MEL", "Maxscript"]
+    };
+
+    // ===== OPTION 1: D3 Force-Directed Graph with Mouse Repulsion =====
+    function initForceGraph() {
+      const container = document.getElementById('viz1');
+      const width = container.clientWidth;
+      const height = container.clientHeight;
+
+      // Simulated portfolio items - tech that appears together in the same project
+      // This represents co-occurrence (would come from real data in production)
+      const portfolioCoOccurrence = [
+        ["PySide6", "Qt", "OpenGL", "Python"],           // facade-editor
+        ["Niagara", "Niagara Modules", "MediaPipe", "Blueprints"], // unrealroom-vfx
+        ["WebSockets", "MediaPipe", "Python", "Blueprints"],       // unrealroom-bps
+        ["Houdini HDAs", "Heightfields", "Python", "VEX", "Houdini"], // apocs-landscape
+        ["HISM", "Blueprints", "Unreal"],                // apocs-building
+        ["Slate UI", "REST API", "Async Tasks", "C++", "Unreal"], // atlasplugin-unreal
+        ["Unity Editor API", "EditorWindow", "REST API", "C#", "Unity"], // atlasplugin-unity
+        ["Behavior Trees", "Blueprints", "Unreal"],      // intelevo-animals
+        ["nDisplay", "Blueprints", "Unreal"],            // intelevo
+        ["Unreal PCG", "Blueprints", "Unreal"],          // chaosbuildings-pcg
+        ["Chaos Physics", "Blueprints", "Unreal"],       // chaosbuildings-runtime
+        ["Maya", "Python", "MEL"],                       // dm-showcase
+        ["3ds Max", "Maxscript", "Python"],              // 2kdam
+      ];
+
+      // Create nodes from all unique tech
+      const allTechSet = new Set();
+      portfolioCoOccurrence.forEach(group => group.forEach(t => allTechSet.add(t)));
+      
+      // Categorize nodes
+      const engineList = ["Unreal", "Unity", "Houdini", "Blender", "Maya", "3ds Max"];
+      const langList = ["Python", "C++", "C#", "Blueprints", "VEX", "MEL", "Maxscript"];
+      
+      const nodes = Array.from(allTechSet).map(t => ({
+        id: t,
+        group: engineList.includes(t) ? 'engine' : langList.includes(t) ? 'lang' : 'tech'
+      }));
+
+      // Create links based on co-occurrence (tech in same portfolio item)
+      const links = [];
+      const linkSet = new Set(); // Avoid duplicates
+      
+      portfolioCoOccurrence.forEach(group => {
+        // Connect all items within this group
+        for (let i = 0; i < group.length; i++) {
+          for (let j = i + 1; j < group.length; j++) {
+            const sourceIdx = nodes.findIndex(n => n.id === group[i]);
+            const targetIdx = nodes.findIndex(n => n.id === group[j]);
+            if (sourceIdx !== -1 && targetIdx !== -1) {
+              const linkKey = [Math.min(sourceIdx, targetIdx), Math.max(sourceIdx, targetIdx)].join('-');
+              if (!linkSet.has(linkKey)) {
+                linkSet.add(linkKey);
+                links.push({ source: sourceIdx, target: targetIdx });
+              }
+            }
+          }
+        }
+      });
+
+      const svg = d3.select('#viz1')
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height);
+
+      // Mouse tracking for repulsion
+      let mouseX = width / 2, mouseY = height / 2;
+      let mouseActive = false;
+
+      svg.on('mousemove', (event) => {
+        const [x, y] = d3.pointer(event);
+        mouseX = x;
+        mouseY = y;
+        mouseActive = true;
+        simulation.alpha(0.3).restart(); // Wake up simulation on mouse move
+      });
+
+      svg.on('mouseleave', () => {
+        mouseActive = false;
+      });
+
+      // Custom force for mouse repulsion
+      function forceMouseRepulsion() {
+        return (alpha) => {
+          if (!mouseActive) return;
+          
+          nodes.forEach(node => {
+            const dx = node.x - mouseX;
+            const dy = node.y - mouseY;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            const maxDist = 120; // Repulsion radius
+            
+            if (dist < maxDist && dist > 0) {
+              const force = (maxDist - dist) / maxDist * alpha * 50;
+              node.vx += (dx / dist) * force;
+              node.vy += (dy / dist) * force;
+            }
+          });
+        };
+      }
+
+      viz1Simulation = d3.forceSimulation(nodes)
+      const simulation = viz1Simulation
+        .force('link', d3.forceLink(links).distance(60).strength(0.3))
+        .force('charge', d3.forceManyBody().strength(-80))
+        .force('center', d3.forceCenter(width / 2, height / 2))
+        .force('collision', d3.forceCollide().radius(35))
+        .force('mouse', forceMouseRepulsion())
+        .force('boundary', () => {
+          // Keep nodes within bounds
+          nodes.forEach(node => {
+            node.x = Math.max(50, Math.min(width - 50, node.x));
+            node.y = Math.max(40, Math.min(height - 30, node.y));
+          });
+        });
+
+      const link = svg.append('g')
+        .selectAll('line')
+        .data(links)
+        .join('line')
+        .attr('class', 'link');
+
+      const nodeGroup = svg.append('g')
+        .selectAll('g')
+        .data(nodes)
+        .join('g')
+        .attr('class', 'node')
+        .call(d3.drag()
+          .on('start', dragstarted)
+          .on('drag', dragged)
+          .on('end', dragended));
+
+      const colorMap = { tech: '#4ecdc4', engine: '#ff6b6b', lang: '#ffd93d' };
+
+      nodeGroup.append('circle')
+        .attr('r', d => d.group === 'engine' ? 8 : 5)
+        .attr('fill', d => colorMap[d.group])
+        .attr('opacity', 0.8);
+
+      nodeGroup.append('text')
+        .attr('class', 'node-label')
+        .attr('dy', -12)
+        .text(d => d.id);
+
+      simulation.on('tick', () => {
+        link
+          .attr('x1', d => d.source.x)
+          .attr('y1', d => d.source.y)
+          .attr('x2', d => d.target.x)
+          .attr('y2', d => d.target.y);
+
+        nodeGroup.attr('transform', d => `translate(${d.x},${d.y})`);
+      });
+
+      function dragstarted(event) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        event.subject.fx = event.subject.x;
+        event.subject.fy = event.subject.y;
+      }
+
+      function dragged(event) {
+        event.subject.fx = event.x;
+        event.subject.fy = event.y;
+      }
+
+      function dragended(event) {
+        if (!event.active) simulation.alphaTarget(0);
+        event.subject.fx = null;
+        event.subject.fy = null;
+      }
+    }
+
+    // ===== OPTION 2: Floating Chips =====
+    async function initFloatingChips() {
+      const container = document.getElementById('viz2');
+      const content = document.getElementById('viz2-content');
+      const titleEl = document.getElementById('viz2-title');
+      
+      // Fetch real data from portfolio_item_db.json
+      const SKILLSET_FILTER = 'tooldev';
+      
+      let portfolioData;
+      try {
+        const response = await fetch('db/portfolio_item_db.json');
+        portfolioData = await response.json();
+      } catch (e) {
+        console.error('Failed to load portfolio data for Option 2:', e);
+        return;
+      }
+      
+      // Filter items by skillset
+      const matchingItems = Object.values(portfolioData).filter(item => 
+        item.skillsets && item.skillsets.includes(SKILLSET_FILTER)
+      );
+      
+      // NEW CATEGORIZED STRUCTURE - aggregate by tech category
+      const techByCategory = {
+        editor_tools: new Set(),
+        procedural: new Set(),
+        graphics_vfx: new Set(),
+        runtime_simulation: new Set(),
+        pipeline_integration: new Set()
+      };
+      
+      // Also collect engines, dccs, languages
+      const enginesSet = new Set();
+      const dccsSet = new Set();
+      const languagesSet = new Set();
+      
+      matchingItems.forEach(item => {
+        // Handle new categorized tech structure
+        if (item.tech && typeof item.tech === 'object') {
+          Object.entries(item.tech).forEach(([category, techItems]) => {
+            if (techByCategory[category]) {
+              techItems.forEach(t => techByCategory[category].add(t));
+            }
+          });
+        }
+        (item.engine || []).forEach(e => enginesSet.add(e));
+        (item.dcc || []).forEach(d => dccsSet.add(d));
+        (item.languages || []).forEach(l => languagesSet.add(l));
+      });
+      
+      // Build array with categories - using new category names
+      const allTech = [
+        ...[...techByCategory.editor_tools].map(t => ({ name: t, category: 'editor_tools' })),
+        ...[...techByCategory.procedural].map(t => ({ name: t, category: 'procedural' })),
+        ...[...techByCategory.graphics_vfx].map(t => ({ name: t, category: 'graphics_vfx' })),
+        ...[...techByCategory.runtime_simulation].map(t => ({ name: t, category: 'runtime_simulation' })),
+        ...[...techByCategory.pipeline_integration].map(t => ({ name: t, category: 'pipeline_integration' })),
+        ...[...enginesSet].map(t => ({ name: t, category: 'engine' })),
+        ...[...dccsSet].map(t => ({ name: t, category: 'dcc' })),
+        ...[...languagesSet].map(t => ({ name: t, category: 'lang' }))
+      ];
+
+      // Shuffle for visual variety
+      allTech.sort(() => Math.random() - 0.5);
+
+      // Update title (header is outside container now)
+      if (titleEl) {
+        titleEl.textContent = 'TECH STACK: ' + SKILLSET_FILTER.toUpperCase();
+      }
+
+      // Add chips to content container
+      allTech.forEach((tech, i) => {
+        const chip = document.createElement('span');
+        chip.className = `float-chip category-${tech.category}`;
+        chip.textContent = tech.name;
+        chip.style.setProperty('--delay', `${Math.random() * 2}s`);
+        chip.style.setProperty('--duration', `${2 + Math.random() * 2}s`);
+        content.appendChild(chip);
+      });
+      
+      // Log category counts
+      console.log(`Option 2 - ${SKILLSET_FILTER}:`, {
+        editor_tools: techByCategory.editor_tools.size,
+        procedural: techByCategory.procedural.size,
+        graphics_vfx: techByCategory.graphics_vfx.size,
+        runtime_simulation: techByCategory.runtime_simulation.size,
+        pipeline_integration: techByCategory.pipeline_integration.size,
+        engines: enginesSet.size,
+        dccs: dccsSet.size,
+        languages: languagesSet.size,
+        total: allTech.length
+      });
+      
+      // ===== DRAG TO SCROLL =====
+      let isDragging = false;
+      let startY = 0;
+      let scrollY = 0;
+      let currentY = 0;
+      
+      container.addEventListener('mousedown', (e) => {
+        if (e.target.closest('.legend')) return;
+        isDragging = true;
+        startY = e.clientY;
+        container.style.cursor = 'grabbing';
+      });
+      
+      document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const deltaY = e.clientY - startY;
+        currentY = scrollY + deltaY;
+        
+        // Clamp to bounds
+        const contentHeight = content.scrollHeight;
+        const containerHeight = container.clientHeight;
+        const maxScroll = 0;
+        const minScroll = Math.min(0, containerHeight - contentHeight - 20);
+        currentY = Math.max(minScroll, Math.min(maxScroll, currentY));
+        
+        content.style.transform = `translateY(${currentY}px)`;
+      });
+      
+      document.addEventListener('mouseup', () => {
+        if (isDragging) {
+          isDragging = false;
+          scrollY = currentY;
+          container.style.cursor = 'grab';
+        }
+      });
+      
+      // Touch support
+      container.addEventListener('touchstart', (e) => {
+        if (e.target.closest('.legend')) return;
+        isDragging = true;
+        startY = e.touches[0].clientY;
+      });
+      
+      document.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const deltaY = e.touches[0].clientY - startY;
+        currentY = scrollY + deltaY;
+        
+        const contentHeight = content.scrollHeight;
+        const containerHeight = container.clientHeight;
+        const maxScroll = 0;
+        const minScroll = Math.min(0, containerHeight - contentHeight - 20);
+        currentY = Math.max(minScroll, Math.min(maxScroll, currentY));
+        
+        content.style.transform = `translateY(${currentY}px)`;
+      });
+      
+      document.addEventListener('touchend', () => {
+        if (isDragging) {
+          isDragging = false;
+          scrollY = currentY;
+        }
+      });
+      
+      console.log(`Option 2: Loaded ${allTech.length} tech items for "${SKILLSET_FILTER}"`);
+    }
+
+    // ===== OPTION 3: Canvas Constellation =====
+    function initCanvasConstellation() {
+      const canvas = document.getElementById('constellation');
+      const container = document.getElementById('viz3');
+      const ctx = canvas.getContext('2d');
+      
+      // Set canvas size
+      canvas.width = container.clientWidth;
+      canvas.height = container.clientHeight;
+
+      const allTech = [
+        ...techData.tech.map(t => ({ name: t, category: 'tech' })),
+        ...techData.engines.map(t => ({ name: t, category: 'engine' })),
+        ...techData.languages.map(t => ({ name: t, category: 'lang' }))
+      ];
+
+      // Hidden searchable text
+      document.getElementById('viz3-searchable').textContent = allTech.map(t => t.name).join(' ');
+
+      const colorMap = { tech: '#4ecdc4', engine: '#ff6b6b', lang: '#ffd93d' };
+      
+      // Initialize particles
+      const particles = allTech.map((tech, i) => ({
+        name: tech.name,
+        category: tech.category,
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        baseX: 0,
+        baseY: 0
+      }));
+
+      // Set base positions in a grid-ish layout
+      const cols = Math.ceil(Math.sqrt(particles.length * (canvas.width / canvas.height)));
+      const rows = Math.ceil(particles.length / cols);
+      particles.forEach((p, i) => {
+        p.baseX = ((i % cols) + 0.5) * (canvas.width / cols);
+        p.baseY = (Math.floor(i / cols) + 0.5) * (canvas.height / rows);
+        p.x = p.baseX + (Math.random() - 0.5) * 50;
+        p.y = p.baseY + (Math.random() - 0.5) * 50;
+      });
+
+      let mouseX = -1000, mouseY = -1000;
+      
+      canvas.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        mouseX = e.clientX - rect.left;
+        mouseY = e.clientY - rect.top;
+      });
+
+      canvas.addEventListener('mouseleave', () => {
+        mouseX = -1000;
+        mouseY = -1000;
+      });
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Update and draw particles
+        particles.forEach((p, i) => {
+          // Drift back to base position
+          p.vx += (p.baseX - p.x) * 0.01;
+          p.vy += (p.baseY - p.y) * 0.01;
+
+          // Repel from mouse
+          const dx = p.x - mouseX;
+          const dy = p.y - mouseY;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 100) {
+            const force = (100 - dist) / 100;
+            p.vx += (dx / dist) * force * 2;
+            p.vy += (dy / dist) * force * 2;
+          }
+
+          // Apply velocity with damping
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vx *= 0.95;
+          p.vy *= 0.95;
+
+          // Draw connections to nearby particles
+          particles.slice(i + 1).forEach(p2 => {
+            const d = Math.sqrt((p.x - p2.x) ** 2 + (p.y - p2.y) ** 2);
+            if (d < 100) {
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = `rgba(78, 205, 196, ${0.15 * (1 - d / 100)})`;
+              ctx.stroke();
+            }
+          });
+
+          // Draw node
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.category === 'engine' ? 6 : 4, 0, Math.PI * 2);
+          ctx.fillStyle = colorMap[p.category];
+          ctx.globalAlpha = 0.8;
+          ctx.fill();
+          ctx.globalAlpha = 1;
+
+          // Draw label
+          ctx.font = '10px Consolas, monospace';
+          ctx.fillStyle = '#e0e0e0';
+          ctx.textAlign = 'center';
+          ctx.fillText(p.name, p.x, p.y - 10);
+        });
+
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    }
+
+    // ===== OPTION 4: Morphing Constellation =====
+    async function initMorphingConstellation() {
+      const container = document.getElementById('viz4');
+      const chipsContainer = document.getElementById('viz4-chips');
+      const svgContainer = document.getElementById('viz4-svg');
+      const collapseBtn = document.getElementById('viz4-collapse');
+      
+      // ===== FETCH REAL DATA FROM portfolio_item_db.json =====
+      const SKILLSET_FILTER = 'tooldev'; // Change this to test different skillsets
+      
+      let portfolioData;
+      try {
+        const response = await fetch('db/portfolio_item_db.json');
+        portfolioData = await response.json();
+      } catch (e) {
+        console.error('Failed to load portfolio data:', e);
+        chipsContainer.innerHTML = '<div style="color: #ff6b6b; padding: 20px;">Failed to load data. Run from a local server.</div>';
+        return;
+      }
+      
+      // Filter items that have the target skillset
+      const matchingItems = Object.values(portfolioData).filter(item => 
+        item.skillsets && item.skillsets.includes(SKILLSET_FILTER)
+      );
+      
+      // Tech categorization mapping - assigns tech items to subcategories
+      const techCategoryMap = {
+        // UI/Editor tools
+        'UI/Editor': ['PySide6', 'Qt', 'Slate UI', 'Unity Editor API', 'EditorWindow', 'Custom Inspectors', 
+                      'Editor Subsystems', 'SerializedObject', 'Node Graph UI', 'Data Assets', 'IMGUI'],
+        // APIs & Systems
+        'Systems': ['REST API', 'WebSockets', 'Async Tasks', 'Google APIs', 'Google Sheets API', 'Maya API', 
+                   '3ds Max SDK', 'FHttpModule', 'UnityWebRequest', 'Async/Await', 'MediaPipe', 'Computer Vision',
+                   'nDisplay', 'Behavior Trees', 'AI Controllers', 'State Machines', 'Animation Blueprints',
+                   'Mocap Data Processing', 'Multi-Projector Setup', 'Tablet Integration', 'Weather Systems',
+                   'Data-Driven Design', 'MVC Architecture'],
+        // Procedural/Generation
+        'Procedural': ['Houdini HDAs', 'Unreal PCG', 'Heightfields', 'HISM', 'Spline Components', 'Spline Mesh',
+                       'Bezier Curves', 'Procedural Mesh', 'Packed Level Actors', 'Runtime Virtual Texture',
+                       'Landscape Grass', 'Atlas Textures', 'Custom Primitive Data'],
+        // Graphics/VFX
+        'Graphics': ['OpenGL', 'Niagara', 'Niagara Modules', 'Niagara Functions', 'Particle Systems', 
+                    'Material Property Blocks', 'LineRenderer', 'Shader Property Control', 'Spritesheets',
+                    'Chaos Physics', 'Chaos Destruction', 'Geometry Collection', 'Fracture', 'Fluid Simulation',
+                    'Destruction Systems', 'Animation Curves', 'MonoBehaviour']
+      };
+      
+      // Aggregate data into sets
+      const allTech = new Set();
+      const enginesSet = new Set();
+      const dccsSet = new Set();
+      const languagesSet = new Set();
+      
+      matchingItems.forEach(item => {
+        (item.tech || []).forEach(t => allTech.add(t));
+        (item.engine || []).forEach(e => enginesSet.add(e));
+        (item.dcc || []).forEach(d => dccsSet.add(d));
+        (item.languages || []).forEach(l => languagesSet.add(l));
+      });
+      
+      // Categorize tech items
+      const categorizedTech = {
+        'UI/Editor': [],
+        'Systems': [],
+        'Procedural': [],
+        'Graphics': []
+      };
+      
+      allTech.forEach(tech => {
+        let found = false;
+        for (const [category, items] of Object.entries(techCategoryMap)) {
+          if (items.includes(tech)) {
+            categorizedTech[category].push(tech);
+            found = true;
+            break;
+          }
+        }
+        // If not found in any category, add to Systems as fallback
+        if (!found) {
+          console.log('Uncategorized tech:', tech);
+          categorizedTech['Systems'].push(tech);
+        }
+      });
+      
+      // Build categories from real data
+      const categories = [
+        { id: 'Languages', color: '#ffd93d', tech: [...languagesSet] },
+        { id: 'Engines', color: '#ff6b6b', tech: [...enginesSet] },
+        { id: 'DCCs', color: '#f97316', tech: [...dccsSet] },
+        { id: 'UI/Editor', color: '#4ecdc4', tech: categorizedTech['UI/Editor'] },
+        { id: 'Systems', color: '#06b6d4', tech: categorizedTech['Systems'] },
+        { id: 'Procedural', color: '#22c55e', tech: categorizedTech['Procedural'] },
+        { id: 'Graphics', color: '#a855f7', tech: categorizedTech['Graphics'] }
+      ].filter(cat => cat.tech.length > 0);
+      
+      console.log(`Loaded ${matchingItems.length} items for "${SKILLSET_FILTER}" skillset`);
+      console.log('Categories:', categories);
+      
+      // Update title to show which skillset is loaded
+      const titleEl = document.getElementById('viz4-title');
+      titleEl.textContent = `TECH STACK: ${SKILLSET_FILTER.toUpperCase()}`;
+
+      // ====== COLLAPSED STATE: Create floating chips ======
+      categories.forEach((cat, i) => {
+        const chip = document.createElement('div');
+        chip.className = 'morph-chip';
+        chip.textContent = cat.id;
+        chip.style.background = `${cat.color}22`;
+        chip.style.border = `2px solid ${cat.color}`;
+        chip.style.color = cat.color;
+        chip.style.setProperty('--glow-color', `${cat.color}66`);
+        chip.style.setProperty('--delay', `${i * 0.15}s`);
+        chip.style.setProperty('--duration', `${2.5 + Math.random()}s`);
+        chipsContainer.appendChild(chip);
+      });
+
+      // ====== EXPANDED STATE: SVG constellation ======
+      let simulation = null;
+      let svgInitialized = false;
+      let categoryNodes = [];
+      let techNodes = [];
+      let allNodes = [];
+      let linkElements, techGroup, categoryGroup, svgElement;
+      let mouseX = -1000, mouseY = -1000;
+      const width = container.clientWidth;
+      const expandedHeight = 550;
+
+      function initSVG() {
+        if (svgInitialized) return;
+        svgInitialized = true;
+
+        svgElement = d3.select(svgContainer)
+          .append('svg')
+          .attr('width', width)
+          .attr('height', expandedHeight)
+          .style('opacity', 0);
+
+        // Build nodes - start at center
+        const centerX = width / 2;
+        const centerY = expandedHeight / 2;
+
+        categoryNodes = categories.map((c, i) => ({
+          id: c.id,
+          type: 'category',
+          color: c.color,
+          x: centerX,
+          y: centerY
+        }));
+
+        const links = [];
+        
+        categories.forEach(cat => {
+          cat.tech.forEach(techName => {
+            techNodes.push({
+              id: techName,
+              type: 'tech',
+              parent: cat.id,
+              color: cat.color,
+              x: centerX + (Math.random() - 0.5) * 50,
+              y: centerY + (Math.random() - 0.5) * 50
+            });
+            links.push({ source: cat.id, target: techName });
+          });
+        });
+
+        allNodes = [...categoryNodes, ...techNodes];
+
+        // Links - start hidden
+        linkElements = svgElement.append('g')
+          .selectAll('line')
+          .data(links)
+          .join('line')
+          .attr('class', 'morph-link')
+          .attr('stroke', d => categories.find(c => c.id === d.source)?.color || '#4ecdc4')
+          .attr('stroke-width', 1)
+          .attr('stroke-opacity', 0);
+
+        // Tech nodes - start hidden
+        techGroup = svgElement.append('g')
+          .selectAll('g')
+          .data(techNodes)
+          .join('g')
+          .attr('class', 'tech-node-expanded')
+          .style('opacity', 0);
+
+        techGroup.append('circle')
+          .attr('r', 4)
+          .attr('fill', d => d.color)
+          .attr('opacity', 0.8);
+
+        techGroup.append('text')
+          .attr('class', 'tech-label-expanded')
+          .attr('dy', -10)
+          .text(d => d.id);
+
+        // Category nodes - start hidden (will animate in)
+        categoryGroup = svgElement.append('g')
+          .selectAll('g')
+          .data(categoryNodes)
+          .join('g')
+          .attr('class', 'category-node-expanded')
+          .style('opacity', 0)
+          .call(d3.drag()
+            .on('start', dragstarted)
+            .on('drag', dragged)
+            .on('end', dragended));
+
+        categoryGroup.append('circle')
+          .attr('r', 22)
+          .attr('fill', d => d.color)
+          .attr('opacity', 0.3)
+          .attr('stroke', d => d.color)
+          .attr('stroke-width', 2);
+
+        categoryGroup.append('text')
+          .attr('class', 'category-label-expanded')
+          .text(d => d.id);
+
+        // Mouse tracking
+        svgElement.on('mousemove', (event) => {
+          const [x, y] = d3.pointer(event);
+          mouseX = x;
+          mouseY = y;
+        });
+        svgElement.on('mouseleave', () => { mouseX = -1000; mouseY = -1000; });
+
+        // Force simulation - spread out for multiple categories
+        simulation = d3.forceSimulation(allNodes)
+          .force('link', d3.forceLink(links).id(d => d.id).distance(50).strength(0.7))
+          .force('charge', d3.forceManyBody().strength(-70))
+          .force('centerX', d3.forceX(centerX).strength(0.08))
+          .force('centerY', d3.forceY(centerY).strength(0.08))
+          .force('collision', d3.forceCollide().radius(d => d.type === 'category' ? 40 : 18))
+          .force('mouse', () => {
+            allNodes.forEach(node => {
+              const dx = node.x - mouseX;
+              const dy = node.y - mouseY;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < 60 && dist > 0) {
+                const force = (60 - dist) / 60 * 0.8;
+                node.vx += (dx / dist) * force;
+                node.vy += (dy / dist) * force;
+              }
+            });
+          })
+          .alphaDecay(0.02)
+          .stop();
+
+        simulation.on('tick', () => {
+          // Soft bounds - push back towards center if too far
+          allNodes.forEach(node => {
+            const margin = 70;
+            if (node.x < margin) node.vx += 0.5;
+            if (node.x > width - margin) node.vx -= 0.5;
+            if (node.y < margin) node.vy += 0.5;
+            if (node.y > expandedHeight - margin) node.vy -= 0.5;
+          });
+
+          linkElements
+            .attr('x1', d => d.source.x)
+            .attr('y1', d => d.source.y)
+            .attr('x2', d => d.target.x)
+            .attr('y2', d => d.target.y);
+
+          techGroup.attr('transform', d => `translate(${d.x},${d.y})`);
+          categoryGroup.attr('transform', d => `translate(${d.x},${d.y})`);
+        });
+
+        function dragstarted(event) {
+          if (!event.active) simulation.alphaTarget(0.3).restart();
+          event.subject.fx = event.subject.x;
+          event.subject.fy = event.subject.y;
+        }
+
+        function dragged(event) {
+          event.subject.fx = event.x;
+          event.subject.fy = event.y;
+        }
+
+        function dragended(event) {
+          if (!event.active) simulation.alphaTarget(0);
+          event.subject.fx = null;
+          event.subject.fy = null;
+        }
+
+      }
+
+      // ====== EXPAND / COLLAPSE with animation ======
+      let isExpanded = false;
+      const chips = chipsContainer.querySelectorAll('.morph-chip');
+
+      function expand() {
+        isExpanded = true;
+        
+        // Get chip positions BEFORE any changes
+        const chipRects = Array.from(chips).map(chip => chip.getBoundingClientRect());
+        const containerRect = container.getBoundingClientRect();
+
+        // Add expanded class to grow container
+        container.classList.add('expanded');
+
+        // Initialize SVG if needed
+        initSVG();
+
+        // Calculate target positions for categories (spread in expanded space)
+        const centerX = width / 2;
+        const centerY = expandedHeight / 2;
+        const radius = 160;
+        
+        categoryNodes.forEach((node, i) => {
+          const angle = (i / categories.length) * Math.PI * 2 - Math.PI / 2;
+          node.targetX = centerX + Math.cos(angle) * radius;
+          node.targetY = centerY + Math.sin(angle) * radius;
+          node.x = centerX;
+          node.y = centerY;
+        });
+
+        // Animate chips flying to their target positions
+        chips.forEach((chip, i) => {
+          const rect = chipRects[i];
+          const node = categoryNodes[i];
+          
+          // Set chip to fixed position at its current location
+          chip.classList.add('transitioning');
+          chip.style.left = rect.left + 'px';
+          chip.style.top = rect.top + 'px';
+          chip.style.margin = '0';
+          
+          // Animate to target position in SVG space
+          const targetX = containerRect.left + node.targetX;
+          const targetY = containerRect.top + node.targetY;
+          
+          requestAnimationFrame(() => {
+            chip.style.transform = `translate(${targetX - rect.left}px, ${targetY - rect.top}px) scale(0.7)`;
+            chip.style.opacity = '0';
+          });
+        });
+
+        // After chip animation, show SVG elements
+        setTimeout(() => {
+          // Show SVG
+          svgElement.style('opacity', 1);
+          
+          // Position category nodes at their targets
+          categoryNodes.forEach(node => {
+            node.x = node.targetX;
+            node.y = node.targetY;
+          });
+          
+          // Position tech nodes near their parents
+          techNodes.forEach(node => {
+            const parent = categoryNodes.find(c => c.id === node.parent);
+            if (parent) {
+              node.x = parent.x + (Math.random() - 0.5) * 40;
+              node.y = parent.y + (Math.random() - 0.5) * 40;
+            }
+          });
+          
+          // Update positions
+          categoryGroup.attr('transform', d => `translate(${d.x},${d.y})`);
+          techGroup.attr('transform', d => `translate(${d.x},${d.y})`);
+          
+          // Fade in category nodes
+          categoryGroup.transition().duration(300).style('opacity', 1);
+          
+          // Fade in tech nodes and links
+          setTimeout(() => {
+            techGroup.transition().duration(400).style('opacity', 1);
+            linkElements.transition().duration(400).attr('stroke-opacity', 0.2);
+            
+            // Start simulation gently
+            simulation.alpha(0.4).restart();
+          }, 150);
+          
+          // Hide the transitioning chips
+          chips.forEach(chip => chip.classList.add('hidden'));
+        }, 500);
+      }
+
+      function collapse() {
+        isExpanded = false;
+        
+        // Stop simulation
+        if (simulation) simulation.stop();
+        
+        // Fade out SVG elements
+        if (linkElements) linkElements.transition().duration(200).attr('stroke-opacity', 0);
+        if (techGroup) techGroup.transition().duration(200).style('opacity', 0);
+        if (categoryGroup) categoryGroup.transition().duration(200).style('opacity', 0);
+        
+        setTimeout(() => {
+          if (svgElement) svgElement.style('opacity', 0);
+          container.classList.remove('expanded');
+          
+          // Reset chips
+          chips.forEach(chip => {
+            chip.classList.remove('transitioning', 'hidden');
+            chip.style.left = '';
+            chip.style.top = '';
+            chip.style.margin = '';
+            chip.style.transform = '';
+            chip.style.opacity = '';
+          });
+        }, 300);
+      }
+
+      // Click on chips container to expand
+      chipsContainer.addEventListener('click', () => {
+        if (!isExpanded) expand();
+      });
+
+      // Collapse button
+      collapseBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        collapse();
+      });
+    }
+
+    // ===== OPTION 5: Circle Bloom Visualization =====
+    async function initCircleBloom() {
+      const container = document.getElementById('viz5');
+      const svg = d3.select('#viz5-svg');
+      const titleEl = document.getElementById('viz5-title');
+      
+      // Fetch real data
+      const SKILLSET_FILTER = 'tooldev';
+      
+      let portfolioData;
+      try {
+        const response = await fetch('db/portfolio_item_db.json');
+        portfolioData = await response.json();
+      } catch (e) {
+        console.error('Failed to load portfolio data:', e);
+        return;
+      }
+      
+      const matchingItems = Object.values(portfolioData).filter(item => 
+        item.skillsets && item.skillsets.includes(SKILLSET_FILTER)
+      );
+      
+      // Tech categorization
+      const techCategoryMap = {
+        'UI/Editor': ['PySide6', 'Qt', 'Slate UI', 'Unity Editor API', 'EditorWindow', 'Custom Inspectors', 
+                      'Editor Subsystems', 'SerializedObject', 'Node Graph UI', 'Data Assets', 'IMGUI'],
+        'APIs': ['REST API', 'WebSockets', 'Async Tasks', 'Google APIs', 'Google Sheets API', 'Maya API', 
+                   '3ds Max SDK', 'FHttpModule', 'UnityWebRequest', 'Async/Await'],
+        'Systems': ['MediaPipe', 'Computer Vision', 'nDisplay', 'Behavior Trees', 'AI Controllers', 
+                    'State Machines', 'Animation Blueprints', 'Mocap Data Processing', 'Multi-Projector Setup', 
+                    'Tablet Integration', 'Weather Systems', 'Data-Driven Design', 'MVC Architecture'],
+        'Procedural': ['Houdini HDAs', 'Unreal PCG', 'Heightfields', 'HISM', 'Spline Components', 'Spline Mesh',
+                       'Bezier Curves', 'Procedural Mesh', 'Packed Level Actors', 'Runtime Virtual Texture',
+                       'Landscape Grass', 'Atlas Textures', 'Custom Primitive Data'],
+        'Graphics': ['OpenGL', 'Niagara', 'Niagara Modules', 'Niagara Functions', 'Particle Systems', 
+                    'Material Property Blocks', 'LineRenderer', 'Shader Property Control', 'Spritesheets',
+                    'Chaos Physics', 'Chaos Destruction', 'Geometry Collection', 'Fracture', 'Fluid Simulation',
+                    'Destruction Systems', 'Animation Curves', 'MonoBehaviour']
+      };
+      
+      // Aggregate
+      const allTech = new Set();
+      const enginesSet = new Set();
+      const dccsSet = new Set();
+      const languagesSet = new Set();
+      
+      matchingItems.forEach(item => {
+        (item.tech || []).forEach(t => allTech.add(t));
+        (item.engine || []).forEach(e => enginesSet.add(e));
+        (item.dcc || []).forEach(d => dccsSet.add(d));
+        (item.languages || []).forEach(l => languagesSet.add(l));
+      });
+      
+      // Categorize tech
+      const categorizedTech = {};
+      Object.keys(techCategoryMap).forEach(k => categorizedTech[k] = []);
+      
+      allTech.forEach(tech => {
+        let found = false;
+        for (const [category, items] of Object.entries(techCategoryMap)) {
+          if (items.includes(tech)) {
+            categorizedTech[category].push(tech);
+            found = true;
+            break;
+          }
+        }
+        if (!found) categorizedTech['Systems'].push(tech);
+      });
+      
+      // Build categories
+      const categoryColors = {
+        'Languages': '#ffd93d',
+        'Engines': '#ff6b6b', 
+        'DCCs': '#f97316',
+        'UI/Editor': '#4ecdc4',
+        'APIs': '#06b6d4',
+        'Systems': '#8b5cf6',
+        'Procedural': '#22c55e',
+        'Graphics': '#ec4899'
+      };
+      
+      const categories = [
+        { id: 'Languages', tech: [...languagesSet] },
+        { id: 'Engines', tech: [...enginesSet] },
+        { id: 'DCCs', tech: [...dccsSet] },
+        { id: 'UI/Editor', tech: categorizedTech['UI/Editor'] },
+        { id: 'APIs', tech: categorizedTech['APIs'] },
+        { id: 'Systems', tech: categorizedTech['Systems'] },
+        { id: 'Procedural', tech: categorizedTech['Procedural'] },
+        { id: 'Graphics', tech: categorizedTech['Graphics'] }
+      ].filter(c => c.tech.length > 0).map(c => ({
+        ...c,
+        color: categoryColors[c.id] || '#888',
+        expanded: false
+      }));
+      
+      titleEl.textContent = `TECH STACK: ${SKILLSET_FILTER.toUpperCase()}`;
+      
+      // Layout calculations
+      let width, height, collapsedHeight = 160;
+      let isExpanded = false;
+      
+      function updateDimensions() {
+        width = container.clientWidth;
+        height = container.clientHeight;
+      }
+      updateDimensions();
+      
+      // Calculate category positions
+      function getCategoryPositions(expanded) {
+        const h = expanded ? 500 : collapsedHeight;
+        const centerY = expanded ? 120 : h / 2;
+        const totalWidth = categories.length * 100;
+        const startX = (width - totalWidth) / 2 + 50;
+        
+        return categories.map((cat, i) => ({
+          x: startX + i * (width - 100) / (categories.length - 1 || 1),
+          y: centerY,
+          baseRadius: expanded ? 35 : 30
+        }));
+      }
+      
+      // Create SVG elements
+      const defs = svg.append('defs');
+      
+      // Glow filter
+      const filter = defs.append('filter').attr('id', 'bloom-glow');
+      filter.append('feGaussianBlur').attr('stdDeviation', '3').attr('result', 'coloredBlur');
+      const feMerge = filter.append('feMerge');
+      feMerge.append('feMergeNode').attr('in', 'coloredBlur');
+      feMerge.append('feMergeNode').attr('in', 'SourceGraphic');
+      
+      const linksGroup = svg.append('g').attr('class', 'bloom-links');
+      const techGroup = svg.append('g').attr('class', 'bloom-techs');
+      const categoryGroup = svg.append('g').attr('class', 'bloom-categories');
+      
+      // Create category circles
+      const categoryNodes = categoryGroup.selectAll('.bloom-category')
+        .data(categories)
+        .join('g')
+        .attr('class', 'bloom-category');
+      
+      categoryNodes.append('circle')
+        .attr('class', 'bloom-category-circle')
+        .attr('fill', d => d.color)
+        .attr('opacity', 0.85)
+        .attr('filter', 'url(#bloom-glow)');
+      
+      categoryNodes.append('text')
+        .attr('class', 'bloom-category-label')
+        .attr('font-size', d => d.id.length > 8 ? '10px' : '12px')
+        .text(d => d.id);
+      
+      // Create tech nodes and links for each category
+      categories.forEach((cat, catIndex) => {
+        // Links
+        cat.tech.forEach((tech, techIndex) => {
+          linksGroup.append('line')
+            .attr('class', 'bloom-link')
+            .attr('data-category', cat.id)
+            .attr('data-tech', tech)
+            .attr('stroke', cat.color)
+            .attr('stroke-width', 1);
+        });
+        
+        // Tech circles
+        cat.tech.forEach((tech, techIndex) => {
+          const g = techGroup.append('g')
+            .attr('class', 'bloom-tech')
+            .attr('data-category', cat.id);
+          
+          g.append('circle')
+            .attr('class', 'bloom-tech-circle')
+            .attr('r', 18)
+            .attr('fill', cat.color)
+            .attr('opacity', 0.7);
+          
+          g.append('text')
+            .attr('class', 'bloom-tech-label')
+            .text(tech.length > 12 ? tech.substring(0, 11) + '…' : tech);
+        });
+      });
+      
+      // Position tech nodes around their category
+      function positionTech(cat, catX, catY, expanded) {
+        const techNodes = techGroup.selectAll(`.bloom-tech[data-category="${cat.id}"]`);
+        const links = linksGroup.selectAll(`.bloom-link[data-category="${cat.id}"]`);
+        
+        const count = cat.tech.length;
+        const radius = expanded && cat.expanded ? 80 + count * 3 : 0;
+        
+        techNodes.each(function(d, i) {
+          const angle = (i / count) * Math.PI * 2 - Math.PI / 2;
+          const tx = catX + Math.cos(angle) * radius;
+          const ty = catY + Math.sin(angle) * radius;
+          
+          d3.select(this)
+            .classed('visible', expanded && cat.expanded)
+            .transition()
+            .duration(400)
+            .attr('transform', `translate(${tx}, ${ty})`);
+        });
+        
+        links.each(function(d, i) {
+          const angle = (i / count) * Math.PI * 2 - Math.PI / 2;
+          const tx = catX + Math.cos(angle) * radius;
+          const ty = catY + Math.sin(angle) * radius;
+          
+          d3.select(this)
+            .classed('visible', expanded && cat.expanded)
+            .transition()
+            .duration(400)
+            .attr('x1', catX)
+            .attr('y1', catY)
+            .attr('x2', tx)
+            .attr('y2', ty);
+        });
+      }
+      
+      // Render function
+      function render() {
+        updateDimensions();
+        const positions = getCategoryPositions(isExpanded);
+        
+        categoryNodes.each(function(cat, i) {
+          const pos = positions[i];
+          const node = d3.select(this);
+          
+          node.transition()
+            .duration(400)
+            .attr('transform', `translate(${pos.x}, ${pos.y})`);
+          
+          node.select('circle')
+            .transition()
+            .duration(400)
+            .attr('r', pos.baseRadius);
+          
+          positionTech(cat, pos.x, pos.y, isExpanded);
+        });
+      }
+      
+      // Initial render
+      render();
+      
+      // Click handler for categories
+      categoryNodes.on('click', function(event, cat) {
+        event.stopPropagation();
+        
+        if (!isExpanded) {
+          // First expand the container
+          isExpanded = true;
+          container.classList.add('expanded');
+          setTimeout(() => {
+            cat.expanded = true;
+            render();
+          }, 300);
+        } else {
+          // Toggle this category
+          cat.expanded = !cat.expanded;
+          render();
+        }
+      });
+      
+      // Click on container background to collapse all
+      container.addEventListener('click', (e) => {
+        if (e.target === container || e.target.tagName === 'svg') {
+          if (isExpanded) {
+            categories.forEach(c => c.expanded = false);
+            isExpanded = false;
+            container.classList.remove('expanded');
+            setTimeout(render, 50);
+          }
+        }
+      });
+      
+      // Handle resize
+      window.addEventListener('resize', () => {
+        render();
+      });
+    }
+
+    // ===== Collapsible Toggle for Option 1 =====
+    let viz1Simulation = null;
+    let viz1Initialized = false;
+
+    function toggleViz1(event) {
+      if (event) event.stopPropagation();
+      const container = document.getElementById('viz1');
+      const isExpanded = container.classList.contains('expanded');
+      
+      if (isExpanded) {
+        // Collapse
+        container.classList.remove('expanded');
+        if (viz1Simulation) {
+          viz1Simulation.stop();
+        }
+      } else {
+        // Expand
+        container.classList.add('expanded');
+        // Wait for CSS transition, then init/restart simulation
+        setTimeout(() => {
+          if (!viz1Initialized) {
+            initForceGraph();
+            viz1Initialized = true;
+          } else if (viz1Simulation) {
+            // Recenter and restart
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            viz1Simulation.force('center', d3.forceCenter(width / 2, height / 2));
+            viz1Simulation.alpha(0.5).restart();
+          }
+        }, 420); // Match CSS transition duration
+      }
+    }
+
+    // Click handler for collapsed state
+    document.getElementById('viz1').addEventListener('click', function(e) {
+      if (!this.classList.contains('expanded')) {
+        toggleViz1();
+      }
+    });
+
+    // Initialize all visualizations
+    initCircleBloom();            // Option 5 - Circle Bloom (NEW!)
+    initMorphingConstellation();  // Option 4 - Morphing Constellation
+    // initForceGraph(); // Option 1 - lazy-loaded on expand
+    initFloatingChips();          // Option 2
+    initCanvasConstellation();    // Option 3
+  </script>
+
+</body>
+</html>

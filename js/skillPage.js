@@ -18,7 +18,7 @@ let currentSelectedSystemId = null;
 /**
  * Render the skill header section
  */
-function renderSkillHeader(header) {
+function renderSkillHeader(header, skillId) {
   // Background image (from first portfolio item)
   const headerEl = document.querySelector('.skill-header-box');
   if (headerEl) {
@@ -38,11 +38,18 @@ function renderSkillHeader(header) {
   const statsText = `Used in ${header.stats.projectCount} project${header.stats.projectCount !== 1 ? 's' : ''} | ${header.stats.systemCount} system${header.stats.systemCount !== 1 ? 's' : ''} shipped`;
   document.getElementById('skillStats').textContent = statsText;
 
-  // Render tech chips - show all aggregated tech for this skillset
+  // Render tech chips using the new TechStackChips component
   const chipsContainer = document.getElementById('skillTechChips');
-  chipsContainer.innerHTML = header.techChips
-    .map(chip => `<span class="skill-chip">${chip}</span>`)
-    .join('');
+  if (chipsContainer && header.techData && window.renderTechStackChips) {
+    chipsContainer.innerHTML = ''; // Clear old content
+    chipsContainer.classList.add('tech-stack-chips-wrapper');
+    renderTechStackChips('skillTechChips', header.techData, skillId);
+  } else {
+    // Fallback to simple chips if component not loaded
+    chipsContainer.innerHTML = header.techChips
+      .map(chip => `<span class="skill-chip">${chip}</span>`)
+      .join('');
+  }
 }
 
 /**
@@ -526,23 +533,71 @@ async function LoadSkillPage(skillId) {
 
   const allSystems = matchingItems.map(buildSystemCard);
 
-  // Aggregate tech - prioritize specific tech/frameworks for recruiter visibility
-  const tech = new Set();      // Specific frameworks, APIs, tools (most important for Ctrl+F)
-  const engines = new Set();   // Unreal, Unity
-  const dccs = new Set();      // Houdini, Maya, etc.
-  const languages = new Set(); // Python, C++, C#, etc.
+  // Aggregate tech - using new categorized structure
   const projects = new Set();
   
+  // Use the TechStackChips helper if available, otherwise do it manually
+  let techData;
+  if (window.aggregateTechFromItems) {
+    techData = aggregateTechFromItems(matchingItems);
+  } else {
+    // Fallback aggregation
+    techData = {
+      editor_tools: [],
+      procedural: [],
+      graphics_vfx: [],
+      runtime_simulation: [],
+      pipeline_integration: [],
+      engines: [],
+      dccs: [],
+      languages: []
+    };
+    
+    const sets = {
+      editor_tools: new Set(),
+      procedural: new Set(),
+      graphics_vfx: new Set(),
+      runtime_simulation: new Set(),
+      pipeline_integration: new Set(),
+      engines: new Set(),
+      dccs: new Set(),
+      languages: new Set()
+    };
+    
+    matchingItems.forEach(item => {
+      // Handle new categorized tech structure
+      if (item.tech && typeof item.tech === 'object' && !Array.isArray(item.tech)) {
+        Object.entries(item.tech).forEach(([category, items]) => {
+          if (sets[category] && Array.isArray(items)) {
+            items.forEach(t => sets[category].add(t));
+          }
+        });
+      }
+      (item.engine || []).forEach(e => sets.engines.add(e));
+      (item.dcc || []).forEach(d => sets.dccs.add(d));
+      (item.languages || []).forEach(l => sets.languages.add(l));
+    });
+    
+    Object.keys(techData).forEach(key => {
+      techData[key] = [...sets[key]];
+    });
+  }
+  
   matchingItems.forEach(item => {
-    (item.tech || []).forEach(t => tech.add(t));
-    (item.engine || []).forEach(e => engines.add(e));
-    (item.dcc || []).forEach(d => dccs.add(d));
-    (item.languages || []).forEach(l => languages.add(l));
     if (item.projectname) projects.add(item.projectname);
   });
 
-  // Order: tech first (specific tools/frameworks), then engines, dccs, languages
-  const techChips = [...tech, ...engines, ...dccs, ...languages];
+  // Flatten for fallback display
+  const techChips = [
+    ...techData.editor_tools,
+    ...techData.procedural,
+    ...techData.graphics_vfx,
+    ...techData.runtime_simulation,
+    ...techData.pipeline_integration,
+    ...techData.engines,
+    ...techData.dccs,
+    ...techData.languages
+  ];
 
   // Get first image from first system for header background
   let headerBackgroundImage = null;
@@ -565,6 +620,7 @@ async function LoadSkillPage(skillId) {
         systemCount: matchingItems.length
       },
       techChips: techChips,
+      techData: techData,  // New categorized tech data
       backgroundImage: headerBackgroundImage
     },
     systems: allSystems,
@@ -576,7 +632,7 @@ async function LoadSkillPage(skillId) {
   console.log('[SkillPage] ViewModel:', viewModel);
 
   // Render sections
-  renderSkillHeader(viewModel.header);
+  renderSkillHeader(viewModel.header, skillId);
   renderSystemsCarousel(viewModel.systems, viewModel.selectedSystemId);
 
   // Select initial system

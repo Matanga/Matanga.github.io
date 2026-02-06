@@ -18,7 +18,7 @@
   "solutions": "I designed a visual grammar authoring tool backed by a formal, deterministic grammar resolution system. Artists interact directly with modular facade elements and structural groups, while the system maintains a canonical grammar representation and produces normalized, pipeline-ready outputs. Real-time visual feedback and structured content management ensured rapid iteration without sacrificing correctness or scalability.",
   "portfolioitems": [
     "facade-editor",
-    "facade-grammarsystem",
+    "facade-grammar",
     "facade-contentmanagement"
   ]
 }

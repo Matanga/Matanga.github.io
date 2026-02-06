@@ -16,7 +16,9 @@
       "dcc": ["Houdini"],
       "engine": ["Unreal"],
       "languages": ["Python", "VEX", "Blueprints"],
-      "tech": ["Houdini HDAs", "Heightfields", "Spline Components"],
+      "tech": {
+        "procedural": ["Houdini HDAs", "Heightfields", "Spline Components"]
+      },
       "skillsets": ["tooldev", "pipelinedev", "procgen"],
       "tags": [
         "procedural-generation",
@@ -77,7 +79,9 @@
       "dcc": ["Houdini"],
       "engine": ["Unreal"],
       "languages": ["Python", "VEX", "Blueprints"],
-      "tech": ["Houdini HDAs", "Spline Components"],
+      "tech":{
+        "procedural": ["Houdini HDAs", "Spline Components"]
+      },
       "skillsets": ["tooldev", "pipelinedev", "unrealdev", "procgen"],
       "tags": [
         "procedural-generation",
@@ -143,7 +147,11 @@
       "dcc": ["Houdini"],
       "engine": ["Unreal"],
       "languages": ["Python", "VEX", "Blueprints"],
-      "tech": ["Houdini HDAs", "HISM", "Atlas Textures", "Data Assets", "Custom Primitive Data"],
+      "tech": {
+        "procedural": ["Houdini HDAs", "Data Assets"],
+        "graphics_vfx": ["HISM", "Atlas Textures"],
+        "pipeline_integration": ["Custom Primitive Data"]
+      },
       "skillsets": ["tooldev", "pipelinedev", "unrealdev", "procgen"],
       "tags": [
         "procedural-generation",
@@ -203,7 +211,9 @@
         "dcc": ["Maya", "3ds Max", "Houdini"],
         "engine": [],
         "languages": ["Python", "Maxscript", "MEL"],
-        "tech": ["Maya API", "3ds Max SDK", "Node Graph UI"],
+        "tech": {
+          "editor_tools": ["Maya API", "3ds Max SDK", "Node Graph UI"]
+        },
         "skillsets": ["tooldev", "pipelinedev"],
         "tags": ["batch-processing", "automation", "normalization", "dam", "scalable-tools"],
         "priority": 3,
@@ -241,7 +251,9 @@
         "dcc": ["Maya", "3ds Max", "Houdini"],
         "engine": [],
         "languages": ["Python", "Maxscript", "MEL"],
-        "tech": ["Google Sheets API", "Google APIs"],
+        "tech": {
+          "pipeline_integration": ["Google Sheets API", "Google APIs"]
+        },
         "skillsets": ["tooldev", "pipelinedev"],
         "tags": ["inventory", "dashboard", "reporting", "google-sheets", "google-api", "automation", "production-visibility", "dam"],
         "priority": 3,
@@ -276,7 +288,10 @@
         "dcc": ["Maya", "Houdini"],
         "engine": [],
         "languages": ["Python", "MEL"],
-        "tech": ["Maya API", "Mocap Data Processing"],
+        "tech":{
+          "editor_tools": ["Maya API"],
+          "pipeline_integration": ["Mocap Data Processing"]
+        },
         "skillsets": ["pipelinedev", "tooldev"],
         "tags": ["mocap", "performance-capture", "broadcast", "data-normalization", "ingestion-pipeline", "automation"],
         "priority": 3,
@@ -318,7 +333,10 @@
         "dcc": [],
         "engine": ["Unity"],
         "languages": ["C#"],
-        "tech": ["Unity Editor API", "Custom Inspectors", "Bezier Curves", "Procedural Mesh"],
+        "tech": {
+          "editor_tools": ["Unity Editor API", "Custom Inspectors"],
+          "procedural": ["Bezier Curves", "Procedural Mesh"]
+        },
         "skillsets": ["tooldev", "vfx", "unitydev", "procgen"],
         "tags": [
           "curves",
@@ -370,7 +388,9 @@
         "dcc": [],
         "engine": ["Unity"],
         "languages": ["C#"],
-        "tech": ["Unity Editor API", "EditorWindow", "SerializedObject"],
+        "tech": {
+          "editor_tools": ["Unity Editor API", "EditorWindow", "SerializedObject"]
+        },
         "skillsets": ["tooldev", "vfx", "unitydev"],
         "tags": [
           "lighting",
@@ -417,7 +437,10 @@
         "dcc": [],
         "engine": ["Unity"],
         "languages": ["C#"],
-        "tech": ["Unity Editor API", "Custom Inspectors", "Spritesheets", "Material Property Blocks"],
+        "tech":  {
+          "editor_tools": ["Unity Editor API", "Custom Inspectors"],
+          "graphics_vfx": ["Spritesheets", "Material Property Blocks"]
+        },
         "skillsets": ["tooldev", "vfx", "unitydev"],
         "tags": [
           "vfx-tools",
@@ -473,7 +496,10 @@
         "dcc": [],
         "engine": ["Unity"],
         "languages": ["C#"],
-        "tech": ["Particle Systems", "Destruction Systems"],
+        "tech": {
+          "graphics_vfx": ["Particle Systems"],
+          "runtime_simulation": ["Destruction Systems"]
+        },
         "skillsets": ["tooldev", "vfx"],
         "tags": [
           "realtime-vfx",
@@ -523,7 +549,10 @@
         "dcc": [],
         "engine": ["Unity"],
         "languages": ["C#"],
-        "tech": ["MonoBehaviour", "Animation Curves", "LineRenderer", "Shader Property Control"],
+        "tech":{
+          "graphics_vfx": ["LineRenderer", "Shader Property Control"],
+          "runtime_simulation": ["MonoBehaviour", "Animation Curves"]
+        },
         "skillsets": ["tooldev", "vfx", "unitydev", "procgen"],
         "tags": [
           "vfx-tools",
@@ -583,7 +612,14 @@
         "dcc": [],
         "engine": ["Unreal"],
         "languages": ["Blueprints"],
-        "tech": ["AI Controllers", "Behavior Trees", "Animation Blueprints", "State Machines"],
+        "tech": {
+          "runtime_simulation": [
+            "AI Controllers",
+            "Behavior Trees",
+            "Animation Blueprints",
+            "State Machines"
+          ]
+        },
         "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
         "tags": [
           "ai-behavior",
@@ -632,7 +668,10 @@
         "dcc": [],
         "engine": ["Unreal"],
         "languages": ["Blueprints"],
-        "tech": ["nDisplay", "Weather Systems", "Data-Driven Design"],
+        "tech": {
+          "runtime_simulation": ["Weather Systems"],
+          "pipeline_integration": ["nDisplay"]
+        },
         "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
         "tags": [
           "environment-systems",
@@ -681,7 +720,9 @@
         "dcc": ["Blender", "Houdini"],
         "engine": ["Unreal"],
         "languages": ["Blueprints"],
-        "tech": ["nDisplay", "Multi-Projector Setup", "Tablet Integration"],
+        "tech": {
+          "pipeline_integration": ["nDisplay", "Multi-Projector Setup", "Tablet Integration"]
+        },
         "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
         "tags": [
           "live-installation",
@@ -734,7 +775,10 @@
         "dcc": [],
         "engine": ["Unreal"],
         "languages": ["Blueprints", "Python"],
-        "tech": ["MediaPipe", "WebSockets", "Spline Components", "Computer Vision"],
+        "tech":  {
+          "procedural": ["Spline Components"],
+          "pipeline_integration": ["MediaPipe", "WebSockets", "Computer Vision"]
+        },
         "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
         "tags": [
           "interactive-installation",
@@ -781,7 +825,10 @@
         "dcc": [],
         "engine": ["Unreal"],
         "languages": ["Blueprints"],
-        "tech": ["Niagara", "Niagara Modules", "Niagara Functions", "MediaPipe", "Fluid Simulation"],
+        "tech":{
+          "graphics_vfx": ["Niagara", "Niagara Modules", "Niagara Functions", "Fluid Simulation"],
+          "pipeline_integration": ["MediaPipe"]
+        },
         "skillsets": ["unrealdev", "vfx", "tooldev", "artinstallation"],
         "tags": [
           "niagara",
@@ -831,7 +878,10 @@
         "dcc": [],
         "engine": ["Unreal"],
         "languages": ["Blueprints"],
-        "tech": ["Unreal PCG", "Lumen", "Nanite"],
+        "tech": {
+          "procedural": ["Unreal PCG"],
+          "graphics_vfx": ["Lumen", "Nanite"]
+        },
         "skillsets": ["unrealdev", "pipelinedev", "procgen"],
         "tags": ["environment", "realtime", "procedural", "validation"],
         "priority": 1,
@@ -883,7 +933,9 @@
         "dcc": [],
         "engine": ["Unreal"],
         "languages": ["Blueprints"],
-        "tech": ["Sequencer", "Camera Rigs", "Cine Camera"],
+        "tech": {
+          "runtime_simulation": ["Sequencer", "Camera Rigs", "Cine Camera"]
+        },
         "skillsets": ["unrealdev"],
         "tags": ["sequencer", "cinematic", "realtime", "presentation"],
         "priority": 1,
@@ -931,7 +983,10 @@
       "dcc": [],
       "engine": ["Unreal"],
       "languages": ["Blueprints"],
-      "tech": ["Spline Components", "Spline Mesh", "Runtime Virtual Texture", "Landscape Grass"],
+      "tech": {
+        "procedural": ["Spline Components", "Spline Mesh"],
+        "graphics_vfx": ["Runtime Virtual Texture", "Landscape Grass"]
+      },
       "skillsets": ["tooldev", "pipelinedev", "unrealdev", "procgen"],
       "tags": [
         "spline-authoring",
@@ -976,7 +1031,9 @@
       "dcc": [],
       "engine": ["Unreal"],
       "languages": ["Blueprints"],
-      "tech": ["Unreal PCG", "Packed Level Actors", "Data Assets"],
+      "tech": {
+        "procedural": ["Unreal PCG", "Packed Level Actors", "Data Assets"]
+      },
       "skillsets": ["tooldev", "pipelinedev", "unrealdev"],
       "tags": [
         "pcg",
@@ -1038,7 +1095,14 @@
       "dcc": [],
       "engine": ["Unreal"],
       "languages": ["Blueprints"],
-      "tech": ["Chaos Physics", "Chaos Destruction", "Geometry Collection", "Fracture"],
+      "tech": {
+        "runtime_simulation": [
+          "Chaos Physics",
+          "Chaos Destruction",
+          "Geometry Collection",
+          "Fracture"
+        ]
+      },
       "skillsets": ["unrealdev", "tooldev", "pipelinedev"],
       "tags": [
         "chaos-destruction",
@@ -1094,7 +1158,10 @@
       "dcc": [],
       "engine": ["Unreal"],
       "languages": ["Blueprints"],
-      "tech": ["Unreal PCG", "Packed Level Actors", "Data Assets"],
+      "tech":  {
+        "editor_tools": ["Slate UI", "Editor Subsystems"],
+        "pipeline_integration": ["REST API", "Async Tasks", "FHttpModule"]
+      },
       "skillsets": ["tooldev", "pipelinedev", "unrealdev", "procgen"],
       "tags": [
         "pcg",
@@ -1156,7 +1223,9 @@
       "dcc": [],
       "engine": ["Unreal"],
       "languages": ["Blueprints"],
-      "tech": ["Chaos Physics", "Chaos Destruction", "Geometry Collection", "Fracture"],
+      "tech": {
+        "editor_tools": ["PySide6", "Qt", "OpenGL", "MVC Architecture"]
+      },
       "skillsets": ["unrealdev", "tooldev", "pipelinedev", "procgen"],
       "tags": [
         "chaos-destruction",
@@ -1208,7 +1277,10 @@
       "dcc": [],
       "engine": ["Unreal"],
       "languages": ["C++", "Blueprints"],
-      "tech": ["Slate UI", "Editor Subsystems", "REST API", "Async Tasks", "FHttpModule"],
+      "tech": {
+        "procedural": ["Grammar Systems", "Constraint Resolution"],
+        "pipeline_integration": ["JSON Serialization"]
+      },
       "skillsets": ["unrealdev", "tooldev", "pipelinedev"],
       "tags": ["editor-plugin", "workflow", "async", "asset-import", "job-history"],
       "priority": 1,
@@ -1255,7 +1327,9 @@
       "dcc": [],
       "engine": ["Unity"],
       "languages": ["C#"],
-      "tech": ["Unity Editor API", "EditorWindow", "REST API", "UnityWebRequest", "Async/Await"],
+      "tech":  {
+        "pipeline_integration": ["Manifest Systems", "JSON Schema", "Data Validation"]
+      },
       "skillsets": ["unitydev", "tooldev", "pipelinedev"],
       "tags": ["editor-plugin", "workflow", "dynamic-ui", "job-history", "asset-import"],
       "priority": 1,

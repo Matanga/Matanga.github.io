@@ -26,16 +26,16 @@
     "status": "complete",
     "media": {
       "image": [
-        "ibg-grammar__01__symbolic-expression.jpg",
-        "ibg-grammar__02__resolved-layout.jpg"
+        "facade-grammar__01__symbolic-expression.jpg",
+        "facade-grammar__02__resolved-layout.jpg"
       ],
       "youtube": [
-        "https://www.youtube.com/embed/REPLACE_WITH_ITEM2_VIDEO_ID"
+        "https://www.youtube.com/embed/V3ZaBijZ3FY"
       ],
       "captions": {
-        "ibg-grammar__01__symbolic-expression.jpg": "Example symbolic facade grammar prior to resolution.",
-        "ibg-grammar__02__resolved-layout.jpg": "Resolved facade layout after deterministic width-based expansion.",
-        "https://www.youtube.com/embed/REPLACE_WITH_ITEM2_VIDEO_ID": "Demonstration of grammar resolution showing fixed elements preserved while repeatable sections expand to fit different target widths."
+        "facade-grammar__01__symbolic-expression.jpg": "Example symbolic facade grammar prior to resolution.",
+        "facade-grammar__02__resolved-layout.jpg": "Resolved facade layout after deterministic width-based expansion.",
+        "https://www.youtube.com/embed/V3ZaBijZ3FY": "Editor walkthrough demonstrating visual facade authoring, live updates, multi-floor editing, and real-time 3D feedback."
       }
     },
     "deepDive": {
