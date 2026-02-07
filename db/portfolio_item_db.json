@@ -221,12 +221,12 @@
         "media": {
           "image": [
             "BatchSequencer_PortfolioItem_1.jpg",
-            "BatchSequencer_PortfolioItem_2.png"
+            "BatchSequencer_PortfolioItem_2.jpg"
           ],
           "youtube": [],
           "captions": {
             "BatchSequencer_PortfolioItem_1.jpg": "Batch Sequencer tool UI showing node-based batch workflows used for large-scale asset processing.",
-            "BatchSequencer_PortfolioItem_2.png": "Example batch configuration demonstrating reusable manifests for automated asset normalization."
+            "BatchSequencer_PortfolioItem_2.jpg": "Example batch configuration demonstrating reusable manifests for automated asset normalization."
           }
         },
         "deepDive": {
@@ -259,11 +259,11 @@
         "priority": 3,
         "status": "complete",
         "media": {
-          "image": ["2kdam-inventory-1.png", "2kdam-inventory-2.png"],
+          "image": ["2kdam-inventory-1.jpg", "2kdam-inventory-2.jpg"],
           "youtube": [],
           "captions": {
-            "2kdam-inventory-1.png": "DAM inventory spreadsheet dashboard providing production visibility into asset progress and pipeline status.",
-            "2kdam-inventory-2.png": "Example inventory reporting view used to track large-scale asset normalization progress without manual updates."
+            "2kdam-inventory-1.jpg": "DAM inventory spreadsheet dashboard providing production visibility into asset progress and pipeline status.",
+            "2kdam-inventory-2.jpg": "Example inventory reporting view used to track large-scale asset normalization progress without manual updates."
           }
         },
         "deepDive": {
@@ -352,16 +352,16 @@
         "media": {
           "image": [
             "vfx_loftrenderer2.gif",
-            "curvetools_portfolio_item-1.png",
+            "curvetools_portfolio_item-1.jpg",
             "beziercurve.gif",
-            "curvetools_portfolio_item-2.png",
+            "curvetools_portfolio_item-2.jpg",
             "vfx_loftrenderer.gif"
           ],
           "youtube": [],
           "captions": {
-            "curvetools_portfolio_item-1.png": "Curve Tools custom editor UI inside Unity for authoring curve-driven VFX geometry.",
+            "curvetools_portfolio_item-1.jpg": "Curve Tools custom editor UI inside Unity for authoring curve-driven VFX geometry.",
             "beziercurve.gif": "Animated preview of the Bezier curve tool generating procedural VFX meshes in real time.",
-            "curvetools_portfolio_item-2.png": "Alternate view of the Curve Tools editor showing parameter controls and curve configuration.",
+            "curvetools_portfolio_item-2.jpg": "Alternate view of the Curve Tools editor showing parameter controls and curve configuration.",
             "vfx_loftrenderer.gif": "VFX Loft Renderer extruding geometry along curves for projectile and muzzle-style effects.",
             "vfx_loftrenderer2.gif": "Loft Renderer in action with the curve editor, demonstrating rapid iteration and shape control."
           }
@@ -404,15 +404,15 @@
         "status": "complete",
         "media": {
           "image": [
-            "lightlister_portfolio_item-1.png",
-            "lightlister_portfolio_item-2.png",
-            "lightlister_portfolio_item-3.png"
+            "lightlister_portfolio_item-1.jpg",
+            "lightlister_portfolio_item-2.jpg",
+            "lightlister_portfolio_item-3.jpg"
           ],
           "youtube": [],
           "captions": {
-            "lightlister_portfolio_item-1.png": "Light Lister editor window UI dynamically populated from scene lights for centralized editing.",
-            "lightlister_portfolio_item-2.png": "Grouped-by-type lighting controls showing shared and type-specific properties for fast iteration.",
-            "lightlister_portfolio_item-3.png": "Example Light Lister view demonstrating bulk lighting adjustments driven by current scene contents."
+            "lightlister_portfolio_item-1.jpg": "Light Lister editor window UI dynamically populated from scene lights for centralized editing.",
+            "lightlister_portfolio_item-2.jpg": "Grouped-by-type lighting controls showing shared and type-specific properties for fast iteration.",
+            "lightlister_portfolio_item-3.jpg": "Example Light Lister view demonstrating bulk lighting adjustments driven by current scene contents."
           }
         },
         "deepDive": {
@@ -455,22 +455,22 @@
         "status": "complete",
         "media": {
           "image": [
-            "texturetoolcomponents_portfolio_item-4.png",
-            "texturetoolcomponents_portfolio_item-1.png",
+            "texturetoolcomponents_portfolio_item-4.jpg",
+            "texturetoolcomponents_portfolio_item-1.jpg",
             "vfx_muzzlerenderer.gif",
-            "texturetoolcomponents_portfolio_item-2.png",
+            "texturetoolcomponents_portfolio_item-2.jpg",
             "vfx_spritesheetutils-1.gif",
-            "texturetoolcomponents_portfolio_item-3.png",
+            "texturetoolcomponents_portfolio_item-3.jpg",
             "vfx_textureoffset.gif"
           ],
           "youtube": [],
           "captions": {
-            "texturetoolcomponents_portfolio_item-1.png": "Muzzle renderer inspector UI showing authoring controls for parametric muzzle VFX setup.",
+            "texturetoolcomponents_portfolio_item-1.jpg": "Muzzle renderer inspector UI showing authoring controls for parametric muzzle VFX setup.",
             "vfx_muzzlerenderer.gif": "Animated preview of the muzzle renderer tool generating and updating VFX output in-editor.",
-            "texturetoolcomponents_portfolio_item-4.png": "In-game muzzle effect driven by the authoring components and texture workflows.",
-            "texturetoolcomponents_portfolio_item-2.png": "Tool view showing isolated muzzle variants for quick comparison and iteration.",
+            "texturetoolcomponents_portfolio_item-4.jpg": "In-game muzzle effect driven by the authoring components and texture workflows.",
+            "texturetoolcomponents_portfolio_item-2.jpg": "Tool view showing isolated muzzle variants for quick comparison and iteration.",
             "vfx_spritesheetutils-1.gif": "Spritesheet utilities animating muzzle textures directly in the Unity editor for fast iteration.",
-            "texturetoolcomponents_portfolio_item-3.png": "Component scripting/editor view supporting the VFX texture authoring toolset.",
+            "texturetoolcomponents_portfolio_item-3.jpg": "Component scripting/editor view supporting the VFX texture authoring toolset.",
             "vfx_textureoffset.gif": "Texture offset component animating Material texture coordinates in-editor for procedural motion."
           }
         },
@@ -513,17 +513,17 @@
         "status": "complete",
         "media": {
           "image": [
-            "texturetoolcomponents_portfolio_item-4.png",
-            "vfxshowcase_portfolio_item-2.png",
-            "vfxshowcase_portfolio_item-3.png",
-            "vfxshowcase_portfolio_item-4.png"
+            "texturetoolcomponents_portfolio_item-4.jpg",
+            "vfxshowcase_portfolio_item-2.jpg",
+            "vfxshowcase_portfolio_item-3.jpg",
+            "vfxshowcase_portfolio_item-4.jpg"
           ],
           "youtube": ["https://www.youtube.com/embed/GRmn-bm99Kc"],
           "captions": {
-            "texturetoolcomponents_portfolio_item-4.png": "In-game realtime VFX screenshot from the Element Space showcase scene.",
-            "vfxshowcase_portfolio_item-2.png": "Internal destruction documentation: wood material breakup and fracturing type guidelines.",
-            "vfxshowcase_portfolio_item-3.png": "Internal destruction documentation: glass material breakup guidelines and recommended fracture types.",
-            "vfxshowcase_portfolio_item-4.png": "Internal destruction documentation index outlining scalable destruction standards by material.",
+            "texturetoolcomponents_portfolio_item-4.jpg": "In-game realtime VFX screenshot from the Element Space showcase scene.",
+            "vfxshowcase_portfolio_item-2.jpg": "Internal destruction documentation: wood material breakup and fracturing type guidelines.",
+            "vfxshowcase_portfolio_item-3.jpg": "Internal destruction documentation: glass material breakup guidelines and recommended fracture types.",
+            "vfxshowcase_portfolio_item-4.jpg": "Internal destruction documentation index outlining scalable destruction standards by material.",
             "https://www.youtube.com/embed/GRmn-bm99Kc": "Realtime capture of the VFX showcase scene featuring environment effects and destruction workflows."
           }
         },
@@ -568,25 +568,25 @@
         "media": {
           "image": [
             "vfx_animationcurves.gif",
-            "animatedvfxcomponents_portfolio_item-1.png",
-            "animatedvfxcomponents_portfolio_item-2.png",
-            "animatedvfxcomponents_portfolio_item-3.png",
-            "animatedvfxcomponents_portfolio_item-4.png",
+            "animatedvfxcomponents_portfolio_item-1.jpg",
+            "animatedvfxcomponents_portfolio_item-2.jpg",
+            "animatedvfxcomponents_portfolio_item-3.jpg",
+            "animatedvfxcomponents_portfolio_item-4.jpg",
             "vfx_circlerenderer.gif",
-            "animatedvfxcomponents_portfolio_item-6.png",
-            "animatedvfxcomponents_portfolio_item-7.png",
-            "animatedvfxcomponents_portfolio_item-8.png"
+            "animatedvfxcomponents_portfolio_item-6.jpg",
+            "animatedvfxcomponents_portfolio_item-7.jpg",
+            "animatedvfxcomponents_portfolio_item-8.jpg"
           ],
           "youtube": [],
           "captions": {
-            "animatedvfxcomponents_portfolio_item-1.png": "VFX_DelayStartComponent inspector: enables a disabled MonoBehaviour after a configurable delay.",
-            "animatedvfxcomponents_portfolio_item-2.png": "VFX_DeactivateByTime inspector: deactivates a target GameObject (or self) after a set duration.",
-            "animatedvfxcomponents_portfolio_item-3.png": "VFX_SwitchVisibility inspector: toggles selected MeshRenderers on/off with a configurable delay.",
-            "animatedvfxcomponents_portfolio_item-4.png": "VFX_CircleRenderer inspector: procedural circle drawing controls (radius, segments, width, color).",
+            "animatedvfxcomponents_portfolio_item-1.jpg": "VFX_DelayStartComponent inspector: enables a disabled MonoBehaviour after a configurable delay.",
+            "animatedvfxcomponents_portfolio_item-2.jpg": "VFX_DeactivateByTime inspector: deactivates a target GameObject (or self) after a set duration.",
+            "animatedvfxcomponents_portfolio_item-3.jpg": "VFX_SwitchVisibility inspector: toggles selected MeshRenderers on/off with a configurable delay.",
+            "animatedvfxcomponents_portfolio_item-4.jpg": "VFX_CircleRenderer inspector: procedural circle drawing controls (radius, segments, width, color).",
             "vfx_circlerenderer.gif": "Circle Renderer animated example demonstrating procedural circle generation in-editor.",
-            "animatedvfxcomponents_portfolio_item-6.png": "VFX_AnimationCurves setup driving Light parameters using curve-based animation.",
-            "animatedvfxcomponents_portfolio_item-7.png": "VFX_AnimationCurves setup driving shader float parameters via curves for runtime VFX control.",
-            "animatedvfxcomponents_portfolio_item-8.png": "VFX_AnimationCurves setup driving shader color parameters via curves for dynamic VFX styling.",
+            "animatedvfxcomponents_portfolio_item-6.jpg": "VFX_AnimationCurves setup driving Light parameters using curve-based animation.",
+            "animatedvfxcomponents_portfolio_item-7.jpg": "VFX_AnimationCurves setup driving shader float parameters via curves for runtime VFX control.",
+            "animatedvfxcomponents_portfolio_item-8.jpg": "VFX_AnimationCurves setup driving shader color parameters via curves for dynamic VFX styling.",
             "vfx_animationcurves.gif": "Animated example of curve-driven parameter animation for VFX without using Unity’s Animator."
           }
         },
@@ -634,15 +634,15 @@
         "status": "complete",
         "media": {
           "image": [
-            "intelevoshowcase_portfolio_item-7.png",
-            "intelevoanimals_portfolio_item-1.png",
-            "intelevoanimals_portfolio_item-2.png"
+            "intelevoshowcase_portfolio_item-7.jpg",
+            "intelevoanimals_portfolio_item-1.jpg",
+            "intelevoanimals_portfolio_item-2.jpg"
           ],
           "youtube": ["https://www.youtube.com/embed/3xw63__iTmk"],
           "captions": {
-            "intelevoshowcase_portfolio_item-7.png": "Close-up of a roaring tiger character driven by the interactive AI and animation system.",
-            "intelevoanimals_portfolio_item-1.png": "Visitors interacting with the installation, taking selfies with reactive animal characters.",
-            "intelevoanimals_portfolio_item-2.png": "Audience observing animals responding to presence and interaction within the surround-room setup.",
+            "intelevoshowcase_portfolio_item-7.jpg": "Close-up of a roaring tiger character driven by the interactive AI and animation system.",
+            "intelevoanimals_portfolio_item-1.jpg": "Visitors interacting with the installation, taking selfies with reactive animal characters.",
+            "intelevoanimals_portfolio_item-2.jpg": "Audience observing animals responding to presence and interaction within the surround-room setup.",
             "https://www.youtube.com/embed/3xw63__iTmk": "Editor-captured footage showcasing animal movement, animation blending, and AI-driven behavior."
           }
         },
@@ -686,15 +686,15 @@
         "status": "complete",
         "media": {
           "image": [
-            "intelevoenvironment_portfolio_item-1.png",
-            "intelevoenvironment_portfolio_item-2.png",
-            "intelevoenvironment_portfolio_item-3.png"
+            "intelevoenvironment_portfolio_item-1.jpg",
+            "intelevoenvironment_portfolio_item-2.jpg",
+            "intelevoenvironment_portfolio_item-3.jpg"
           ],
           "youtube": ["https://www.youtube.com/embed/5nbDx_YLn-k"],
           "captions": {
-            "intelevoenvironment_portfolio_item-1.png": "Unreal Editor view showing environment actors and systems used to drive the interactive installation.",
-            "intelevoenvironment_portfolio_item-2.png": "Mood lighting setup used to shape atmosphere and support reactive environmental states.",
-            "intelevoenvironment_portfolio_item-3.png": "Weather system driving dynamic environmental changes in response to interaction and ambient logic.",
+            "intelevoenvironment_portfolio_item-1.jpg": "Unreal Editor view showing environment actors and systems used to drive the interactive installation.",
+            "intelevoenvironment_portfolio_item-2.jpg": "Mood lighting setup used to shape atmosphere and support reactive environmental states.",
+            "intelevoenvironment_portfolio_item-3.jpg": "Weather system driving dynamic environmental changes in response to interaction and ambient logic.",
             "https://www.youtube.com/embed/5nbDx_YLn-k": "Environment system showcase video demonstrating real-time lighting, weather, and ambient animation."
           }
         },
@@ -737,19 +737,19 @@
         "status": "complete",
         "media": {
           "image": [
-            "intelevoshowcase_portfolio_item-1.png",
-            "intelevoshowcase_portfolio_item-2.png",
-            "intelevoshowcase_portfolio_item-3.png",
-            "intelevoshowcase_portfolio_item-5.png",
-            "intelevoshowcase_portfolio_item-6.png"
+            "intelevoshowcase_portfolio_item-1.jpg",
+            "intelevoshowcase_portfolio_item-2.jpg",
+            "intelevoshowcase_portfolio_item-3.jpg",
+            "intelevoshowcase_portfolio_item-5.jpg",
+            "intelevoshowcase_portfolio_item-6.jpg"
           ],
           "youtube": ["https://www.youtube.com/embed/t04CSqkdfSM"],
           "captions": {
-            "intelevoshowcase_portfolio_item-1.png": "Visitors taking photos with interactive animal characters inside the installation.",
-            "intelevoshowcase_portfolio_item-2.png": "Audience members actively engaging with the interactive experience.",
-            "intelevoshowcase_portfolio_item-3.png": "Visitor interacting with a reactive tiger character in the surround environment.",
-            "intelevoshowcase_portfolio_item-5.png": "Participants using tablets to drive real-time interaction with the installation.",
-            "intelevoshowcase_portfolio_item-6.png": "Multi-user tablet interaction controlling animals and environment behavior.",
+            "intelevoshowcase_portfolio_item-1.jpg": "Visitors taking photos with interactive animal characters inside the installation.",
+            "intelevoshowcase_portfolio_item-2.jpg": "Audience members actively engaging with the interactive experience.",
+            "intelevoshowcase_portfolio_item-3.jpg": "Visitor interacting with a reactive tiger character in the surround environment.",
+            "intelevoshowcase_portfolio_item-5.jpg": "Participants using tablets to drive real-time interaction with the installation.",
+            "intelevoshowcase_portfolio_item-6.jpg": "Multi-user tablet interaction controlling animals and environment behavior.",
             "https://www.youtube.com/embed/t04CSqkdfSM": "On-site footage showing the surround room installation running live and stable during public operation."
           }
         },
@@ -888,25 +888,25 @@
         "status": "complete",
         "media": {
           "image": [
-            "cyberpunk-scene-environment__01__hero-wide.png",
-            "cyberpunk-scene-environment__02__walkthrough-entry.png",
-            "cyberpunk-scene-environment__03__layout-overview.png",
-            "cyberpunk-scene-environment__04__market-stalls-detail.png",
-            "cyberpunk-scene-environment__06__lighting-mood-shot.png",
-            "cyberpunk-scene-environment__08__character-integration.png",
-            "cyberpunk-scene-environment__09__composition-leading-lines.png"
+            "cyberpunk-scene-environment__01__hero-wide.jpg",
+            "cyberpunk-scene-environment__02__walkthrough-entry.jpg",
+            "cyberpunk-scene-environment__03__layout-overview.jpg",
+            "cyberpunk-scene-environment__04__market-stalls-detail.jpg",
+            "cyberpunk-scene-environment__06__lighting-mood-shot.jpg",
+            "cyberpunk-scene-environment__08__character-integration.jpg",
+            "cyberpunk-scene-environment__09__composition-leading-lines.jpg"
           ],
           "youtube": [
             "https://www.youtube.com/embed/sSofJzzeDCA"
           ],
           "captions": {
-            "cyberpunk-scene-environment__01__hero-wide.png": "Hero wide shot establishing the full food court space, density, and overall cyberpunk mood.",
-            "cyberpunk-scene-environment__02__walkthrough-entry.png": "Entry viewpoint used in the walkthrough, showing immediate readability and lighting direction.",
-            "cyberpunk-scene-environment__03__layout-overview.png": "High-level layout overview that communicates spatial flow, focal points, and scene organization.",
-            "cyberpunk-scene-environment__04__market-stalls-detail.png": "Close-up of stall clustering and prop dressing, demonstrating believable lived-in detail from generated assets.",
-            "cyberpunk-scene-environment__06__lighting-mood-shot.png": "Lighting-focused frame highlighting contrast, color separation, and depth through the scene.",
-            "cyberpunk-scene-environment__08__character-integration.png": "Character/actor integration frame showing scale, placement, and interaction within the environment.",
-            "cyberpunk-scene-environment__09__composition-leading-lines.png": "Composition shot demonstrating deliberate sightlines and guiding the viewer through the space.",
+            "cyberpunk-scene-environment__01__hero-wide.jpg": "Hero wide shot establishing the full food court space, density, and overall cyberpunk mood.",
+            "cyberpunk-scene-environment__02__walkthrough-entry.jpg": "Entry viewpoint used in the walkthrough, showing immediate readability and lighting direction.",
+            "cyberpunk-scene-environment__03__layout-overview.jpg": "High-level layout overview that communicates spatial flow, focal points, and scene organization.",
+            "cyberpunk-scene-environment__04__market-stalls-detail.jpg": "Close-up of stall clustering and prop dressing, demonstrating believable lived-in detail from generated assets.",
+            "cyberpunk-scene-environment__06__lighting-mood-shot.jpg": "Lighting-focused frame highlighting contrast, color separation, and depth through the scene.",
+            "cyberpunk-scene-environment__08__character-integration.jpg": "Character/actor integration frame showing scale, placement, and interaction within the environment.",
+            "cyberpunk-scene-environment__09__composition-leading-lines.jpg": "Composition shot demonstrating deliberate sightlines and guiding the viewer through the space.",
             "https://www.youtube.com/embed/sSofJzzeDCA": "Real-time walkthrough demonstrating environment cohesion, spatial flow, and consistency using platform-generated assets."
           }
         },
@@ -942,19 +942,19 @@
         "status": "complete",
         "media": {
           "image": [
-            "cyberpunk-scene-sequencer__01__establishing-shot.png",
-            "cyberpunk-scene-sequencer__02__camera-path-overview.png",
-            "cyberpunk-scene-sequencer__03__mid-shot-composition.png",
-            "cyberpunk-scene-sequencer__04__sequencer-lighting-pass.png"
+            "cyberpunk-scene-sequencer__01__establishing-shot.jpg",
+            "cyberpunk-scene-sequencer__02__camera-path-overview.jpg",
+            "cyberpunk-scene-sequencer__03__mid-shot-composition.jpg",
+            "cyberpunk-scene-sequencer__04__sequencer-lighting-pass.jpg"
           ],
           "youtube": [
             "https://www.youtube.com/embed/sU12YZB1AWA"
           ],
           "captions": {
-            "cyberpunk-scene-sequencer__01__establishing-shot.png": "Opening establishing shot used to introduce scale, spatial layout, and overall mood of the environment.",
-            "cyberpunk-scene-sequencer__02__camera-path-overview.png": "Editor overview illustrating the planned camera path and shot progression authored in Unreal Sequencer.",
-            "cyberpunk-scene-sequencer__03__mid-shot-composition.png": "Sequencer editor view showing camera tracks, timing, and shot arrangement during cinematic authoring.",
-            "cyberpunk-scene-sequencer__04__sequencer-lighting-pass.png": "Sequencer timeline view demonstrating coordination of lighting and environment elements alongside camera animation.",
+            "cyberpunk-scene-sequencer__01__establishing-shot.jpg": "Opening establishing shot used to introduce scale, spatial layout, and overall mood of the environment.",
+            "cyberpunk-scene-sequencer__02__camera-path-overview.jpg": "Editor overview illustrating the planned camera path and shot progression authored in Unreal Sequencer.",
+            "cyberpunk-scene-sequencer__03__mid-shot-composition.jpg": "Sequencer editor view showing camera tracks, timing, and shot arrangement during cinematic authoring.",
+            "cyberpunk-scene-sequencer__04__sequencer-lighting-pass.jpg": "Sequencer timeline view demonstrating coordination of lighting and environment elements alongside camera animation.",
             "https://www.youtube.com/embed/sU12YZB1AWA": "Sequencer-exported cinematic showcasing camera design, lighting continuity, and real-time presentation of the environment."
           }
         },
@@ -1000,17 +1000,17 @@
       "status": "complete",
       "media": {
         "image": [
-          "chaosbuildings-spline_01.png",
-          "chaosbuildings-spline_02.png",
-          "chaosbuildings-spline_03.png"
+          "chaosbuildings-spline_01.jpg",
+          "chaosbuildings-spline_02.jpg",
+          "chaosbuildings-spline_03.jpg"
         ],
         "youtube": [
           "https://www.youtube.com/embed/erOLKPf2rXM"
         ],
         "captions": {
-          "chaosbuildings-spline_01.png": "Road spline Blueprint selected in the Unreal Editor, exposing authoring parameters used to encode urban layout intent.",
-          "chaosbuildings-spline_02.png": "Top-down view of authored road splines defining the primary urban layout before contextual PCG interpretation.",
-          "chaosbuildings-spline_03.png": "Intersection case showing spline connectivity and layout constraints used as semantic input for downstream systems.",
+          "chaosbuildings-spline_01.jpg": "Road spline Blueprint selected in the Unreal Editor, exposing authoring parameters used to encode urban layout intent.",
+          "chaosbuildings-spline_02.jpg": "Top-down view of authored road splines defining the primary urban layout before contextual PCG interpretation.",
+          "chaosbuildings-spline_03.jpg": "Intersection case showing spline connectivity and layout constraints used as semantic input for downstream systems.",
           "https://www.youtube.com/embed/erOLKPf2rXM": "Editor-mode walkthrough showing the spline-authored road network forming the structural backbone of the procedural city layout."
         }
     },
@@ -1048,25 +1048,25 @@
       "status": "complete",
       "media": {
         "image": [
-          "chaosbuildings-pcg_01.png",
-          "chaosbuildings-pcg_02.png",
-          "chaosbuildings-pcg_03.png",
-          "chaosbuildings-pcg_04.png",
-          "chaosbuildings-pcg_05.png",
-          "chaosbuildings-pcg_06.png",
-          "chaosbuildings-pcg_07.png"
+          "chaosbuildings-pcg_01.jpg",
+          "chaosbuildings-pcg_02.jpg",
+          "chaosbuildings-pcg_03.jpg",
+          "chaosbuildings-pcg_04.jpg",
+          "chaosbuildings-pcg_05.jpg",
+          "chaosbuildings-pcg_06.jpg",
+          "chaosbuildings-pcg_07.jpg"
         ],
         "youtube": [
           "https://www.youtube.com/embed/8j5FebcAETY"
         ],
         "captions": {
-          "chaosbuildings-pcg_01.png": "Procedurally generated urban layout produced by the global PCG system, interpreting spline metadata and zoning rules to form coherent city blocks.",
-          "chaosbuildings-pcg_02.png": "Global PCG graph showing rule-based evaluation of spline data, zoning groups, and contextual placement logic.",
-          "chaosbuildings-pcg_03.png": "Zoning configuration view demonstrating how different building categories and density tiers are selected procedurally.",
-          "chaosbuildings-pcg_04.png": "Procedural placement of buildings, sidewalks, and props driven by road context and zoning interpretation.",
-          "chaosbuildings-pcg_05.png": "Context-aware building placement adapting to road width, orientation, and surrounding environment.",
-          "chaosbuildings-pcg_06.png": "Intersection-aware PCG resolving crossings and corners to maintain coherent urban structure.",
-          "chaosbuildings-pcg_07.png": "Direction-aware traffic and prop placement aligned to spline orientation within the procedural city.",
+          "chaosbuildings-pcg_01.jpg": "Procedurally generated urban layout produced by the global PCG system, interpreting spline metadata and zoning rules to form coherent city blocks.",
+          "chaosbuildings-pcg_02.jpg": "Global PCG graph showing rule-based evaluation of spline data, zoning groups, and contextual placement logic.",
+          "chaosbuildings-pcg_03.jpg": "Zoning configuration view demonstrating how different building categories and density tiers are selected procedurally.",
+          "chaosbuildings-pcg_04.jpg": "Procedural placement of buildings, sidewalks, and props driven by road context and zoning interpretation.",
+          "chaosbuildings-pcg_05.jpg": "Context-aware building placement adapting to road width, orientation, and surrounding environment.",
+          "chaosbuildings-pcg_06.jpg": "Intersection-aware PCG resolving crossings and corners to maintain coherent urban structure.",
+          "chaosbuildings-pcg_07.jpg": "Direction-aware traffic and prop placement aligned to spline orientation within the procedural city.",
           "https://www.youtube.com/embed/8j5FebcAETY": "Global PCG system interpreting spline metadata and zoning rules to place buildings, sidewalks, props, and traffic coherently."
         }
       },
@@ -1114,19 +1114,19 @@
       "status": "complete",
       "media": {
         "image": [
-          "chaosbuildings-runtime_01.png",
-          "chaosbuildings-runtime_02.png",
-          "chaosbuildings-runtime_03.png",
-          "chaosbuildings-runtime_04.png"
+          "chaosbuildings-runtime_01.jpg",
+          "chaosbuildings-runtime_02.jpg",
+          "chaosbuildings-runtime_03.jpg",
+          "chaosbuildings-runtime_04.jpg"
         ],
         "youtube": [
           "https://www.youtube.com/embed/rnS3XX26NOM"
         ],
         "captions": {
-          "chaosbuildings-runtime_01.png": "Procedurally placed building at runtime, shown at the beginning of a Chaos-enabled structural collapse.",
-          "chaosbuildings-runtime_02.png": "Runtime traversal of the procedural city using a third-person validation harness.",
-          "chaosbuildings-runtime_03.png": "Third-person runtime view navigating the procedurally generated urban environment.",
-          "chaosbuildings-runtime_04.png": "Runtime validation view demonstrating stable traversal through the procedural city under real-time conditions.",
+          "chaosbuildings-runtime_01.jpg": "Procedurally placed building at runtime, shown at the beginning of a Chaos-enabled structural collapse.",
+          "chaosbuildings-runtime_02.jpg": "Runtime traversal of the procedural city using a third-person validation harness.",
+          "chaosbuildings-runtime_03.jpg": "Third-person runtime view navigating the procedurally generated urban environment.",
+          "chaosbuildings-runtime_04.jpg": "Runtime validation view demonstrating stable traversal through the procedural city under real-time conditions.",
           "https://www.youtube.com/embed/rnS3XX26NOM": "Runtime validation pass showing Chaos-enabled building destruction and real-time traversal of the procedural city."
         
         }
@@ -1176,25 +1176,25 @@
       "status": "complete",
       "media": {
         "image": [
-          "chaosbuildings-pcg_06.png",
-          "chaosbuildings-pcg_01.png",
-          "chaosbuildings-pcg_02.png",
-          "chaosbuildings-pcg_03.png",
-          "chaosbuildings-pcg_04.png",
-          "chaosbuildings-pcg_05.png",
-          "chaosbuildings-pcg_07.png"
+          "chaosbuildings-pcg_06.jpg",
+          "chaosbuildings-pcg_01.jpg",
+          "chaosbuildings-pcg_02.jpg",
+          "chaosbuildings-pcg_03.jpg",
+          "chaosbuildings-pcg_04.jpg",
+          "chaosbuildings-pcg_05.jpg",
+          "chaosbuildings-pcg_07.jpg"
         ],
         "youtube": [
           "https://www.youtube.com/embed/8j5FebcAETY"
         ],
         "captions": {
-          "chaosbuildings-pcg_01.png": "Procedurally generated urban layout produced by the global PCG system, interpreting spline metadata and zoning rules to form coherent city blocks.",
-          "chaosbuildings-pcg_02.png": "Global PCG graph showing rule-based evaluation of spline data, zoning groups, and contextual placement logic.",
-          "chaosbuildings-pcg_03.png": "Zoning configuration view demonstrating how different building categories and density tiers are selected procedurally.",
-          "chaosbuildings-pcg_04.png": "Procedural placement of buildings, sidewalks, and props driven by road context and zoning interpretation.",
-          "chaosbuildings-pcg_05.png": "Context-aware building placement adapting to road width, orientation, and surrounding environment.",
-          "chaosbuildings-pcg_06.png": "Intersection-aware PCG resolving crossings and corners to maintain coherent urban structure.",
-          "chaosbuildings-pcg_07.png": "Direction-aware traffic and prop placement aligned to spline orientation within the procedural city.",
+          "chaosbuildings-pcg_01.jpg": "Procedurally generated urban layout produced by the global PCG system, interpreting spline metadata and zoning rules to form coherent city blocks.",
+          "chaosbuildings-pcg_02.jpg": "Global PCG graph showing rule-based evaluation of spline data, zoning groups, and contextual placement logic.",
+          "chaosbuildings-pcg_03.jpg": "Zoning configuration view demonstrating how different building categories and density tiers are selected procedurally.",
+          "chaosbuildings-pcg_04.jpg": "Procedural placement of buildings, sidewalks, and props driven by road context and zoning interpretation.",
+          "chaosbuildings-pcg_05.jpg": "Context-aware building placement adapting to road width, orientation, and surrounding environment.",
+          "chaosbuildings-pcg_06.jpg": "Intersection-aware PCG resolving crossings and corners to maintain coherent urban structure.",
+          "chaosbuildings-pcg_07.jpg": "Direction-aware traffic and prop placement aligned to spline orientation within the procedural city.",
           "https://www.youtube.com/embed/8j5FebcAETY": "Global PCG system interpreting spline metadata and zoning rules to place buildings, sidewalks, props, and traffic coherently."
         }
       },
@@ -1237,19 +1237,19 @@
       "status": "complete",
       "media": {
         "image": [
-          "chaosbuildings-runtime_01.png",
-          "chaosbuildings-runtime_02.png",
-          "chaosbuildings-runtime_03.png",
-          "chaosbuildings-runtime_04.png"
+          "chaosbuildings-runtime_01.jpg",
+          "chaosbuildings-runtime_02.jpg",
+          "chaosbuildings-runtime_03.jpg",
+          "chaosbuildings-runtime_04.jpg"
         ],
         "youtube": [
           "https://www.youtube.com/embed/rnS3XX26NOM"
         ],
         "captions": {
-          "chaosbuildings-runtime_01.png": "Procedurally placed building at runtime, shown at the beginning of a Chaos-enabled structural collapse.",
-          "chaosbuildings-runtime_02.png": "Runtime traversal of the procedural city using a third-person validation harness.",
-          "chaosbuildings-runtime_03.png": "Third-person runtime view navigating the procedurally generated urban environment.",
-          "chaosbuildings-runtime_04.png": "Runtime validation view demonstrating stable traversal through the procedural city under real-time conditions.",
+          "chaosbuildings-runtime_01.jpg": "Procedurally placed building at runtime, shown at the beginning of a Chaos-enabled structural collapse.",
+          "chaosbuildings-runtime_02.jpg": "Runtime traversal of the procedural city using a third-person validation harness.",
+          "chaosbuildings-runtime_03.jpg": "Third-person runtime view navigating the procedurally generated urban environment.",
+          "chaosbuildings-runtime_04.jpg": "Runtime validation view demonstrating stable traversal through the procedural city under real-time conditions.",
           "https://www.youtube.com/embed/rnS3XX26NOM": "Runtime validation pass showing Chaos-enabled building destruction and real-time traversal of the procedural city."
         
         }

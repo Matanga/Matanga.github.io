@@ -3,44 +3,44 @@
     {
       "id": "chaosbuildings",
       "label": "Chaos Buildings",
-      "image": "chaosbuildings-pcg_01.png"
+      "image": "chaosbuildings-pcg_01.jpg"
     },
     {
       "id": "cyberpunk-scene",
       "label": "Cyberpunk Food Court Scene",
-      "image": "cyberpunk-scene-environment__01__hero-wide.png"
+      "image": "cyberpunk-scene-environment__01__hero-wide.jpg"
     },
     {
       "id": "intel-evo",
       "label": "Intel Evo",
-      "image": "intelevoenvironment_portfolio_item-2.png"
+      "image": "intelevoenvironment_portfolio_item-2.jpg"
     },
     {
       "id": "unreal-room",
       "label": "Unreal Room",
-      "image": "Thumbnail_unrealroom.png"
+      "image": "Thumbnail_unrealroom.jpg"
     }
   ],
   "featuredSkillsets": [
     {
       "id": "tooldev",
       "label": "Tool Development",
-      "image": "Thumbnail_tooldev.png"
+      "image": "Thumbnail_tooldev.jpg"
     },
     {
       "id": "procgen",
       "label": "Procedural Generation",
-      "image": "apocs_overview_05.png"
+      "image": "apocs_overview_05.jpg"
     },
     {
       "id": "unrealdev",
       "label": "Unreal Development",
-      "image": "Thumbnail_unreal.png"
+      "image": "Thumbnail_unreal.jpg"
     },
     {
       "id": "pipelinedev",
       "label": "Pipeline Development",
-      "image": "2kdam-inventory-1.png"
+      "image": "2kdam-inventory-1.jpg"
     }
   ]
 }
