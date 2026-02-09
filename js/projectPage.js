@@ -278,10 +278,15 @@ function selectContribution(contributionId, isUserClick) {
   
   // Update card selection state and find the clicked card
   let clickedCard = null;
-  document.querySelectorAll('.proj-contribution-card').forEach(card => {
+  let cardIndex = -1;
+  const allCards = document.querySelectorAll('.proj-contribution-card');
+  allCards.forEach((card, index) => {
     const isSelected = card.dataset.contributionId === contributionId;
     card.classList.toggle('selected', isSelected);
-    if (isSelected) clickedCard = card;
+    if (isSelected) {
+      clickedCard = card;
+      cardIndex = index;
+    }
   });
   
   // Find the contribution
@@ -290,22 +295,89 @@ function selectContribution(contributionId, isUserClick) {
   
   renderContributionDetail(contribution);
   
-  // Only scroll and animate on user clicks, not on initial page load
-  if (isUserClick === true && clickedCard) {
-    // Scroll the clicked card to near the top of the viewport
-    const cardRect = clickedCard.getBoundingClientRect();
-    const scrollOffset = window.scrollY + cardRect.top - 60; // 60px padding from top (accounts for topbar)
-    window.scrollTo({ top: scrollOffset, behavior: 'smooth' });
+  // Scroll and animate (both for user clicks and initial load)
+  if (clickedCard) {
+    // Scroll the card horizontally to center it in the carousel (unless it's the first card)
+    scrollCardToCenter(clickedCard, cardIndex, isUserClick === true);
     
-    // Trigger border pulse animation on the detail section
-    const detailSection = document.querySelector('.proj-detail');
-    if (detailSection) {
-      detailSection.classList.remove('content-loaded');
-      // Force reflow to restart animation
-      void detailSection.offsetWidth;
-      detailSection.classList.add('content-loaded');
+    // Only do vertical scroll and animations on user clicks
+    if (isUserClick === true) {
+      // Scroll the clicked card to near the top of the viewport
+      const cardRect = clickedCard.getBoundingClientRect();
+      const scrollOffset = window.scrollY + cardRect.top - 60; // 60px padding from top (accounts for topbar)
+      window.scrollTo({ top: scrollOffset, behavior: 'smooth' });
+      
+      // Trigger highlight animation on the clicked card
+      triggerCardHighlight(clickedCard, 'proj-contribution-card');
+      
+      // Trigger border pulse animation on the detail section
+      const detailSection = document.querySelector('.proj-detail');
+      if (detailSection) {
+        detailSection.classList.remove('content-loaded');
+        // Force reflow to restart animation
+        void detailSection.offsetWidth;
+        detailSection.classList.add('content-loaded');
+      }
     }
   }
+}
+
+/**
+ * Scroll a card to the center of its carousel container
+ * @param {HTMLElement} card - The card element to center
+ * @param {number} cardIndex - The index of the card (0 = first)
+ * @param {boolean} animate - Whether to animate the scroll
+ */
+function scrollCardToCenter(card, cardIndex, animate = true) {
+  const carousel = document.getElementById('proj-contributions-list');
+  if (!carousel || !card) return;
+  
+  // Skip centering for the first card - it's locked at the start
+  if (cardIndex === 0) return;
+  
+  // Calculate the scroll position to center the card
+  const carouselRect = carousel.getBoundingClientRect();
+  const cardRect = card.getBoundingClientRect();
+  
+  // Calculate where the card should be (center of carousel)
+  const carouselCenter = carouselRect.width / 2;
+  const cardCenter = cardRect.width / 2;
+  
+  // Current position of card relative to carousel
+  const cardLeftInCarousel = card.offsetLeft;
+  
+  // Target scroll position: card's left position minus the offset needed to center it
+  const targetScroll = cardLeftInCarousel - carouselCenter + cardCenter;
+  
+  // Clamp to valid scroll range
+  const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+  const clampedScroll = Math.max(0, Math.min(targetScroll, maxScroll));
+  
+  if (animate) {
+    carousel.scrollTo({ left: clampedScroll, behavior: 'smooth' });
+  } else {
+    carousel.scrollLeft = clampedScroll;
+  }
+}
+
+/**
+ * Trigger highlight animation on a card
+ * @param {HTMLElement} card - The card element
+ * @param {string} cardClass - The base class of the card (for cleanup)
+ */
+function triggerCardHighlight(card, cardClass) {
+  if (!card) return;
+  
+  // Remove from all cards first
+  document.querySelectorAll(`.${cardClass}`).forEach(c => {
+    c.classList.remove('card-highlight-pulse');
+  });
+  
+  // Force reflow to restart animation
+  void card.offsetWidth;
+  
+  // Add animation class
+  card.classList.add('card-highlight-pulse');
 }
 
 /**

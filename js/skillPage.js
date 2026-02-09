@@ -276,33 +276,102 @@ function selectSystem(systemId, isUserClick = false) {
 
   // Update selected state in all cards and find clicked card
   let clickedCard = null;
-  document.querySelectorAll('.skill-system-card').forEach(card => {
+  let cardIndex = -1;
+  const allCards = document.querySelectorAll('.skill-system-card');
+  allCards.forEach((card, index) => {
     const isSelected = card.dataset.systemId === systemId;
     card.classList.toggle('skill-card-selected', isSelected);
-    if (isSelected && !clickedCard) clickedCard = card;
+    if (isSelected && !clickedCard) {
+      clickedCard = card;
+      cardIndex = index;
+    }
   });
 
   // Render the detail
   renderSystemDetail(system);
 
-  // Only scroll and animate on user clicks, not on initial page load
-  if (isUserClick) {
-    // Scroll the clicked card to near the top of the viewport
-    if (clickedCard) {
+  // Scroll and animate (both for user clicks and initial load for horizontal centering)
+  if (clickedCard) {
+    // Scroll the card horizontally to center it in the carousel (unless it's the first card)
+    scrollSkillCardToCenter(clickedCard, cardIndex, isUserClick);
+    
+    // Only do vertical scroll and animations on user clicks
+    if (isUserClick) {
+      // Scroll the clicked card to near the top of the viewport
       const cardRect = clickedCard.getBoundingClientRect();
       const scrollOffset = window.scrollY + cardRect.top - 60; // 60px padding from top (accounts for topbar)
       window.scrollTo({ top: scrollOffset, behavior: 'smooth' });
-    }
+      
+      // Trigger highlight animation on the clicked card
+      triggerSkillCardHighlight(clickedCard);
 
-    // Trigger border pulse animation on the detail section
-    const detailSection = document.getElementById('skillSystemDetail');
-    if (detailSection) {
-      detailSection.classList.remove('content-loaded');
-      // Force reflow to restart animation
-      void detailSection.offsetWidth;
-      detailSection.classList.add('content-loaded');
+      // Trigger border pulse animation on the detail section
+      const detailSection = document.getElementById('skillSystemDetail');
+      if (detailSection) {
+        detailSection.classList.remove('content-loaded');
+        // Force reflow to restart animation
+        void detailSection.offsetWidth;
+        detailSection.classList.add('content-loaded');
+      }
     }
   }
+}
+
+/**
+ * Scroll a skill card to the center of its carousel container
+ * @param {HTMLElement} card - The card element to center
+ * @param {number} cardIndex - The index of the card (0 = first)
+ * @param {boolean} animate - Whether to animate the scroll
+ */
+function scrollSkillCardToCenter(card, cardIndex, animate = true) {
+  const carousel = document.getElementById('skillCarousel');
+  if (!carousel || !card) return;
+  
+  // Skip centering for the first card - it's locked at the start
+  if (cardIndex === 0) return;
+  
+  // Calculate the scroll position to center the card
+  const carouselRect = carousel.getBoundingClientRect();
+  const cardRect = card.getBoundingClientRect();
+  
+  // Calculate where the card should be (center of carousel)
+  const carouselCenter = carouselRect.width / 2;
+  const cardCenter = cardRect.width / 2;
+  
+  // Current position of card relative to carousel
+  const cardLeftInCarousel = card.offsetLeft;
+  
+  // Target scroll position: card's left position minus the offset needed to center it
+  const targetScroll = cardLeftInCarousel - carouselCenter + cardCenter;
+  
+  // Clamp to valid scroll range
+  const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+  const clampedScroll = Math.max(0, Math.min(targetScroll, maxScroll));
+  
+  if (animate) {
+    carousel.scrollTo({ left: clampedScroll, behavior: 'smooth' });
+  } else {
+    carousel.scrollLeft = clampedScroll;
+  }
+}
+
+/**
+ * Trigger highlight animation on a skill card
+ * @param {HTMLElement} card - The card element
+ */
+function triggerSkillCardHighlight(card) {
+  if (!card) return;
+  
+  // Remove from all cards first
+  document.querySelectorAll('.skill-system-card').forEach(c => {
+    c.classList.remove('card-highlight-pulse');
+  });
+  
+  // Force reflow to restart animation
+  void card.offsetWidth;
+  
+  // Add animation class
+  card.classList.add('card-highlight-pulse');
 }
 
 /**
@@ -635,11 +704,10 @@ async function LoadSkillPage(skillId) {
   renderSkillHeader(viewModel.header, skillId);
   renderSystemsCarousel(viewModel.systems, viewModel.selectedSystemId);
 
-  // Select initial system
+  // Select initial system (use selectSystem to apply centering logic)
   if (viewModel.selectedSystemId) {
-    const initialSystem = viewModel.systems.find(s => s.id === viewModel.selectedSystemId);
-    renderSystemDetail(initialSystem);
-    currentSelectedSystemId = viewModel.selectedSystemId;
+    // Use selectSystem with isUserClick=false to center without animations
+    selectSystem(viewModel.selectedSystemId, false);
   }
 
   // Show the skillsets tab
