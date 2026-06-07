@@ -35,7 +35,7 @@ function renderSkillHeader(header, skillId) {
   document.getElementById('skillTitle').textContent = header.title;
   document.getElementById('skillDescription').textContent = header.description;
   
-  const statsText = `Used in ${header.stats.projectCount} project${header.stats.projectCount !== 1 ? 's' : ''} | ${header.stats.systemCount} system${header.stats.systemCount !== 1 ? 's' : ''} shipped`;
+  const statsText = `${header.stats.projectCount} project${header.stats.projectCount !== 1 ? 's' : ''} | ${header.stats.systemCount} system${header.stats.systemCount !== 1 ? 's' : ''}`;
   document.getElementById('skillStats').textContent = statsText;
 
   // Render tech chips using the new TechStackChips component
@@ -71,7 +71,7 @@ function renderSystemCard(system, isSelected = false) {
     // Prefer actual images for thumbnails
     const imgSrc = firstImage.src.startsWith('http') 
       ? firstImage.src 
-      : `https://matanga.github.io/images/${firstImage.src}`;
+      : `/images/${firstImage.src}`;
     thumbnailHtml = `<div class="skill-card-thumbnail" style="background-image: url('${imgSrc}')"></div>`;
   } else if (firstYoutube) {
     // Fall back to YouTube thumbnail if no images available
@@ -83,15 +83,17 @@ function renderSystemCard(system, isSelected = false) {
   }
 
   return `
-    <div class="skill-system-card ${selectedClass}" data-system-id="${system.id}" onclick="selectSystem('${system.id}', true)">
+    <button class="skill-system-card ${selectedClass}" type="button"
+            data-system-id="${system.id}" aria-pressed="${isSelected}"
+            onclick="selectSystem('${system.id}', true)">
       <div class="skill-card-content">
         <h4 class="skill-card-title">${system.title}</h4>
         <p class="skill-card-description">${truncateText(system.oneLiner, 100)}</p>
-        <button class="skill-card-cta">&#8594; View system</button>
+        <span class="skill-card-cta">&rarr; View system</span>
       </div>
       ${thumbnailHtml}
       <div class="skill-card-tags">${tagsHtml}</div>
-    </div>
+    </button>
   `;
 }
 
@@ -183,7 +185,7 @@ function renderPrimaryShowcase(showcase) {
   } else if (primary.type === 'image') {
     const imgSrc = primary.src.startsWith('http') 
       ? primary.src 
-      : `https://matanga.github.io/images/${primary.src}`;
+      : `/images/${primary.src}`;
     container.innerHTML = `<img class="skill-primary-image" src="${imgSrc}" alt="${primary.caption || 'Showcase'}" onclick="openImageModal('${imgSrc}')" style="cursor: pointer;">`;
   }
 
@@ -240,7 +242,7 @@ function renderAdditionalShowcase(showcase) {
     } else if (item.type === 'image') {
       const imgSrc = item.src.startsWith('http') 
         ? item.src 
-        : `https://matanga.github.io/images/${item.src}`;
+        : `/images/${item.src}`;
       return `
         <div class="skill-gallery-item">
           <img src="${imgSrc}" alt="${item.caption || 'Showcase'}" onclick="openImageModal('${imgSrc}')" style="cursor: pointer;">
@@ -281,6 +283,7 @@ function selectSystem(systemId, isUserClick = false) {
   allCards.forEach((card, index) => {
     const isSelected = card.dataset.systemId === systemId;
     card.classList.toggle('skill-card-selected', isSelected);
+    card.setAttribute('aria-pressed', String(isSelected));
     if (isSelected && !clickedCard) {
       clickedCard = card;
       cardIndex = index;
@@ -295,13 +298,8 @@ function selectSystem(systemId, isUserClick = false) {
     // Scroll the card horizontally to center it in the carousel (unless it's the first card)
     scrollSkillCardToCenter(clickedCard, cardIndex, isUserClick);
     
-    // Only do vertical scroll and animations on user clicks
+    // Animate on user clicks while preserving the current page position.
     if (isUserClick) {
-      // Scroll the clicked card to near the top of the viewport
-      const cardRect = clickedCard.getBoundingClientRect();
-      const scrollOffset = window.scrollY + cardRect.top - 60; // 60px padding from top (accounts for topbar)
-      window.scrollTo({ top: scrollOffset, behavior: 'smooth' });
-      
       // Trigger highlight animation on the clicked card
       triggerSkillCardHighlight(clickedCard);
 
@@ -441,8 +439,10 @@ function setupCarouselDrag(carousel) {
  */
 function toggleWhatIBuilt() {
   const content = document.getElementById('skillDetailsContent');
+  const button = document.getElementById('skillDetailsToggle');
   const isHidden = content.style.display === 'none';
   content.style.display = isHidden ? 'block' : 'none';
+  button?.setAttribute('aria-expanded', String(isHidden));
   updateToggleArrow('skillDetailsToggle', isHidden);
 }
 

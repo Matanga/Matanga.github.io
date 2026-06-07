@@ -875,3 +875,138 @@
     height: 100px;
   }
 }
+
+/* ============================================
+   PHASE 5 EXPERTISE DETAIL
+   ============================================ */
+
+.skill-page {
+  gap: 14px;
+}
+
+.skill-header-box,
+.skill-page .menu_box {
+  margin-top: 0;
+  border-radius: 5px;
+}
+
+.skill-header-box {
+  min-height: 300px;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.skill-header-box::before {
+  background: linear-gradient(90deg, rgba(18, 18, 18, 0.96), rgba(18, 18, 18, 0.68));
+}
+
+.skill-label {
+  width: auto;
+  right: auto;
+  padding: 0;
+  color: var(--accent-user);
+  background: transparent;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skill-title {
+  margin: 26px 0 8px;
+  font-size: clamp(30px, 4vw, 44px);
+  letter-spacing: -0.035em;
+}
+
+.skill-description {
+  max-width: 820px;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  line-height: var(--leading-relaxed);
+}
+
+.skill-stats {
+  color: var(--accent-user);
+}
+
+.skill-systems-box,
+.skill-system-detail {
+  border-left: 1px solid var(--border-dim);
+}
+
+.skill-section-label,
+.skill-systems-box .skill-section-label,
+.skill-showcase-section .skill-section-label,
+.skill-additional-showcase .skill-section-label {
+  color: var(--accent-user);
+}
+
+.skill-carousel {
+  scrollbar-color: var(--accent-user) var(--bg-elevated);
+}
+
+.skill-carousel::-webkit-scrollbar-thumb {
+  background: var(--accent-user);
+}
+
+.skill-system-card {
+  padding: 0;
+  color: inherit;
+  border-top-color: var(--border-dim);
+  border-radius: 4px;
+  font-family: inherit;
+  text-align: left;
+}
+
+.skill-system-card:hover,
+.skill-system-card.skill-card-selected {
+  border-color: var(--accent-user);
+}
+
+.skill-system-card.skill-card-selected {
+  border-width: 1px;
+  border-top: 3px solid var(--accent-user);
+  box-shadow: 0 0 0 1px var(--accent-user), 0 8px 22px rgba(0, 0, 0, 0.24);
+}
+
+.skill-card-selected .skill-card-title::after {
+  background: var(--accent-user);
+}
+
+.skill-card-cta,
+.skill-project-link a {
+  color: var(--accent-user);
+}
+
+.skill-details-toggle:hover {
+  border-color: var(--accent-user);
+}
+
+.skill-bullet-list li::before {
+  color: var(--accent-user);
+}
+
+.skill-primary-showcase,
+.skill-gallery-item {
+  overflow: hidden;
+  border: 1px solid var(--border-dim);
+  border-radius: 4px;
+}
+
+.skill-primary-image,
+.skill-gallery-item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .skill-header-box {
+    min-height: 260px;
+    padding: 22px 18px;
+  }
+}

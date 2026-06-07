@@ -431,7 +431,7 @@ Test projects with:
 All project routes use the new case-study design without losing project-level or
 system-level dynamic behavior.
 
-## Phase 5: Expertise
+## Phase 5: Expertise - Completed
 
 Preserve and improve the existing skillset system.
 
@@ -449,17 +449,10 @@ Preserve and improve the existing skillset system.
 
 - Restyle dynamic skillset pages to match the new design system.
 - Reuse the improved system-card and evidence components where practical.
-- Keep Expertise as a small navigation dropdown.
-- Optionally add `/expertise` as a curated overview containing broad capability
-  families:
-  - Pipeline Architecture
-  - Artist Tools
-  - Procedural Systems
-  - Engine and Runtime Systems
-- Link overview cards to one or more existing dynamic skillset routes.
-
-The `/expertise` overview is optional and should be evaluated after Work filters
-are functioning.
+- Replace the Expertise dropdown with a direct `/expertise` destination.
+- Build the overview dynamically from existing skill metadata and tagged systems.
+- Link every overview card to its existing `/skillsets/:skill` route.
+- Add a clear return link from individual expertise pages.
 
 ### Deliverable
 

@@ -40,6 +40,7 @@
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <!-- Page Styles -->
     <link href="css/homePage.css" rel="stylesheet" type="text/css"/>
+    <link href="css/expertisePage.css" rel="stylesheet" type="text/css"/>
     <link href="css/projectPage.css" rel="stylesheet" type="text/css"/>
     <link href="css/skillPage.css" rel="stylesheet" type="text/css"/>
     <link href="css/contactPage.css" rel="stylesheet" type="text/css"/>
@@ -50,6 +51,7 @@
     <script src="js/main.js"></script>
     <!-- Page Scripts -->
     <script src="js/homePage.js"></script>
+    <script src="js/expertisePage.js"></script>
     <script src="js/projectPage.js"></script>
     <script src="js/techStackChips.js"></script>
     <script src="js/skillPage.js"></script>
@@ -127,12 +129,8 @@
                 <a class="nav-link" data-nav="work" href="/"
                    onclick="event.preventDefault(); navigateTo('/')">Work</a>
 
-                <div class="nav-dropdown" id="expertiseDropdown">
-                    <a class="nav-link nav-dropdown-trigger" data-nav="expertise" href="/expertise"
-                       aria-haspopup="true" aria-expanded="false"
-                       onclick="event.preventDefault(); navigateTo('/expertise')">Expertise</a>
-                    <div class="nav-dropdown-menu" id="skillsetsList" aria-label="Expertise areas"></div>
-                </div>
+                <a class="nav-link" data-nav="expertise" href="/expertise"
+                   onclick="event.preventDefault(); navigateTo('/expertise')">Expertise</a>
 
                 <a class="nav-link" data-nav="about" href="/about"
                    onclick="event.preventDefault(); navigateTo('/about')">About</a>
@@ -506,13 +504,15 @@
 
     <section id="skillsets" class="tabcontent">
         <div class="section_wrapper skill-page">
+            <a class="skill-back-link" href="/expertise"
+               onclick="event.preventDefault(); navigateTo('/expertise')">&larr; All expertise</a>
             
             <!-- 1) SKILL HEADER -->
             <div class="skill-header-box">
-                <div class="skill-label">Skill</div>
+                <div class="skill-label">Expertise</div>
                 <h2 class="skill-title" id="skillTitle">VFX & Interactive Systems</h2>
                 <p class="skill-description" id="skillDescription">Real-time visual effects, procedural animation, and data-driven Niagara systems.</p>
-                <p class="skill-stats" id="skillStats">Used in 6 projects | 12 systems shipped</p>
+                <p class="skill-stats" id="skillStats">6 projects | 12 systems</p>
                 <div class="skill-tech-chips" id="skillTechChips">
                     <!-- Tech chips inserted via JS -->
                 </div>
@@ -549,7 +549,10 @@
 
                 <!-- What I Built (collapsed by default) -->
                 <div class="skill-what-i-built" id="skillWhatIBuilt">
-                    <button class="skill-details-toggle" id="skillDetailsToggle" onclick="toggleWhatIBuilt()">
+                    <button class="skill-details-toggle" id="skillDetailsToggle"
+                            type="button" aria-expanded="false"
+                            aria-controls="skillDetailsContent"
+                            onclick="toggleWhatIBuilt()">
                         What I Built <span class="toggle-arrow">&#8250;</span>
                     </button>
                     <div class="skill-details-content" id="skillDetailsContent" style="display: none;">
@@ -627,12 +630,13 @@
     </section>
 
     <section id="expertise" class="tabcontent">
-        <div class="section_wrapper">
-            <div class="shell-placeholder">
-                <p class="shell-placeholder-label">Expertise</p>
+        <div class="section_wrapper expertise-page">
+            <header class="expertise-intro">
+                <p class="expertise-eyebrow">Expertise</p>
                 <h1>Production disciplines and technical systems</h1>
-                <p>The expertise overview will be implemented after the Work landing page. Use the Expertise menu to browse the current dynamically generated skill pages.</p>
-            </div>
+                <p>Browse the tools, pipelines, engine systems, and interactive workflows represented across the portfolio.</p>
+            </header>
+            <div class="expertise-grid" id="expertiseGrid"></div>
         </div>
     </section>
 
@@ -746,14 +750,9 @@
             }
         });
 
-        // Setup dropdown close/reset handlers
-        setupDropdownResetHandlers();
-        
         globalPortfolioManager = new PortfolioManager(() => {
-            const skillsetlist = globalPortfolioManager.getUniqueSkillsets();
-            AddSkillsetButtons(skillsetlist,"skillsetsList");
-            
             initializeWorkPage(globalPortfolioManager);
+            initializeExpertisePage(globalPortfolioManager);
             
             // Check if we were redirected from 404.html (GitHub Pages SPA workaround)
             const redirectPath = sessionStorage.getItem('redirectPath');
