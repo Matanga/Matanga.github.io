@@ -1,5 +1,4 @@
 {
-
       "apocs":{
           "name": "Procedural World Pipeline R&D Sandbox",
           "client": "Undisclosed",
@@ -252,6 +251,5 @@
           "facade-grammar",
           "facade-content"
         ]
-      }
-      
+      }      
 }
