@@ -415,26 +415,41 @@
     <!-- Projects SECTION -->
 
     <section id="projects" class="tabcontent">
-        <div class="section_wrapper">
+        <div class="section_wrapper project-page">
 
             <!-- Header -->
             <div class="proj-section proj-header">
-                <div class="proj-header-accent"><h2>Project</h2></div>
-                <h1 id="proj-project-title">Project Title</h1>
-                <p id="proj-project-impact">Impact statement goes here...</p>
-                <div id="proj-project-meta"></div>
-                <p id="proj-tech-line"></p>
-                <p id="proj-visibility"></p>
+                <div class="proj-header-copy">
+                    <p class="proj-case-label">Case Study</p>
+                    <h1 id="proj-project-title">Project Title</h1>
+                    <p id="proj-project-impact">Impact statement goes here...</p>
+                    <div id="proj-project-meta"></div>
+                    <p id="proj-visibility"></p>
+                </div>
+                <div class="proj-header-media">
+                    <img id="proj-hero-image" src="" alt="">
+                </div>
             </div>
 
-            <!-- Responsibilities -->
-            <div class="proj-section proj-responsibilities">
-                <h4 class="proj-section-title">My Responsibilities</h4>
-                <ul id="proj-responsibilities-list">
-                    <li class="proj-responsibility-item">Loading...</li>
-                </ul>
-                <button class="proj-project-details-btn" id="proj-project-details-btn" onclick="toggleProjectDetails()">View Challenges & Solutions</button>
-                <div id="proj-project-details" style="display: none;"></div>
+            <div class="proj-facts" id="proj-facts"></div>
+
+            <div class="proj-story-grid">
+                <div class="proj-section proj-overview">
+                    <h2 class="proj-section-title">Overview</h2>
+                    <p id="proj-overview-text"></p>
+                    <button class="proj-project-details-btn" id="proj-project-details-btn"
+                            type="button" aria-expanded="false"
+                            aria-controls="proj-project-details"
+                            onclick="toggleProjectDetails()">Project context & challenges</button>
+                    <div id="proj-project-details" style="display: none;"></div>
+                </div>
+
+                <div class="proj-section proj-responsibilities">
+                    <h2 class="proj-section-title">My Responsibilities</h2>
+                    <ul id="proj-responsibilities-list">
+                        <li class="proj-responsibility-item">Loading...</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Contributions List - Horizontal Carousel -->
@@ -455,12 +470,15 @@
                 <h4 class="proj-section-title">Selected Contribution</h4>
                 <h3 id="proj-detail-title">Select a contribution above</h3>
                 <p id="proj-detail-oneliner"></p>
-                <div id="proj-evidence-gallery"></div>
                 <div id="proj-detail-bottom">
                     <div id="proj-detail-built"></div>
-                    <button class="proj-deepdive-btn" id="proj-deepdive-btn" style="display: none;">View Technical Details</button>
+                    <button class="proj-deepdive-btn" id="proj-deepdive-btn"
+                            type="button" aria-expanded="false"
+                            aria-controls="proj-detail-deepdive"
+                            style="display: none;">View Technical Details</button>
                     <div id="proj-detail-deepdive" style="display: none;"></div>
                 </div>
+                <div id="proj-evidence-gallery"></div>
             </div>
 
         </div>

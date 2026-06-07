@@ -320,7 +320,7 @@ Contact and resume call to action
 The Work landing page becomes the site's default and primary project-discovery
 surface.
 
-## Phase 4: Dynamic Case-Study Template
+## Phase 4: Dynamic Case-Study Template - In Progress
 
 Rebuild one representative project first, then apply the renderer to every
 project.

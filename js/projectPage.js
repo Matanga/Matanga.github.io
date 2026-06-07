@@ -33,7 +33,9 @@ function renderProjectPage(viewModel) {
   
   // Select first contribution by default
   if (viewModel.contributions.length > 0) {
-    selectContribution(viewModel.contributions[0].id);
+    const requestedId = decodeURIComponent(window.location.hash.replace(/^#/, ''));
+    const requestedContribution = viewModel.contributions.find(item => item.id === requestedId);
+    selectContribution(requestedContribution?.id || viewModel.contributions[0].id);
   }
   
   // Store details for "deep dive" toggle
@@ -44,17 +46,14 @@ function renderProjectPage(viewModel) {
  * Render the header block
  */
 function renderHeader(header, visibility) {
-  // Background image (from first portfolio item)
-  const headerEl = document.querySelector('.proj-header');
-  if (headerEl) {
-    if (header.backgroundImage) {
-      const imgSrc = header.backgroundImage.startsWith('http') 
-        ? header.backgroundImage 
-        : `/images/${header.backgroundImage}`;
-      headerEl.style.backgroundImage = `url('${imgSrc}')`;
-    } else {
-      headerEl.style.backgroundImage = 'none';
-    }
+  const heroImage = document.getElementById('proj-hero-image');
+  if (heroImage) {
+    const imgSrc = header.backgroundImage?.startsWith('http')
+      ? header.backgroundImage
+      : `/images/${header.backgroundImage || ''}`;
+    heroImage.src = imgSrc;
+    heroImage.alt = header.backgroundImage ? `${header.title} project preview` : '';
+    heroImage.parentElement.hidden = !header.backgroundImage;
   }
   
   // Title
@@ -73,11 +72,15 @@ function renderHeader(header, visibility) {
     if (header.role) {
       chips.push(`<span class="proj-chip proj-chip-role">${header.role}</span>`);
     }
-    if (header.platform && header.platform.length > 0) {
-      chips.push(`<span class="proj-chip proj-chip-platform">${header.platform.join(', ')}</span>`);
+    if (header.projectTypes && header.projectTypes.length > 0) {
+      chips.push(`<span class="proj-chip proj-chip-platform">${header.projectTypes.map(getWorkTypeLabel).join(' / ')}</span>`);
     }
-    if (header.mediaType) {
-      chips.push(`<span class="proj-chip proj-chip-media">${header.mediaType}</span>`);
+    if (header.status) {
+      const statusLabel = header.status
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+      chips.push(`<span class="proj-chip proj-chip-media">${statusLabel}</span>`);
     }
     
     metaEl.innerHTML = chips.join('');
@@ -93,15 +96,32 @@ function renderHeader(header, visibility) {
   const visibilityEl = document.getElementById('proj-visibility');
   if (visibilityEl) {
     const parts = [];
-    if (visibility.client && visibility.client.toLowerCase() !== 'undisclosed') {
-      parts.push(`Client: ${visibility.client}`);
-    }
-    if (visibility.company && visibility.company.toLowerCase() !== 'undisclosed') {
-      parts.push(`Company: ${visibility.company}`);
-    }
-    visibilityEl.textContent = parts.join(' · ');
+    if (header.year) parts.unshift(String(header.year));
+    if (visibility.relationship) parts.push(visibility.relationship);
+    visibilityEl.textContent = parts.join(' | ');
     visibilityEl.style.display = parts.length > 0 ? 'block' : 'none';
   }
+
+  const factsEl = document.getElementById('proj-facts');
+  if (factsEl) {
+    const facts = [
+      ['Role', header.role],
+      ['Scope', header.scope],
+      ['Client', visibility.client],
+      ['Company', visibility.company],
+      ['Stack', header.techLine],
+    ].filter(([, value]) => value && String(value).toLowerCase() !== 'undisclosed');
+
+    factsEl.innerHTML = facts.map(([label, value]) => `
+      <div class="proj-fact">
+        <span>${label}</span>
+        <strong>${value}</strong>
+      </div>
+    `).join('');
+  }
+
+  const overviewEl = document.getElementById('proj-overview-text');
+  if (overviewEl) overviewEl.textContent = header.overview || header.impact;
 }
 
 /**
@@ -133,10 +153,7 @@ function renderContributionsList(contributions) {
     return;
   }
   
-  const colorSelector = new NonRepeatRandomColorSelector();
-  
   container.innerHTML = contributions.map(contrib => {
-    const color = colorSelector.getRandomColor();
     const statusBadge = contrib.status === 'wip' 
       ? '<span class="proj-status-badge proj-status-wip">WIP</span>' 
       : '';
@@ -153,7 +170,7 @@ function renderContributionsList(contributions) {
     if (firstImage) {
       const imgSrc = firstImage.src.startsWith('http') 
         ? firstImage.src 
-        : `https://matanga.github.io/images/${firstImage.src}`;
+        : `/images/${firstImage.src}`;
       thumbnailHtml = `<div class="proj-card-thumbnail" style="background-image: url('${imgSrc}')"></div>`;
     } else if (firstYoutube) {
       const videoId = extractYouTubeIdProj(firstYoutube.src);
@@ -165,7 +182,8 @@ function renderContributionsList(contributions) {
     return `
       <button class="proj-contribution-card" 
               data-contribution-id="${contrib.id}"
-              style="--card-accent: ${color};"
+              type="button"
+              aria-pressed="false"
               onclick="selectContribution('${contrib.id}', true)">
         <div class="proj-card-content">
           <div class="proj-contribution-header">
@@ -283,6 +301,7 @@ function selectContribution(contributionId, isUserClick) {
   allCards.forEach((card, index) => {
     const isSelected = card.dataset.contributionId === contributionId;
     card.classList.toggle('selected', isSelected);
+    card.setAttribute('aria-pressed', String(isSelected));
     if (isSelected) {
       clickedCard = card;
       cardIndex = index;
@@ -294,6 +313,10 @@ function selectContribution(contributionId, isUserClick) {
   if (!contribution) return;
   
   renderContributionDetail(contribution);
+
+  if (isUserClick === true) {
+    history.replaceState(null, '', `${window.location.pathname}#${encodeURIComponent(contributionId)}`);
+  }
   
   // Scroll and animate (both for user clicks and initial load)
   if (clickedCard) {
@@ -302,11 +325,6 @@ function selectContribution(contributionId, isUserClick) {
     
     // Only do vertical scroll and animations on user clicks
     if (isUserClick === true) {
-      // Scroll the clicked card to near the top of the viewport
-      const cardRect = clickedCard.getBoundingClientRect();
-      const scrollOffset = window.scrollY + cardRect.top - 60; // 60px padding from top (accounts for topbar)
-      window.scrollTo({ top: scrollOffset, behavior: 'smooth' });
-      
       // Trigger highlight animation on the clicked card
       triggerCardHighlight(clickedCard, 'proj-contribution-card');
       
@@ -415,6 +433,7 @@ function renderContributionDetail(contribution) {
     if (contribution.deepDive) {
       deepDiveBtn.style.display = 'inline-block';
       deepDiveBtn.onclick = () => toggleDeepDive(contribution.deepDive);
+      deepDiveBtn.setAttribute('aria-expanded', 'false');
       deepDiveEl.innerHTML = ''; // Clear until toggled
       deepDiveEl.style.display = 'none';
     } else {
@@ -453,9 +472,11 @@ function toggleDeepDive(deepDive) {
     `;
     el.style.display = 'block';
     btn.textContent = 'Hide Technical Details';
+    btn.setAttribute('aria-expanded', 'true');
   } else {
     el.style.display = 'none';
     btn.textContent = 'View Technical Details';
+    btn.setAttribute('aria-expanded', 'false');
   }
 }
 
@@ -493,10 +514,12 @@ function toggleProjectDetails() {
       </div>
     `;
     el.style.display = 'block';
-    btn.textContent = 'Hide Project Details';
+    btn.textContent = 'Hide project context & challenges';
+    btn.setAttribute('aria-expanded', 'true');
   } else {
     el.style.display = 'none';
-    btn.textContent = 'View Challenges & Solutions';
+    btn.textContent = 'Project context & challenges';
+    btn.setAttribute('aria-expanded', 'false');
   }
 }
 
@@ -570,9 +593,12 @@ function openImageModal(src) {
     modal = document.createElement('div');
     modal.id = 'proj-image-modal';
     modal.className = 'proj-modal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-label', 'Project image preview');
     modal.innerHTML = `
       <div class="proj-modal-content">
-        <span class="proj-modal-close" onclick="closeImageModal()">&times;</span>
+        <button class="proj-modal-close" type="button" aria-label="Close image preview" onclick="closeImageModal()">&times;</button>
         <img id="proj-modal-image" src="" alt="Full size image">
       </div>
     `;
@@ -585,12 +611,17 @@ function openImageModal(src) {
   }
   
   document.getElementById('proj-modal-image').src = src;
+  window._projectModalTrigger = document.activeElement;
   modal.style.display = 'flex';
+  modal.querySelector('.proj-modal-close').focus();
 }
 
 function closeImageModal() {
   const modal = document.getElementById('proj-image-modal');
-  if (modal) modal.style.display = 'none';
+  if (modal) {
+    modal.style.display = 'none';
+    window._projectModalTrigger?.focus();
+  }
 }
 
 // ============================================
@@ -640,6 +671,13 @@ function buildEvidence(item) {
   return evidence;
 }
 
+function buildProjectOverview(context, impact) {
+  if (!context) return impact || '';
+  const sentences = context.match(/[^.!?]+[.!?]+/g);
+  if (!sentences || sentences.length <= 2) return context;
+  return sentences.slice(0, 2).join(' ').trim();
+}
+
 /**
  * Load and render a project
  * 
@@ -683,14 +721,18 @@ async function LoadProject(projectId) {
       title: project.name,
       impact: project.impact || '',
       role: project.involvement,
-      platform: Array.isArray(project.platform) ? project.platform : [project.platform],
-      mediaType: project.media,
+      scope: project.media,
+      year: project.year,
+      status: project.status,
+      projectTypes: project.projectTypes || [],
       techLine: buildTechLine(items),
-      backgroundImage: headerBackgroundImage
+      backgroundImage: project.thumbnail || headerBackgroundImage,
+      overview: buildProjectOverview(project.context, project.impact)
     },
     visibility: {
       client: project.client,
-      company: project.company
+      company: project.company,
+      relationship: project.relationship
     },
     responsibilities: project.responsibilities || [],
     details: {
@@ -738,3 +780,15 @@ window.selectContribution = selectContribution;
 window.toggleProjectDetails = toggleProjectDetails;
 window.openImageModal = openImageModal;
 window.closeImageModal = closeImageModal;
+
+window.addEventListener('hashchange', () => {
+  if (!currentProject) return;
+  const contributionId = decodeURIComponent(window.location.hash.replace(/^#/, ''));
+  if (currentProject.contributions.some(item => item.id === contributionId)) {
+    selectContribution(contributionId, false);
+  }
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeImageModal();
+});
