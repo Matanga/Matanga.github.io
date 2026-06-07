@@ -1,0 +1,32 @@
+{
+  "projectTypes": {
+    "production": "Production",
+    "internal-tool": "Internal Tool",
+    "commercial-game": "Commercial Game",
+    "broadcast": "Broadcast",
+    "interactive-installation": "Interactive Installation",
+    "research-and-development": "R&D",
+    "platform-validation": "Platform Validation",
+    "personal-project": "Personal Project"
+  },
+  "projectStatuses": {
+    "complete": "Complete",
+    "ongoing": "Ongoing",
+    "in-development": "In Development",
+    "archived": "Archived"
+  },
+  "visibility": {
+    "public": "Public",
+    "unlisted": "Unlisted",
+    "private": "Private"
+  },
+  "skillsets": {
+    "tooldev": "Tool Development",
+    "pipelinedev": "Pipeline Development",
+    "unrealdev": "Unreal Engine Development",
+    "unitydev": "Unity Development",
+    "procgen": "Procedural Generation",
+    "vfx": "VFX & Interactive Systems",
+    "artinstallation": "Art Installations"
+  }
+}
