@@ -439,9 +439,8 @@
                     <p id="proj-overview-text"></p>
                     <button class="proj-project-details-btn" id="proj-project-details-btn"
                             type="button" aria-expanded="false"
-                            aria-controls="proj-project-details"
+                            aria-controls="proj-context-drawer"
                             onclick="toggleProjectDetails()">Project context & challenges</button>
-                    <div id="proj-project-details" style="display: none;"></div>
                 </div>
 
                 <div class="proj-section proj-responsibilities">
@@ -482,6 +481,24 @@
             </div>
 
         </div>
+
+        <div class="proj-drawer-backdrop" id="proj-drawer-backdrop"
+             onclick="closeProjectDetails()" hidden></div>
+        <aside class="proj-context-drawer" id="proj-context-drawer"
+               role="dialog" aria-modal="true"
+               aria-labelledby="proj-context-drawer-title"
+               aria-hidden="true">
+            <div class="proj-drawer-header">
+                <div>
+                    <p class="proj-drawer-label">Project Details</p>
+                    <h2 id="proj-context-drawer-title">Context, challenges & approach</h2>
+                </div>
+                <button class="proj-drawer-close" id="proj-drawer-close"
+                        type="button" aria-label="Close project details"
+                        onclick="closeProjectDetails()">&times;</button>
+            </div>
+            <div class="proj-drawer-content" id="proj-project-details"></div>
+        </aside>
     </section>
 
     <!--------------------->

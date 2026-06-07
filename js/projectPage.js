@@ -484,43 +484,74 @@ function toggleDeepDive(deepDive) {
  * Toggle project-level challenges & solutions
  */
 function toggleProjectDetails() {
-  const el = document.getElementById('proj-project-details');
-  const btn = document.getElementById('proj-project-details-btn');
-  if (!el || !window._projectDetails) return;
-  
-  const details = window._projectDetails;
-  
-  if (el.style.display === 'none' || el.style.display === '') {
-    el.innerHTML = `
-      <div class="proj-project-details-content">
-        ${details.context ? `
-          <div class="proj-detail-section">
-            <h5>Context</h5>
-            <p>${details.context}</p>
-          </div>
-        ` : ''}
-        ${details.challenges && details.challenges.length > 0 ? `
-          <div class="proj-detail-section">
-            <h5>Challenges</h5>
-            <ul>${details.challenges.map(c => `<li>${c}</li>`).join('')}</ul>
-          </div>
-        ` : ''}
-        ${details.solutions && details.solutions.length > 0 ? `
-          <div class="proj-detail-section">
-            <h5>Solutions</h5>
-            <ul>${details.solutions.map(s => `<li>${s}</li>`).join('')}</ul>
-          </div>
-        ` : ''}
-      </div>
-    `;
-    el.style.display = 'block';
-    btn.textContent = 'Hide project context & challenges';
-    btn.setAttribute('aria-expanded', 'true');
+  const drawer = document.getElementById('proj-context-drawer');
+  if (drawer?.classList.contains('open')) {
+    closeProjectDetails();
   } else {
-    el.style.display = 'none';
-    btn.textContent = 'Project context & challenges';
-    btn.setAttribute('aria-expanded', 'false');
+    openProjectDetails();
   }
+}
+
+function openProjectDetails() {
+  const content = document.getElementById('proj-project-details');
+  const drawer = document.getElementById('proj-context-drawer');
+  const backdrop = document.getElementById('proj-drawer-backdrop');
+  const trigger = document.getElementById('proj-project-details-btn');
+  const closeButton = document.getElementById('proj-drawer-close');
+  if (!content || !drawer || !backdrop || !window._projectDetails) return;
+
+  const details = window._projectDetails;
+  content.innerHTML = `
+    <div class="proj-project-details-content">
+      ${details.context ? `
+        <section class="proj-detail-section">
+          <h3>Context</h3>
+          <p>${details.context}</p>
+        </section>
+      ` : ''}
+      ${details.challenges && details.challenges.length > 0 ? `
+        <section class="proj-detail-section">
+          <h3>Key Challenges</h3>
+          ${details.challenges.map(challenge => `<p>${challenge}</p>`).join('')}
+        </section>
+      ` : ''}
+      ${details.solutions && details.solutions.length > 0 ? `
+        <section class="proj-detail-section">
+          <h3>Solution Strategy</h3>
+          ${details.solutions.map(solution => `<p>${solution}</p>`).join('')}
+        </section>
+      ` : ''}
+    </div>
+  `;
+
+  window._projectDrawerTrigger = document.activeElement;
+  backdrop.hidden = false;
+  requestAnimationFrame(() => {
+    backdrop.classList.add('open');
+    drawer.classList.add('open');
+  });
+  drawer.setAttribute('aria-hidden', 'false');
+  trigger?.setAttribute('aria-expanded', 'true');
+  document.body.classList.add('project-drawer-open');
+  closeButton?.focus();
+}
+
+function closeProjectDetails() {
+  const drawer = document.getElementById('proj-context-drawer');
+  const backdrop = document.getElementById('proj-drawer-backdrop');
+  const trigger = document.getElementById('proj-project-details-btn');
+  if (!drawer || !backdrop) return;
+
+  drawer.classList.remove('open');
+  backdrop.classList.remove('open');
+  drawer.setAttribute('aria-hidden', 'true');
+  trigger?.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('project-drawer-open');
+
+  window.setTimeout(() => {
+    backdrop.hidden = true;
+  }, 220);
+  window._projectDrawerTrigger?.focus();
 }
 
 /**
@@ -684,6 +715,8 @@ function buildProjectOverview(context, impact) {
  * @param {string} projectId - The project ID to load
  */
 async function LoadProject(projectId) {
+  closeProjectDetails();
+
   // Scroll to top when loading a new project
   window.scrollTo(0, 0);
   
@@ -771,6 +804,8 @@ window.ProjectPage = {
   selectContribution,
   toggleDeepDive,
   toggleProjectDetails,
+  openProjectDetails,
+  closeProjectDetails,
   openImageModal,
   closeImageModal
 };
@@ -778,6 +813,8 @@ window.ProjectPage = {
 // Also expose directly for onclick handlers
 window.selectContribution = selectContribution;
 window.toggleProjectDetails = toggleProjectDetails;
+window.openProjectDetails = openProjectDetails;
+window.closeProjectDetails = closeProjectDetails;
 window.openImageModal = openImageModal;
 window.closeImageModal = closeImageModal;
 
@@ -790,5 +827,28 @@ window.addEventListener('hashchange', () => {
 });
 
 document.addEventListener('keydown', event => {
-  if (event.key === 'Escape') closeImageModal();
+  if (event.key === 'Escape') {
+    closeImageModal();
+    closeProjectDetails();
+  }
+
+  if (event.key === 'Tab') {
+    const drawer = document.getElementById('proj-context-drawer');
+    if (!drawer?.classList.contains('open')) return;
+
+    const focusable = [...drawer.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )].filter(element => !element.disabled && element.offsetParent !== null);
+    if (focusable.length === 0) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
 });
