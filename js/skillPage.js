@@ -711,7 +711,7 @@ async function LoadSkillPage(skillId) {
   }
 
   // Show the skillsets tab
-  OpenTab("skillsets");
+  OpenTab("skillsets", "expertise");
 }
 
 // Make globally available

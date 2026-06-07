@@ -716,7 +716,7 @@ async function LoadProject(projectId) {
   renderProjectPage(viewModel);
   
   // Show the projects tab
-  OpenTab('projects');
+  OpenTab('projects', 'work');
 }
 
 // ============================================

@@ -198,9 +198,60 @@ Unless existing verified information requires otherwise:
 data, portfolio-item data, or the verified resume. If they cannot be established
 from those sources, ask rather than inventing them.
 
-## Phase 2: Shared Shell And Navigation
+## Phase 2: Shared Shell And Navigation - Completed
 
 Create the responsive frame used by every page.
+
+### Approved Shell Specification
+
+- Maximum content width: `1200px`
+- Desktop gutters: `32px`
+- Tablet gutters: `24px`
+- Mobile gutters: `16px`
+- Sticky navigation:
+
+```text
+Pablo Vezzini | Work | Expertise | About | Resume | Contact | Accent
+```
+
+- `Work` routes to `/`.
+- `Expertise` routes to `/expertise` and retains a compact dropdown linking to
+  existing dynamic skillset pages.
+- `Resume` routes to a web resume page with a direct PDF download.
+- Mobile navigation collapses into a menu.
+- The Work landing page will use a static Atlas Unreal plugin image in its compact
+  hero during Phase 3.
+- The availability line remains visible but easy to edit or hide.
+- Project relationships will appear on project cards in compact form.
+- Technology filters will support multiple selections.
+
+### User-Selectable Accent
+
+Keep semantic status colors independent from the user-selected accent.
+
+The accent may affect:
+
+- Active navigation
+- Primary buttons
+- Interactive links and arrows
+- Selected filters and system cards
+- Focus rings
+- Small decorative borders
+
+It must not recolor semantic success, warning, error, or project-status meaning.
+
+Approved presets:
+
+```text
+Cyan   #4CC9F0
+Green  #10B981
+Amber  #FFB703
+Pink   #FE3385
+Purple #A855F7
+```
+
+The selector is a small header swatch with a compact popover. The selected value
+persists in `localStorage`; on mobile the selector appears inside the menu.
 
 ### Work
 

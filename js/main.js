@@ -8,24 +8,29 @@ let globalPortfolioManager = null;
 
 // Helper to close dropdowns on mobile and after clicking (fixes hover state persistence)
 function closeDropdowns() {
-  // Remove focus from any dropdown buttons to close the menu
-  document.querySelectorAll('.dropdown .dropbtn').forEach(btn => btn.blur());
-  // Also blur the active element in case it's inside a dropdown
   if (document.activeElement) document.activeElement.blur();
-  
-  // Force-close all dropdowns by adding the dropdown-closed class
-  document.querySelectorAll('.dropdown').forEach(dropdown => {
-    dropdown.classList.add('dropdown-closed');
-  });
+  closeMobileMenu();
+  closeAccentPicker();
 }
 
-// Setup dropdown reset handlers (call once after DOM is ready)
 function setupDropdownResetHandlers() {
-  document.querySelectorAll('.dropdown').forEach(dropdown => {
-    // Remove the closed class when mouse leaves, allowing hover to work again
-    dropdown.addEventListener('mouseleave', function() {
-      this.classList.remove('dropdown-closed');
-    });
+  const dropdown = document.getElementById('expertiseDropdown');
+  const trigger = dropdown?.querySelector('.nav-dropdown-trigger');
+  if (!dropdown || !trigger) return;
+
+  dropdown.addEventListener('mouseenter', () => {
+    trigger.setAttribute('aria-expanded', 'true');
+  });
+  dropdown.addEventListener('mouseleave', () => {
+    trigger.setAttribute('aria-expanded', 'false');
+  });
+  dropdown.addEventListener('focusin', () => {
+    trigger.setAttribute('aria-expanded', 'true');
+  });
+  dropdown.addEventListener('focusout', (event) => {
+    if (!dropdown.contains(event.relatedTarget)) {
+      trigger.setAttribute('aria-expanded', 'false');
+    }
   });
 }
 
@@ -186,23 +191,75 @@ function getLoadReferences(key){
     return dictSkillsetsReferences[key];
 }
 
+const DEFAULT_ACCENT = '#4CC9F0';
+const ACCENT_STORAGE_KEY = 'portfolioAccentColor';
+
 function setSiteColor(color) {
-  // V3.0: Update both legacy and new CSS variables for accent color
-  
-  // Update legacy variables (for backward compatibility)
   document.documentElement.style.setProperty('--main-color', color);
   document.documentElement.style.setProperty('--main-transparent', getTransparentColor(color));
-  
-  // Update V3.0 semantic variables
   document.documentElement.style.setProperty('--accent-structure', color);
+  document.documentElement.style.setProperty('--accent-user', color);
   document.documentElement.style.setProperty('--accent-transparent', getTransparentColor(color));
   document.documentElement.style.setProperty('--accent-glow', getGlowColor(color));
 
-  // Set the background color of the element with ID 'color_selector'
   const colorSelector = document.getElementById('color_selector');
   if (colorSelector) {
     colorSelector.style.backgroundColor = color;
   }
+
+  document.querySelectorAll('.accent-swatch').forEach(swatch => {
+    swatch.classList.toggle(
+      'selected',
+      swatch.dataset.color.toLowerCase() === color.toLowerCase()
+    );
+  });
+}
+
+function selectAccent(color) {
+  setSiteColor(color);
+  localStorage.setItem(ACCENT_STORAGE_KEY, color);
+  closeAccentPicker();
+}
+
+function initializeAccentPicker() {
+  const savedColor = localStorage.getItem(ACCENT_STORAGE_KEY) || DEFAULT_ACCENT;
+  setSiteColor(savedColor);
+}
+
+function toggleAccentPicker(event) {
+  event.stopPropagation();
+  const picker = document.getElementById('accentPicker');
+  const toggle = document.getElementById('color_selector');
+  if (!picker || !toggle) return;
+  const isOpen = picker.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', String(isOpen));
+}
+
+function closeAccentPicker() {
+  const picker = document.getElementById('accentPicker');
+  const toggle = document.getElementById('color_selector');
+  picker?.classList.remove('open');
+  toggle?.setAttribute('aria-expanded', 'false');
+}
+
+function toggleMobileMenu() {
+  const navigation = document.getElementById('primaryNavigation');
+  const toggle = document.getElementById('mobileMenuToggle');
+  if (!navigation || !toggle) return;
+  const isOpen = navigation.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', String(isOpen));
+  document.body.classList.toggle('mobile-menu-open', isOpen);
+}
+
+function closeMobileMenu() {
+  document.getElementById('primaryNavigation')?.classList.remove('open');
+  document.getElementById('mobileMenuToggle')?.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('mobile-menu-open');
+}
+
+function navigateTo(route) {
+  closeDropdowns();
+  page.show(route);
 }
 
 function getGlowColor(color) {
@@ -275,7 +332,7 @@ function AddProjectButtons(pm,containerId) {
   Object.keys(pm.projects).forEach(projectKey => {
     const project = pm.projects[projectKey];
     const link = document.createElement("a");
-    link.setAttribute("class", "topbar-linkbtn loadBtn");
+    link.setAttribute("class", "nav-dropdown-link loadBtn");
     link.setAttribute("href", "/projects/" + projectKey);
     link.setAttribute("data-project", projectKey);
     link.textContent = project.name;
@@ -305,7 +362,7 @@ function AddSkillsetButtons(list,containerId) {
   
   list.forEach(function(element) {
     const link = document.createElement("a");
-    link.setAttribute("class", "topbar-linkbtn loadBtn");
+    link.setAttribute("class", "nav-dropdown-link loadBtn");
     link.setAttribute("href", "/skillsets/" + element);
     link.setAttribute("data-skillset", element);
     link.textContent = get_skillset_label(element);
@@ -451,28 +508,24 @@ function AddPortfolioItemDescription(containerId,  item) {
 
 
 // Changes the tab
-function OpenTab(tabName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
+function OpenTab(tabName, navName = tabName) {
+  document.querySelectorAll('.tabcontent').forEach(tab => {
+    tab.style.display = 'none';
+  });
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
+  document.querySelectorAll('[data-nav]').forEach(link => {
+    const isActive = link.dataset.nav === navName;
+    link.classList.toggle('active', isActive);
+    if (isActive) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
 
-  // Get all elements with class="dropbtn" and remove the class "active"
-  tablinks = document.getElementsByClassName("dropbtn");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tabName).style.display = "block";
-
-  let element = document.getElementById(('btn'+tabName));
-
-  element.className += " active";
+  const tab = document.getElementById(tabName);
+  if (tab) tab.style.display = 'block';
+  closeMobileMenu();
 }
 
 function LoadPortfolioItem(item,loadRefs){
@@ -576,6 +629,4 @@ function toggleHide(toggleID){
 
 /*--------------------------------------------------*/
 /*--------------Utiltities---------------------------*/
-
-
 

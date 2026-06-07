@@ -110,48 +110,62 @@
     <!-- Procedural background canvas -->
     <canvas id="bg-colonize" style="display: none;"></canvas>
 
-    <!--------------------->
-    <!----- Top Bar ------->
-    <section class="topbar">
-        <div class="topbar-content">
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="site-brand" href="/" onclick="event.preventDefault(); navigateTo('/')">Pablo Vezzini</a>
 
-            <div class="dropdown" id="dropdowncolor">
-                <button class="colorSelector" id="color_selector"></button>
-
-                <div class="dropdown-content">
-                    <button onclick="setSiteColor('#4CC9F0')" style="min-width:20px; min-height: 20px; background-color: #4CC9F0; margin: 5px;" title="Structure"></button>
-                    <button onclick="setSiteColor('#10B981')" style="min-width:20px; min-height: 20px; background-color: #10B981; margin: 5px;" title="Success"></button>
-                    <button onclick="setSiteColor('#FFB703')" style="min-width:20px; min-height: 20px; background-color: #FFB703; margin: 5px;" title="Warning"></button>
-                    <button onclick="setSiteColor('#fe3385')" style="min-width:20px; min-height: 20px; background-color: #fe3385; margin: 5px;" title="Highlight"></button>
-                </div>
-
-            </div>
-
-            <button class="dropbtn" id="btnhome" onclick="page.show('/home')">Home</button>
-
-            <div class="dropdown">
-                <button class="dropbtn" id="btnprojects">Projects</button>
-                <div class="dropdown-content" id="projectsList">
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn" id="btnskillsets" >Skillsets</button>
-                <div class="dropdown-content" id="skillsetsList">
-                </div>
-            </div>
-
-            <button class="dropbtn" id="btncontact" onclick="page.show('/contact')">Contact</button>
-
-            <!-- Procedural background toggle -->
-            <button class="bg-toggle-btn" id="bgToggleBtn" onclick="toggleProceduralBg()" title="Toggle procedural background">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 2L12 6M12 18L12 22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12L6 12M18 12L22 12M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93"/>
-                </svg>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                    aria-expanded="false" aria-controls="primaryNavigation"
+                    onclick="toggleMobileMenu()">
+                <span class="mobile-menu-label">Menu</span>
+                <span class="mobile-menu-icon" aria-hidden="true"></span>
             </button>
 
+            <nav class="primary-navigation" id="primaryNavigation" aria-label="Primary navigation">
+                <a class="nav-link" data-nav="work" href="/"
+                   onclick="event.preventDefault(); navigateTo('/')">Work</a>
+
+                <div class="nav-dropdown" id="expertiseDropdown">
+                    <a class="nav-link nav-dropdown-trigger" data-nav="expertise" href="/expertise"
+                       aria-haspopup="true" aria-expanded="false"
+                       onclick="event.preventDefault(); navigateTo('/expertise')">Expertise</a>
+                    <div class="nav-dropdown-menu" id="skillsetsList" aria-label="Expertise areas"></div>
+                </div>
+
+                <a class="nav-link" data-nav="about" href="/about"
+                   onclick="event.preventDefault(); navigateTo('/about')">About</a>
+                <a class="nav-link" data-nav="resume" href="/resume"
+                   onclick="event.preventDefault(); navigateTo('/resume')">Resume</a>
+                <a class="nav-link" data-nav="contact" href="/contact"
+                   onclick="event.preventDefault(); navigateTo('/contact')">Contact</a>
+
+                <div class="accent-picker" id="accentPicker">
+                    <button class="accent-picker-toggle" id="color_selector" type="button"
+                            aria-label="Choose interface accent color"
+                            aria-expanded="false" aria-controls="accentPickerMenu"
+                            onclick="toggleAccentPicker(event)"></button>
+                    <div class="accent-picker-menu" id="accentPickerMenu" role="group"
+                         aria-label="Interface accent colors">
+                        <button class="accent-swatch" type="button" data-color="#4CC9F0"
+                                style="--swatch-color:#4CC9F0" aria-label="Cyan accent"
+                                onclick="selectAccent('#4CC9F0')"></button>
+                        <button class="accent-swatch" type="button" data-color="#10B981"
+                                style="--swatch-color:#10B981" aria-label="Green accent"
+                                onclick="selectAccent('#10B981')"></button>
+                        <button class="accent-swatch" type="button" data-color="#FFB703"
+                                style="--swatch-color:#FFB703" aria-label="Amber accent"
+                                onclick="selectAccent('#FFB703')"></button>
+                        <button class="accent-swatch" type="button" data-color="#FE3385"
+                                style="--swatch-color:#FE3385" aria-label="Pink accent"
+                                onclick="selectAccent('#FE3385')"></button>
+                        <button class="accent-swatch" type="button" data-color="#A855F7"
+                                style="--swatch-color:#A855F7" aria-label="Purple accent"
+                                onclick="selectAccent('#A855F7')"></button>
+                    </div>
+                </div>
+            </nav>
         </div>
-      <div class="topbar-separator"></div>
-    </section>
+    </header>
 
 
     <!--------------------->
@@ -479,6 +493,37 @@
         </div>
     </section>
 
+    <section id="expertise" class="tabcontent">
+        <div class="section_wrapper">
+            <div class="shell-placeholder">
+                <p class="shell-placeholder-label">Expertise</p>
+                <h1>Production disciplines and technical systems</h1>
+                <p>The expertise overview will be implemented after the Work landing page. Use the Expertise menu to browse the current dynamically generated skill pages.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="tabcontent">
+        <div class="section_wrapper">
+            <div class="shell-placeholder">
+                <p class="shell-placeholder-label">About</p>
+                <h1>About Pablo</h1>
+                <p>The verified biography, career history, and working approach will move here during the content phase.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="tabcontent">
+        <div class="section_wrapper">
+            <div class="shell-placeholder">
+                <p class="shell-placeholder-label">Resume</p>
+                <h1>Lead Technical Artist - Pipelines & Tools</h1>
+                <p>The web resume will be built from verified career information. The current PDF remains available now.</p>
+                <a class="shell-primary-action" href="/documents/Pablo_Vezzini_Lead_Technical_Artist_2026.pdf" target="_blank" rel="noopener">Download resume PDF</a>
+            </div>
+        </div>
+    </section>
+
 
 
     <!--------------------->
@@ -495,9 +540,13 @@
         btn.classList.toggle('active', isActive);
     }
 
-    page('/home', function() {
+    page('/', function() {
       window.scrollTo(0, 0);
-      OpenTab('home')
+      OpenTab('home', 'work')
+    });
+
+    page('/home', function() {
+      page.replace('/');
     });
 
     page('/projects/:name', function(ctx) {
@@ -508,32 +557,66 @@
         LoadSkillPage(ctx.params.name)
     });
 
+    page('/expertise', function() {
+      window.scrollTo(0, 0);
+      OpenTab('expertise', 'expertise')
+    });
+
+    page('/about', function() {
+      window.scrollTo(0, 0);
+      OpenTab('about', 'about')
+    });
+
+    page('/resume', function() {
+      window.scrollTo(0, 0);
+      OpenTab('resume', 'resume')
+    });
+
     page('/contact', function() {
       window.scrollTo(0, 0);
-      OpenTab('contact')
+      OpenTab('contact', 'contact')
     });
 
 
     // Catch-all 404 handler - redirect to home for unknown routes
     page('*', function() {
-      console.warn('Route not found, redirecting to home');
-      page.show('/home');
+      console.warn('Route not found, redirecting to work');
+      page.show('/');
     });
 
     /*----------------Main--------------------------*/
     //setCSSProperty('.menu_box','border','1px #f54646 solid')
-    OpenTab('home');
+    OpenTab('home', 'work');
 
     // Start router immediately but DON'T dispatch the initial route yet
     // This allows button clicks to work while data is loading
     page.start({ dispatch: false });
 
     $(document).ready(function(){
+        initializeAccentPicker();
+
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('#accentPicker')) {
+                closeAccentPicker();
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeDropdowns();
+            }
+        });
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 760) {
+                closeMobileMenu();
+            }
+        });
+
         // Setup dropdown close/reset handlers
         setupDropdownResetHandlers();
         
         globalPortfolioManager = new PortfolioManager(() => {
-            AddProjectButtons(globalPortfolioManager,"projectsList");
             const skillsetlist = globalPortfolioManager.getUniqueSkillsets();
             AddSkillsetButtons(skillsetlist,"skillsetsList");
             
@@ -548,7 +631,7 @@
             } else {
                 // NOW dispatch the current URL route (after data is ready)
                 const currentPath = window.location.pathname + window.location.search + window.location.hash;
-                page.replace(currentPath || '/home');
+                page.replace(currentPath || '/');
             }
         });
     });
