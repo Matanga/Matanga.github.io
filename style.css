@@ -81,7 +81,7 @@ body {
   margin: 0;
   padding-top: 65px;
   background-color: var(--bg-core);
-  background-image: radial-gradient(circle, #373737 1px, #ee090900 1px);
+  background-image: radial-gradient(circle, rgba(110, 110, 110, 0.22) 1px, transparent 1px);
   background-size: 5px 5px;
   min-height: 100vh;
   font-family: var(--font-body);
@@ -1766,5 +1766,4 @@ margin-top: 0px;
 /*-------------------------------------------------------------------*/
 /*-------------------------------------------------------------------*/
 /*Modal Image--------------------------------------------*/
-
 

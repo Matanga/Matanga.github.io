@@ -39,6 +39,7 @@
     <!-- <link href="https://matanga.github.io/style.css" rel="stylesheet" type="text/css"/>/>-->
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <!-- Page Styles -->
+    <link href="css/homePage.css" rel="stylesheet" type="text/css"/>
     <link href="css/projectPage.css" rel="stylesheet" type="text/css"/>
     <link href="css/skillPage.css" rel="stylesheet" type="text/css"/>
     <link href="css/contactPage.css" rel="stylesheet" type="text/css"/>
@@ -48,6 +49,7 @@
     <script src="js/page.js"></script>
     <script src="js/main.js"></script>
     <!-- Page Scripts -->
+    <script src="js/homePage.js"></script>
     <script src="js/projectPage.js"></script>
     <script src="js/techStackChips.js"></script>
     <script src="js/skillPage.js"></script>
@@ -173,7 +175,103 @@
 
     <section id="home" class="tabcontent">
 
-        <div class="section_wrapper">
+        <div class="section_wrapper work-page">
+            <section class="work-hero" aria-labelledby="work-hero-title">
+                <div class="work-hero-content">
+                    <h1 id="work-hero-title">Pablo Vezzini</h1>
+                    <p class="work-role">Lead Technical Artist</p>
+                    <p class="work-focus">Pipeline Architecture · Artist Tools · Procedural Systems · Engine Integration</p>
+                    <p class="work-intro">I design production systems that help artists build, validate, and ship complex content.</p>
+                    <div class="work-hero-actions">
+                        <a class="work-button work-button-primary" href="#selected-work">View featured projects</a>
+                        <a class="work-button" href="/contact" onclick="event.preventDefault(); navigateTo('/contact')">Get in touch</a>
+                    </div>
+                </div>
+                <div class="work-hero-media">
+                    <img src="/images/atlasplugin-unreal_01_editor-docked-ui.jpg" alt="Atlas integration running inside the Unreal Editor">
+                    <div class="work-hero-media-label">
+                        <strong>Atlas DCC Integration Framework</strong>
+                        <span>Unreal Editor plugin</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="work-section" id="selected-work" aria-labelledby="selected-work-title">
+                <div class="work-section-heading">
+                    <div>
+                        <h2 id="selected-work-title">Featured Projects</h2>
+                    </div>
+                </div>
+                <div class="work-selected-grid" id="workSelectedGrid"></div>
+            </section>
+
+            <section class="work-section work-browser" aria-labelledby="all-work-title">
+                <div class="work-section-heading work-browser-heading">
+                    <div>
+                        <h2 id="all-work-title">All Projects</h2>
+                        <span class="work-result-label"><span id="workResultCount">0</span> projects</span>
+                    </div>
+                </div>
+
+                <div class="work-browser-controls">
+                    <label class="work-sort">
+                        <span>Sort by</span>
+                        <select id="workSort" onchange="setWorkSort(this.value)">
+                            <option value="featured">Featured</option>
+                            <option value="newest">Newest</option>
+                            <option value="title">Title</option>
+                        </select>
+                    </label>
+                    <div class="work-view-switcher" role="group" aria-label="Project display mode">
+                        <button class="work-view-button" type="button" data-view="large"
+                                aria-label="Large cards" aria-pressed="false"
+                                onclick="setWorkView('large')"><span class="work-view-icon work-view-icon-large"></span></button>
+                        <button class="work-view-button" type="button" data-view="small"
+                                aria-label="Small cards" aria-pressed="false"
+                                onclick="setWorkView('small')"><span class="work-view-icon work-view-icon-small"></span></button>
+                        <button class="work-view-button active" type="button" data-view="list"
+                                aria-label="List" aria-pressed="true"
+                                onclick="setWorkView('list')"><span class="work-view-icon work-view-icon-list"></span></button>
+                    </div>
+                </div>
+
+                <div class="work-filter-panel">
+                    <div class="work-filter-group">
+                        <span class="work-filter-label">Discipline</span>
+                        <div class="work-filter-options" id="workSkillFilters"></div>
+                    </div>
+                    <div class="work-filter-group">
+                        <span class="work-filter-label">Technology</span>
+                        <div class="work-filter-options" id="workTechnologyFilters"></div>
+                    </div>
+                    <div class="work-filter-group">
+                        <span class="work-filter-label">Project type</span>
+                        <div class="work-filter-options" id="workTypeFilters"></div>
+                    </div>
+                    <button class="work-clear-filters" id="workClearFilters" type="button" onclick="clearWorkFilters()" hidden>Clear filters</button>
+                </div>
+
+                <div class="work-project-grid view-list" id="workProjectGrid"></div>
+                <div class="work-empty-state" id="workEmptyState" hidden>
+                    <h3>No projects match these filters</h3>
+                    <p>Clear one or more filters to see the full project list.</p>
+                    <button class="work-button" type="button" onclick="clearWorkFilters()">Clear filters</button>
+                </div>
+            </section>
+
+            <section class="work-cta">
+                <div>
+                    <h2>Building tools, pipelines, or procedural systems?</h2>
+                    <p>Let's discuss the production problem behind them.</p>
+                </div>
+                <div class="work-cta-actions">
+                    <a class="work-button work-button-primary" href="/contact" onclick="event.preventDefault(); navigateTo('/contact')">Contact Pablo</a>
+                    <a class="work-button" href="/documents/Pablo_Vezzini_Lead_Technical_Artist_2026.pdf" target="_blank" rel="noopener">Download resume</a>
+                </div>
+            </section>
+        </div>
+
+        <div class="section_wrapper legacy-home-content" hidden>
 
             <div class="menu_box hero-section">      
                 <!-- V3.0: Typography-first hero, avatar relocated to contact section -->
@@ -620,8 +718,7 @@
             const skillsetlist = globalPortfolioManager.getUniqueSkillsets();
             AddSkillsetButtons(skillsetlist,"skillsetsList");
             
-            // Load homepage featured items from config
-            loadHomepageFeatured();
+            initializeWorkPage(globalPortfolioManager);
             
             // Check if we were redirected from 404.html (GitHub Pages SPA workaround)
             const redirectPath = sessionStorage.getItem('redirectPath');

@@ -43,6 +43,13 @@ class Project {
     this.media = data.media;
     this.platform = data.platform;
     this.involvement = data.involvement;
+    this.year = data.year;
+    this.featured = data.featured || false;
+    this.visibility = data.visibility || 'public';
+    this.status = data.status || 'complete';
+    this.projectTypes = data.projectTypes || [];
+    this.relationship = data.relationship || '';
+    this.thumbnail = data.thumbnail || '';
     this.portfolioitems = data.portfolioitems;
     this.impact = data.impact;
     this.responsibilities = data.responsibilities || [];
@@ -629,4 +636,3 @@ function toggleHide(toggleID){
 
 /*--------------------------------------------------*/
 /*--------------Utiltities---------------------------*/
-

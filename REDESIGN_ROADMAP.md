@@ -276,7 +276,7 @@ persists in `localStorage`; on mobile the selector appears inside the menu.
 All existing content remains functional inside the new navigation and responsive
 layout.
 
-## Phase 3: Work Landing Page
+## Phase 3: Work Landing Page - Completed
 
 Replace the current text-heavy homepage with the project browser.
 
