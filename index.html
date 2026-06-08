@@ -504,11 +504,11 @@
 
     <section id="skillsets" class="tabcontent">
         <div class="section_wrapper skill-page">
-            <a class="skill-back-link" href="/expertise"
-               onclick="event.preventDefault(); navigateTo('/expertise')">&larr; All expertise</a>
             
             <!-- 1) SKILL HEADER -->
             <div class="skill-header-box">
+                <a class="skill-back-link" href="/expertise"
+                   onclick="event.preventDefault(); navigateTo('/expertise')">&larr; Expertise overview</a>
                 <div class="skill-label">Expertise</div>
                 <h2 class="skill-title" id="skillTitle">VFX & Interactive Systems</h2>
                 <p class="skill-description" id="skillDescription">Real-time visual effects, procedural animation, and data-driven Niagara systems.</p>
@@ -520,7 +520,8 @@
 
             <!-- 2) ALL SYSTEMS - Horizontal Infinite Scroll -->
             <div class="menu_box skill-systems-box">
-                <div class="skill-section-label">FEATURED SYSTEMS</div>
+                <div class="skill-section-label">RELATED SYSTEMS ACROSS PROJECTS</div>
+                <p class="skill-section-hint">Systems and contributions from every portfolio project tagged with this expertise. Select one to inspect its implementation and evidence.</p>
                 <div class="skill-carousel-wrapper">
                     <div class="skill-carousel" id="skillCarousel">
                         <!-- All system cards inserted via JS -->

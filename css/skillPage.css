@@ -891,6 +891,7 @@
 }
 
 .skill-header-box {
+  width: 100%;
   min-height: 300px;
   padding: 34px;
   display: flex;
@@ -904,9 +905,10 @@
 }
 
 .skill-label {
+  position: static;
   width: auto;
-  right: auto;
   padding: 0;
+  margin: 20px 0 0;
   color: var(--accent-user);
   background: transparent;
   font-size: 10px;
@@ -915,7 +917,7 @@
 }
 
 .skill-title {
-  margin: 26px 0 8px;
+  margin: 8px 0;
   font-size: clamp(30px, 4vw, 44px);
   letter-spacing: -0.035em;
 }
@@ -935,7 +937,16 @@
 
 .skill-systems-box,
 .skill-system-detail {
+  width: 100%;
   border-left: 1px solid var(--border-dim);
+}
+
+.skill-section-hint {
+  max-width: 760px;
+  margin: -3px 0 14px;
+  color: var(--text-secondary);
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
 }
 
 .skill-section-label,
@@ -1004,9 +1015,33 @@
   object-fit: cover;
 }
 
+.skill-back-link {
+  position: absolute;
+  top: 18px;
+  left: 34px;
+  z-index: 2;
+  color: var(--text-secondary);
+  font: 500 10px/1 var(--font-code);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.skill-back-link:hover {
+  color: var(--accent-user);
+}
+
 @media screen and (max-width: 600px) {
   .skill-header-box {
     min-height: 260px;
     padding: 22px 18px;
+  }
+
+  .skill-back-link {
+    top: 16px;
+    left: 18px;
+  }
+
+  .skill-label {
+    margin-top: 24px;
   }
 }
