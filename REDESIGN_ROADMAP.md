@@ -19,7 +19,7 @@ sources.
 ## Core Information Architecture
 
 ```text
-Work | Expertise | About | Resume | Contact
+Work | Expertise | About | Contact
 ```
 
 Proposed routes:
@@ -29,8 +29,8 @@ Proposed routes:
 /projects/:project    Dynamic project case study
 /expertise            Optional expertise overview
 /skillsets/:skill     Existing dynamic skillset detail page
-/about                Biography, career history, and working approach
-/resume               Web resume with PDF download
+/about                Merged biography, career history, and resume overview
+/resume               Redirects to /about; PDF remains directly downloadable
 /contact              Contact details and form
 ```
 
@@ -48,7 +48,7 @@ Proposed routes:
 - Do not publish invented dates, titles, locations, technologies, quantities, or
   impact metrics.
 - Qualitative outcomes are acceptable when quantitative evidence is unavailable.
-- Build About and Resume content from the existing resume and verified project
+- Build About / Resume content from the existing resume and verified project
   records, not from generated mockup copy.
 
 ## Phase 1: Foundation And Data Contract - Completed
@@ -211,13 +211,13 @@ Create the responsive frame used by every page.
 - Sticky navigation:
 
 ```text
-Pablo Vezzini | Work | Expertise | About | Resume | Contact | Accent
+Pablo Vezzini | Work | Expertise | About | Contact | Accent
 ```
 
 - `Work` routes to `/`.
 - `Expertise` routes to `/expertise` and retains a compact dropdown linking to
   existing dynamic skillset pages.
-- `Resume` routes to a web resume page with a direct PDF download.
+- The resume overview is merged into `About`; `/resume` redirects to `/about`.
 - Mobile navigation collapses into a menu.
 - The Work landing page will use a static Atlas Unreal plugin image in its compact
   hero during Phase 3.
@@ -257,7 +257,7 @@ persists in `localStorage`; on mobile the selector appears inside the menu.
 
 - Replace the Projects dropdown with a direct Work destination.
 - Keep Expertise as a small dropdown initially.
-- Add routes for Work, About, Resume, and Contact.
+- Add routes for Work, About, Resume redirect, and Contact.
 - Introduce a wider desktop content container, approximately 1120-1200px.
 - Preserve single-column mobile layouts.
 - Build shared UI primitives:
@@ -461,23 +461,52 @@ professional presentation.
 
 ## Phase 6: About, Resume, Contact, And Polish
 
-### About
+Build and review this phase one URL at a time. Do not combine the content pages
+into a single implementation pass.
+
+### Phase 6A: About / Resume - In Progress
 
 - Add a concise verified biography.
 - Explain working approach and ownership.
 - Present real employer history.
 - Nest client engagements beneath the correct employer or contracting period.
 - Include verified capabilities and selected supporting media.
-- Keep the pixel avatar optional and secondary.
-
-### Resume
-
-- Build the web resume from the current verified PDF.
+- Merge the web resume overview into the About route.
 - Preserve employer/client distinctions.
 - Include a direct PDF download.
 - Do not add unsupported technologies, locations, metrics, dates, or titles.
 
-### Contact
+#### Production Context Logo Assets
+
+The About / Resume page is wired for logo images with text fallbacks. Save final
+assets under:
+
+```text
+images/logos/
+```
+
+Preferred format: PNG or SVG with a consistent canvas. Transparent backgrounds
+are ideal, but dark backgrounds are acceptable when all logos use the same canvas
+ratio and visual padding. Export at approximately `360 x 120px` or larger. Keep
+generous internal padding and preserve original logo proportions.
+
+Expected filenames:
+
+```text
+logo-atlas.png
+logo-globant.png
+logo-sixthvowel.png
+logo-realtime-uk.png
+logo-genosha.png
+logo-2k.png
+logo-netflix.png
+logo-intel.png
+logo-meta.png
+logo-ea.png
+logo-squareenix.png
+```
+
+### Phase 6B: Contact - Pending
 
 - Use real email and LinkedIn details.
 - Include accurate location and availability.
@@ -487,7 +516,7 @@ professional presentation.
   - Message
 - Preserve resume and selected-work links.
 
-### Final Polish
+### Phase 6C: Final Polish - Pending
 
 - Keyboard navigation and visible focus states
 - Reduced-motion support

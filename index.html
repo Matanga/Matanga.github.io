@@ -41,6 +41,7 @@
     <!-- Page Styles -->
     <link href="css/homePage.css" rel="stylesheet" type="text/css"/>
     <link href="css/expertisePage.css" rel="stylesheet" type="text/css"/>
+    <link href="css/aboutPage.css" rel="stylesheet" type="text/css"/>
     <link href="css/projectPage.css" rel="stylesheet" type="text/css"/>
     <link href="css/skillPage.css" rel="stylesheet" type="text/css"/>
     <link href="css/contactPage.css" rel="stylesheet" type="text/css"/>
@@ -134,8 +135,6 @@
 
                 <a class="nav-link" data-nav="about" href="/about"
                    onclick="event.preventDefault(); navigateTo('/about')">About</a>
-                <a class="nav-link" data-nav="resume" href="/resume"
-                   onclick="event.preventDefault(); navigateTo('/resume')">Resume</a>
                 <a class="nav-link" data-nav="contact" href="/contact"
                    onclick="event.preventDefault(); navigateTo('/contact')">Contact</a>
 
@@ -642,27 +641,211 @@
     </section>
 
     <section id="about" class="tabcontent">
-        <div class="section_wrapper">
-            <div class="shell-placeholder">
-                <p class="shell-placeholder-label">About</p>
-                <h1>About Pablo</h1>
-                <p>The verified biography, career history, and working approach will move here during the content phase.</p>
-            </div>
+        <div class="section_wrapper about-page">
+            <section class="about-hero" aria-labelledby="about-title">
+                <div class="about-hero-content">
+                    <h1 id="about-title">About / Resume</h1>
+                    <p class="about-role">Lead Technical Artist - pipelines, tools, and production systems</p>
+                    <p class="about-intro">I work at the boundary between art, tools, and engine systems: editor tooling, procedural workflows, validation pipelines, and integrations across Unreal Engine, Unity, Houdini, Maya, Blender, and backend services.</p>
+                    <div class="about-quick-facts" aria-label="Quick facts">
+                        <div class="about-quick-fact">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                            <span>Vienna, Austria</span>
+                        </div>
+                        <div class="about-quick-fact">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v4M17 3v4M4 8h16M5 5h14v16H5z"/></svg>
+                            <span>15+ years experience</span>
+                        </div>
+                        <div class="about-quick-fact">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18v-2a4 4 0 0 1 4-4h1M15 12h1a4 4 0 0 1 4 4v2M9 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0zM12 14v7M9 18h6"/></svg>
+                            <span>Senior technical-art ownership</span>
+                        </div>
+                        <div class="about-quick-fact">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4-8 4-8-4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg>
+                            <span>Engines, DCCs, services</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-hero-visual" aria-hidden="true">
+                    <div class="about-map-grid"></div>
+                    <div class="about-map-line about-map-line-a"></div>
+                    <div class="about-map-line about-map-line-b"></div>
+                    <div class="about-map-line about-map-line-c"></div>
+                    <div class="about-wire-cube"></div>
+                    <figure class="about-map-tile about-map-tile-a">
+                        <img src="/images/atlasplugin-unreal_01_editor-docked-ui.jpg" alt="">
+                    </figure>
+                    <figure class="about-map-tile about-map-tile-b">
+                        <img src="/images/chaosbuildings-pcg_01.jpg" alt="">
+                    </figure>
+                    <figure class="about-map-tile about-map-tile-c">
+                        <img src="/images/facade-editor__01__main-workspace.jpg" alt="">
+                    </figure>
+                    <figure class="about-map-tile about-map-tile-d">
+                        <img src="/images/dm-showcase-3.jpg" alt="">
+                    </figure>
+                    <figure class="about-map-tile about-map-tile-e">
+                        <img src="/images/atlasplugin-unity__01__editor-window.jpg" alt="">
+                    </figure>
+                    <figure class="about-map-tile about-map-tile-f">
+                        <img src="/images/intelevoshowcase_portfolio_item-1.jpg" alt="">
+                    </figure>
+                </div>
+            </section>
+
+            <section class="about-section about-contexts" aria-labelledby="about-contexts-title">
+                <div class="about-section-heading">
+                    <h2 id="about-contexts-title">Selected Production Contexts</h2>
+                    <span>Hover or focus a logo for the relationship context</span>
+                </div>
+                <div class="about-logo-grid" aria-label="Selected production contexts">
+                    <button class="about-logo-mark logo-atlas" type="button" data-tooltip="Atlas - direct employer, Sep 2024 to present. Lead Technical Artist / Systems & Pipeline Engineer / Field Application Engineer."><img src="/images/logos/logo-atlas.png" alt="Atlas"><span>ATLAS</span></button>
+                    <button class="about-logo-mark logo-globant" type="button" data-tooltip="Globant - direct employer, Apr 2018 to Oct 2021. Senior Technical Artist / Lead Tools Developer."><img src="/images/logos/logo-globant.png" alt="Globant"><span>Globant</span></button>
+                    <button class="about-logo-mark logo-sixth" type="button" data-tooltip="Sixth Vowel - direct employer. Element Space was developed as a Sixth Vowel employee in 2018."><img src="/images/logos/logo-sixthvowel.png" alt="Sixth Vowel"><span>Sixth Vowel</span></button>
+                    <button class="about-logo-mark logo-realtime" type="button" data-tooltip="RealtimeUK - independent contractor engagement for the Netflix production Dance Monsters."><img src="/images/logos/logo-realtime-uk.png" alt="RealtimeUK"><span>RealtimeUK</span></button>
+                    <button class="about-logo-mark logo-genosha" type="button" data-tooltip="Genosha - independent contractor engagement for Intel's Evolution Experience installation."><img src="/images/logos/logo-genosha.png" alt="Genosha"><span>Genosha</span></button>
+                    <button class="about-logo-mark logo-2k" type="button" data-tooltip="2K - client context delivered through Globant for the Enterprise Digital Asset Library pipeline."><img src="/images/logos/logo-2k.png" alt="2K"><span>2K</span></button>
+                    <button class="about-logo-mark logo-netflix" type="button" data-tooltip="Netflix - production context for Dance Monsters, delivered through RealtimeUK as an independent contractor."><img src="/images/logos/logo-netflix.png" alt="Netflix"><span>Netflix</span></button>
+                    <button class="about-logo-mark logo-intel" type="button" data-tooltip="Intel - client context for Evolution Experience, delivered through Genosha as an independent contractor."><img src="/images/logos/logo-intel.png" alt="Intel"><span>intel</span></button>
+                    <button class="about-logo-mark logo-meta" type="button" data-tooltip="Meta - selected project context during Globant employment."><img src="/images/logos/logo-meta.png" alt="Meta"><span>Meta</span></button>
+                    <button class="about-logo-mark logo-ea" type="button" data-tooltip="EA - selected production context listed in the verified resume."><img src="/images/logos/logo-ea.png" alt="EA"><span>EA</span></button>
+                    <button class="about-logo-mark logo-square" type="button" data-tooltip="Square Enix - R&D design-partner collaboration through Atlas."><img src="/images/logos/logo-squareenix.png" alt="Square Enix"><span>Square Enix</span></button>
+                </div>
+                <p class="about-context-note">These contexts come from direct roles, subcontracted work, or client projects. The career section below preserves the actual relationship.</p>
+            </section>
+
+            <section class="about-section about-career" aria-labelledby="about-career-title">
+                <div class="about-section-heading">
+                    <h2 id="about-career-title">Career Backbone</h2>
+                    <span>Employer-first, with client work nested underneath</span>
+                </div>
+                <div class="about-career-list">
+                    <article class="about-career-row">
+                        <div class="about-career-date">2005 - 2018</div>
+                        <div>
+                            <h3>Earlier Experience</h3>
+                            <p>3D production, visualization, pipeline tools, and technical art at Kisp SA, Estudio Fluo, ArtFrequency, Kisp SA, and Sixth Vowel.</p>
+                        </div>
+                        <div class="about-career-tags">
+                            <span>Element Space as Sixth Vowel employee</span>
+                            <span>Unity</span>
+                            <span>3ds Max tools</span>
+                        </div>
+                    </article>
+                    <article class="about-career-row">
+                        <div class="about-career-date">Apr 2018 - Oct 2021</div>
+                        <div>
+                            <h3>Globant</h3>
+                            <p>Senior Technical Artist / Lead Tools Developer. Pipeline development, R&amp;D, tools, and mentoring across external studio projects.</p>
+                        </div>
+                        <div class="about-career-tags">
+                            <span>2K DAM pipeline</span>
+                            <span>Meta VR diagnostics</span>
+                        </div>
+                    </article>
+                    <article class="about-career-row">
+                        <div class="about-career-date">Nov 2021 - Present</div>
+                        <div>
+                            <h3>Independent Contractor</h3>
+                            <p>Senior Technical Artist / Pipeline Engineer for selected production and installation work.</p>
+                        </div>
+                        <div class="about-career-tags">
+                            <span>RealtimeUK for Netflix</span>
+                            <span>Genosha for Intel</span>
+                            <span>Unreal Room R&amp;D</span>
+                        </div>
+                    </article>
+                    <article class="about-career-row about-career-current">
+                        <div class="about-career-date">Sep 2024 - Present</div>
+                        <div>
+                            <h3>Atlas</h3>
+                            <p>Lead Technical Artist / Systems &amp; Pipeline Engineer / Field Application Engineer. Design-partner workflows, platform validation, and cross-DCC integration.</p>
+                        </div>
+                        <div class="about-career-tags">
+                            <span>Unreal, Unity, Blender plugins</span>
+                            <span>AI workflow tooling</span>
+                            <span>PCG city R&amp;D</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="about-section about-ownership" aria-labelledby="about-ownership-title">
+                <div class="about-section-heading">
+                    <h2 id="about-ownership-title">Production Problems I Solve</h2>
+                </div>
+                <div class="about-ownership-grid">
+                    <a class="about-ownership-card" href="/skillsets/pipelinedev" onclick="event.preventDefault(); navigateTo('/skillsets/pipelinedev')">
+                        <div class="about-ownership-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h5v5H4zM15 4h5v5h-5zM15 15h5v5h-5zM9 9l6-3M9 11l6 6"/></svg><h3>Pipeline Architecture</h3></div>
+                        <p>Cross-DCC workflows, ingestion, validation, publishing, metadata, and delivery.</p>
+                    </a>
+                    <a class="about-ownership-card" href="/skillsets/tooldev" onclick="event.preventDefault(); navigateTo('/skillsets/tooldev')">
+                        <div class="about-ownership-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0-5 5L4 17l3 3 5.5-5.5a4 4 0 0 0 5-5l-3 3-3-3z"/></svg><h3>Artist Tools</h3></div>
+                        <p>Editor tools that reduce manual work and expose complex systems safely.</p>
+                    </a>
+                    <a class="about-ownership-card" href="/skillsets/proceduralgeneration" onclick="event.preventDefault(); navigateTo('/skillsets/proceduralgeneration')">
+                        <div class="about-ownership-title"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="3"/><circle cx="18" cy="7" r="3"/><circle cx="12" cy="17" r="3"/><path d="M8.5 9l2 5M15.5 9l-2 5"/></svg><h3>Procedural Systems</h3></div>
+                        <p>PCG, grammar systems, Houdini workflows, and runtime-aware generation.</p>
+                    </a>
+                    <a class="about-ownership-card" href="/skillsets/unrealdev" onclick="event.preventDefault(); navigateTo('/skillsets/unrealdev')">
+                        <div class="about-ownership-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6L3 12l5 6M16 6l5 6-5 6M14 4l-4 16"/></svg><h3>Engine Integration</h3></div>
+                        <p>Unreal, Unity, APIs, WebSockets, native plugins, and deployment constraints.</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="about-section about-detail-grid" aria-label="Technical range and representative impact">
+                <div class="about-panel about-impact" aria-labelledby="about-impact-title">
+                    <div class="about-section-heading">
+                        <h2 id="about-impact-title">Representative Impact</h2>
+                    </div>
+                    <div class="about-impact-grid">
+                        <div class="about-impact-item">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+                            <strong>Production tooling</strong>
+                            <span>Tools and pipelines used in real studio, broadcast, installation, and platform contexts.</span>
+                        </div>
+                        <div class="about-impact-item">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l4 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+                            <strong>Faster iteration</strong>
+                            <span>Automation, validation, and editor workflows that reduce repeated manual work.</span>
+                        </div>
+                        <div class="about-impact-item">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v5c0 4.8-3.3 7.5-8 9-4.7-1.5-8-4.2-8-9V7z"/><path d="M9 12l2 2 4-5"/></svg>
+                            <strong>Reliability</strong>
+                            <span>Validation and deployment work for systems expected to run under production constraints.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <details class="about-panel about-tech" open>
+                    <summary>
+                        <span>
+                            <strong>Technical Range</strong>
+                            <small>Representative technologies from the current resume and project database.</small>
+                        </span>
+                    </summary>
+                    <div class="about-tech-groups">
+                        <div><strong>Engines</strong><span>Unreal Engine, Unity</span></div>
+                        <div><strong>DCC / Procedural</strong><span>Houdini, Maya, Blender, 3ds Max</span></div>
+                        <div><strong>Languages</strong><span>Python, C++, C#, VEX, MEL, MaxScript</span></div>
+                        <div><strong>Integration</strong><span>REST APIs, WebSockets, Git, Perforce, Docker / AWS execution</span></div>
+                    </div>
+                </details>
+            </section>
+
+            <section class="about-cta" aria-label="Contact Pablo">
+                <div>
+                    <h2>Building tools, pipelines, or procedural systems?</h2>
+                    <p>Let's discuss the production problem behind them.</p>
+                </div>
+                <div class="about-cta-actions">
+                    <a class="about-button about-button-primary" href="/contact" onclick="event.preventDefault(); navigateTo('/contact')">Contact Pablo</a>
+                    <a class="about-button" href="/documents/Pablo_Vezzini_Lead_Technical_Artist_2026.pdf" target="_blank" rel="noopener">Download resume</a>
+                </div>
+            </section>
         </div>
     </section>
-
-    <section id="resume" class="tabcontent">
-        <div class="section_wrapper">
-            <div class="shell-placeholder">
-                <p class="shell-placeholder-label">Resume</p>
-                <h1>Lead Technical Artist - Pipelines & Tools</h1>
-                <p>The web resume will be built from verified career information. The current PDF remains available now.</p>
-                <a class="shell-primary-action" href="/documents/Pablo_Vezzini_Lead_Technical_Artist_2026.pdf" target="_blank" rel="noopener">Download resume PDF</a>
-            </div>
-        </div>
-    </section>
-
-
 
     <!--------------------->
     <!-- SCRIPTS -->
@@ -706,8 +889,7 @@
     });
 
     page('/resume', function() {
-      window.scrollTo(0, 0);
-      OpenTab('resume', 'resume')
+      page.replace('/about');
     });
 
     page('/contact', function() {
