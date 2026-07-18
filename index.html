@@ -644,27 +644,14 @@
         <div class="section_wrapper about-page">
             <section class="about-hero" aria-labelledby="about-title">
                 <div class="about-hero-content">
-                    <h1 id="about-title">About / Resume</h1>
-                    <p class="about-role">Lead Technical Artist - pipelines, tools, and production systems</p>
-                    <p class="about-intro">I work at the boundary between art, tools, and engine systems: editor tooling, procedural workflows, validation pipelines, and integrations across Unreal Engine, Unity, Houdini, Maya, Blender, and backend services.</p>
-                    <div class="about-quick-facts" aria-label="Quick facts">
-                        <div class="about-quick-fact">
-                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                            <span>Vienna, Austria</span>
-                        </div>
-                        <div class="about-quick-fact">
-                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v4M17 3v4M4 8h16M5 5h14v16H5z"/></svg>
-                            <span>15+ years experience</span>
-                        </div>
-                        <div class="about-quick-fact">
-                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18v-2a4 4 0 0 1 4-4h1M15 12h1a4 4 0 0 1 4 4v2M9 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0zM12 14v7M9 18h6"/></svg>
-                            <span>Senior technical-art ownership</span>
-                        </div>
-                        <div class="about-quick-fact">
-                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4-8 4-8-4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg>
-                            <span>Engines, DCCs, services</span>
-                        </div>
+                    <p class="about-eyebrow">Technical artist · tools developer · R&amp;D</p>
+                    <h1 id="about-title">I turn ambiguous production problems into usable tools, workflows, and real-time experiences.</h1>
+                    <p class="about-intro">I work between art and engineering: researching unfamiliar problems, building practical prototypes, and turning the useful ones into reliable systems for creative teams.</p>
+                    <div class="about-cta-actions about-hero-actions">
+                        <a class="about-button about-button-primary" href="/" onclick="event.preventDefault(); navigateTo('/')">View selected work</a>
+                        <a class="about-button" href="/documents/Pablo_Vezzini_Lead_Technical_Artist_2026.pdf" target="_blank" rel="noopener">Download resume</a>
                     </div>
+                    <p class="about-credibility">15+ years · In-house and freelance · Art + engineering · Production + R&amp;D · Vienna, Austria</p>
                 </div>
                 <div class="about-hero-visual" aria-hidden="true">
                     <div class="about-map-grid"></div>
@@ -711,86 +698,186 @@
                     <button class="about-logo-mark logo-ea" type="button" data-tooltip="EA - selected production context listed in the verified resume."><img src="/images/logos/logo-ea.png" alt="EA"><span>EA</span></button>
                     <button class="about-logo-mark logo-square" type="button" data-tooltip="Square Enix - R&D design-partner collaboration through Atlas."><img src="/images/logos/logo-squareenix.png" alt="Square Enix"><span>Square Enix</span></button>
                 </div>
-                <p class="about-context-note">These contexts come from direct roles, subcontracted work, or client projects. The career section below preserves the actual relationship.</p>
+                <p class="about-context-note">These contexts come from direct roles, subcontracted work, or client projects. The resume provides the complete chronology.</p>
             </section>
 
-            <section class="about-section about-career" aria-labelledby="about-career-title">
+            <section class="about-section about-career about-timeline" aria-labelledby="about-career-title" hidden>
                 <div class="about-section-heading">
-                    <h2 id="about-career-title">Career Backbone</h2>
-                    <span>Employer-first, with client work nested underneath</span>
+                    <h2 id="about-career-title">Career Timeline</h2>
+                    <span>Overlapping role periods with project markers inside the correct context</span>
                 </div>
-                <div class="about-career-list">
-                    <article class="about-career-row">
-                        <div class="about-career-date">2005 - 2018</div>
-                        <div>
-                            <h3>Earlier Experience</h3>
-                            <p>3D production, visualization, pipeline tools, and technical art at Kisp SA, Estudio Fluo, ArtFrequency, Kisp SA, and Sixth Vowel.</p>
+                <div class="about-timeline-layout">
+                    <div class="about-timeline-chart" aria-label="Career timeline from 2005 to present">
+                        <div class="about-timeline-years" aria-hidden="true">
+                            <span>2005</span>
+                            <span>2010</span>
+                            <span>2015</span>
+                            <span>2018</span>
+                            <span>2021</span>
+                            <span>2024</span>
+                            <span>Present</span>
                         </div>
-                        <div class="about-career-tags">
-                            <span>Element Space as Sixth Vowel employee</span>
-                            <span>Unity</span>
-                            <span>3ds Max tools</span>
+
+                        <div class="about-timeline-row row-earlier">
+                            <button class="about-timeline-label" type="button" data-period="earlier">
+                                <strong>Earlier Experience</strong>
+                                <span>2005 - 2018</span>
+                            </button>
+                            <div class="about-timeline-track">
+                                <button class="about-timeline-bar bar-earlier" type="button" data-period="earlier" style="--start: 0%; --width: 61.9%">
+                                    <span>3D production → tools → technical art</span>
+                                </button>
+                                <button class="about-project-marker" type="button" data-period="earlier" data-project="/projects/element-space" style="--pos: 61.9%">Element Space</button>
+                            </div>
                         </div>
-                    </article>
-                    <article class="about-career-row">
-                        <div class="about-career-date">Apr 2018 - Oct 2021</div>
-                        <div>
-                            <h3>Globant</h3>
-                            <p>Senior Technical Artist / Lead Tools Developer. Pipeline development, R&amp;D, tools, and mentoring across external studio projects.</p>
+
+                        <div class="about-timeline-row row-globant">
+                            <button class="about-timeline-label" type="button" data-period="globant">
+                                <strong>Globant</strong>
+                                <span>Apr 2018 - Oct 2021</span>
+                            </button>
+                            <div class="about-timeline-track">
+                                <button class="about-timeline-bar bar-globant" type="button" data-period="globant" style="--start: 61.9%; --width: 17.2%">
+                                    <span>Senior TA / Lead Tools Developer</span>
+                                </button>
+                                <button class="about-project-marker" type="button" data-period="globant" data-project="/projects/2kdam" style="--pos: 71.4%">2K DAM</button>
+                            </div>
                         </div>
-                        <div class="about-career-tags">
-                            <span>2K DAM pipeline</span>
-                            <span>Meta VR diagnostics</span>
+
+                        <div class="about-timeline-row row-contractor">
+                            <button class="about-timeline-label" type="button" data-period="contractor">
+                                <strong>Independent Contractor</strong>
+                                <span>Nov 2021 - Present</span>
+                            </button>
+                            <div class="about-timeline-track">
+                                <button class="about-timeline-bar bar-contractor" type="button" data-period="contractor" style="--start: 79%; --width: 21%">
+                                    <span>Pipeline engineering / Unreal systems</span>
+                                </button>
+                                <button class="about-project-marker" type="button" data-period="contractor" data-project="/projects/dance-monsters" style="--pos: 79%">Dance Monsters</button>
+                                <button class="about-project-marker" type="button" data-period="contractor" data-project="/projects/intel-evo" style="--pos: 82%">Intel EVO</button>
+                                <button class="about-project-marker" type="button" data-period="contractor" data-project="/projects/unreal-room" style="--pos: 83.5%">Unreal Room</button>
+                            </div>
                         </div>
-                    </article>
-                    <article class="about-career-row">
-                        <div class="about-career-date">Nov 2021 - Present</div>
-                        <div>
-                            <h3>Independent Contractor</h3>
-                            <p>Senior Technical Artist / Pipeline Engineer for selected production and installation work.</p>
+
+                        <div class="about-timeline-row row-atlas">
+                            <button class="about-timeline-label" type="button" data-period="atlas">
+                                <strong>Atlas</strong>
+                                <span>Sep 2024 - Present</span>
+                            </button>
+                            <div class="about-timeline-track">
+                                <button class="about-timeline-bar bar-atlas is-active" type="button" data-period="atlas" style="--start: 93.5%; --width: 6.5%">
+                                    <span>Lead Technical Artist / Systems Engineer</span>
+                                </button>
+                                <button class="about-project-marker" type="button" data-period="atlas" data-project="/projects/facadebuilder" style="--pos: 92%">Grammar Editor</button>
+                                <button class="about-project-marker" type="button" data-period="atlas" data-project="/projects/chaosbuildings" style="--pos: 96%">Chaos Buildings</button>
+                                <button class="about-project-marker" type="button" data-period="atlas" data-project="/projects/atlasplugin" style="--pos: 98%">Atlas DCC</button>
+                            </div>
                         </div>
-                        <div class="about-career-tags">
-                            <span>RealtimeUK for Netflix</span>
-                            <span>Genosha for Intel</span>
-                            <span>Unreal Room R&amp;D</span>
+                    </div>
+
+                    <article class="about-timeline-detail" id="aboutTimelineDetail" aria-live="polite">
+                        <div class="about-detail-topline">
+                            <span id="aboutTimelineRange">Sep 2024 - Present</span>
+                            <span id="aboutTimelineRelation">Direct employer</span>
                         </div>
-                    </article>
-                    <article class="about-career-row about-career-current">
-                        <div class="about-career-date">Sep 2024 - Present</div>
-                        <div>
-                            <h3>Atlas</h3>
-                            <p>Lead Technical Artist / Systems &amp; Pipeline Engineer / Field Application Engineer. Design-partner workflows, platform validation, and cross-DCC integration.</p>
+                        <h3 id="aboutTimelineTitle">Atlas</h3>
+                        <p id="aboutTimelineRole">Lead Technical Artist / Systems &amp; Pipeline Engineer / Field Application Engineer</p>
+                        <p id="aboutTimelineSummary">Design-partner workflows, platform validation, and cross-DCC integration across Unreal, Unity, Blender, and backend services.</p>
+                        <div class="about-timeline-columns">
+                            <div>
+                                <h4>Selected Contexts</h4>
+                                <div class="about-career-tags" id="aboutTimelineContexts"></div>
+                            </div>
+                            <div>
+                                <h4>Technical Focus</h4>
+                                <div class="about-career-tags" id="aboutTimelineFocus"></div>
+                            </div>
                         </div>
-                        <div class="about-career-tags">
-                            <span>Unreal, Unity, Blender plugins</span>
-                            <span>AI workflow tooling</span>
-                            <span>PCG city R&amp;D</span>
-                        </div>
+                        <div class="about-timeline-links" id="aboutTimelineLinks" aria-label="Relevant projects"></div>
                     </article>
                 </div>
             </section>
 
             <section class="about-section about-ownership" aria-labelledby="about-ownership-title">
                 <div class="about-section-heading">
-                    <h2 id="about-ownership-title">Production Problems I Solve</h2>
+                    <h2 id="about-ownership-title">What I Bring</h2>
+                    <span>Senior technical-art work across production, tools, and exploratory development</span>
                 </div>
                 <div class="about-ownership-grid">
                     <a class="about-ownership-card" href="/skillsets/pipelinedev" onclick="event.preventDefault(); navigateTo('/skillsets/pipelinedev')">
-                        <div class="about-ownership-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h5v5H4zM15 4h5v5h-5zM15 15h5v5h-5zM9 9l6-3M9 11l6 6"/></svg><h3>Pipeline Architecture</h3></div>
-                        <p>Cross-DCC workflows, ingestion, validation, publishing, metadata, and delivery.</p>
+                        <div class="about-ownership-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h5v5H4zM15 4h5v5h-5zM15 15h5v5h-5zM9 9l6-3M9 11l6 6"/></svg><h3>Technical Art</h3></div>
+                        <p>Connecting visual goals with practical engine, workflow, and production constraints.</p>
                     </a>
                     <a class="about-ownership-card" href="/skillsets/tooldev" onclick="event.preventDefault(); navigateTo('/skillsets/tooldev')">
-                        <div class="about-ownership-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0-5 5L4 17l3 3 5.5-5.5a4 4 0 0 0 5-5l-3 3-3-3z"/></svg><h3>Artist Tools</h3></div>
-                        <p>Editor tools that reduce manual work and expose complex systems safely.</p>
+                        <div class="about-ownership-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0-5 5L4 17l3 3 5.5-5.5a4 4 0 0 0 5-5l-3 3-3-3z"/></svg><h3>Tools &amp; Automation</h3></div>
+                        <p>Artist-facing utilities, DCC integrations, and workflows that reduce repeated work.</p>
                     </a>
                     <a class="about-ownership-card" href="/skillsets/proceduralgeneration" onclick="event.preventDefault(); navigateTo('/skillsets/proceduralgeneration')">
-                        <div class="about-ownership-title"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="3"/><circle cx="18" cy="7" r="3"/><circle cx="12" cy="17" r="3"/><path d="M8.5 9l2 5M15.5 9l-2 5"/></svg><h3>Procedural Systems</h3></div>
-                        <p>PCG, grammar systems, Houdini workflows, and runtime-aware generation.</p>
+                        <div class="about-ownership-title"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="3"/><circle cx="18" cy="7" r="3"/><circle cx="12" cy="17" r="3"/><path d="M8.5 9l2 5M15.5 9l-2 5"/></svg><h3>Pipeline Development</h3></div>
+                        <p>Systems that move content reliably between people, applications, and production stages.</p>
                     </a>
                     <a class="about-ownership-card" href="/skillsets/unrealdev" onclick="event.preventDefault(); navigateTo('/skillsets/unrealdev')">
-                        <div class="about-ownership-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6L3 12l5 6M16 6l5 6-5 6M14 4l-4 16"/></svg><h3>Engine Integration</h3></div>
-                        <p>Unreal, Unity, APIs, WebSockets, native plugins, and deployment constraints.</p>
+                        <div class="about-ownership-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6L3 12l5 6M16 6l5 6-5 6M14 4l-4 16"/></svg><h3>R&amp;D &amp; Prototyping</h3></div>
+                        <p>Testing unfamiliar technology and assumptions before committing a larger production effort.</p>
                     </a>
+                </div>
+            </section>
+
+            <section class="about-section about-method" aria-labelledby="about-method-title">
+                <div class="about-section-heading">
+                    <h2 id="about-method-title">How I Work</h2>
+                    <span>From ambiguous request to a usable production system</span>
+                </div>
+                <div class="about-method-flow">
+                    <article class="about-method-step">
+                        <span>01</span>
+                        <h3>Understand the real problem</h3>
+                        <p>I map constraints, talk with the people doing the work, and identify where the actual friction occurs.</p>
+                    </article>
+                    <article class="about-method-step">
+                        <span>02</span>
+                        <h3>Prototype the risky assumptions</h3>
+                        <p>I build focused tests early to learn what is feasible before the first idea becomes an expensive commitment.</p>
+                    </article>
+                    <article class="about-method-step">
+                        <span>03</span>
+                        <h3>Make it survive production</h3>
+                        <p>I turn successful experiments into practical systems: clear interfaces, integration, validation, documentation, and maintainable implementation.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="about-section about-evidence" aria-labelledby="about-evidence-title">
+                <div class="about-section-heading">
+                    <h2 id="about-evidence-title">Selected Evidence</h2>
+                    <span>Representative projects, not a complete archive</span>
+                </div>
+                <p class="about-evidence-intro">Some work is proprietary, undocumented, or better explained through a conversation. These case studies show the kinds of systems, decisions, and production problems I work on.</p>
+                <div class="about-evidence-grid">
+                    <a class="about-evidence-card" href="/projects/atlasplugin" onclick="event.preventDefault(); navigateTo('/projects/atlasplugin')">
+                        <img src="/images/atlasplugin-unreal_01_editor-docked-ui.jpg" alt="Atlas DCC integration editor interface">
+                        <div><span>Integration framework</span><h3>Atlas DCC Integration Framework</h3><p>Native Unreal, Unity, and Blender integrations for schema-driven AI workflows and automated asset ingestion.</p><strong>View case study →</strong></div>
+                    </a>
+                    <a class="about-evidence-card" href="/projects/chaosbuildings" onclick="event.preventDefault(); navigateTo('/projects/chaosbuildings')">
+                        <img src="/images/chaosbuildings-pcg_01.jpg" alt="Procedurally generated urban layout">
+                        <div><span>Procedural system</span><h3>Chaos Buildings</h3><p>Designer-authored road splines and procedural rules for controllable urban generation in Unreal Engine.</p><strong>View case study →</strong></div>
+                    </a>
+                    <a class="about-evidence-card" href="/projects/intel-evo" onclick="event.preventDefault(); navigateTo('/projects/intel-evo')">
+                        <img src="/images/intelevoshowcase_portfolio_item-1.jpg" alt="Evolution Experience interactive installation">
+                        <div><span>Interactive experience</span><h3>Evolution Experience</h3><p>Real-time interactive installation work spanning procedural environments, Unreal development, and production delivery.</p><strong>View case study →</strong></div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="about-section about-practice" aria-labelledby="about-practice-title">
+                <div class="about-section-heading">
+                    <h2 id="about-practice-title">How My Practice Developed</h2>
+                    <span>15+ years of production-facing technical work</span>
+                </div>
+                <div class="about-practice-grid">
+                    <article><span>Foundations</span><h3>Production first</h3><p>I began with hands-on 3D production and interactive work, learning how assets are created, revised, delivered, and used under real constraints.</p></article>
+                    <article><span>Systems</span><h3>Tools and workflows</h3><p>As the work became more technical, I moved toward automation, DCC tooling, real-time workflows, and pipelines that support larger teams and more complex content.</p></article>
+                    <article><span>Now</span><h3>Leadership and exploration</h3><p>Today I work across tools, pipelines, Unreal, technical art, and R&amp;D: clarifying difficult problems, testing directions, and building systems that remain useful in production.</p></article>
                 </div>
             </section>
 
@@ -834,10 +921,22 @@
                 </details>
             </section>
 
+            <section class="about-section about-human" aria-labelledby="about-human-title">
+                <img src="/images/matanga_ok.png" alt="Pablo Vezzini" class="about-human-photo">
+                <div>
+                    <div class="about-section-heading">
+                        <h2 id="about-human-title">A Practical Approach</h2>
+                    </div>
+                    <p>I enjoy the work between disciplines: when creative goals are ambitious, technical requirements are unclear, and the useful path forward still needs to be discovered.</p>
+                    <p>I care about systems that are technically sound, understandable for artists, and resilient enough to be used after the initial prototype has passed.</p>
+                    <ul class="about-principles" aria-label="Working principles"><li>Curiosity with practical limits</li><li>Clear communication across disciplines</li><li>Maintainable systems and knowledge sharing</li></ul>
+                </div>
+            </section>
+
             <section class="about-cta" aria-label="Contact Pablo">
                 <div>
-                    <h2>Building tools, pipelines, or procedural systems?</h2>
-                    <p>Let's discuss the production problem behind them.</p>
+                    <h2>Working on a difficult production, tooling, or real-time problem?</h2>
+                    <p>I am interested in technical art, pipeline development, Unreal workflows, R&amp;D, and work that needs someone comfortable between creative and engineering teams.</p>
                 </div>
                 <div class="about-cta-actions">
                     <a class="about-button about-button-primary" href="/contact" onclick="event.preventDefault(); navigateTo('/contact')">Contact Pablo</a>
