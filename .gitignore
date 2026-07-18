@@ -10,3 +10,6 @@ db/portfolio_item_db_Backup.json
 
 # Project planning documents (internal only)
 ROADMAP.md
+
+# JetBrains IDE workspace settings
+.idea/
